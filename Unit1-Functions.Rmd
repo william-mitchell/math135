@@ -1,0 +1,49 @@
+
+# Functions
+
+## Steps of the Modeling Cycle
+
+1. Ask a question about reality.
+2. Make some observations and collect the corresponding data.
+3. Conjecture a model or modify a known model based on the data.
+4. Test the model against known data (from step 2.) and modify the model as needed.
+5. Repeat steps 2.-4. to improve the model
+
+## Goals
+
+- Explain what a function is
+- Identify and explain independent and dependent variables
+- Recognize functions in a variety of forms
+- Find a function's intercept(s)
+- Identify regions where a function is increasing/decreasing
+- Compute the average rate of change between two points on a function
+- Determine where a function is concave up/down
+- Compute the relative change between two points on a function
+
+
+## Tasks
+
+1. A family needs to purchase life insurance. What possible inputs might be used to determine the premium (monthly payment) for life insurance?
+
+2. In the Andes mountains in Peru, the number $N$ of species of bats is a *function* of the elevation $h$ in feet above sea level. 
+   a. What is the independent variable?
+   b. What is the dependent variable?
+   c. Interpret the statement $f(500)=200$ if $f$ represents this function.
+   d. Would you guess this function to be increasing or decreasing?
+
+3. Sketch each of the following:
+   a. An increasing function which is concave up
+   b. An increasing function which is concave down
+   c. A decreasing function which is concave up
+   d. A decreasing function which is concave down
+
+4. What is the *relative change* in the Dow Jones average from 169.84 to 77.90 (from 1 January 1931 to 31 December 1931)? Compare this to the *relative change* in the Dow Jones average from 35,443.82 to 35369.09 (from 2 September 2021 to 3 September 2021).
+
+5. One rainy summer day, measurements were recorded (in inches) from a rain gauge every hour (in the table below). What was the average rate of rainfall from 8 a.m. to 5 p.m.? What are the units of this rate of change?
+
+**Time**   | 8 am | 9 | 10 | 11 | noon | 1 pm | 2 | 3 | 4 | 5 pm
+-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------
+**Amount** | 0.15 | 0.17 | 0.2 | 0.45 | 0.48 | 0.75 | 1.03 | 1.20 | 1.45 | 1.60
+
+ 
+

@@ -1,7 +1,10 @@
 book_filename: "math135_handbook"
 output_dir: docs/
 delete_merged_file: true
-rmd_files: ["index.Rmd", "Unit1-R_Primer.Rmd", ]
+rmd_files: ["index.Rmd", 
+  "Unit1-R_Primer.Rmd", 
+  "Unit1-Functions.Rmd",
+  "Unit1-LinearFunctions.Rmd"]
 language:
   ui:
-    chapter_name: "Unit "
+    chapter_name: "Topic "

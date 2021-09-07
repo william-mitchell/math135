@@ -22,3 +22,10 @@ single-variable-plots
 multivariable-plots
 plotting-data
 troubleshooting
+functions
+steps-of-the-modeling-cycle
+goals
+tasks
+linear-functions
+goals-1
+tasks-1

@@ -1,0 +1,43 @@
+# Linear Functions
+
+
+
+## Goals
+
+ - Explain linear functions in words, tables, equations, and graphs
+ - Describe the effects of varying parameters in linear functions
+ - Assess whether given data is linear and, if so, model it
+ 
+## Tasks
+ 
+1. Come up with an example of a real world phenomenon that behaves like a linear function.
+ 
+2. The table below lists the average weight, $w$, in pounds of American men in their sixties for height, $h$, in inches
+   a. Which is the dependent and which is the independent variable?  
+   b. Is this an increasing/decreasing function?
+   c. Can this be represented by a linear function? If so, find an equation to describe this data.
+
+**Height (inches)** | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 
+-------|-------|-------|-------|-------|-------|-------|-------|-------
+**Weight (pounds)** | 166 | 171 | 176 | 181 | 186 | 191 | 196 | 201 
+
+
+
+3. The plot below represents the world population growth rate by year since 1995. 
+
+```{r}
+Y=c(0,5,10,15,20)
+R=c(1.41,1.26,1.20,1.13,1.06)
+plotPoints(R~Y,main="World Population Growth Rate",xlab="Year (since 1995)",ylab="Growth Rate")
+```
+
+   a. Explain why a linear model of this data is reasonable.
+   b. Come up with an equation that (approximately) describes this data.
+   c. What decision(s) did you make in part (b)? What are the strengths and weaknesses of your choice? Can you think of a methodology that might be better?
+   d. Create a plot in RStudio that shows both the data points and the linear function that you found in part (b). 
+      - Start by doing a cut-and-paste the R code above
+      - You can add your linear function to this plot using `plotFun(m*t+b~t,add=TRUE)` where `m` and `b` are the slope and the vertical intercept of the function you found in part (b)
+   
+
+
+
