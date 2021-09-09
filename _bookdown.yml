@@ -4,7 +4,8 @@ delete_merged_file: true
 rmd_files: ["index.Rmd", 
   "Unit1-R_Primer.Rmd", 
   "Unit1-Functions.Rmd",
-  "Unit1-LinearFunctions.Rmd"]
+  "Unit1-LinearFunctions.Rmd",
+  "Unit1-R_Intro.Rmd"]
 language:
   ui:
     chapter_name: "Topic "

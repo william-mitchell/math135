@@ -1,6 +1,6 @@
 # (PART) Functions {-}
 
-# Introduction to R Studio
+# R Studio Primer
 
 ```{r setup, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -135,7 +135,7 @@ RStudio will keep track of your variables in the environment tab. If you want to
 
 Some of the calculations in AMC1 require a doing calculations over and over again to get an estimate of a value. A great way to do this is with a list or a sequence. It's also how we'll define coordinates for points. 
 
-RStudio makes a list with the `c()` command. The "c" in short for "combine".
+RStudio makes a list with the `c()` command. The "c" in short for "combine these values to make into a list".
 
 ```{r}
 P=c(3,5,11,-1,4)
@@ -161,7 +161,7 @@ S=seq(1, 2, 0.1)
 S
 ```
 
-**Pro Tips**
+**Pro Tips**:
 
 * Always write `0.1` instead of `.1` in your code. It is much easier to read and to debug later!
 * Consider adding a space after your commas to separate parameters. It's much easier to read later!

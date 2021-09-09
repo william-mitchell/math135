@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 4 Intro to RStudio | MATH 135: AMC I</title>
+  <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 4 Intro to RStudio | MATH 135: AMC I" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  <meta name="github-repo" content="mathbeveridge/math135_f21" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 4 Intro to RStudio | MATH 135: AMC I" />
+  
+  <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="linear-functions.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="m135style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href = "./">MATH 135: AMC I</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="part"><span><b>I Functions</b></span></li>
+<li class="chapter" data-level="1" data-path="r-studio-primer.html"><a href="r-studio-primer.html"><i class="fa fa-check"></i><b>1</b> R Studio Primer</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#getting-oriented"><i class="fa fa-check"></i><b>1.1</b> Getting Oriented</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#first-login"><i class="fa fa-check"></i><b>1.1.1</b> First login</a></li>
+<li class="chapter" data-level="1.1.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#the-rstudio-window"><i class="fa fa-check"></i><b>1.1.2</b> The RStudio window</a></li>
+<li class="chapter" data-level="1.1.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#packages"><i class="fa fa-check"></i><b>1.1.3</b> Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#rmarkdown"><i class="fa fa-check"></i><b>1.2</b> RMarkdown</a></li>
+<li class="chapter" data-level="1.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#calculations-in-rstudio"><i class="fa fa-check"></i><b>1.3</b> Calculations in RStudio</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#basic-commands"><i class="fa fa-check"></i><b>1.3.1</b> Basic Commands</a></li>
+<li class="chapter" data-level="1.3.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#variables"><i class="fa fa-check"></i><b>1.3.2</b> Variables</a></li>
+<li class="chapter" data-level="1.3.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#lists-and-sequences"><i class="fa fa-check"></i><b>1.3.3</b> Lists and sequences</a></li>
+<li class="chapter" data-level="1.3.4" data-path="r-studio-primer.html"><a href="r-studio-primer.html#making-functions"><i class="fa fa-check"></i><b>1.3.4</b> Making functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="r-studio-primer.html"><a href="r-studio-primer.html#data"><i class="fa fa-check"></i><b>1.4</b> Data</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#importing-data-from-rstudiomosaic"><i class="fa fa-check"></i><b>1.4.1</b> Importing data from RStudio/mosaic</a></li>
+<li class="chapter" data-level="1.4.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#importing-.csv-files"><i class="fa fa-check"></i><b>1.4.2</b> Importing .csv files</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="r-studio-primer.html"><a href="r-studio-primer.html#plots"><i class="fa fa-check"></i><b>1.5</b> Plots</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#single-variable-plots"><i class="fa fa-check"></i><b>1.5.1</b> Single variable plots</a></li>
+<li class="chapter" data-level="1.5.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#multivariable-plots"><i class="fa fa-check"></i><b>1.5.2</b> Multivariable plots</a></li>
+<li class="chapter" data-level="1.5.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#plotting-data"><i class="fa fa-check"></i><b>1.5.3</b> Plotting data</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="r-studio-primer.html"><a href="r-studio-primer.html#troubleshooting"><i class="fa fa-check"></i><b>1.6</b> Troubleshooting</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2</b> Functions</a><ul>
+<li class="chapter" data-level="2.1" data-path="functions.html"><a href="functions.html#steps-of-the-modeling-cycle"><i class="fa fa-check"></i><b>2.1</b> Steps of the Modeling Cycle</a></li>
+<li class="chapter" data-level="2.2" data-path="functions.html"><a href="functions.html#goals"><i class="fa fa-check"></i><b>2.2</b> Goals</a></li>
+<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html#tasks"><i class="fa fa-check"></i><b>2.3</b> Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>3</b> Linear Functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="linear-functions.html"><a href="linear-functions.html#goals-1"><i class="fa fa-check"></i><b>3.1</b> Goals</a></li>
+<li class="chapter" data-level="3.2" data-path="linear-functions.html"><a href="linear-functions.html#tasks-1"><i class="fa fa-check"></i><b>3.2</b> Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html"><i class="fa fa-check"></i><b>4</b> Intro to RStudio</a><ul>
+<li class="chapter" data-level="4.1" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#getting-started"><i class="fa fa-check"></i><b>4.1</b> Getting Started</a></li>
+<li class="chapter" data-level="4.2" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#r-markdown-files"><i class="fa fa-check"></i><b>4.2</b> R Markdown files</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#formatting-regular-text"><i class="fa fa-check"></i><b>4.2.1</b> Formatting Regular Text</a></li>
+<li class="chapter" data-level="4.2.2" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#code-chunks"><i class="fa fa-check"></i><b>4.2.2</b> Code Chunks</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#writing-code"><i class="fa fa-check"></i><b>4.3</b> Writing Code</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#basic-calculations"><i class="fa fa-check"></i><b>4.3.1</b> Basic Calculations</a></li>
+<li class="chapter" data-level="4.3.2" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#variables-lists-and-sequences"><i class="fa fa-check"></i><b>4.3.2</b> Variables, Lists and Sequences</a></li>
+<li class="chapter" data-level="4.3.3" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#functions-1"><i class="fa fa-check"></i><b>4.3.3</b> Functions</a></li>
+<li class="chapter" data-level="4.3.4" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#plotting"><i class="fa fa-check"></i><b>4.3.4</b> Plotting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#troubleshooting-1"><i class="fa fa-check"></i><b>4.4</b> Troubleshooting</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#you-try-4"><i class="fa fa-check"></i><b>4.4.1</b> You Try</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MATH 135: AMC I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro-to-rstudio" class="section level1">
+<h1><span class="header-section-number">Topic 4</span> Intro to RStudio</h1>
+<p>Welcome to our RStudio Introduction! RStudio is a front end (user friendly) interface for R, a programming
+language for statistics. We’ll be using it to work with data and our various forms of functions.</p>
+<p>RStudio is a <strong>long term learning goal</strong> for us. We will be adding new functions and learning new
+things throughout the semester._</p>
+<div id="getting-started" class="section level2">
+<h2><span class="header-section-number">4.1</span> Getting Started</h2>
+<p>Follow my lead as we get ourselves going with RStudio. We will</p>
+<ul>
+<li>Log in to RStudio</li>
+<li>Add some <em>packages</em> to the R environment</li>
+<li>Create a math135 directory to work in</li>
+<li>Create our first Rmd (‘R Markdown’) file</li>
+<li>Knit that Rmd file to create a PDF</li>
+</ul>
+<p>You will need to replace the auto-generated code block at the top of your Rmd file with this one, which loads the mosaic functionality into the R environment when we knit to PDF.</p>
+<pre><code>```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```</code></pre>
+<p><strong>Pro Tip:</strong> Be kind to future you.</p>
+<ul>
+<li>Save all of your work for this class in the math135 subdirectory that we create today.</li>
+<li>Give your files meaningful names. Include the unit, the topic, the date, etc, or a helpful combination of these identifiers.</li>
+</ul>
+</div>
+<div id="r-markdown-files" class="section level2">
+<h2><span class="header-section-number">4.2</span> R Markdown files</h2>
+<p>An R Markdown file is a hybrid file that has both text and code. You can then <strong>knit</strong> this Rmd file to make a lovely PDF.</p>
+<div id="formatting-regular-text" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Formatting Regular Text</h3>
+<p>The regular text uses Markdown, which has simple commands to create formatting such has sections, bold, italic, links, itemized lists, and much more. Here are is some example Markdown syntax.</p>
+<pre><code># Heading 
+
+This is a regular sentence.
+
+## Sub Heading
+
+You get *italics like this.* 
+
+Skipping a line starts a new paragraph.
+But if you don&#39;t skip a line then it&#39;s part of the same paragraph
+
+### Sub Sub Heading
+
+You get **bold text like this.**
+
+Here is how to make an itemized list
+
+* Make sure to skip a line before your first item
+* The asterisk must be the **first** character on the line (no spaces!)
+* If you want a sublist
+   + Start the sublist on the line below the item
+   + Indent by three spaces.
+   + Use a plus sign
+</code></pre>
+<p>Here is a nice reference page for <a href="https://rmarkdown.rstudio.com/authoring_basics.html">common R Markdown syntax</a>.</p>
+</div>
+<div id="code-chunks" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Code Chunks</h3>
+<p>Your R code must be placed inside <strong>code chunks.</strong> Here is what a code chuck looks like</p>
+<pre><code>```{r}
+1 + 1
+
+sin(pi/4)
+```</code></pre>
+<p>When you knit your Rmd file, the code chunks are executed in order. You can also
+run an individual chunk by clicking on the green arrow in its upper right corner.</p>
+<p>Adding a code chunk is easy!</p>
+<ul>
+<li>In the top bar of the Markdown window, there’s a small, green plus C button.</li>
+<li>When you click this button, it’ll bring up options for code blocks to insert</li>
+<li>Select “R” which is the first option. (It’s the only one we will use.)</li>
+</ul>
+</div>
+</div>
+<div id="writing-code" class="section level2">
+<h2><span class="header-section-number">4.3</span> Writing Code</h2>
+<p>Add a code chunk and let’s get cracking!</p>
+<div id="basic-calculations" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Basic Calculations</h3>
+<p>We can use that code chunk to do some basic calculations.</p>
+<div id="you-try" class="section level4">
+<h4><span class="header-section-number">4.3.1.1</span> You Try</h4>
+<p>Create a code block and try to calculate each of the following. Try some other calculations, too!</p>
+<ul>
+<li><span class="math inline">\(8+13\)</span></li>
+<li><span class="math inline">\(7*9\)</span></li>
+<li><span class="math inline">\(\sin(\pi/2)\)</span></li>
+<li><span class="math inline">\(\sqrt{121}\)</span></li>
+<li><span class="math inline">\((2.25)^3\)</span></li>
+<li><span class="math inline">\(8 \cos( \pi/6)\)</span></li>
+</ul>
+<p>Which ones work? If you got an error, can you fix it? Can you guess the name of the square root function?</p>
+</div>
+</div>
+<div id="variables-lists-and-sequences" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Variables, Lists and Sequences</h3>
+<p>When we do a calculation, we can store the result for later. Here are some examples:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="intro-to-rstudio.html#cb49-1"></a>a =<span class="st"> </span><span class="dv">15</span></span>
+<span id="cb49-2"><a href="intro-to-rstudio.html#cb49-2"></a>b =<span class="st"> </span><span class="dv">4</span> <span class="op">*</span><span class="st"> </span>a</span></code></pre></div>
+<p>R is particularly good at doing calculations on lists of data. So let’s make some lists!</p>
+<p>RStudio makes a list with the <code>c()</code> command. The “c” in short for “combine”.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="intro-to-rstudio.html#cb50-1"></a>P=<span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">11</span>, <span class="dv">-1</span>, <span class="dv">4</span>)</span>
+<span id="cb50-2"><a href="intro-to-rstudio.html#cb50-2"></a>P</span></code></pre></div>
+<pre><code>## [1]  3  5 11 -1  4</code></pre>
+<p>If you want to make a sequence, you use the <code>seq()</code> command. For example:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="intro-to-rstudio.html#cb52-1"></a>S=<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb52-2"><a href="intro-to-rstudio.html#cb52-2"></a>S</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p>Notice that the values increment by 1. You can use a different step size by adding a third argument.
+For exmaple, if I wanted a sequence 1, 1.1, 1.2, 1.3, etc… all the way up to 2, I would write</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="intro-to-rstudio.html#cb54-1"></a>T=<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">0.1</span>)</span>
+<span id="cb54-2"><a href="intro-to-rstudio.html#cb54-2"></a>T</span></code></pre></div>
+<pre><code>##  [1] 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0</code></pre>
+<p>Now look at the <strong>Environment</strong> tab in the upper right window. What do you notice?</p>
+<p><strong>Pro Tips</strong>: Be kind to future you as well as current collaborators.</p>
+<ul>
+<li>Always write <code>0.1</code> instead of <code>.1</code> in your code. It is much easier to read and to debug later!</li>
+<li>Consider adding a space after your commas to separate parameters. It’s easier to read!</li>
+</ul>
+<div id="you-try-1" class="section level4">
+<h4><span class="header-section-number">4.3.2.1</span> You Try</h4>
+<p>Try to do the following:</p>
+<ul>
+<li>Create a list <code>X</code> containing the values 8, 6, 7, 5, 3, 0, 9.</li>
+<li>Create a list <code>Y</code> containing the sequence of odd integers between (and including) 1 and 19</li>
+<li>What is the output of the command `X^2’? Can you see what R is doing?</li>
+<li>Try making another lists. Apply some functions to that list.</li>
+</ul>
+</div>
+</div>
+<div id="functions-1" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Functions</h3>
+<p>Now it’s time to write your own function. Here is how you create <span class="math inline">\(f(x)= x^2 -3\)</span>.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="intro-to-rstudio.html#cb56-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">3</span> <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
+<p>Much of this is pretty intuitive, except for maybe the final <code>~ x</code>. This tilde symbol comes up a lot in RStudio and it indicates <em>dependence</em>. We need to tell RStudio that <span class="math inline">\(f\)</span> is in terms of this variable <span class="math inline">\(x\)</span>, so it knows where to put an input when I ask it to:</p>
+<p>Notice! In the right upper window, you now have a function called <code>f</code>. We can do a lot with this function, but
+to start, let’s evaluate it at 1.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="intro-to-rstudio.html#cb57-1"></a><span class="kw">f</span>(<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] -2</code></pre>
+<p>What do you think this code is doing?</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="intro-to-rstudio.html#cb59-1"></a><span class="kw">f</span>(S)</span></code></pre></div>
+<pre><code>##  [1] -2  1  6 13 22 33 46 61 78 97</code></pre>
+<div id="you-try-2" class="section level4">
+<h4><span class="header-section-number">4.3.3.1</span> You Try</h4>
+<ul>
+<li>Create a new function <span class="math inline">\(g\)</span> where <span class="math inline">\(g(t) = sqrt{t-4}\)</span></li>
+<li>Evaluate this function at <span class="math inline">\(t=8\)</span>, and <span class="math inline">\(t=12.34\)</span> and <span class="math inline">\(t=100\)</span></li>
+<li>What happens when you try to evaluate this function at <span class="math inline">\(t=2\)</span>? What do you think that means?</li>
+</ul>
+</div>
+</div>
+<div id="plotting" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> Plotting</h3>
+<p>Let’s see how to create plots using RStudio. First, let’s create a plot of this data</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>x</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>h(x)</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>9</td>
+<td>16</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p>from the function <span class="math inline">\(h(x)=x^2\)</span>.</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="intro-to-rstudio.html#cb61-1"></a>X =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
+<span id="cb61-2"><a href="intro-to-rstudio.html#cb61-2"></a>Y =<span class="st"> </span>X<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb61-3"><a href="intro-to-rstudio.html#cb61-3"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p>Notice! We list the <strong>dependent</strong> variable <code>Y</code> first and then the <strong>independent</strong> variable <code>X</code> after the tidle <code>~</code> (which matches the syntax of <code>makeFun</code>).</p>
+<p>We can also plot a function. Once again the dependent variable appears after the tilde.</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="intro-to-rstudio.html#cb62-1"></a><span class="kw">plotFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p>We can actually plot the data and the function on the same graph. We will plot the data and then add the function by using the <code>add=TRUE' parameter for</code>plotFun<code>. I will also use the optional</code>col` parameter to change the color of the function curve.</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="intro-to-rstudio.html#cb63-1"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="intro-to-rstudio.html#cb64-1"></a><span class="kw">plotFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-35-2.png" width="672" /></p>
+<div id="you-try-3" class="section level4">
+<h4><span class="header-section-number">4.3.4.1</span> You Try</h4>
+<ul>
+<li>Create a sequence of integer points <code>P</code> from 1 to 10.</li>
+<li>Define <code>Q = sin(P)</code></li>
+<li>Create a plot of <code>Q</code> versus <code>P</code> and then add the function plot of <code>sin(x)</code></li>
+<li>Try plotting some other data and fuunctions.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="troubleshooting-1" class="section level2">
+<h2><span class="header-section-number">4.4</span> Troubleshooting</h2>
+<p>Without fail, you will make mistakes. Things will break and you’ll get error messages. That’s ok! That’s how
+we learn.</p>
+<div id="you-try-4" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> You Try</h3>
+<p>Each of the following lines of code will break when run. Try them out, notice the error, and see if
+you can fix it.</p>
+<ul>
+<li><code>2 sin(pi/2)</code></li>
+<li><code>sqrt(3*(7+5)</code></li>
+<li><code>Sqrt(3*(7+5))</code></li>
+<li><code>makeFun(x^2-4, x)</code></li>
+<li><code>makeFun(x+1 ~ t)</code></li>
+<li><code>makefun(2x+1 ~ x)</code></li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="linear-functions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
