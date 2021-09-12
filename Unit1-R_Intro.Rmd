@@ -11,7 +11,7 @@ language for statistics.  We’ll be using it to work with data and our various 
 
 
 RStudio is a **long term learning goal** for us. We will be adding new functions and learning new
-things throughout the semester._
+things throughout the semester.
 
 
 ## Getting Started
@@ -35,7 +35,7 @@ suppressPackageStartupMessages(library(mosaic))
 
 **Pro Tip:** Be kind to future you. 
 
-* Save all of your work for this class in the math135 subdirectory that we create today.
+* Save all of your work for this class in the `math135` subdirectory that we create today.
 * Give your files meaningful names. Include the unit, the topic,  the date, etc, or a helpful combination of these identifiers.
 
 
@@ -205,7 +205,7 @@ f(S)
 
 #### You Try
 
-* Create a new function $g$ where $g(t) = sqrt{t-4}$
+* Create a new function $g$ where $g(t) = \sqrt{t-4}$
 * Evaluate this function at $t=8$, and $t=12.34$ and $t=100$
 * What happens when you try to evaluate this function at $t=2$? What do you think that means?
 
