@@ -242,7 +242,7 @@ plotFun(x^2 ~ x)
 ```
 
 
-We can actually plot the data and the function on the same graph. We will plot the data and then add the function by using the  `add=TRUE' parameter for `plotFun`. I will also use the optional `col` parameter to change the color of the function curve.
+We can actually plot the data and the function on the same graph. We will plot the data and then add the function by using the  `add=TRUE` parameter for `plotFun`. I will also use the optional `col` parameter to change the color of the function curve.
 
 
 ```{r, echo=TRUE}

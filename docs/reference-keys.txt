@@ -45,3 +45,8 @@ plotting
 you-try-3
 troubleshooting-1
 you-try-4
+exponential-and-logarithmic-functions
+goals-2
+tasks-2
+periodic-functions
+tasks-3

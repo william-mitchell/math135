@@ -1,0 +1,55 @@
+# Periodic Functions
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+##  Tasks
+
+For each graph shown, write down a corresponding periodic formula.
+
+1. 
+
+```{r periodic2, echo=FALSE}
+x <- seq(0,20*pi,0.01)
+plot(x, -8 * cos(x/10), type='l', col='blue', xaxt='n',  ylab='y')
+axis(side=1, at=c(0,5*pi, 10*pi, 15*pi, 20*pi), labels=c("0",expression(5*pi), expression(10*pi), expression(15*pi), expression(20*pi)))
+
+```
+
+
+2.
+
+```{r periodic4, echo=FALSE}
+x <- seq(-2*pi,2*pi,0.01)
+plot(x, cos(x)+2, type='l', col='blue', xaxt='n',  ylab='y')
+axis(side=1, at=c(-2*pi, -pi, 0,pi, 2*pi),
+     labels=c(expression(-2*pi), expression(-pi), "0",expression(pi), expression(2*pi)))
+```
+
+3.
+
+```{r periodic1, echo=FALSE}
+x <- seq(0,10,0.01)
+plot(x, 7*sin(pi/5*x), type='l', col='blue', xaxt='n',  ylab='y')
+axis(side=1, at=c(0,2,4,6,8,10), labels=c(0,2,4,6,8,10))
+
+```
+
+
+
+
+
+4.
+
+```{r periodic3, echo=FALSE}
+x <- seq(0,pi,0.01)
+plot(x, -40*sin(2*x)+50, type='l', col='blue', xaxt='n',  ylab='y')
+axis(side=1, at=c(0,pi/2, pi), labels=c("0",expression(pi/2), expression(pi)))
+
+```
+
+
+

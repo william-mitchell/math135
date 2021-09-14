@@ -1,0 +1,135 @@
+# Exponential and Logarithmic Functions
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+
+## Goals
+
+* Explain exponential functions in words, equations, and graphs
+* Describe the effects of varying parameters in exponential functions
+* Assess whether given data is exponential, and if so, model it
+* Solve for unknowns in an exponent using the logarithm
+* Write exponential functions in equivalent forms
+* Determine half-lives and doubling times
+
+## Tasks
+
+
+1. Here are approximate values of two functions, $f$ and $g$.  For each function, if you think it could be linear or exponential, give a reason and find an approximate formula.
+
+|    |    |    |    |    |    |    |    |
+|----|----|----|----|----|----|----|----|
+|   $x$  | 20 | 20.5 | 21 | 21.5 | 22 | 22.5 | 23 |
+| $f(x)$ | 26.00 | 26.15 | 26.30 | 26.45 | 26.60 | 26.75 | 26.90 |
+| $g(x)$ | 190 | 217 | 247 | 282 | 321 | 366  | 418
+
+
+<!--
+\begin{solution}
+First, we note that the $x$ values are equally spaced. For $f(x)$, the value increases by $0.15$ for each entry, suggesting a linear function. The slope is
+\begin{equation}
+y = \frac{26.15-26}{20.5-20}=0.3.
+\end{equation}
+To find the $f$-intercept, we can plug any data point into $f=0.3x+b$, from which we find $b=20$. Therefore, $f=0.3x+20$.
+For $g(x)$, we note that each successive value is the previous one multiplied by approximately $1.14$. Since the points are spaced by 0.5, then $1.14^2=1.3$ suggesting the exponential function $g(x) = 190 \cdot (1.3)^{(x-20)}$, or equivalently, $g(x) = 0.9997 \cdot 1.3^x$.
+\end{solution}
+-->
+
+
+2. A September 2007 article included the following passage about Peter Thiel, a Facebook investor and insider.
+
+> Thiel justified his faith (besides his stake in the company) in Facebook's prowess based on the exponential growth of the social network. Facebook is growing at 3 to 4 percent compounded weekly, with about 38 million members currently, he told me. At the current growth rate Facebook would have 220 million members in a year. ``In three years, we could have everybody on the planet, but that's not going to happen, but people underestimate the power of the exponential growth we are seeing," he said.
+
+  a. Construct a generic model function $F(t)$ (that is, with no numeric values in it) for the number of Facebook users at time $t$. Make sure to make a good choice for the units of $t$ and $F(t)$ and be sure to state what they are.
+<!-- \begin{solution}
+As suggested by the quotation, we choose an exponential growth model $F(t)=P_0 a^t$. Here, $P_0$ represents the initial number of users. Since the information we are given measures users in millions and time in weeks, we choose the units of $F$ to be millions of users, and the units of $t$ to be weeks.
+\end{solution}-->
+  b. Assuming 3\% weekly growth, predict the number of users in one year from September 2007.
+<!--\begin{solution}
+We are given that $F(0) = 38$, and hence $P_0 = 38$. If we want 3\% growth per week, $a = 1.03$. Therefore, $F(t) = 38(1.03)^t$. To predict the number of users one year from September 2007, we must find $F(52)$ since there are 52 weeks in a year. Plugging in, we find $F(52) = 176.7$. Thus, we expect 176.7 million users.
+\end{solution}-->
+  c. Assuming 4\% weekly growth, predict the number of users in one year from September 2007.
+<!--\begin{solution}
+This is almost identical to the previous part, except that now $a=1.04$. In this case, $F(52) = 38(1.04)^{52}= 292.1$. Thus, we expect 292.1 million users.
+\end{solution}-->
+  d. Determine the rate of growth that will result in 220 million users in one year from September 2007. Then, use this to update your model from part (a), and make a plot of your function in RStudio.
+<!-- \begin{solution}
+Our model is $F(t) = 38a^t$. We wish to find the value of $a$ for which $F(52) = 220$. That is,
+\begin{eqnarray*}
+220  & = & 38 a^{52}\\
+\frac{220}{38} & = & a^{52} \\
+\left( \frac{220}{38} \right) ^ {1/52} & = & a \\
+1.0343 & \approx & a.
+\end{eqnarray*}
+Thus, 3.43\% growth per week will result in 220 million users one year later.
+\end{solution}-->
+  
+  Note: the actual number of Facebook users in September 2008 was 100 million.
+
+3. Radioactive cobalt-60 has a half-life of 5.3 years. If the initial amount is 60 grams, find a formula for the amount of cobalt-60 left after $t$ years. Plot your function in RStudio.
+<!-- \begin{solution}
+Our function is $f(t) = P_0 a^t$ where $t$ is time in years, and $f(t)$ is the amount of colbalt-60 in grams. Since $60 = f(0) = P_0 a^0$, we know that $P_0 = 60$. Hence, $f(t) = 60 a^t$. Since The half life is 5.3 years, we know that
+\begin{eqnarray*}
+30 & = & 60 a^{5.3}\\
+\frac{30}{60} & = & a^{5.3} \\
+\left( \frac{1}{2} \right) ^ {1/5.3} & = & a \\
+0.877 & \approx & a.
+\end{eqnarray*}
+Therefore, $f(t) = 60(0.877)^t$.
+\end{solution} -->
+
+4. In 1980, there were about 170 million vehicles (cars and trucks) and about 227 million people in the United States. The number of vehicles has been growing at 4\% a year, while the population has been growing at 1\% a year. 
+   a. When was there, on average, one vehicle per person? 
+<!--	\begin{solution}
+Let $v(t)$ be the number of vehicles (in millions) t years after 1980 and $p(t)$ be the number of people (in millions) t years after 1980. Based on the given information we have
+\begin{eqnarray*}
+v(t) & = & 170(1.04)^t\\
+p(t) & = & 227(1.01)^t.
+\end{eqnarray*}
+We want to solve
+\begin{eqnarray*}
+v(t) & = & p(t) \\
+170(1.04)^t & = & 227(1.01)^t \\
+\left( \frac{1.04}{1.01} \right)^t & = & \frac{227}{170} \\
+(1.0297) ^ t & = & 227/170 \\
+t \ln 1.0297 & = & \ln 1.3353 \\
+t & \approx & 9.87.
+\end{eqnarray*}
+Since $t$ is years since 1980, there will be one car per person in the year 1980 + 9.87 = 1989.87, that is, nearly 1990.
+\end{solution} -->
+
+   b. In RStudio, make a plot of the number of vehicles and the number of people over time on the same graph with a different color for each curve.
+<!--
+\begin{solution}
+\begin{verbatim}
+plotFun(170*1.04^t~t,xlim=range(0,40),xlab='Year since 1980',ylab='Number',
+main='Comparison of People vs Vehicles')
+plotFun(227*1.01^t~t,add=TRUE,col="green")
+\end{verbatim}
+\includegraphics[width=0.5\textwidth]{PeopleVehiclesPlot.png}
+\end{solution} -->
+
+   c. Use your models to predict the number of vehicles and the number of people today. Then use google to see how accurate these models are over time.
+<!-- \begin{solution}
+\begin{eqnarray*}
+v(40) & = & 170(1.04)^{40} \approx 816.17 \text{ million vehicles}\\
+p(40) & = & 227(1.01)^{40} \approx 337.97 \text{ million vehicles.}
+\end{eqnarray*}
+Google says there are about 273.6 million vehicles today and 328.2 million people.
+\end{solution} -->
+
+5. If an investment triples in 15 years, what interest rate (compounded continuously) does the investment earn?
+<!-- \begin{solution}
+Let's refer to the initial investment as $P_0$. Since continuous compounding is mentioned, we assume that we should use an exponential model of the form $P(t) = P_0 \exp{kt}$. The continuous compounding rate is $k$. Since the investment triples in 15 years, we know that
+\begin{eqnarray*}
+3 P_0 & = & P_0 e^{15k}\\
+3 & = & e^{15k} \\
+\ln 3 & = & 15 k \\
+k & = & (\ln 3)/15 \approx 0.073.
+\end{eqnarray*}
+Therefore, the interest rate is about 7.3\%.
+\end{solution} -->
