@@ -42,7 +42,7 @@ For $g(x)$, we note that each successive value is the previous one multiplied by
 
 2. A September 2007 article included the following passage about Peter Thiel, a Facebook investor and insider.
 
-> Thiel justified his faith (besides his stake in the company) in Facebook's prowess based on the exponential growth of the social network. Facebook is growing at 3 to 4 percent compounded weekly, with about 38 million members currently, he told me. At the current growth rate Facebook would have 220 million members in a year. ``In three years, we could have everybody on the planet, but that's not going to happen, but people underestimate the power of the exponential growth we are seeing," he said.
+> Thiel justified his faith (besides his stake in the company) in Facebook's prowess based on the exponential growth of the social network. Facebook is growing at 3 to 4 percent compounded weekly, with about 38 million members currently, he told me. At the current growth rate Facebook would have 220 million members in a year. "In three years, we could have everybody on the planet, but that's not going to happen, but people underestimate the power of the exponential growth we are seeing," he said.
 
   a. Construct a generic model function $F(t)$ (that is, with no numeric values in it) for the number of Facebook users at time $t$. Make sure to make a good choice for the units of $t$ and $F(t)$ and be sure to state what they are.
 <!-- \begin{solution}
