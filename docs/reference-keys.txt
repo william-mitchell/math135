@@ -21,6 +21,11 @@ plots
 single-variable-plots
 multivariable-plots
 plotting-data
+rstudio-quick-referrence
+common-functions
+defining-your-own-function
+creating-lists-of-data
+plotting-data-and-plotting-functions
 troubleshooting
 functions
 steps-of-the-modeling-cycle

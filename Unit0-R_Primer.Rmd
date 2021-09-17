@@ -1,8 +1,8 @@
-# (PART) Functions {-}
+<--# (PART) RStudio {-}-->
 
 # R Studio Primer
 
-```{r setup, include=FALSE, warning=FALSE}
+```{r, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
 ```
@@ -330,25 +330,5 @@ Cool, we've got our plot. Two things to note:
 
 * We have again put our dependent variable first and our independent variable second using the dependency symbol `~`. 
 * We need to put in the parameter data=somedata! Not doing so will result in an error, because RStudio does not know where to find these elusive variables time and temp. 
-
-## Troubleshooting
-Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here's a list of some common errors and what might be wrong:
-
-
-- _Nothing ran, all I got was a plus sign..._ You probably forgot some parentheses. Try the following:
-   - Enter a parenthesis on that line to see if this closes it out.
-   - Press the Escape key to get to a new line. 
-
-
-* _Unexpected symbol in..._ You may have forgotten a multiplication sign or otherwise gave RStudio a symbol it cannot parse. Check your line of code again to see if you have all your symbols.
-
-* _Object not found..._ You may not have defined that variable (or function) yet. Check your environment tab to see if it has the object you're looking for (or if you've called it something different than you remember!). You also may be trying to use something from a data set that you have not included as a parameter. See if you need to add in the parameter `data=....`
-
-* _Could not find function..._ RStudio doesn't know what function you're using. Check your capitalization and that you have the right packages installed.
-
-* _Argument "name" is missing, with no default..._
-You're probably trying to take a derivative or antiderivative without the mosaicCalc package. Go back to the packages section of the introduction for how to fix this.
-
-* _I can't find my data!_  You may have fetched it but did not give it a name. Go back to your fetch command and make sure you have assigned it a variable.
 
 
