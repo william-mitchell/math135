@@ -420,7 +420,7 @@ for each of the points in my sequence <code>S</code>. I’ll call those new valu
 <p>I like to build my functions with a makeFun command first, then we employ plotFun in a similar fashion.</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="r-studio-primer.html#cb38-1"></a>f=<span class="kw">makeFun</span>(<span class="dv">3</span><span class="op">*</span>x<span class="op">+</span><span class="dv">2</span><span class="op">*</span><span class="kw">sin</span>(pi<span class="op">*</span>x)<span class="op">~</span>x)</span>
 <span id="cb38-2"><a href="r-studio-primer.html#cb38-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x)<span class="op">~</span>x)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-18-1.png" width="432" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-22-1.png" width="432" style="display: block; margin: auto;" /></p>
 <p><code>plotFun</code> takes a whole variety of parameters, here are a few useful ones:</p>
 <ul>
 <li><code>xlim</code>, <code>ylim</code>: sets the range of your <span class="math inline">\(x\)</span>-axis. Example: <code>xlim=range(1,4), ylim=range(3,60)</code></li>
@@ -435,7 +435,7 @@ Example: <code>add=TRUE</code></li>
 <span id="cb39-3"><a href="r-studio-primer.html#cb39-3"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x)<span class="op">~</span>x, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="dv">1</span>,<span class="dv">4</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="dv">3</span>,<span class="dv">60</span>), </span>
 <span id="cb39-4"><a href="r-studio-primer.html#cb39-4"></a>        <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>,<span class="dt">xlab=</span><span class="st">&quot;time&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;red=velocity, blue=position&quot;</span>)</span>
 <span id="cb39-5"><a href="r-studio-primer.html#cb39-5"></a><span class="kw">plotFun</span>(<span class="kw">g</span>(x)<span class="op">~</span>x, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">add=</span><span class="ot">TRUE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-19-1.png" width="432" style="display: block; margin: auto;" /><img src="math135_handbook_files/figure-html/unnamed-chunk-19-2.png" width="432" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-23-1.png" width="432" style="display: block; margin: auto;" /><img src="math135_handbook_files/figure-html/unnamed-chunk-23-2.png" width="432" style="display: block; margin: auto;" /></p>
 <p>RStudio is a little weird about plots in the RMarkdown in that you might get multiples if you’re adding plots together. If you want the chunk to hold all plots until the end, add <code>fig.show='hold'</code> into the script braces at the top of the chunk.</p>
 </div>
 <div id="multivariable-plots" class="section level3">
@@ -443,7 +443,7 @@ Example: <code>add=TRUE</code></li>
 <p>Plotting multivariable functions in RStudio is very similar, but you’ll have to sort through more parameters and decide how you want to look at your function. Let’s start with what RStudio does as a default:</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="r-studio-primer.html#cb40-1"></a>g=<span class="kw">makeFun</span>(<span class="op">-</span>x<span class="op">*</span>y<span class="op">*</span><span class="kw">exp</span>(<span class="op">-</span>x<span class="op">^</span><span class="dv">2</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">~</span>x<span class="op">&amp;</span>y)</span>
 <span id="cb40-2"><a href="r-studio-primer.html#cb40-2"></a><span class="kw">plotFun</span>(<span class="kw">g</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-20-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-24-1.png" width="480" style="display: block; margin: auto;" /></p>
 <p>We are given quite a colorful plot! Since the function takes two variables, <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, we need some third way to display the output. That’s what the colors and contours do. The colors show the relative values of the function (cooler colors for smaller values) while the contours connect all points <span class="math inline">\((x,y)\)</span> that have the same function output. Again, this plotFun comes with parameters which can make a better picture. The ones from the single variable section still hold, so we’ll list just the new ones here.</p>
 <ul>
 <li><code>filled</code>: this determines whether you want the colors or not. Example: <code>filled=FALSE</code></li>
@@ -455,10 +455,10 @@ Example: <code>surface=TRUE</code></li>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="r-studio-primer.html#cb41-1"></a>g=<span class="kw">makeFun</span>(<span class="op">-</span>x<span class="op">*</span>y<span class="op">*</span><span class="kw">exp</span>(<span class="op">-</span>x<span class="op">^</span><span class="dv">2</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">~</span>x<span class="op">&amp;</span>y)</span>
 <span id="cb41-2"><a href="r-studio-primer.html#cb41-2"></a><span class="kw">plotFun</span>(<span class="kw">g</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>),</span>
 <span id="cb41-3"><a href="r-studio-primer.html#cb41-3"></a>        <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="kw">seq</span>(<span class="dt">from=</span><span class="op">-</span>.<span class="dv">2</span>,<span class="dt">to=</span>.<span class="dv">2</span>,<span class="dt">by=</span><span class="fl">0.05</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-21-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-25-1.png" width="480" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-studio-primer.html#cb42-1"></a>f=<span class="kw">makeFun</span>(<span class="dv">3</span><span class="op">*</span>x<span class="op">^</span><span class="dv">2</span><span class="op">-</span>x<span class="dv">-2</span><span class="op">*</span>y<span class="op">^</span><span class="dv">2</span><span class="op">+</span>y<span class="dv">-2</span><span class="op">~</span>x<span class="op">&amp;</span>y)</span>
 <span id="cb42-2"><a href="r-studio-primer.html#cb42-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">surface=</span><span class="ot">TRUE</span>, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">5</span>,<span class="dv">5</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">5</span>,<span class="dv">5</span>), <span class="dt">zlab=</span><span class="st">&quot;f(x,y)&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-22-1.png" width="432" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-26-1.png" width="432" style="display: block; margin: auto;" /></p>
 </div>
 <div id="plotting-data" class="section level3">
 <h3><span class="header-section-number">1.5.3</span> Plotting data</h3>
@@ -484,11 +484,11 @@ Example: <code>surface=TRUE</code></li>
 </tbody>
 </table>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="r-studio-primer.html#cb43-1"></a><span class="kw">plotPoints</span>(<span class="kw">c</span>(<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="op">-</span><span class="dv">2</span>)<span class="op">~</span><span class="kw">c</span>(<span class="op">-</span><span class="fl">2.2</span>,<span class="op">-</span><span class="fl">2.0</span>,<span class="op">-</span><span class="fl">1.8</span>,<span class="op">-</span><span class="fl">1.6</span>,<span class="op">-</span><span class="fl">1.4</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-23-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-27-1.png" width="480" style="display: block; margin: auto;" /></p>
 <p><em>Notice:</em> the <span class="math inline">\(y\)</span> coordinates go first! This is because we once again use the tilde to denote dependency.</p>
 <p>If you want to plot points from a data set, you’ll use the same command with some alternate parameters. I’ll use a previously loaded data set (unhelpfully) called somedata. It’s got two variables, time and temp. Check back in the data section for details.</p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="r-studio-primer.html#cb44-1"></a><span class="kw">plotPoints</span>(temp<span class="op">~</span>time,<span class="dt">data=</span>somedata)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-24-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-28-1.png" width="480" style="display: block; margin: auto;" /></p>
 <p>Cool, we’ve got our plot. Two things to note:</p>
 <ul>
 <li>We have again put our dependent variable first and our independent variable second using the dependency symbol <code>~</code>.</li>
