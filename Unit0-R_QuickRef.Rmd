@@ -131,14 +131,15 @@ We can also combine plots of data and functions using `add=TRUE`.
 
 ```{r}
 
-time_data = seq(0,5)
-pop_data = c(6.82, 7.05, 7.35, 7.66, 7.84, 8.24)
+time_data = seq(0,50, 10)
+pop_data = c(6.82, 9.63, 14.3, 20.48, 28.94, 42.25)
 
-plotPoints(pop_data ~ time_data, xlab='years since 2000', ylab='population (millions)')
+plotPoints(pop_data ~ time_data, xlab='years since 1950', ylab='population (millions)')
 
 P = makeFun( 6.82 * (1.037)^t ~ t)
 
 plotFun(P(t) ~ t, add=TRUE, col='orange')
+
 
 ```
 

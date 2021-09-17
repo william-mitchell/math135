@@ -356,44 +356,44 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="rstudio-quick-referrence.html#cb55-1"></a>X =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>)</span>
 <span id="cb55-2"><a href="rstudio-quick-referrence.html#cb55-2"></a>Y =<span class="st"> </span>X<span class="op">^</span><span class="dv">2</span></span>
 <span id="cb55-3"><a href="rstudio-quick-referrence.html#cb55-3"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="rstudio-quick-referrence.html#cb56-1"></a>x_data =<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">13</span>)</span>
 <span id="cb56-2"><a href="rstudio-quick-referrence.html#cb56-2"></a>y_data =<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">8</span>,<span class="dv">4</span>,<span class="dv">2</span>)</span>
 <span id="cb56-3"><a href="rstudio-quick-referrence.html#cb56-3"></a><span class="kw">plotPoints</span>(y_data <span class="op">~</span><span class="st"> </span>x_data)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <p>Use <code>plotFun</code> to plot a function.</p>
 <ul>
 <li>As with <code>plotPoints</code>, we use a tilde <code>~</code> to separate the output variable (the function) from the input variable.</li>
 <li>The optional <code>xlim</code> argument specifies the domain for the plot.</li>
 </ul>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="rstudio-quick-referrence.html#cb57-1"></a><span class="kw">plotFun</span>(<span class="kw">sin</span>(x) <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="rstudio-quick-referrence.html#cb58-1"></a><span class="kw">plotFun</span>(<span class="kw">sin</span>(x) <span class="op">~</span><span class="st"> </span>x, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>pi))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-34-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-30-2.png" width="672" /></p>
 <p>We can layer one plot on top of another by using the <code>add=TRUE</code> argument.</p>
 <ul>
 <li>You only need to specify the <code>xlim</code> for the <strong>first plot</strong> because the second one is added to the first.</li>
 <li>It’s helpful to change the color for subsequent plots. Use the argument <code>col="red"</code> using any color name you like (RStudio knows a lot of colors!)</li>
 </ul>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="rstudio-quick-referrence.html#cb59-1"></a><span class="kw">plotFun</span>(<span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">sin</span>(x) <span class="op">~</span><span class="st"> </span>x, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>pi))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="rstudio-quick-referrence.html#cb60-1"></a><span class="kw">plotFun</span>(<span class="kw">cos</span>(<span class="dv">3</span><span class="op">*</span>x) <span class="op">~</span><span class="st"> </span>x, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;green&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-35-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-31-2.png" width="672" /></p>
 <p>We can label the axes using <code>xlab</code> and <code>ylab</code>. When you are layering two plots, you must specify these labels in the first function that you plot!</p>
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="rstudio-quick-referrence.html#cb61-1"></a><span class="kw">plotFun</span>(<span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">sin</span>(x) <span class="op">~</span><span class="st"> </span>x, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>pi), <span class="dt">xlab=</span><span class="st">&#39;time&#39;</span>, <span class="dt">ylab=</span><span class="st">&#39;displacement&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="rstudio-quick-referrence.html#cb62-1"></a><span class="kw">plotFun</span>(<span class="kw">cos</span>(<span class="dv">3</span><span class="op">*</span>x) <span class="op">~</span><span class="st"> </span>x, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;green&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-36-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-32-2.png" width="672" /></p>
 <p>We can also combine plots of data and functions using <code>add=TRUE</code>.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="rstudio-quick-referrence.html#cb63-1"></a>time_data =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
-<span id="cb63-2"><a href="rstudio-quick-referrence.html#cb63-2"></a>pop_data =<span class="st"> </span><span class="kw">c</span>(<span class="fl">6.82</span>, <span class="fl">7.05</span>, <span class="fl">7.35</span>, <span class="fl">7.66</span>, <span class="fl">7.84</span>, <span class="fl">8.24</span>)</span>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="rstudio-quick-referrence.html#cb63-1"></a>time_data =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">50</span>, <span class="dv">10</span>)</span>
+<span id="cb63-2"><a href="rstudio-quick-referrence.html#cb63-2"></a>pop_data =<span class="st"> </span><span class="kw">c</span>(<span class="fl">6.82</span>, <span class="fl">9.63</span>, <span class="fl">14.3</span>, <span class="fl">20.48</span>, <span class="fl">28.94</span>, <span class="fl">42.25</span>)</span>
 <span id="cb63-3"><a href="rstudio-quick-referrence.html#cb63-3"></a></span>
-<span id="cb63-4"><a href="rstudio-quick-referrence.html#cb63-4"></a><span class="kw">plotPoints</span>(pop_data <span class="op">~</span><span class="st"> </span>time_data, <span class="dt">xlab=</span><span class="st">&#39;years since 2000&#39;</span>, <span class="dt">ylab=</span><span class="st">&#39;population (millions)&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<span id="cb63-4"><a href="rstudio-quick-referrence.html#cb63-4"></a><span class="kw">plotPoints</span>(pop_data <span class="op">~</span><span class="st"> </span>time_data, <span class="dt">xlab=</span><span class="st">&#39;years since 1950&#39;</span>, <span class="dt">ylab=</span><span class="st">&#39;population (millions)&#39;</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
 <div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="rstudio-quick-referrence.html#cb64-1"></a>P =<span class="st"> </span><span class="kw">makeFun</span>( <span class="fl">6.82</span> <span class="op">*</span><span class="st"> </span>(<span class="fl">1.037</span>)<span class="op">^</span>t <span class="op">~</span><span class="st"> </span>t)</span>
 <span id="cb64-2"><a href="rstudio-quick-referrence.html#cb64-2"></a></span>
 <span id="cb64-3"><a href="rstudio-quick-referrence.html#cb64-3"></a><span class="kw">plotFun</span>(<span class="kw">P</span>(t) <span class="op">~</span><span class="st"> </span>t, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-37-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-33-2.png" width="672" /></p>
 </div>
 <div id="troubleshooting" class="section level2">
 <h2><span class="header-section-number">2.5</span> Troubleshooting</h2>
