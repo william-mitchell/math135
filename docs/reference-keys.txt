@@ -26,6 +26,8 @@ common-functions
 defining-your-own-function
 creating-lists-of-data
 plotting-data-and-plotting-functions
+fitting-a-function-to-data
+fitting-a-power-function-to-data
 troubleshooting
 functions
 steps-of-the-modeling-cycle

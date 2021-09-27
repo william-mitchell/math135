@@ -158,7 +158,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#defining-your-own-function"><i class="fa fa-check"></i><b>2.2</b> Defining your own function</a></li>
 <li class="chapter" data-level="2.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-lists-of-data"><i class="fa fa-check"></i><b>2.3</b> Creating Lists of Data</a></li>
 <li class="chapter" data-level="2.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-plotting-functions"><i class="fa fa-check"></i><b>2.4</b> Plotting Data and Plotting Functions</a></li>
-<li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.5</b> Troubleshooting</a></li>
+<li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.5</b> Fitting a Function to Data</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-power-function-to-data"><i class="fa fa-check"></i><b>2.5.1</b> Fitting a Power Function to Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.6</b> Troubleshooting</a></li>
 </ul></li>
 <li class="part"><span><b>I Functions</b></span></li>
 <li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a><ul>
@@ -395,8 +398,73 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb64-3"><a href="rstudio-quick-referrence.html#cb64-3"></a><span class="kw">plotFun</span>(<span class="kw">P</span>(t) <span class="op">~</span><span class="st"> </span>t, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-33-2.png" width="672" /></p>
 </div>
+<div id="fitting-a-function-to-data" class="section level2">
+<h2><span class="header-section-number">2.5</span> Fitting a Function to Data</h2>
+<p>The <code>fitModel</code> command is part of the mosaic package. Here is how you would fit a linear model to data</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="rstudio-quick-referrence.html#cb65-1"></a>xdata =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb65-2"><a href="rstudio-quick-referrence.html#cb65-2"></a>ydata =<span class="st"> </span><span class="kw">c</span>(<span class="fl">5.3</span>, <span class="fl">7.7</span>, <span class="fl">10.1</span>, <span class="fl">11.3</span>, <span class="fl">12.0</span>    )</span>
+<span id="cb65-3"><a href="rstudio-quick-referrence.html#cb65-3"></a></span>
+<span id="cb65-4"><a href="rstudio-quick-referrence.html#cb65-4"></a><span class="kw">fitModel</span>(ydata  <span class="op">~</span><span class="st"> </span>A<span class="op">*</span><span class="st"> </span>xdata  <span class="op">+</span><span class="st"> </span>B)</span></code></pre></div>
+<pre><code>## function (xdata, ..., transformation = function (x) 
+## x) 
+## return(transformation(predict(model, newdata = data.frame(xdata = xdata), 
+##     ...)))
+## &lt;environment: 0x7ffebc030630&gt;
+## attr(,&quot;coefficients&quot;)
+##    A    B 
+## 1.70 4.18 
+## attr(,&quot;class&quot;)
+## [1] &quot;nlsfunction&quot; &quot;function&quot;</code></pre>
+<p>This output says that the best fitting linear function has slope <span class="math inline">\(A=1.70\)</span> and <span class="math inline">\(y\)</span>-intercept <span class="math inline">\(B=4.18\)</span>. So let’s create the corresponding linear function and plot it with the data.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="rstudio-quick-referrence.html#cb67-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(<span class="fl">1.70</span> <span class="op">*</span><span class="st">  </span>x <span class="op">+</span><span class="st"> </span><span class="fl">4.18</span> <span class="op">~</span><span class="st"> </span>x)</span>
+<span id="cb67-2"><a href="rstudio-quick-referrence.html#cb67-2"></a></span>
+<span id="cb67-3"><a href="rstudio-quick-referrence.html#cb67-3"></a><span class="kw">plotPoints</span>(ydata <span class="op">~</span><span class="st"> </span>xdata)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="rstudio-quick-referrence.html#cb68-1"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x) <span class="op">~</span><span class="st"> </span>x,  <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-35-2.png" width="672" /></p>
+<div id="fitting-a-power-function-to-data" class="section level3">
+<h3><span class="header-section-number">2.5.1</span> Fitting a Power Function to Data</h3>
+<p>Here are the steps to fit <code>xdata</code> and <code>ydata</code> to a power function <span class="math inline">\(f(x) = c x^p\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Take the log of both <code>xdata</code> and <code>ydata</code></li>
+<li>Fit a linear function <span class="math inline">\(y = A x + B\)</span> to the resulting data</li>
+<li>The original constants are <span class="math inline">\(p = A\)</span> and <span class="math inline">\(c = exp(B)\)</span></li>
+</ol>
+<p>Here is an example</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="rstudio-quick-referrence.html#cb69-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(<span class="fl">4.3</span> <span class="op">*</span><span class="st"> </span>x<span class="op">^</span>(<span class="fl">1.7</span>)<span class="op">~</span>x)</span>
+<span id="cb69-2"><a href="rstudio-quick-referrence.html#cb69-2"></a></span>
+<span id="cb69-3"><a href="rstudio-quick-referrence.html#cb69-3"></a>xdata =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>)</span>
+<span id="cb69-4"><a href="rstudio-quick-referrence.html#cb69-4"></a>ydata =<span class="st"> </span><span class="kw">c</span>(<span class="dv">7</span>, <span class="dv">33</span>, <span class="dv">65</span>, <span class="dv">110</span>, <span class="dv">180</span>)</span>
+<span id="cb69-5"><a href="rstudio-quick-referrence.html#cb69-5"></a></span>
+<span id="cb69-6"><a href="rstudio-quick-referrence.html#cb69-6"></a>logxdata =<span class="st"> </span><span class="kw">log</span>(xdata)</span>
+<span id="cb69-7"><a href="rstudio-quick-referrence.html#cb69-7"></a>logydata =<span class="st"> </span><span class="kw">log</span>(ydata)</span>
+<span id="cb69-8"><a href="rstudio-quick-referrence.html#cb69-8"></a></span>
+<span id="cb69-9"><a href="rstudio-quick-referrence.html#cb69-9"></a><span class="kw">fitModel</span>(logydata <span class="op">~</span><span class="st"> </span>A <span class="op">*</span><span class="st"> </span>logxdata <span class="op">+</span><span class="st"> </span>B)</span></code></pre></div>
+<pre><code>## function (logxdata, ..., transformation = function (x) 
+## x) 
+## return(transformation(predict(model, newdata = data.frame(logxdata = logxdata), 
+##     ...)))
+## &lt;environment: 0x7ffec4ea12b0&gt;
+## attr(,&quot;coefficients&quot;)
+##        A        B 
+## 1.449432 1.915983 
+## attr(,&quot;class&quot;)
+## [1] &quot;nlsfunction&quot; &quot;function&quot;</code></pre>
+<p>This tells us that <span class="math inline">\(A=1.45\)</span> and <span class="math inline">\(B=1.92\)</span>. We solve for <span class="math inline">\(c\)</span> and plot the function with the data</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="rstudio-quick-referrence.html#cb71-1"></a>p =<span class="st"> </span><span class="fl">1.45</span></span>
+<span id="cb71-2"><a href="rstudio-quick-referrence.html#cb71-2"></a>p</span></code></pre></div>
+<pre><code>## [1] 1.45</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="rstudio-quick-referrence.html#cb73-1"></a>c =<span class="st"> </span><span class="kw">exp</span>(<span class="fl">1.92</span>)</span>
+<span id="cb73-2"><a href="rstudio-quick-referrence.html#cb73-2"></a>c</span></code></pre></div>
+<pre><code>## [1] 6.820958</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="rstudio-quick-referrence.html#cb75-1"></a><span class="kw">plotPoints</span>(ydata <span class="op">~</span><span class="st"> </span>xdata)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="rstudio-quick-referrence.html#cb76-1"></a><span class="kw">plotFun</span>(<span class="fl">6.82</span> <span class="op">*</span><span class="st"> </span>x<span class="op">^</span><span class="fl">1.45</span> <span class="op">~</span><span class="st"> </span>x, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;orange&#39;</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-37-2.png" width="672" /></p>
+</div>
+</div>
 <div id="troubleshooting" class="section level2">
-<h2><span class="header-section-number">2.5</span> Troubleshooting</h2>
+<h2><span class="header-section-number">2.6</span> Troubleshooting</h2>
 <p>Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here’s a list of some common errors and what might be wrong:</p>
 <ul>
 <li><p><em>Nothing ran, all I got was a plus sign…</em> You probably forgot some parentheses. Try the following:</p>
