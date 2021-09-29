@@ -28,6 +28,7 @@ creating-lists-of-data
 plotting-data-and-plotting-functions
 fitting-a-function-to-data
 fitting-a-power-function-to-data
+plotting-3d-functions
 troubleshooting
 functions
 steps-of-the-modeling-cycle
@@ -55,5 +56,7 @@ you-try-4
 exponential-and-logarithmic-functions
 goals-2
 tasks-2
-periodic-functions
+power-functions
 tasks-3
+periodic-functions
+tasks-4

@@ -1,0 +1,126 @@
+---
+title: "Untitled"
+author: "Andrew Beveridge"
+date: "9/23/2021"
+output: html_document
+---
+
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+
+
+The exam will have:
+
+
+1. Zipf law (fit power function, thinking about models and conclusions)
+
+2. Beer froth decay (exponential function from 2 points)
+
+3. Lung volume (sin function) 
+
+
+4. Lava java sketch the contour (pick from choices), estimate rate of change
+or
+Kristin's Cobb-Douglas function  about diminishing returns
+
+
+linear functions
+rate of change
+multivariable functions
+
+units
+dimension
+fermi
+
+Coffee drink by Macalester students in a semester.
+
+```{r}
+2000 * 1.5  * 4*30 * 16 / 128
+```
+
+
+
+```{r}
+plotFun(35.74+0.6215*T-35.75*V^(0.16)+0.4275*T*V^(0.16)~T & V, T.lim=range(-30,30),
+V.lim=range(5,40),zlab="V",xlab="T",ylab="W")
+```
+```{r}
+tdata = seq(0.05,.5, .05)
+distdata = c(0.3, 1.25, 2.4, 4.6, 7.1, 10, 13.8, 18.1, 22.6, 28.0)
+plotPoints(distdata~tdata)
+logtdata = log(tdata)
+logdistdata = log(distdata)
+fitModel(logdistdata~A*logtdata+B)
+plotFun(exp(4.68) * x^1.97~x, add=TRUE, col='red')
+```
+```{r}
+plotFun(exp(4.68) * x^1.97~x,  col='red')
+```
+
+```{r}
+x = seq(1,14)
+pop=c(8.80, 3.90, 2.75, 2.31, 1.61, 1.60, 1.43, 1.39, 1.30, 1.01, 0.96, 0.95, 0.92, 0.91)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+plotPoints(pop~x)
+plotFun(exp(2.007)*x^(-0.84)~x, add=TRUE, col='red')
+```
+
+It has been long observed that the populations of the largest cities seem to follow a power law
+$pop(r) = C r^p$ where $r$ is the rank of the city's population (1st, 2nd, 3rd, 4th largest, and so on). Find the values of C and p for US Metro Areas
+
+```{r}
+x = seq(1,14)
+pop=c(18.82, 12.46, 8.88, 6.49, 6.40, 6.17, 5.91, 5.73, 5.38, 4.58, 4.32, 3.53, 3.46, 3.31)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+plotPoints(pop~x)
+plotFun(exp(2.91)*x^(-0.62)~x, add=TRUE, col='red')
+```
+
+
+
+
+Find the values of C and p for World Metro Areas
+
+```{r}
+x = seq(1,14)
+pop=c(37.34, 31.18, 27.80, 22.24, 21.92, 21.74, 21.32, 20.90, 20.67, 19.11, 18.82, 16.50, 16.38, 15.42)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+plotPoints(pop~x)
+plotFun(exp(3.62)*x^(-0.31)~x, add=TRUE, col='red')
+```
+How about European metro?
+```{r}
+x = seq(1,14)
+pop=c(11.02, 6.13, 6.03, 4.91, 4.59, 3.97, 3.57, 3.33, 3.19, 2.77, 2.66, 2.40, 2.09, 1.99)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+plotPoints(pop~x)
+plotFun(exp(2.41)*x^(-0.61)~x, add=TRUE, col='red')
+```
+
+
+
+How about African metro?
+```{r}
+x = seq(1,14)
+pop=c(20.90, 16.73, 14.37, 8.33, 7.77, 6.70, 6.58, 5.83, 5.78, 5.28, 5.20, 4.80, 4.62, 4.00)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+plotPoints(pop~x)
+plotFun(exp(3.15)*x^(-0.65)~x, add=TRUE, col='red')
+```
+
+
+
+(a) Find the best-fitting power function for each of these data sets
+(b) Are the exponents $p$ for the three functions roughly equal? Does this support or contradict the hypothesis, or is it neutral?
+(c) Are the constants $C$ for the three functions roughly equal? Does this support or contradict the hypothesis, or is it neutral?
+

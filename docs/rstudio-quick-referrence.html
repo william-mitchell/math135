@@ -161,7 +161,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.5</b> Fitting a Function to Data</a><ul>
 <li class="chapter" data-level="2.5.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-power-function-to-data"><i class="fa fa-check"></i><b>2.5.1</b> Fitting a Power Function to Data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.6</b> Troubleshooting</a></li>
+<li class="chapter" data-level="2.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-3d-functions"><i class="fa fa-check"></i><b>2.6</b> Plotting 3D Functions</a></li>
+<li class="chapter" data-level="2.7" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.7</b> Troubleshooting</a></li>
 </ul></li>
 <li class="part"><span><b>I Functions</b></span></li>
 <li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a><ul>
@@ -193,8 +194,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="6.1" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#goals-2"><i class="fa fa-check"></i><b>6.1</b> Goals</a></li>
 <li class="chapter" data-level="6.2" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#tasks-2"><i class="fa fa-check"></i><b>6.2</b> Tasks</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="periodic-functions.html"><a href="periodic-functions.html"><i class="fa fa-check"></i><b>7</b> Periodic Functions</a><ul>
-<li class="chapter" data-level="7.1" data-path="periodic-functions.html"><a href="periodic-functions.html#tasks-3"><i class="fa fa-check"></i><b>7.1</b> Tasks</a></li>
+<li class="chapter" data-level="7" data-path="power-functions.html"><a href="power-functions.html"><i class="fa fa-check"></i><b>7</b> Power Functions</a><ul>
+<li class="chapter" data-level="7.1" data-path="power-functions.html"><a href="power-functions.html#tasks-3"><i class="fa fa-check"></i><b>7.1</b> Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="periodic-functions.html"><a href="periodic-functions.html"><i class="fa fa-check"></i><b>8</b> Periodic Functions</a><ul>
+<li class="chapter" data-level="8.1" data-path="periodic-functions.html"><a href="periodic-functions.html#tasks-4"><i class="fa fa-check"></i><b>8.1</b> Tasks</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
@@ -409,7 +413,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(xdata = xdata), 
 ##     ...)))
-## &lt;environment: 0x7ffebc030630&gt;
+## &lt;environment: 0x7ffec3fe2a28&gt;
 ## attr(,&quot;coefficients&quot;)
 ##    A    B 
 ## 1.70 4.18 
@@ -444,7 +448,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(logxdata = logxdata), 
 ##     ...)))
-## &lt;environment: 0x7ffec4ea12b0&gt;
+## &lt;environment: 0x7ffede6cd0a0&gt;
 ## attr(,&quot;coefficients&quot;)
 ##        A        B 
 ## 1.449432 1.915983 
@@ -463,8 +467,26 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-37-2.png" width="672" /></p>
 </div>
 </div>
+<div id="plotting-3d-functions" class="section level2">
+<h2><span class="header-section-number">2.6</span> Plotting 3D Functions</h2>
+<p>We plot 3D functions <span class="math inline">\(z = f(x,y)\)</span> using the <code>plotFun()</code> command. We specify the independent variables with the syntax <code>~ x&amp;y</code>. By default, RStudio will create a <strong>contour plot</strong> of this function and include <strong>shading</strong> to help visualize the values of the function.</p>
+<p>You can add more contours using the <code>levels</code> parameter, and turn off the shading with the <code>filled</code> parameter</p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="rstudio-quick-referrence.html#cb77-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span>y<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y)</span>
+<span id="cb77-2"><a href="rstudio-quick-referrence.html#cb77-2"></a></span>
+<span id="cb77-3"><a href="rstudio-quick-referrence.html#cb77-3"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y) <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>You can add more contours using the <code>levels</code> parameter, and turn off the shading with the <code>filled</code> parameter</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="rstudio-quick-referrence.html#cb78-1"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y) <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y, <span class="dt">levels =</span> <span class="kw">seq</span>(<span class="op">-</span><span class="dv">1</span> ,<span class="dv">1</span>, <span class="fl">.2</span>), <span class="dt">filled =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p>You can change the plot range using <code>xlim</code> and <code>ylim</code>.</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="rstudio-quick-referrence.html#cb79-1"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y) <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">20</span>,<span class="dv">20</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>You can create a 3D plot by setting <code>surface=TRUE</code>.</p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="rstudio-quick-referrence.html#cb80-1"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y) <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">20</span>,<span class="dv">20</span>), <span class="dt">surface=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+</div>
 <div id="troubleshooting" class="section level2">
-<h2><span class="header-section-number">2.6</span> Troubleshooting</h2>
+<h2><span class="header-section-number">2.7</span> Troubleshooting</h2>
 <p>Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here’s a list of some common errors and what might be wrong:</p>
 <ul>
 <li><p><em>Nothing ran, all I got was a plus sign…</em> You probably forgot some parentheses. Try the following:</p>

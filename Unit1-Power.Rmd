@@ -1,0 +1,28 @@
+# Power Functions
+
+
+This activity is intended to further your understanding of power functions.  
+
+
+When you have data that you suspect comes from a power function $y=k x^p$, you can apply this technique to discover the power (exponent). Here are the steps:
+
+1. Take the natural log of both the $x$-axis data and the $y$-axis data
+2. Fit a line to the resulting data 
+3. Use the slope and $y$-intercept of this line to find the values of the power $p$ and the constant $k$.
+
+## Tasks
+
+Let's do an example where we know the power law in advance. Suppose we start out with 
+$$y = \frac{3}{x^2}.$$ 
+Do the following calculations using R.
+
+
+
+1. Compute the function value for $x = 2, 4, 7, 8, 12,$ and 20.
+1.  Now you have a list of data points: $(2,0.75)$, and so forth. Take the natural log ($\ln$) of the $x$ coordinate and the $y$ coordinate to get a new list of points. These will be $(0.693, -0.2877)$ and so forth.
+1. Plot these (transformed) points. They should look like a line.
+1. Find the slope of the line. What is it? How does that quantity appear in the original function?
+1. Find the vertical intercept of the line. Take the value of the intercept and exponentiate it... that is, if the intercept is $b$, take $e^b$. How does this quantity show up in the original function?
+
+
+In practice, this technique is applied starting with step 2: data! If the log-transformed data  looks like a line then you have a power law, and you can determine the power and the constant of proportionality as above.
