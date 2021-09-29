@@ -200,11 +200,10 @@ plotFun(6.82 * x^1.45 ~ x, add=TRUE, col='orange')
 
 ```
 
-## Plotting 3D Functions
+## Plotting Surfaces in 3D
 
-We plot 3D functions $z = f(x,y)$ using the `plotFun()` command. We specify the independent variables with the syntax `~ x&y`. By default, RStudio will create a **contour plot** of this function and include **shading** to help visualize the values of the function.
+We plot functions $z = f(x,y)$ using the `plotFun()` command. We specify the independent variables with the syntax `~ x&y`. By default, RStudio will create a **contour plot** of this function and include **shading** to help visualize the values of the function.
 
-You can add more contours using the `levels` parameter, and turn off the shading with the `filled` parameter
 
 ```{r}
 f = makeFun(x^2 - y^2 ~ x&y)
@@ -213,7 +212,7 @@ plotFun(f(x,y) ~ x&y)
 
 ```
 
-You can add more contours using the `levels` parameter, and turn off the shading with the `filled` parameter
+You can add more contours using the `levels` parameter, and turn off the shading with the `filled` parameter.
 
 ```{r}
 plotFun(f(x,y) ~ x&y, levels = seq(-1 ,1, .2), filled = FALSE)
