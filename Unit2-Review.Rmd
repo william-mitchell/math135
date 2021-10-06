@@ -21,7 +21,7 @@
 
   1. If all the humans in the world were crammed together, how much area would we require? Is this closer to the size of a city, a state, the U.S., or North America? Hint: start by figuring out how many people would fit in 1 square meter. Then figure out how many square kilometers we would need.
 
-  1. If you combined all the liquid you’ve consumed over your lifetime, how many olympic swimming pools would it fill?
+  1. If you combined all the liquid you’ve consumed over your lifetime, how many Olympic swimming pools would it fill?
   
 ##  Solutions
 
@@ -36,7 +36,7 @@ $$
 $$\frac{35 \mbox{ miles}}{1 \mbox{ hour}} \cdot \frac{5280 \mbox{ feet}}{1 \mbox{ miles}} \cdot\frac{1 \mbox{ hour}}{60 \mbox{ minutes}}\cdot \frac{1 \mbox{ minute}}{60 \mbox{ seconds}} = 51.33 \frac{\mbox{feet}}{\mbox{sec}}$$
   Now let's convert to centimeters per second
 $$
-\frac{51.33 \mbox{ feet}}{1 \mbox{ sec}} \cdot \frac{12 \mbox{ inches}}{1 \mbox{ feet}} \cdot \frac{2.54 \mbox{ cm}}{1 \mbox{ sec}} = 1564.64 \frac{\mbox{cm}}{\mbox{sec}}
+\frac{51.33 \mbox{ feet}}{1 \mbox{ sec}} \cdot \frac{12 \mbox{ inches}}{1 \mbox{ feet}} \cdot \frac{2.54 \mbox{ cm}}{1 \mbox{ inch}} = 1564.64 \frac{\mbox{cm}}{\mbox{sec}}
 $$
 
 
@@ -76,6 +76,10 @@ LT^{-1} &=& (L^{-1})^a (LT^{-2})^b (ML^{-3})^c \\
  L^1 T^{-1} M^0 &=& L^{a+b-3c} T^{-2b} M^{c}
 \end{array}
 $$
+so we have the equations
+$$
+1 = a+b - 3c \qquad -1 = -2b \qquad 0 = c
+$$
 which means that $c=0$ and $b=1/2$ and $a=1/2$. So our final equation is
 $$
 V = k  \sqrt{Pg}
@@ -97,4 +101,4 @@ $$
 $$
 \frac{3 \mbox{ liters}}{1 \mbox{ day}}\frac{365 \mbox{ days}}{1 \mbox{ year}} \times (20 \mbox{ years}) = 21,900 \mbox{ liters}.
 $$
-Now we need to approximate the volume of a swimming pool. I know that olympic  swimming pools are $50$ meters long. The width smaller: let's guess  $30$ meters, and the depth is about 3 meters (not 1 meter). So the volume of a pool is $50m \times 30m \times 3m = 4500 m^3$. There are 1000 liters in a  cubic meter, so you've consumed about 22 cubic meters of liquids in your life. That's much smaller than one swimming pool. It would only have a depth of $22/(50*30)=0.015$  meters, which is 1.5 cm. That's enough water to get your feet wet.
+Now we need to approximate the volume of a swimming pool. I know that Olympic  swimming pools are $50$ meters long. The width smaller: let's guess  $30$ meters, and the depth is about 3 meters (not 1 meter). So the volume of a pool is $50m \times 30m \times 3m = 4500 m^3$. There are 1000 liters in a  cubic meter, so you've consumed about 22 cubic meters of liquids in your life. That's much smaller than one swimming pool. It would only have a depth of $22/(50*30)=0.015$  meters, which is 1.5 cm. That's enough water to get your feet wet.
