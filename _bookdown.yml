@@ -9,7 +9,8 @@ rmd_files: ["index.Rmd",
   "Unit1-R_Intro.Rmd",
   "Unit1-Exp.Rmd",
   "Unit1-Power.Rmd",
-  "Unit1-Periodic.Rmd"]
+  "Unit1-Periodic.Rmd",
+  "Unit2-Review.Rmd"]
 language:
   ui: 
     chapter_name: "Topic "

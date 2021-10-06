@@ -170,7 +170,7 @@ Here are the steps to fit `xdata` and `ydata` to a power function $f(x) = c x^p$
 
 1. Take the log of both `xdata` and `ydata`
 2. Fit a linear function $y = A x + B$ to the resulting data
-3. The original constants are $p = A$ and $c = exp(B)$
+3. The original constants are `p = A` and `c = exp(B)`
 
 Here is an example
 
