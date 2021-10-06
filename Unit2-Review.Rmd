@@ -82,14 +82,14 @@ V = k  \sqrt{Pg}
 $$
 
 ### Fermi Estimation
-  1. The population  of the earth is growing, but not very quickly.  So let's assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is  born each year, too
+  1. The population  of the earth is growing, but not very quickly.  So let's assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is also born each year. This leads to the estimation:
 $$
 7.8 \times 10^9 \mbox{ people} \times \frac{1 \mbox{ birth/year}}{73 \mbox{ people}}  \times \frac{1 \mbox{ year}}{365 \mbox{ days}} = 292,738 \frac{\mbox{ births}}{\mbox{ day}} 
 $$
   
  
 
-  1. Let's start with the hint: How many people could we cram  into one square meter? I think that we could fit about 10 people (but not 30). So  we would need $7.8 \times 10^8$ square meters to fit everyone on the planet.  Converting to square kilometers requires dividing by $(10^3)^2$, which gives $780$ square kilometers. This is less than $30^2=900$, which is much closer to the size of a city than the size of a state.
+  1. Let's start with the hint: How many people could we cram  into one square meter? I think that we could fit about 10 people (but not 30). So  we would need $7.8 \times 10^8$ square meters to fit everyone on the planet.  Converting to square kilometers requires dividing by $(10^3)^2$, which gives $780$ square kilometers. This is less than $30^2=900$, which is much closer to the size of a city than the size of a state. $30 km \times 30 km$ is similar to the size of a "metro area"  of a big city.
   
 
 
@@ -97,4 +97,4 @@ $$
 $$
 \frac{3 \mbox{ liters}}{1 \mbox{ day}}\frac{365 \mbox{ days}}{1 \mbox{ year}} \times (20 \mbox{ years}) = 21,900 \mbox{ liters}.
 $$
-Now we need to approximate the volume of a swimming pool. I know that olympic  swimming pools are $50$ meters long. The width smaller: let's guess  $30$ meters, and the depth is about 3 meters (not 1 meter). So the volume of a pool is $50 \times 30 \times 3 = 4500 m^3$. There are 1000 liters in a  cubic meter, so you've consumed about 22 cubic meters of liquids in your life. That's much smaller than one swimming pool. It would only have a depth of $22/(50*30)=0.015$  meters, which is 1.5 cm. 
+Now we need to approximate the volume of a swimming pool. I know that olympic  swimming pools are $50$ meters long. The width smaller: let's guess  $30$ meters, and the depth is about 3 meters (not 1 meter). So the volume of a pool is $50m \times 30m \times 3m = 4500 m^3$. There are 1000 liters in a  cubic meter, so you've consumed about 22 cubic meters of liquids in your life. That's much smaller than one swimming pool. It would only have a depth of $22/(50*30)=0.015$  meters, which is 1.5 cm. That's enough water to get your feet wet.
