@@ -72,18 +72,20 @@ $$
 \begin{array}{rcl}
 V &=& k P^a g^b \mu^c \\
 [V] &=& [P]^a [g]^b [\mu]^c \\
-LT^{-1} &=& (L^{-1})^a (LT^{-2})^b (ML^{-3})^c \\
- L^1 T^{-1} M^0 &=& L^{a+b-3c} T^{-2b} M^{c}
+LT^{-1} &=& (T)^a (LT^{-2})^b (ML^{-3})^c \\
+ L^1 T^{-1} M^0 &=& L^{b-3c} T^{a-2b} M^{c}
 \end{array}
 $$
 so we have the equations
 $$
-1 = a+b - 3c \qquad -1 = -2b \qquad 0 = c
+1 = b - 3c \qquad -1 = a-2b \qquad 0 = c
 $$
-which means that $c=0$ and $b=1/2$ and $a=1/2$. So our final equation is
+which means that $c=0$ and $b=1$ and $a=1$. So our final equation is
 $$
-V = k  \sqrt{Pg}
+V = k Pg
 $$
+
+
 
 ### Fermi Estimation
   1. The population  of the earth is growing, but not very quickly.  So let's assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is also born each year. This leads to the estimation:
@@ -93,12 +95,12 @@ $$
   
  
 
-  1. Let's start with the hint: How many people could we cram  into one square meter? I think that we could fit about 10 people (but not 30). So  we would need $7.8 \times 10^8$ square meters to fit everyone on the planet.  Converting to square kilometers requires dividing by $(10^3)^2$, which gives $780$ square kilometers. This is less than $30^2=900$, which is much closer to the size of a city than the size of a state. $30 km \times 30 km$ is similar to the size of a "metro area"  of a big city.
+  1. Let's start with the hint: How many people could we cram  into one square meter? I think that we could fit about 10 people (but not 30). So  we would need $7.8 \times 10^8$ square meters to fit everyone on the planet.  Converting to square kilometers requires dividing by $(10^3)^2$, which gives $780$ square kilometers. This is less than $30^2=900$, which is much closer to the size of a city than the size of a state. In fact, $30 km \times 30 km$  is similar to the size of the  "metro area"  of a big city.
   
 
 
   1. How much do you drink each day? It's probably between 1 liter and 3 liters. So let's assume that it's 3 liters per day. You've been alive for about 20 years. So the amount of liquids that you've consumed is at most
 $$
-\frac{3 \mbox{ liters}}{1 \mbox{ day}}\frac{365 \mbox{ days}}{1 \mbox{ year}} \times (20 \mbox{ years}) = 21,900 \mbox{ liters}.
+\frac{3 \mbox{ liters}} \times {1 \mbox{ day}}\frac{365 \mbox{ days}}{1 \mbox{ year}} \times (20 \mbox{ years}) = 21,900 \mbox{ liters}.
 $$
 Now we need to approximate the volume of a swimming pool. I know that Olympic  swimming pools are $50$ meters long. The width smaller: let's guess  $30$ meters, and the depth is about 3 meters (not 1 meter). So the volume of a pool is $50m \times 30m \times 3m = 4500 m^3$. There are 1000 liters in a  cubic meter, so you've consumed about 22 cubic meters of liquids in your life. That's much smaller than one swimming pool. It would only have a depth of $22/(50*30)=0.015$  meters, which is 1.5 cm. That's enough water to get your feet wet.
