@@ -86,14 +86,6 @@ V = k Pg
 $$
 
 
-V = D^a P^b S^c
-
-L/T = M/L^3 * 1/T * M/T^2
-
-1 = -3a
--1 = -b-2cc
-0 = a+c
-
 ### Fermi Estimation
   1. The population  of the earth is growing, but not very quickly.  So let's assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is also born each year. This leads to the estimation:
 $$
