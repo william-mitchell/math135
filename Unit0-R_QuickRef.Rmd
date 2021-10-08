@@ -200,6 +200,52 @@ plotFun(6.82 * x^1.45 ~ x, add=TRUE, col='orange')
 
 ```
 
+### Fitting a Model by Specifying Starting Values
+
+Sometimes `fitModel` fails to find a good model for the data. Here are two things that can happen.
+
+* The command  `fitModel` fails,complaining about a "singular gradient." This means that `fitModel` picked a bad starting point, and can't figure out how to improve it's initial guess.
+* The command `fitModel` does find a function, but when we plot it, we realize that it's not what we want. 
+
+Here is an example of `fitModel` returning a function that we don't like. Let's load in the `utilities.csv' data set and look at the first few rows.
+
+```{r}
+utilitydata = fetch::fetchData("utilities.csv")
+head(utilitydata)
+```
+
+Now let's plot temperature versus month
+
+```{r}
+plotPoints(temp ~ month, data=utilitydata)
+```
+
+We have ploted monthly temperature data for multiple years. Let's try to fit a periodic function.
+
+```{r}
+M = fitModel(temp ~ A * sin(w*(month + p))+C, data=utilitydata)
+coef(M)
+
+f = makeFun(-28.7 * sin(-6.8*(t + 56.2))+47.2 ~ t)
+plotFun(f(t)~t, add=TRUE, col='red')
+```
+
+This is not what we wanted! It looks like `fitModel` was confused by the multiple data points for each month. So the frequency `w` is completely wrong! We can correct this by specifying an initial guess for `w`. We think that the period should be 12 months, so we want to start with `w=2*pi/12`.
+
+```{r}
+M = fitModel(temp ~ A * sin(w*(month + p))+C, data=utilitydata, start=list(w=2*pi/12))
+coef(M)
+
+f = makeFun(-28.7 * sin(0.5*(t -22.8))+47.2 ~ t)
+plotFun(f(t)~t, add=TRUE, col='orange')
+```
+
+
+
+
+
+That looks much better!
+
 ## Plotting Surfaces in 3D
 
 We plot functions $z = f(x,y)$ using the `plotFun()` command. We specify the independent variables with the syntax `~ x&y`. By default, RStudio will create a **contour plot** of this function and include **shading** to help visualize the values of the function.

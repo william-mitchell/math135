@@ -28,6 +28,7 @@ creating-lists-of-data
 plotting-data-and-plotting-functions
 fitting-a-function-to-data
 fitting-a-power-function-to-data
+fitting-a-model-by-specifying-starting-values
 plotting-surfaces-in-3d
 troubleshooting
 functions

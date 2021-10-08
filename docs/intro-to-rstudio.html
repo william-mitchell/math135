@@ -160,6 +160,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-plotting-functions"><i class="fa fa-check"></i><b>2.4</b> Plotting Data and Plotting Functions</a></li>
 <li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.5</b> Fitting a Function to Data</a><ul>
 <li class="chapter" data-level="2.5.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-power-function-to-data"><i class="fa fa-check"></i><b>2.5.1</b> Fitting a Power Function to Data</a></li>
+<li class="chapter" data-level="2.5.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-model-by-specifying-starting-values"><i class="fa fa-check"></i><b>2.5.2</b> Fitting a Model by Specifying Starting Values</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-surfaces-in-3d"><i class="fa fa-check"></i><b>2.6</b> Plotting Surfaces in 3D</a></li>
 <li class="chapter" data-level="2.7" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.7</b> Troubleshooting</a></li>
@@ -332,21 +333,21 @@ run an individual chunk by clicking on the green arrow in its upper right corner
 <div id="variables-lists-and-sequences" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Variables, Lists and Sequences</h3>
 <p>When we do a calculation, we can store the result for later. Here are some examples:</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="intro-to-rstudio.html#cb85-1"></a>a =<span class="st"> </span><span class="dv">15</span></span>
-<span id="cb85-2"><a href="intro-to-rstudio.html#cb85-2"></a>b =<span class="st"> </span><span class="dv">4</span> <span class="op">*</span><span class="st"> </span>a</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="intro-to-rstudio.html#cb96-1"></a>a =<span class="st"> </span><span class="dv">15</span></span>
+<span id="cb96-2"><a href="intro-to-rstudio.html#cb96-2"></a>b =<span class="st"> </span><span class="dv">4</span> <span class="op">*</span><span class="st"> </span>a</span></code></pre></div>
 <p>R is particularly good at doing calculations on lists of data. So let’s make some lists!</p>
 <p>RStudio makes a list with the <code>c()</code> command. The “c” in short for “combine”.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="intro-to-rstudio.html#cb86-1"></a>P=<span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">11</span>, <span class="dv">-1</span>, <span class="dv">4</span>)</span>
-<span id="cb86-2"><a href="intro-to-rstudio.html#cb86-2"></a>P</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="intro-to-rstudio.html#cb97-1"></a>P=<span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">11</span>, <span class="dv">-1</span>, <span class="dv">4</span>)</span>
+<span id="cb97-2"><a href="intro-to-rstudio.html#cb97-2"></a>P</span></code></pre></div>
 <pre><code>## [1]  3  5 11 -1  4</code></pre>
 <p>If you want to make a sequence, you use the <code>seq()</code> command. For example:</p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="intro-to-rstudio.html#cb88-1"></a>S=<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
-<span id="cb88-2"><a href="intro-to-rstudio.html#cb88-2"></a>S</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="intro-to-rstudio.html#cb99-1"></a>S=<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb99-2"><a href="intro-to-rstudio.html#cb99-2"></a>S</span></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <p>Notice that the values increment by 1. You can use a different step size by adding a third argument.
 For exmaple, if I wanted a sequence 1, 1.1, 1.2, 1.3, etc… all the way up to 2, I would write</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="intro-to-rstudio.html#cb90-1"></a>T=<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">0.1</span>)</span>
-<span id="cb90-2"><a href="intro-to-rstudio.html#cb90-2"></a>T</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="intro-to-rstudio.html#cb101-1"></a>T=<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">0.1</span>)</span>
+<span id="cb101-2"><a href="intro-to-rstudio.html#cb101-2"></a>T</span></code></pre></div>
 <pre><code>##  [1] 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0</code></pre>
 <p>Now look at the <strong>Environment</strong> tab in the upper right window. What do you notice?</p>
 <p><strong>Pro Tips</strong>: Be kind to future you as well as current collaborators.</p>
@@ -368,14 +369,14 @@ For exmaple, if I wanted a sequence 1, 1.1, 1.2, 1.3, etc… all the way up to 2
 <div id="functions-1" class="section level3">
 <h3><span class="header-section-number">5.3.3</span> Functions</h3>
 <p>Now it’s time to write your own function. Here is how you create <span class="math inline">\(f(x)= x^2 -3\)</span>.</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="intro-to-rstudio.html#cb92-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">3</span> <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="intro-to-rstudio.html#cb103-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">3</span> <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
 <p>Much of this is pretty intuitive, except for maybe the final <code>~ x</code>. This tilde symbol comes up a lot in RStudio and it indicates <em>dependence</em>. We need to tell RStudio that <span class="math inline">\(f\)</span> is in terms of this variable <span class="math inline">\(x\)</span>, so it knows where to put an input when I ask it to:</p>
 <p>Notice! In the right upper window, you now have a function called <code>f</code>. We can do a lot with this function, but
 to start, let’s evaluate it at 1.</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="intro-to-rstudio.html#cb93-1"></a><span class="kw">f</span>(<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="intro-to-rstudio.html#cb104-1"></a><span class="kw">f</span>(<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] -2</code></pre>
 <p>What do you think this code is doing?</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="intro-to-rstudio.html#cb95-1"></a><span class="kw">f</span>(S)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="intro-to-rstudio.html#cb106-1"></a><span class="kw">f</span>(S)</span></code></pre></div>
 <pre><code>##  [1] -2  1  6 13 22 33 46 61 78 97</code></pre>
 <div id="you-try-2" class="section level4">
 <h4><span class="header-section-number">5.3.3.1</span> You Try</h4>
@@ -412,19 +413,19 @@ to start, let’s evaluate it at 1.</p>
 </tbody>
 </table>
 <p>from the function <span class="math inline">\(h(x)=x^2\)</span>.</p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="intro-to-rstudio.html#cb97-1"></a>X =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
-<span id="cb97-2"><a href="intro-to-rstudio.html#cb97-2"></a>Y =<span class="st"> </span>X<span class="op">^</span><span class="dv">2</span></span>
-<span id="cb97-3"><a href="intro-to-rstudio.html#cb97-3"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="intro-to-rstudio.html#cb108-1"></a>X =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
+<span id="cb108-2"><a href="intro-to-rstudio.html#cb108-2"></a>Y =<span class="st"> </span>X<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb108-3"><a href="intro-to-rstudio.html#cb108-3"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
 <p>Notice! We list the <strong>dependent</strong> variable <code>Y</code> first and then the <strong>independent</strong> variable <code>X</code> after the tidle <code>~</code> (which matches the syntax of <code>makeFun</code>).</p>
 <p>We can also plot a function. Once again the dependent variable appears after the tilde.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="intro-to-rstudio.html#cb98-1"></a><span class="kw">plotFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="intro-to-rstudio.html#cb109-1"></a><span class="kw">plotFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
 <p>We can actually plot the data and the function on the same graph. We will plot the data and then add the function by using the <code>add=TRUE</code> parameter for <code>plotFun</code>. I will also use the optional <code>col</code> parameter to change the color of the function curve.</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="intro-to-rstudio.html#cb99-1"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="intro-to-rstudio.html#cb100-1"></a><span class="kw">plotFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-53-2.png" width="672" /></p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="intro-to-rstudio.html#cb110-1"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="intro-to-rstudio.html#cb111-1"></a><span class="kw">plotFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-57-2.png" width="672" /></p>
 <div id="you-try-3" class="section level4">
 <h4><span class="header-section-number">5.3.4.1</span> You Try</h4>
 <ul>
