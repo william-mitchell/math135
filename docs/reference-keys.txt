@@ -70,3 +70,12 @@ solutions
 units-1
 dimensional-analysis-1
 fermi-estimation-1
+units-dimension-estimation-review
+estimating-the-derivative
+power-functions-1
+rules-of-differentiation
+derivatives-of-familiar-functions
+arithmetic-rules-for-derivatives
+chain-rule
+product-rule
+quotient-rule

@@ -1,0 +1,40 @@
+# Rules of Differentiation
+
+
+
+## Derivatives of Familiar Functions
+
+
+1. $\frac{d}{dx}(c)= 0$ 
+1. $\frac{d}{dx}(mx+b)= m$ 
+1. $\frac{d}{dx}(x^n)=n x^{n-1}$
+1. $\frac{d}{dx}(\sqrt{x})= \frac{1}{2} x^{-1/2}$
+1. $\frac{d}{dx}(e^x)=e^x$
+1. $\frac{d}{dx}(\ln(x))=\frac{1}{x}$
+1. $\frac{d}{dx}(a^{x})= \ln(a) \, a^x$
+1. $\frac{d}{dx}(\log_a(x))= \frac{1}{x \, \ln(a)}$
+1. $\frac{d}{dx}(\sin(x))= \cos(x)$
+1. $\frac{d}{dx}(\cos(x))= -\sin(x)$ 
+
+
+## Arithmetic Rules for Derivatives
+
+
+1. $\frac{d}{dx}(f(x)+g(x))= f'(x) + g'(x)$ 
+1. $\frac{d}{dx}(f(x)-g(x)) = f'(x) - g'(x)$
+1. $\frac{d}{dx}(cf(x))= c f'(x)$  
+
+
+## Product Rule
+
+$$\frac{d}{dx}(f(x)\cdot g(x))= f'(x) g(x) + f(x)g'(x)$$
+
+## Quotient Rule
+
+$$\frac{d}{dx}\left(\frac{f(x)}{g(x)}\right)= \frac{g(x) f'(x) - f(x)g'(x)}{(g(x))^2}$$
+
+## Chain Rule
+
+$$
+\frac{d}{dx} (f(g(x)) = f'(g(x)) g'(x)
+$$
