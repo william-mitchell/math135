@@ -286,7 +286,7 @@ f'(x) \approx\frac{f(x+\alpha)-f(x)}{\alpha}
 $$
 for some small number $\alpha > 0$. Smaller and smaller $\alpha$'s lead to better and better approximations.
 
-So we can estimate the derivative by using smaller and smaller $\alpha$ values until our estimates stabilize. Here is an example that estimates $f'(4)$ for the function $f(x) = x^2 + 10*sin(x)$.
+So we can estimate the derivative by using smaller and smaller $\alpha$ values until our estimates stabilize. Here is an example that estimates $f'(4)$ for the function $f(x) = x^2 + 10*\sin(x)$.
 
 ```{r}
 f=makeFun(x^2+10*sin(x)~x)
@@ -295,7 +295,7 @@ d=(f(4+alpha)-f(4))/alpha
 d
 ```
 
-The estiamates stabilize to the value $1.46356$. So our estimate if $f'(4) \approx 1.46456$
+The estimates stabilize to the value $1.46356$. So our estimate is $f'(4) \approx 1.46456$
 
 We can use the same method to estimate the partial derivates of $g(x,y)$. We have
 $$
@@ -326,6 +326,87 @@ d
 ```
 
 We conclude that $g_y(2,7) \approx 5.610.$
+
+
+## Gradient Search
+
+Here is code that will use gradient search to find the maximum of the function 
+$$
+f(x,y) = - x^4 -  x^3 + 10 x * y + y - 8 y^2 
+$$
+whose partial derivatives are
+$$
+\frac{\partial f}{\partial x} = -3 x^2 - 4 x^3 + 10 y
+\quad \mbox{and} \quad
+\frac{\partial f}{\partial x} = 10 x 2y - 16 y
+$$
+
+```{r}
+
+```
+
+First, you define the partial derivatives and then choose your starting point `(newx, newy)`. In this case, we start at `(1,1)`.
+
+```{r}
+partialx=makeFun(-3*x^2 - 4*x^3 + 10*y~x&y)
+partialy=makeFun(10*x + 2 - 16*y~x&y)
+newx = 1
+newy = 1
+```
+
+Next, you repeatedly run the following code block, which updates the current point by moving `0.1` times the gradient vector. This is equivilant to taking a small step in the uphill direction.
+
+Repeatedly to run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.
+
+```{r}
+newx=newx+0.1*partialx(newx,newy)
+newy=newy+0.1*partialy(newx,newy)
+partialx(newx,newy)
+partialy(newx,newy)
+newx
+newy
+```
+
+
+Repeatedly running this code block will take you to the point `(1.04,0.77)`. But note that starting at another initial point might take you to a different local maximum.
+
+If you want to find a local minimum, then you should multiply the partials by `-0.1` instead. This is equivalent to taking a small step downhill. Try this on the function $f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2$.
+
+
+## Constrained Optimization
+
+Suppose that we want to find the maximum of the production function $P(x,y)=3000x^{0.2}y^{0.8}$ given the constraint $ Q(x,y)= 4x + 3y = 200$.
+
+We want to make a contour plot of $P(x,y)$ and then add the constraint. The maximum value is achieved where the constraint $Q(x,y)=300$ is tangent to the contour curve of $P(x,y)$.
+
+
+```{r}
+P = makeFun( x^(0.2) * y^(0.8) ~ x&y)
+Q = makeFun( 4*x + 3*y ~ x&y)
+
+plotFun(P(x,y)~x&y, xlim=c(0,80), ylim=c(0,80), filled=FALSE, levels=seq(20,80,5))
+plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=200)
+```
+
+In this case, the optimal value of $38$ is achieved at approximately $(10, 55)$. Let's make another plot to confirm to get a better estimate.
+
+```{r}
+plotFun(P(x,y)~x&y, xlim=c(0,40), ylim=c(20,60), filled=FALSE, levels=seq(20,50,2))
+plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=200)
+```
+On this zoomed in plot, we can refine our estimate a bit. The maximum $f(10,53)=38$ is achieved at $x=10$ and $y=53$.
+
+Now, if I want to estimate the Lagrange multiplier $\lambda$, I would change my constraint a little bit (say to $210$) and then look at the change in the optimal value.
+
+```{r}
+plotFun(P(x,y)~x&y, xlim=c(0,40), ylim=c(20,60), filled=FALSE, levels=seq(20,50,2))
+plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=c(200,210))
+```
+We have
+$$
+\lambda = \frac{\triangle \mbox{optimal value}}{\triangle \mbox{constraint}}
+= \frac{40 - 38}{210-200} = \frac{2}{10} = 0.2.
+$$
 
 ## Troubleshooting
 Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here's a list of some common errors and what might be wrong:

@@ -30,6 +30,9 @@ fitting-a-function-to-data
 fitting-a-power-function-to-data
 fitting-a-model-by-specifying-starting-values
 plotting-surfaces-in-3d
+estimating-the-derivative
+gradient-search
+constrained-optimization
 troubleshooting
 functions
 steps-of-the-modeling-cycle
@@ -61,7 +64,7 @@ power-functions
 tasks-3
 periodic-functions
 tasks-4
-units-and-dimension-review
+units-dimension-estimation-review
 review-problems
 units
 dimensional-analysis
@@ -70,12 +73,9 @@ solutions
 units-1
 dimensional-analysis-1
 fermi-estimation-1
-units-dimension-estimation-review
-estimating-the-derivative
-power-functions-1
 rules-of-differentiation
 derivatives-of-familiar-functions
 arithmetic-rules-for-derivatives
-chain-rule
 product-rule
 quotient-rule
+chain-rule

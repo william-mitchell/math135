@@ -100,6 +100,8 @@ x = seq(1,14)
 pop=c(18.82, 12.46, 8.88, 6.49, 6.40, 6.17, 5.91, 5.73, 5.38, 4.58, 4.32, 3.53, 3.46, 3.31)
 plotPoints(log(pop) ~ log(x))
 fitModel(log(pop)~A*log(x)+B)
+exp(2.9139173)
+exp(2.91)
 plotPoints(pop~x)
 plotFun(exp(2.91)*x^(-0.62)~x, add=TRUE, col='red')
 ```
@@ -114,6 +116,7 @@ x = seq(1,14)
 pop=c(37.34, 31.18, 27.80, 22.24, 21.92, 21.74, 21.32, 20.90, 20.67, 19.11, 18.82, 16.50, 16.38, 15.42)
 plotPoints(log(pop) ~ log(x))
 fitModel(log(pop)~A*log(x)+B)
+exp(3.6339626)
 plotPoints(pop~x)
 plotFun(exp(3.62)*x^(-0.31)~x, add=TRUE, col='red')
 ```
@@ -124,6 +127,9 @@ pop=c(11.02, 6.13, 6.03, 4.91, 4.59, 3.97, 3.57, 3.33, 3.19, 2.77, 2.66, 2.40, 2
 plotPoints(log(pop) ~ log(x))
 fitModel(log(pop)~A*log(x)+B)
 plotPoints(pop~x)
+exp(2.405931)
+exp(2.41)
+exp(2.406)
 plotFun(exp(2.41)*x^(-0.61)~x, add=TRUE, col='red')
 ```
 
@@ -135,6 +141,8 @@ x = seq(1,14)
 pop=c(20.90, 16.73, 14.37, 8.33, 7.77, 6.70, 6.58, 5.83, 5.78, 5.28, 5.20, 4.80, 4.62, 4.00)
 plotPoints(log(pop) ~ log(x))
 fitModel(log(pop)~A*log(x)+B)
+exp(3.1471)
+exp(3.15)
 plotPoints(pop~x)
 plotFun(exp(3.15)*x^(-0.65)~x, add=TRUE, col='red')
 ```
@@ -166,6 +174,12 @@ There are two possible
 
 There is a universal growth rate for metro areas that applies to all geographic regions
 Different geographic regions have very different growth rates. 
+
+Compare the three values for $$p$$ that you found. 
+
+Answer the following questions:
+* What is the meaning of the power $$p$$ in this situation?
+* Do your three values of $$p$$ results suggest that there is a "universal law" for the relative sizes of metro areas,  or that "local factors" play an important role? Explain.
 
 
 
@@ -199,7 +213,7 @@ When you mouse over a particular point, it will give you the unemployment rate f
 
 1. Calculate the average rate of change of the unemployment rate between January 1990 and August 2021. Measure time in years (not months).
 1. Calculate the average rate of change of the unemployment rate between November 2008 and November 2019. Once again, measure time in years (not months).
-1. Does this grpph show any year-to-year seasonal patterns to unemployment? Explain.
+1. Does this graph show any year-to-year seasonal patterns to unemployment? Explain.
 
 
 
@@ -209,6 +223,11 @@ An apple farmer will grow crops whenever they can sell those crops for a profit 
 The market price for a bushel of apples is \$30. Meanwhile, it costs the farmer \$17 to produce those apples, and \$0.50 per mile to transport those apples to the market.
 
 Find the distance maximum distance $M$ that the farmer would agree to buy a farm. (In other words, if $d < M$ then the farmer would buy the orchard.)
+
+```{r}
+(30-17)/.5=26
+```
+
 
 
 
@@ -221,7 +240,7 @@ plotFun(22*t*exp(-(5-x)*t),x&t, x.lim=c(0,30),t.lim=c(0,30))
 ```{r}
 h = makeFun(22*t*exp(-(5-x)*t)~x&t)
 h(0,0)
-plotFun(1000* t*exp(-(5-x/1000)*t)~x&t, x.lim=c(0,4000),t.lim=c(0,4), levels=seq(0,1500,50), filled=FALSE)
+plotFun(1000* t*exp(-(5-x/1000)*t)~x&t, x.lim=c(0,4000),t.lim=c(0,4), levels=seq(0,1500,50), filled=FALSE, xlab='dosage (micrograms)', ylab='time (hours)',title='Concentration (micrograms per liter)')
 ```
 
 On this domain, for a fixed TIME this function is  INCREASING/DECREASING/ INCREASING THEN DECREASING? DECREASING THEN INCREASING
@@ -229,3 +248,18 @@ On this domain, for a fixed TIME this function is  INCREASING/DECREASING/ INCREA
 On this domain, for a fixed DOSAGE this function is  INCREASING/DECREASING/ INCREASING THEN DECREASING? DECREASING THEN INCREASING
 
 The drug is effective at concentrations of 150 micrograms/liter. What is the minimum dose that we should give if we want the drug to be at an effective level at least 1 hour? 2500, 3000, 3500, 4000
+
+
+
+
+
+#### Exam 2
+
+
+```{r}
+h = makeFun(22*t*exp(-(5-x)*t)~x&t)
+h(0,0)
+plotFun(1000* t*exp(-(5-x/1000)*t)~x&t, x.lim=c(0,4000),t.lim=c(0,4), levels=seq(0,1500,50), filled=FALSE, xlab='dosage (micrograms)', ylab='time (hours)',title='Concentration (micrograms per liter)')
+```
+
+
