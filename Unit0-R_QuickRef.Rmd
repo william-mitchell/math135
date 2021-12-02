@@ -332,13 +332,13 @@ We conclude that $g_y(2,7) \approx 5.610.$
 
 Here is code that will use gradient search to find the maximum of the function 
 $$
-f(x,y) = - x^4 -  x^3 + 10 x * y + y - 8 y^2 
+f(x,y) = - x^4 -  x^3 + 10 x y + 2y - 8 y^2 
 $$
 whose partial derivatives are
 $$
-\frac{\partial f}{\partial x} = -3 x^2 - 4 x^3 + 10 y
+\frac{\partial f}{\partial x} = -4 x^3 -3 x^2  + 10 y
 \quad \mbox{and} \quad
-\frac{\partial f}{\partial x} = 10 x 2y - 16 y
+\frac{\partial f}{\partial x} = 10 x + 2 - 16 y
 $$
 
 ```{r}
@@ -348,7 +348,7 @@ $$
 First, you define the partial derivatives and then choose your starting point `(newx, newy)`. In this case, we start at `(1,1)`.
 
 ```{r}
-partialx=makeFun(-3*x^2 - 4*x^3 + 10*y~x&y)
+partialx=makeFun( -4*x^3 -3*x^2 + 10*y~x&y)
 partialy=makeFun(10*x + 2 - 16*y~x&y)
 newx = 1
 newy = 1
@@ -375,7 +375,7 @@ If you want to find a local minimum, then you should multiply the partials by `-
 
 ## Constrained Optimization
 
-Suppose that we want to find the maximum of the production function $P(x,y)=3000x^{0.2}y^{0.8}$ given the constraint $ Q(x,y)= 4x + 3y = 200$.
+Suppose that we want to find the maximum of the production function $P(x,y)=3000x^{0.2}y^{0.8}$ given the constraint $Q(x,y)= 4x + 3y = 200$.
 
 We want to make a contour plot of $P(x,y)$ and then add the constraint. The maximum value is achieved where the constraint $Q(x,y)=300$ is tangent to the contour curve of $P(x,y)$.
 
@@ -388,7 +388,7 @@ plotFun(P(x,y)~x&y, xlim=c(0,80), ylim=c(0,80), filled=FALSE, levels=seq(20,80,5
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=200)
 ```
 
-In this case, the optimal value of $38$ is achieved at approximately $(10, 55)$. Let's make another plot to confirm to get a better estimate.
+In this case, the optimal value of $38$ is achieved at approximately $(10, 55)$. Let's make another plot to  get a better estimate.
 
 ```{r}
 plotFun(P(x,y)~x&y, xlim=c(0,40), ylim=c(20,60), filled=FALSE, levels=seq(20,50,2))
@@ -402,6 +402,7 @@ Now, if I want to estimate the Lagrange multiplier $\lambda$, I would change my 
 plotFun(P(x,y)~x&y, xlim=c(0,40), ylim=c(20,60), filled=FALSE, levels=seq(20,50,2))
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=c(200,210))
 ```
+
 We have
 $$
 \lambda = \frac{\triangle \mbox{optimal value}}{\triangle \mbox{constraint}}
