@@ -438,7 +438,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(xdata = xdata), 
 ##     ...)))
-## &lt;environment: 0x7ff9b8ce6250&gt;
+## &lt;environment: 0x7ff9b3eb2ac8&gt;
 ## attr(,&quot;coefficients&quot;)
 ##    A    B 
 ## 1.70 4.18 
@@ -473,7 +473,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(logxdata = logxdata), 
 ##     ...)))
-## &lt;environment: 0x7ff9c7fc4ec8&gt;
+## &lt;environment: 0x7ff9b146c378&gt;
 ## attr(,&quot;coefficients&quot;)
 ##        A        B 
 ## 1.449432 1.915983 
@@ -502,20 +502,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="rstudio-quick-referrence.html#cb77-1"></a>utilitydata =<span class="st"> </span>fetch<span class="op">::</span><span class="kw">fetchData</span>(<span class="st">&quot;utilities.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Retrieving from http://www.mosaic-web.org/go/datasets/utilities.csv</code></pre>
 <div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="rstudio-quick-referrence.html#cb79-1"></a><span class="kw">head</span>(utilitydata)</span></code></pre></div>
-<pre><code>##   month day year temp  kwh ccf thermsPerDay dur totalbill gasbill elecbill
-## 1     2  24 2005   29  557 166          6.0  28    213.71  166.63    47.08
-## 2     3  29 2005   31  772 179          5.5  33    239.85  117.05    62.80
-## 3     1  27 2005   15  891 224          7.5  30    294.96  223.92    71.04
-## 4    11  23 2004   43  860  82          2.8  29    160.26   88.51    71.75
-## 5    12  28 2004   23 1160 208          6.0  35    317.47  224.18    93.29
-## 6     9  26 2004   71  922  15          0.5  32    117.46   21.25    96.21
-##   notes
-## 1      
-## 2      
-## 3      
-## 4      
-## 5      
-## 6</code></pre>
+<pre><code>##   month day year temp  kwh ccf thermsPerDay dur totalbill gasbill elecbill notes
+## 1     2  24 2005   29  557 166          6.0  28    213.71  166.63    47.08      
+## 2     3  29 2005   31  772 179          5.5  33    239.85  117.05    62.80      
+## 3     1  27 2005   15  891 224          7.5  30    294.96  223.92    71.04      
+## 4    11  23 2004   43  860  82          2.8  29    160.26   88.51    71.75      
+## 5    12  28 2004   23 1160 208          6.0  35    317.47  224.18    93.29      
+## 6     9  26 2004   71  922  15          0.5  32    117.46   21.25    96.21</code></pre>
 <p>Now let’s plot temperature versus month</p>
 <div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="rstudio-quick-referrence.html#cb81-1"></a><span class="kw">plotPoints</span>(temp <span class="op">~</span><span class="st"> </span>month, <span class="dt">data=</span>utilitydata)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
@@ -652,8 +645,8 @@ On this zoomed in plot, we can refine our estimate a bit. The maximum <span clas
 </div>
 <div id="estimating-the-definite-integral" class="section level2">
 <h2><span class="header-section-number">2.10</span> Estimating the Definite Integral</h2>
-<p>The define integral <span class="math inline">\(\int_{a}^b f(x) dx\)</span> is the (signed) area between the curve <span class="math inline">\(y=f(x)\)</span> and the <span class="math inline">\(x\)</span>-axis. We approximate this area by partitioning the interval <span class="math inline">\([a,b]\)</span> into smaller intervals of width <span class="math inline">\(\triangle x\)</span> and then summing the areas of <span class="math inline">\(f(x) \triangle x\)</span> of the corresponding rectangles.</p>
-<p>Here is code that makes this approximation for the function <span class="math inline">\(f(x) = x + sin(x^2)\)</span> over the interval <span class="math inline">\([5,10]\)</span>. The code splits this interval into 100 subintervals. You can get a better approximation by increasing the denominator of <code>base=(b-a)/100</code> to a much larger nuumber, for example: <code>base=(b-a)/1000000</code>.</p>
+<p>The define integral <span class="math inline">\(\int_{a}^b f(x) dx\)</span> is the (signed) area between the curve <span class="math inline">\(y=f(x)\)</span> and the <span class="math inline">\(x\)</span>-axis. We approximate this area by partitioning the interval <span class="math inline">\([a,b]\)</span> into smaller intervals of width <span class="math inline">\(\triangle x\)</span> and then summing the areas <span class="math inline">\(f(x) \triangle x\)</span> of the corresponding rectangles.</p>
+<p>Here is code that makes this approximation for the function <span class="math inline">\(f(x) = x + \sin(x^2)\)</span> over the interval <span class="math inline">\([5,10]\)</span>. The code splits this interval into 100 subintervals. You can get a better approximation by increasing the denominator of <code>base=(b-a)/100</code> to a much larger number, for example: <code>base=(b-a)/1000000</code>.</p>
 <div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="rstudio-quick-referrence.html#cb113-1"></a>f=<span class="kw">makeFun</span>(x <span class="op">+</span><span class="st"> </span><span class="kw">sin</span>(x<span class="op">^</span><span class="dv">2</span>)<span class="op">~</span>x)</span>
 <span id="cb113-2"><a href="rstudio-quick-referrence.html#cb113-2"></a>a=<span class="dv">5</span></span>
 <span id="cb113-3"><a href="rstudio-quick-referrence.html#cb113-3"></a>b=<span class="dv">10</span></span>
