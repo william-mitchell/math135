@@ -33,6 +33,7 @@ plotting-surfaces-in-3d
 estimating-the-derivative
 gradient-search
 constrained-optimization
+estimating-the-definite-integral
 troubleshooting
 functions
 steps-of-the-modeling-cycle

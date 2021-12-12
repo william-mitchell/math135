@@ -409,6 +409,27 @@ $$
 = \frac{40 - 38}{210-200} = \frac{2}{10} = 0.2.
 $$
 
+
+## Estimating the Definite Integral
+
+
+The define integral $\int_{a}^b f(x) dx$ is the (signed) area between the curve $y=f(x)$ and the $x$-axis. We approximate this area by partitioning the interval $[a,b]$ into smaller intervals of width $\triangle x$ and then summing the areas of $f(x) \triangle x$ of the corresponding rectangles.
+
+Here is code that makes this approximation for the function $f(x) = x + sin(x^2)$ over the interval $[5,10]$. The code splits this interval into 100 subintervals. You can get a better approximation by increasing the denominator of `base=(b-a)/100` to a much larger nuumber, for example: `base=(b-a)/1000000`.
+
+```{r}
+f=makeFun(x + sin(x^2)~x)
+a=5
+b=10
+base=(b-a)/100
+points=seq(from=a+base, to=b, by=base)
+heights=f(points)
+areas=base*heights
+sum(areas)
+```
+
+
+
 ## Troubleshooting
 Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here's a list of some common errors and what might be wrong:
 
