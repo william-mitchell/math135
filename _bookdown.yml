@@ -14,4 +14,4 @@ rmd_files: ["index.Rmd",
   "Unit4-DerivativeRules.Rmd"]
 language:
   ui: 
-    chapter_name: "Topic "
+    chapter_name: ""

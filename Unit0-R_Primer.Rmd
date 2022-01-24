@@ -75,6 +75,8 @@ In AMC1, we'll be working with code a lot: writing it, running it, analyzing it,
 The best way to get working on this is to upload the template that I've put in the course Moodle page and just start experimenting with what's there. I'm sure you'll get it sorted!
 
 
+<!--
+
 ## Calculations in RStudio
 
 While RStudio is incredibly powerful, it has a lot of rules we need to follow about syntax. You will probably make a lot of mistakes with syntax when you start out (and probably after that, too) so it's helpful to know the ground rules and how to read error messages that come up.
@@ -331,4 +333,4 @@ Cool, we've got our plot. Two things to note:
 * We have again put our dependent variable first and our independent variable second using the dependency symbol `~`. 
 * We need to put in the parameter data=somedata! Not doing so will result in an error, because RStudio does not know where to find these elusive variables time and temp. 
 
-
+-->

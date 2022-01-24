@@ -22,7 +22,10 @@ description: "This is the class activity manual for MATH 135 at Macalester Colle
 
 
 This is the class handbook for Math 135 AMC I at Macalester College. The content here was made by [Andrew Beveridge](https://mathbeveridge.github.io) 
-and draws upon material prepared by [Kristin Heysse](https://www.macalester.edu/~kheysse/), [Lori Ziegelmeier](https://www.loriziegelmeier.com/) and other faculty in the [Department  of Mathematics, Statistics and Computer Science](https://www.macalester.edu/mscs/) at [Macalester College](https://www.macalester.edu/).
+and draws upon:
+
+* Material prepared by [Kristin Heysse](https://www.macalester.edu/~kheysse/), [Lori Ziegelmeier](https://www.loriziegelmeier.com/) and other faculty in the [Department  of Mathematics, Statistics and Computer Science](https://www.macalester.edu/mscs/) at [Macalester College](https://www.macalester.edu/).
+* The open textbook [Applied Calculus](http://www.opentextbookstore.com/details.php?id=14) by Shana Calaway, Dale Hoffman, and David Lippman.
 
 <br>
 <br>

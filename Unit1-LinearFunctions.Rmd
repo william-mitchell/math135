@@ -9,21 +9,39 @@
  - Assess whether given data is linear and, if so, model it
  
 ## Tasks
- 
-1. Come up with an example of a real world phenomenon that behaves like a linear function.
- 
+
+
+1. Find the equation $y=mx+b$ for the graph shown below.
+
+![](images/linear-graph.png){width=30%}
+
 2. The table below lists the average weight, $w$, in pounds of American men in their sixties for height, $h$, in inches
    a. Which is the dependent and which is the independent variable?  
    b. Is this an increasing/decreasing function?
    c. Can this be represented by a linear function? If so, find an equation to describe this data.
 
-**Height (inches)** | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 
+*Height (inches)* | 68 | 69 | 70 | 71 | 72 | 73 | 74 | 75 
 -------|-------|-------|-------|-------|-------|-------|-------|-------
-**Weight (pounds)** | 166 | 171 | 176 | 181 | 186 | 191 | 196 | 201 
+*Weight (pounds)* | 166 | 171 | 176 | 181 | 186 | 191 | 196 | 201 
+
+
+3. A scooter company charges for monthly service according to the formula:
+$C(t) =  5.99 + 0.23 t$ where $t$ is the number of minutes minutes ridden.
+Find and interpret the rate of change and the vertical intercept.
+
+
+4. There were 1650 billion barrels of proven oil reserves in the world as of 2016. At constant consumption levels (and excluding unproven reserves), the world had enough oil to last about 47 more years beyond 2016. Create a linear function $R(t)$ that models the oil reserves (in *billions* of barrels) where $t$ is the number of years since 2016. Find and interpret the rate of change and the vertical intercept of your function.
+
+ 
 
 
 
-3. The plot below represents the world population growth rate by year since 1995. 
+
+
+
+
+
+4. The plot below represents the world population growth rate by year since 1995. 
 
 ```{r}
 Y=c(0,5,10,15,20)
@@ -33,7 +51,7 @@ plotPoints(R~Y,main="World Population Growth Rate",xlab="Year (since 1995)",ylab
 
    a. Explain why a linear model of this data is reasonable.
    b. Come up with an equation that (approximately) describes this data.
-   c. What decision(s) did you make in part (b)? What are the strengths and weaknesses of your choice? Can you think of a methodology that might be better?
+   c. What decision(s) did you make in part (b)? What are the strengths and weaknesses of your choice? 
    d. Create a plot in RStudio that shows both the data points and the linear function that you found in part (b). 
       - Start by doing a cut-and-paste the R code above
       - You can add your linear function to this plot using `plotFun(m*t+b~t,add=TRUE)` where `m` and `b` are the slope and the vertical intercept of the function you found in part (b)

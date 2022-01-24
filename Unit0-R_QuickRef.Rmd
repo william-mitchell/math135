@@ -74,7 +74,7 @@ my_seq3
 
 
 
-## Plotting Data and Plotting Functions
+## Plotting Data
 
 
 Use `plotPoints` to plot a list of $y$-axis data versus a list of $x$-axis data. Separate these lists with a tilde `~`. 
@@ -96,6 +96,7 @@ plotPoints(y_data ~ x_data)
 
 ```
 
+## Plotting Functions
 Use `plotFun` to plot a function. 
 
 * As with `plotPoints`, we use a tilde `~` to separate the output variable (the function) from the input variable.
@@ -126,6 +127,31 @@ plotFun(2 * sin(x) ~ x, xlim=c(0, 2*pi), xlab='time', ylab='displacement')
 plotFun(cos(3*x) ~ x, add=TRUE, col='green')
 ```
 
+
+
+The `plotFun` command takes a whole variety of parameters, here are a few useful ones:
+
+* `xlim`, `ylim`: sets the range of your $x$-axis. Example: `xlim=range(1,4), ylim=range(3,60)`
+* `col`: sets the color of the function you plot. RStudio will recognize most basic colors, which you will pass as strings. Example: `col="red"`
+* `add`: you'll use this when you want to add multiple functions to the same plot. We'll see an example of it below.
+Example: `add=TRUE`
+* `xlab`, `ylab`: for labeling your axes. You'll pass this as a string as well. Example: `xlab="time", ylab="red=velocity, blue=position"`
+
+
+Let's try some of this out. I broke the third line so it would all fit, you don't need to!
+
+```{r fig.align='center',fig.width=4.5, fig.height=2.5, fig.show='hold'}
+f=makeFun(x^3+3~x)
+g=makeFun(3*x^2~x)
+plotFun(f(x)~x, xlim=range(1,4), ylim=range(3,60), 
+        col="blue",xlab="time", ylab="red=velocity, blue=position")
+plotFun(g(x)~x, col="red", add=TRUE)
+```
+
+RStudio is a little weird about plots in the RMarkdown in that you might get multiples if you're adding plots together. If you want the chunk to hold all plots until the end, add `fig.show='hold'` into the script braces at the top of the chunk.
+
+
+## Plotting Data and Functions
 We can also combine plots of data and functions using `add=TRUE`.
 
 
@@ -361,10 +387,10 @@ Repeatedly to run this code block until the partial derivatives are essentially 
 ```{r}
 newx=newx+0.1*partialx(newx,newy)
 newy=newy+0.1*partialy(newx,newy)
-partialx(newx,newy)
-partialy(newx,newy)
-newx
-newy
+# print new partial derivatives
+c(partialx(newx,newy), partialy(newx,newy))
+# print new point
+c(newx, newy)
 ```
 
 
