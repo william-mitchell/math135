@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 R Studio Primer | MATH 135: AMC I</title>
+  <title>4 Linear Functions and Average Rate of Change | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 R Studio Primer | MATH 135: AMC I" />
+  <meta property="og:title" content="4 Linear Functions and Average Rate of Change | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 R Studio Primer | MATH 135: AMC I" />
+  <meta name="twitter:title" content="4 Linear Functions and Average Rate of Change | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="rstudio-quick-referrence.html"/>
+<link rel="prev" href="functions.html"/>
+<link rel="next" href="intro-to-rstudio.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -244,451 +244,138 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-studio-primer" class="section level1">
-<h1><span class="header-section-number">1</span> R Studio Primer</h1>
-<p>In our class, we will be using RStudio, a developing environment commonly used for modeling and statistics. In real world mathematics, you will need to be able to work with data and apply your calculus concepts directly. That’s what we’ll do in RStudio, as it provides an excellent sandbox for us to play in. R (what RStudio is based on) is the programming language used by professional statisticians, so these skills will be useful no matter what field you go into!</p>
-<p>However, just like any programming language, there is a startup cost. The learning curve for RStudio can be pretty steep, particularly if you’ve never done any coding before. Don’t worry, that’s where this guide comes in! In here you’ll find all sorts of explanation and examples for some of the coding we’ll be doing in (and out of) class. I promise, it’ll be worth in the end, and you’ll be a coding master.</p>
-<div id="getting-oriented" class="section level2">
-<h2><span class="header-section-number">1.1</span> Getting Oriented</h2>
-<div id="first-login" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> First login</h3>
-<p>You’ll get into RStudio via the url <a href="https://rstudio.macalester.edu">https://rstudio.macalester.edu</a>. It’s linked in our Moodle page if you’re feeling a little lazy. Your login is your Macalester username and password. You’ll be given the following page (with your username in the uppper right corner):</p>
-<p><img src="images/FirstPage.png" /></p>
-<p>I tend to ignore the projects and just activate a new session by clicking that panel.</p>
-</div>
-<div id="the-rstudio-window" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> The RStudio window</h3>
-<p>Once you’ve got an active session, you’ll be shown the following window. We’ll talk about its parts, starting with the four panels you’ll see. This picture is from a previous version of RStudio, but everything should work the same!</p>
-<p><img src="images/RStudioWindow.png" /></p>
-<div id="panels" class="section level4">
-<h4><span class="header-section-number">1.1.2.1</span> Panels</h4>
+<div id="linear-functions-and-average-rate-of-change" class="section level1">
+<h1><span class="header-section-number">4</span> Linear Functions and Average Rate of Change</h1>
+<div id="goals-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Goals</h2>
 <ul>
-<li>Source: This is where you will edit RMarkdown notebooks, which are described much more in the RMarkdown section.</li>
-<li>Console: This is RStudio’s command line. It’s a great place to test code and serves as a basic calculator.</li>
-<li>Environment, history: this panel keeps track of your work. The environment tab shows all the variables you have named in the session (including data, functions, and lists) and gives you a preview of them. The history tab tracks the pieces of code you run.</li>
-<li>Everything else: this is where you’ll find a lot of stuff, including the files you build and the plots you create of data/functions. It also has the packages list (described in the next subsection) and the help window, which can show you documentation of commands.</li>
-</ul>
-<p>Now that we know what we’re looking at, let’s talk specifics. We’ll talk a lot more about the source panel in the RMarkdown section.</p>
-</div>
-<div id="specific-functions" class="section level4">
-<h4><span class="header-section-number">1.1.2.2</span> Specific functions</h4>
-<ul>
-<li>The new document button. This is how you’ll make new files in your source window.</li>
-<li>The quit session button. Somtimes it’s best to just start over if you can’t figure out why something it not working. You’ll be kicked back to that first page from the previous section.</li>
-<li>The clean environment button. Use this when you want to clear all you variables, including data sets.</li>
-<li>The files buttons. You’ll use these to create, delete, and organize RMarkdown files and data files. See the data section for more information on how to upload data.</li>
+<li>Explain linear functions in words, tables, equations, and graphs</li>
+<li>Describe the effects of varying parameters in linear functions</li>
+<li>Assess whether given data is linear and, if so, model it</li>
+<li>Calculate average rate of change on an interval</li>
+<li>Recognize when a function is increasing or decreasing</li>
+<li>Recognize when a function is concave up or concave down</li>
 </ul>
 </div>
-<div id="command-line-console" class="section level4">
-<h4><span class="header-section-number">1.1.2.3</span> Command Line Console</h4>
-<p>The command line console is the most basic way to run code. It’s great for simple calculations and to test out code before you run it. We’ll run longer blocks of code in our notebooks. You can try out a few calculations here.</p>
-<p><strong>Notice!</strong> Once you run a command (by pressing enter) it is gone to history. You don’t go back and edit previous lines if you find a mistake. Instead, you run the command again with the fixed piece in a new line. Thankfully, RStudio makes this not so terrible. By pushing the UP button on your keyboard, you can scroll through previous commands that you’ve used.</p>
+<div id="linear-function-activities" class="section level2">
+<h2><span class="header-section-number">4.2</span> Linear Function Activities</h2>
+<div id="graph-of-a-linear-function" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Graph of a linear function</h3>
+<p>Find the equation <span class="math inline">\(y=mx+b\)</span> for the graph shown below.</p>
+<p><img src="images/linear-graph.png" style="width:50.0%" /></p>
 </div>
+<div id="height-and-weight-of-american-men" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Height and weight of American men</h3>
+<p>The table below lists the average weight, <span class="math inline">\(w\)</span>, in pounds of American men in their sixties for height, <span class="math inline">\(h\)</span>, in inches.</p>
+<ol style="list-style-type: decimal">
+<li>Which is the dependent variable and which is the independent variable?<br />
+</li>
+<li>Is this an increasing function or a decreasing function?</li>
+<li>Can this be represented by a linear function? If so, find an equation to describe this data.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th><em>Height (inches)</em></th>
+<th>68</th>
+<th>69</th>
+<th>70</th>
+<th>71</th>
+<th>72</th>
+<th>73</th>
+<th>74</th>
+<th>75</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Weight (pounds)</em></td>
+<td>166</td>
+<td>171</td>
+<td>176</td>
+<td>181</td>
+<td>186</td>
+<td>191</td>
+<td>196</td>
+<td>201</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="packages" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Packages</h3>
-<p>RStudio is open source, which means many people write packages to augment what it can do by default. Their work is our gain, and we’ll need a few packages to be able to access what we want. In the lower right hand panel click on the packages tab. Then click on the check boxes next to the following packages:</p>
+<div id="scooter-rates" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Scooter rates</h3>
+<p>A scooter company charges for monthly service according to the formula:
+<span class="math inline">\(C(t) = 5.99 + 0.23 t\)</span> where <span class="math inline">\(t\)</span> is the number of minutes minutes ridden.
+Find and interpret the rate of change and the vertical intercept.</p>
+</div>
+<div id="oil-reserves" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> Oil reserves</h3>
+<p>There were 1650 billion barrels of proven oil reserves in the world as of 2016. At constant consumption levels (and excluding unproven reserves), the world had enough oil to last about 47 more years beyond 2016. Create a linear function <span class="math inline">\(R(t)\)</span> that models the oil reserves (in <em>billions</em> of barrels) where <span class="math inline">\(t\)</span> is the number of years since 2016. Find and interpret the rate of change and the vertical intercept of your function.</p>
+</div>
+<div id="world-population-growth-rate" class="section level3">
+<h3><span class="header-section-number">4.2.5</span> World population growth rate</h3>
+<p>The plot below represents the world population growth rate by year since 1995.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="linear-functions-and-average-rate-of-change.html#cb68-1"></a>Y=<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">15</span>,<span class="dv">20</span>)</span>
+<span id="cb68-2"><a href="linear-functions-and-average-rate-of-change.html#cb68-2"></a>R=<span class="kw">c</span>(<span class="fl">1.41</span>,<span class="fl">1.26</span>,<span class="fl">1.20</span>,<span class="fl">1.13</span>,<span class="fl">1.06</span>)</span>
+<span id="cb68-3"><a href="linear-functions-and-average-rate-of-change.html#cb68-3"></a><span class="kw">plotPoints</span>(R<span class="op">~</span>Y,<span class="dt">main=</span><span class="st">&quot;World Population Growth Rate&quot;</span>,<span class="dt">xlab=</span><span class="st">&quot;Year (since 1995)&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;Growth Rate&quot;</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li>Explain why a linear model of this data is reasonable.</li>
+<li>Come up with an equation that (approximately) describes this data.</li>
+<li>What decision(s) did you make in part (b)? What are the strengths and weaknesses of your choice?</li>
+<li>Create a plot in RStudio that shows both the data points and the linear function that you found in part (b).
 <ul>
-<li>fetch: this package knows how to load in data files</li>
-<li>mosaic, mosaicCore, mosaicData: these contain the specific built-ins which create and plot functions for us. By checking the box by them, we import their functions into the session. Easy enough.</li>
-<li>mosaicCalc: Some of the function commands from the mosaic family of packages don’t interact well with the built in derivative and antiderivative functions in RStudio. mosaicCalc fixes this
-<ul>
-<li>If you don’t see mosaicCalc, then you need to download it. Run the following line of code in your console: <code>install.packages("mosaicCalc")</code> Once you do this, make sure that the mosaicCal box is checked in the packages list</li>
+<li>Start by doing a cut-and-paste the R code above</li>
+<li>You can add your linear function to this plot using <code>plotFun(m*t+b~t,add=TRUE)</code> where <code>m</code> and <code>b</code> are the slope and the vertical intercept of the function you found in part (b)</li>
 </ul></li>
-</ul>
+</ol>
 </div>
 </div>
-<div id="rmarkdown" class="section level2">
-<h2><span class="header-section-number">1.2</span> RMarkdown</h2>
-<p>In AMC1, we’ll be working with code a lot: writing it, running it, analyzing it, and commenting on it. We’ll also be going back to code we’ve already used and tweaking it to solve new but related questions. For all of these reasons, we’re going to use RMarkdown notebooks. The notebook will run large chunks of code at a time and show the output right next to the code. It’s also easier for you to comment on the code you’ve written and go back to it later.</p>
-<p>The best way to get working on this is to upload the template that I’ve put in the course Moodle page and just start experimenting with what’s there. I’m sure you’ll get it sorted!</p>
-<!--
-
-## Calculations in RStudio
-
-While RStudio is incredibly powerful, it has a lot of rules we need to follow about syntax. You will probably make a lot of mistakes with syntax when you start out (and probably after that, too) so it's helpful to know the ground rules and how to read error messages that come up.
-
-### Basic Commands
-
-#### Arithmetic
-RStudio has a lot of built in functions that are pretty intuitive:
-
-```r
-2+3
-```
-
-```
-## [1] 5
-```
-
-```r
-4^3
-```
-
-```
-## [1] 64
-```
-
-```r
-sqrt(49)
-```
-
-```
-## [1] 7
-```
-Some of these functions, like `sqrt()`, take parameters (we put in 49). If you need help with a function, particularly if you need to know about how it takes its parameters, you can use the question mark in front of the function in the Console. Running this pulls up a help page in the lower right window about that function. The examples here are particularly useful!
-
-Multiplication _always_ takes a `*` sign! For example, suppose I wanted to calculate $2\sin(\pi/2)$. We humans know that the two is multiplied on the sine function, but RStudio doesn't get it. 
-
-```r
-2 sin(pi/2)
-```
-
-```
-## Error: <text>:1:3: unexpected symbol
-## 1: 2 sin
-##       ^
-```
-
-We can fix this by including a multiplication sign between 2 and $\sin(\pi/2)$. 
-
-
-```r
-2 * sin(pi/2)
-```
-
-```
-## [1] 2
-```
-
-#### Exponentials and Logarithms
-Another common error made regards the function $e^{x}$. RStudio instead uses the built in function exp:
-
-```r
-exp(1.7)
-```
-
-```
-## [1] 5.473947
-```
-Here's how *not* to do this:
-
-* `e^(1.7)`: R doesn't know what `e` means
-* `exp^(1.7)`: You don't need the `^`
-* `exp 1.7`: You do need the parentheses because `exp` is a function
-```
-
-Logarithms have a similar problem. The notation for the natural log in RStudio is `log()`, _not_ "ln". If you want to do $\log_{10}$, you use the command `log10`:
-
-
-```r
-log(100)
-```
-
-```
-## [1] 4.60517
-```
-
-```r
-log10(100)
-```
-
-```
-## [1] 2
-```
-
-### Variables
-
-Sometimes it's helpful to define a variable, particularly if we need to use it a lot. RStudio makes this easy.
-
-
-```r
-y=4
-sin(3*y)
-```
-
-```
-## [1] -0.5365729
-```
-
-RStudio will keep track of your variables in the environment tab. If you want to delete all your variables, use the little broom icon. 
-
-### Lists and sequences
-
-Some of the calculations in AMC1 require a doing calculations over and over again to get an estimate of a value. A great way to do this is with a list or a sequence. It's also how we'll define coordinates for points. 
-
-RStudio makes a list with the `c()` command. The "c" in short for "combine these values to make into a list".
-
-
-```r
-P=c(3,5,11,-1,4)
-P
-```
-
-```
-## [1]  3  5 11 -1  4
-```
-
-If you want to make a sequence, you use the `seq()` command. This takes the parameters
-
-* `from`: where we start the sequence 
-* `to`: where we want the sequence to end
-* `by`: how large the step is.
-So if I wanted a sequence 1, 1.1, 1.2, 1.3, etc... all the way up to 2, I would write
-
-
-```r
-S=seq(from=1, to=2, by=0.1)
-S
-```
-
-```
-##  [1] 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0
-```
-
-Note that the default order of these parameters is `from,to,by` so you can also get this sequence with the shorter command
-
-
-```r
-S=seq(1, 2, 0.1)
-S
-```
-
-```
-##  [1] 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0
-```
-
-**Pro Tips**:
-
-* Always write `0.1` instead of `.1` in your code. It is much easier to read and to debug later!
-* Consider adding a space after your commas to separate parameters. It's much easier to read later!
-
-
-
-What's great about these lists is that you can do calculations to the whole list with only a few lines of code. For example, say I wanted to calculate 
-$$f(x)=e^x-1+\sqrt{x}$$
-for each of the points in my sequence `S`. I'll call those new values `T`:
-
-```r
-T=exp(S)-1+sqrt(S)
-T
-```
-
-```
-##  [1] 2.718282 3.052975 3.415562 3.809472 4.238416 4.706434 5.217943
-##  [8] 5.777788 6.391288 7.064299 7.803270
-```
-I use the sequence as my variable, and RStudio knows to calculate for each value in the sequence.
-
-### Making functions
-
-Suppose I asked you to calculate $f(3.2), f(3.3), f(3.33), f(3.339)$ for the function
-\[f(x)=0.7 e^{2+x}-1.1\sin(x)-1\]
-
-You could absolutely type this into RStudio by hand. I'll do the first one:
-
-
-```r
-0.7*exp(2+3.2)-1.1*sin(3.2)-1
-```
-
-```
-## [1] 125.9548
-```
-This would get really old, though, particularly if I asked you to do it for four hundred points instead of four points. We'll build ourselves a function to do it instead! To do this, we'll employ the makeFun command:
-
-
-```r
-f=makeFun(0.7*exp(2+x)-1.1*sin(x)-1~x)
-```
-Much of this is pretty intuitive, except for maybe the final `~ x`. This tilde symbol comes up a lot in RStudio and it indicates *dependence*. We need to tell RStudio that $f$ is in terms of this variable $x$, so it knows where to put an input when I ask it to:
-
-
-```r
-f(3.2)
-```
-
-```
-## [1] 125.9548
-```
-
-One of the main themes of this course is to generalize the work we do to many variables. We can also build multivariable functions with the same command, just changing the dependency a little bit. Suppose I want to code up $g(x,y)=\cos(xy)$:
-
-
-```r
-g=makeFun(cos(x*y)~x&y)
-g(2,pi)
-```
-
-```
-## [1] 1
-```
-Notice the ampersand `&` in the dependency. Now my function depends on both $x$ and $y$. 
-
-## Data
-
-One of our jobs in AMC1 is tackling the challenges of working with real life data. This is where RStudio really shines. Math 155 will teach you a ton more on how to work with data in RStudio, so we'll just handle the basics here. This section talks about how to import data and work with it. For how to plot, head over to the plots section of this primer.
-
-### Importing data from RStudio/mosaic
-
-We use different code to import data depending on where we're calling it from. RStudio and the mosaic packages have lots of data sets built in that we can get at for our work. To do this, we use the fetchData command. We'll give our data set a variable name so we can easily reference it. 
-
-
-```r
-somedata = fetch::fetchData("stan-data.csv")
-```
-
-```
-## Retrieving from http://www.mosaic-web.org/go/datasets/stan-data.csv
-```
-If you look over in your environment tab, this data set has now appeared. It's 222 observations of 2 variables. In that environments tab, you can look at the data by clicking on the small arrow (to see the first few entries) or the spreadsheet button (to open the file in the source panel). If you want to see the first bit of data in your console or your RMarkdown file, you can use the head command:
-
-
-```r
-head(somedata)
-```
-
-```
-##   time temp
-## 1    0 98.2
-## 2    1 94.4
-## 3    2 91.4
-## 4    3 89.1
-## 5    4 86.9
-## 6    5 84.9
-```
-
-It looks like we've got some data about temperature over time. 
-
-### Importing .csv files
-
-Sometimes we will want to import our own data sets. The easiest way to do this is to have RStudio read it as a .csv file. Excel and other spreadsheet editors can export their files as .csv files, but we need to do some work to get it into our session. 
-
-
-+ The first thing we need to do is upload the data set to our files. In the lower right panel, click on the files tab and then the upload button. You will be prompted to pick a file.
-+ Once you have uploaded the file, it should appear in your files list. 
-+ At the top of the environment/history tab, there is an import data set button. From that drop down menu, pick from csv. 
-+ When the popup appears, click the browse button. You will be shown the files you have in your RStudio directory. Pick the one you just uploaded. 
-+ Before you import it, you may want to change the name of the data set (in the lower left corner).
-+ If you don't want to view your data after you import it, delete the view command from the code preview section (lower right of the popup). 
-+ Hit import! You'll see your data set is listed in the environment tab.
-
-
-
-## Plots 
-
-One of the first things we learn about functions is that they can be represented with a graph. We can build the plot of a function with the appropriately named plotFun.
-
-### Single variable plots
-
-I like to build my functions with a makeFun command first, then we employ plotFun in a similar fashion.
-
-```r
-f=makeFun(3*x+2*sin(pi*x)~x)
-plotFun(f(x)~x)
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-18-1.png" width="432" style="display: block; margin: auto;" />
-
-`plotFun` takes a whole variety of parameters, here are a few useful ones:
-
-* `xlim`, `ylim`: sets the range of your $x$-axis. Example: `xlim=range(1,4), ylim=range(3,60)`
-* `col`: sets the color of the function you plot. RStudio will recognize most basic colors, which you will pass as strings. Example: `col="red"`
-* `add`: you'll use this when you want to add multiple functions to the same plot. We'll see an example of it below.
-Example: `add=TRUE`
-* `xlab`, `ylab`: for labeling your axes. You'll pass this as a string as well. Exanoke: `xlab="time", ylab="red=velocity, blue=position"`
-
-
-Let's try some of this out. I broke the third line so it would all fit, you don't need to!
-
-
-```r
-f=makeFun(x^3+3~x)
-g=makeFun(3*x^2~x)
-plotFun(f(x)~x, xlim=range(1,4), ylim=range(3,60), 
-        col="blue",xlab="time", ylab="red=velocity, blue=position")
-plotFun(g(x)~x, col="red", add=TRUE)
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-19-1.png" width="432" style="display: block; margin: auto;" /><img src="math135_handbook_files/figure-html/unnamed-chunk-19-2.png" width="432" style="display: block; margin: auto;" />
-
-RStudio is a little weird about plots in the RMarkdown in that you might get multiples if you're adding plots together. If you want the chunk to hold all plots until the end, add `fig.show='hold'` into the script braces at the top of the chunk.
-
-### Multivariable plots
-
-Plotting multivariable functions in RStudio is very similar, but you'll have to sort through more parameters and decide how you want to look at your function. Let's start with what RStudio does as a default:
-
-
-```r
-g=makeFun(-x*y*exp(-x^2-y^2)~x&y)
-plotFun(g(x,y)~x&y)
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-20-1.png" width="480" style="display: block; margin: auto;" />
-
-We are given quite a colorful plot! Since the function takes two variables, $x$ and $y$, we need some third way to display the output. That's what the colors and contours do. The colors show the relative values of the function (cooler colors for smaller values) while the contours connect all points $(x,y)$ that have the same function output. Again, this plotFun comes with parameters which can make a better picture. The ones from the single variable section still hold, so we'll list just the new ones here.
-
-* `filled`: this determines whether you want the colors or not. Example: `filled=FALSE`
-* `levels`: this tells RStudio about how you want the contours. You can only plot a few (as a list) or you can give it a *sequence*. RStudio takes a list by using the `c()` command, where the numbers are separated by commas. The sequence command systematically makes a list by starting from a number, going to a number, and incrementing by a certain amount. Exxample: `levels = c(3,4,5) or levels=seq(from=0, to=4, by=.5)`
-* `surface`: sometimes (probably rarely) you may want to look at the actual three dimensional surface of the function. It's not great for estimating, but can help you get an overall idea of what the function is doing. 
-Example: `surface=TRUE`
-
-
-We'll try a little bit out:
-
-
-```r
-g=makeFun(-x*y*exp(-x^2-y^2)~x&y)
-plotFun(g(x,y)~x&y, xlim=range(-1.5,1.5),
-        ylim=range(-1.5,1.5), filled=FALSE, levels=seq(from=-.2,to=.2,by=0.05))
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-21-1.png" width="480" style="display: block; margin: auto;" />
-
-
-```r
-f=makeFun(3*x^2-x-2*y^2+y-2~x&y)
-plotFun(f(x,y)~x&y, surface=TRUE, xlim=range(-5,5), ylim=range(-5,5), zlab="f(x,y)")
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-22-1.png" width="432" style="display: block; margin: auto;" />
-
-### Plotting data
-
-This is all great for nice, continuous, algebraic functions, but one of our jobs in AMC1 is to work with real life data. How do we plot that? Instead of the plotFun command, we'll use plotPoints. Recall from the lists and sequences section that we can define points with the commands `c()` or `seq()`. Suppose I want to plot the following points:
-
-|     |      |      |      |      |      |
-|-----|------|------|------|------|------|
-| $x$ | -2.2 | -2.0 | -1.8 | -1.6 | -1.4 |
-| $y$ |  6   |  4   |   2  |   0  | -2   |
-
-
- 
-
-```r
-plotPoints(c(6,4,2,0,-2)~c(-2.2,-2.0,-1.8,-1.6,-1.4))
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-23-1.png" width="480" style="display: block; margin: auto;" />
-
-*Notice:* the $y$ coordinates go first! This is because we once again use the tilde to denote dependency. 
-
-If you want to plot points from a data set, you'll use the same command with some alternate parameters. I'll use a previously loaded data set (unhelpfully) called somedata. It's got two variables, time and temp. Check back in the data section for details. 
-
-
-```r
-plotPoints(temp~time,data=somedata)
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-24-1.png" width="480" style="display: block; margin: auto;" />
-
-Cool, we've got our plot. Two things to note:
-
-* We have again put our dependent variable first and our independent variable second using the dependency symbol `~`. 
-* We need to put in the parameter data=somedata! Not doing so will result in an error, because RStudio does not know where to find these elusive variables time and temp. 
-
--->
-
+<div id="average-rate-of-change-activities" class="section level2">
+<h2><span class="header-section-number">4.3</span> Average Rate of Change Activities</h2>
+<div id="aroc-of-a-function" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> AROC of a function</h3>
+<p>Find the average rate of change of the function <span class="math inline">\(f(x) = 2x^2 -3x + 1\)</span> on the interval between <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=3\)</span>. Is the function increasing or decreasing on this interval?</p>
+</div>
+<div id="slope-and-concavity" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Slope and Concavity</h3>
+<p>Sketch an example of a function that is</p>
+<ol style="list-style-type: decimal">
+<li>Increasing and concave up</li>
+<li>Increasing and concave down</li>
+<li>Decreasing and concave up</li>
+<li>Decreasing and concave down</li>
+</ol>
+</div>
+<div id="example-function" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Example Function</h3>
+<p>Find the intervals for which the function is</p>
+<ol style="list-style-type: decimal">
+<li>Increasing</li>
+<li>Decreasing</li>
+<li>Concave up</li>
+<li>Concave down</li>
+</ol>
+<p><img src="images/slope-concavity-example.png" style="width:50.0%" /></p>
+<!-- y=\frac{-\left(x-1\right)\left(\frac{x}{3}-3\right)\left(x-7\right)\left(x-2\right)}{8}+5 -->
+</div>
+<div id="vinyl-lps" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> Vinyl LPs</h3>
+<p>Let <span class="math inline">\(V(t)\)</span> denote the number of vinyl LP records sold in the US (in millions) in year <span class="math inline">\(t\)</span>.</p>
+<p><span class="math display">\[
+\begin{array}{c|c|c|c|c|c|c}
+t &amp; 1995 &amp; 2000 &amp; 2005 &amp; 2010 &amp; 2015 &amp; 2020 \\
+\hline
+V(t) &amp; 0.8 &amp; 1.5 &amp; 0.9 &amp; 2.8 &amp; 11.9 &amp; 27.5
+\end{array}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Calculate the average rate of change for each of the five year intervals 1995-2000, 2000-2005, 2005-2010, 2010-15, 2015-2020.</li>
+<li>Use your answers from part 1 to determine whether the function <span class="math inline">\(V(t)\)</span> is increasing or decreasing on these five year intervals.</li>
+<li>Use your answers from part 1 to estimate whether the function <span class="math inline">\(V(t)\)</span> is concave up or concave down on each of the ten year intervals 1995-2005, 2000-2010, 2005-2015 and 2010-2020.</li>
+</ol>
+
+</div>
 </div>
 </div>
             </section>
@@ -696,8 +383,8 @@ Cool, we've got our plot. Two things to note:
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rstudio-quick-referrence.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro-to-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

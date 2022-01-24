@@ -23,7 +23,7 @@
 - Compute the relative change between two points on a function
 
 
-## Tasks
+## Activities
 
 1. A family needs to purchase life insurance. What possible inputs might be used to determine the premium (monthly payment) for life insurance?
 
@@ -31,13 +31,13 @@
    a. What is the independent variable?
    b. What is the dependent variable?
    c. Interpret the statement $f(500)=200$ if $f$ represents this function.
-   d. Would you guess this function to be increasing or decreasing?
+   d. Do you expect this function to be increasing or decreasing? Why?
 
 3. Sketch each of the following:
-   a. An increasing function which is concave up
-   b. An increasing function which is concave down
-   c. A decreasing function which is concave up
-   d. A decreasing function which is concave down
+   a. An increasing function that is concave up
+   b. An increasing function that is concave down
+   c. A decreasing function that is concave up
+   d. A decreasing function that is concave down
 
 4. What is the *relative change* in the Dow Jones average from 169.84 to 77.90 (from 1 January 1931 to 31 December 1931)? Compare this to the *relative change* in the Dow Jones average from 35,443.82 to 35369.09 (from 2 September 2021 to 3 September 2021).
 
