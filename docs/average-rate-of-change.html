@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MATH 135: AMC I</title>
+  <title>4 Average Rate of Change | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="MATH 135: AMC I" />
+  <meta property="og:title" content="4 Average Rate of Change | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MATH 135: AMC I" />
+  <meta name="twitter:title" content="4 Average Rate of Change | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="r-studio-primer.html"/>
+<link rel="prev" href="linear-functions.html"/>
+<link rel="next" href="intro-to-rstudio.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -243,32 +243,120 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">MATH 135: AMC I</h1>
-</div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is the class handbook for Math 135 AMC I at Macalester College. The content here was made by <a href="https://mathbeveridge.github.io">Andrew Beveridge</a>
-and draws upon:</p>
+<div id="average-rate-of-change" class="section level1">
+<h1><span class="header-section-number">4</span> Average Rate of Change</h1>
+<div id="goals-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Goals</h2>
 <ul>
-<li>Material prepared by <a href="https://www.macalester.edu/~kheysse/">Kristin Heysse</a>, <a href="https://www.loriziegelmeier.com/">Lori Ziegelmeier</a> and other faculty in the <a href="https://www.macalester.edu/mscs/">Department of Mathematics, Statistics and Computer Science</a> at <a href="https://www.macalester.edu/">Macalester College</a>.</li>
-<li>The open textbook <a href="http://www.opentextbookstore.com/details.php?id=14">Applied Calculus</a> by Shana Calaway, Dale Hoffman, and David Lippman.</li>
+<li>Calculate average rate of change on an interval</li>
+<li>Recognize when a function is increasing or decreasing</li>
+<li>Recognize when a function is concave up or concave down</li>
 </ul>
-<p><br>
-<br>
-<br></p>
-<p><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></p>
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+</div>
+<div id="activities-1" class="section level2">
+<h2><span class="header-section-number">4.2</span> Activities</h2>
+<div id="aroc-of-a-function" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> AROC of a function</h3>
+<p>Find the average rate of change of the function <span class="math inline">\(f(x) = 2x^2 -3x + 1\)</span> on the interval between <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=3\)</span>.</p>
+</div>
+<div id="measuring-rainfall" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Measuring rainfall</h3>
+<p>One rainy summer day, measurements were recorded (in inches) from a rain gauge every hour.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Time</strong></th>
+<th>8 am</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>noon</th>
+<th>1 pm</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5 pm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Amount</strong></td>
+<td>0.15</td>
+<td>0.17</td>
+<td>0.2</td>
+<td>0.45</td>
+<td>0.48</td>
+<td>0.75</td>
+<td>1.03</td>
+<td>1.20</td>
+<td>1.45</td>
+<td>1.60</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li>What was the average rate of rainfall from 8 a.m. to 5 p.m.?</li>
+<li>What are the units of this rate of change?</li>
+</ol>
+</div>
+<div id="slope-and-concavity" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Slope and Concavity</h3>
+<p>Sketch an example of a function that is</p>
+<ol style="list-style-type: decimal">
+<li>Increasing and concave up</li>
+<li>Increasing and concave down</li>
+<li>Decreasing and concave up</li>
+<li>Decreasing and concave down</li>
+</ol>
+</div>
+<div id="example-function" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> Example Function</h3>
+<p>Here is the graph of a function.
+<img src="images/slope-concavity-example.png" style="width:50.0%" /></p>
+<p>Find the subintervals of <span class="math inline">\([0,10]\)</span> where the function is</p>
+<ol style="list-style-type: decimal">
+<li>Increasing</li>
+<li>Decreasing</li>
+<li>Concave up</li>
+<li>Concave down</li>
+</ol>
+<!-- y=\frac{-\left(x-1\right)\left(\frac{x}{3}-3\right)\left(x-7\right)\left(x-2\right)}{8}+5 -->
+</div>
+<div id="vinyl-lps" class="section level3">
+<h3><span class="header-section-number">4.2.5</span> Vinyl LPs</h3>
+<p>Let <span class="math inline">\(V(t)\)</span> denote the number of vinyl LP records sold in the US (in millions) in year <span class="math inline">\(t\)</span>.</p>
+<p><span class="math display">\[
+\begin{array}{c|c|c|c|c|c|c}
+t &amp; 1995 &amp; 2000 &amp; 2005 &amp; 2010 &amp; 2015 &amp; 2020 \\
+\hline
+V(t) &amp; 0.8 &amp; 1.5 &amp; 0.9 &amp; 2.8 &amp; 11.9 &amp; 27.5
+\end{array}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Calculate the average rate of change for each of the five year intervals 1995-2000, 2000-2005, 2005-2010, 2010-15, 2015-2020.</li>
+<li>Use your answers from part 1 to determine whether the function <span class="math inline">\(V(t)\)</span> is increasing or decreasing on these five year intervals.</li>
+<li>Use your answers from part 1 to estimate whether the function <span class="math inline">\(V(t)\)</span> is concave up or concave down on each of the ten year intervals 1995-2005, 2000-2010, 2005-2015 and 2010-2020.</li>
+</ol>
+</div>
+<div id="relative-change-of-the-dow-jones-average" class="section level3">
+<h3><span class="header-section-number">4.2.6</span> Relative change of the Dow Jones average</h3>
+<p>The <em>relative change</em> of a function <span class="math inline">\(f(x)\)</span> on interval <span class="math inline">\([a,b]\)</span> is
+<span class="math display">\[ \frac{f(b)-f(a)}{f(a)}.\]</span></p>
+<ol style="list-style-type: decimal">
+<li>What is the <em>relative change</em> in the Dow Jones average from 169.84 to 77.90 (from 1 January 1931 to 31 December 1931)?</li>
+<li>Compare this to the <em>relative change</em> in the Dow Jones average from 35,443.82 to 35369.09 (from 2 September 2021 to 3 September 2021).</li>
+</ol>
 
-<!--# (PART) RStudio {-}-->
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="r-studio-primer.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="linear-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="intro-to-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
