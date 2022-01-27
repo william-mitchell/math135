@@ -4,7 +4,7 @@
 
 ## Goals
 
- - Calculate average rate of change on an interval
+ - Calculate average rate of change (AROC) on an interval
  - Recognize when a function is increasing or decreasing
  - Recognize when a function is concave up or concave down
  
@@ -14,10 +14,10 @@
 
 ### AROC of a function
 
-Find the average rate of change of the function $f(x) = 2x^2 -3x + 1$ on the interval between $x=-1$ and $x=3$. 
+Find the average rate of change (AROC) of the function $f(x) = 2x^2 -3x + 1$ on the interval between $x=-1$ and $x=3$. 
 
-### Measuring rainfall
-One rainy summer day, measurements were recorded (in inches) from a rain gauge every hour. 
+### Measuring daily rainfall
+One rainy summer day, hourly measurements of the total rainfall were recorded (in inches) by a rain gauge. 
 
 **Time**   | 8 am | 9 | 10 | 11 | noon | 1 pm | 2 | 3 | 4 | 5 pm
 -------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------
@@ -25,6 +25,14 @@ One rainy summer day, measurements were recorded (in inches) from a rain gauge e
 
 1. What was the average rate of rainfall from 8 a.m. to 5 p.m.? 
 2. What are the units of this rate of change? 
+
+### Sketching a function
+
+1. Sketch a *nonlinear* function that has an average rate of change of 1 on the interval $[0,2]$.
+2. Compare sketches at your table. Are they similar?
+3. Sketch a function with an AROC of 1 on $[0,2]$ that is *very different* from everyone else's function.
+
+**The take away:** AROC is an estimation of the behavior of the function on the interval. But there is no guarantee about the quality of the estimate.
 
 ### Slope and Concavity
 Sketch an example of a function that is
