@@ -30,7 +30,11 @@ graph-of-a-linear-function
 height-and-weight-of-american-men
 scooter-rates
 oil-reserves
-world-population-growth-rate
+solutions
+graph-of-a-linear-function-1
+height-and-weight-of-american-men-1
+scooter-rates-1
+oil-reserves-1
 average-rate-of-change
 goals-1
 activities-1
@@ -41,6 +45,14 @@ slope-and-concavity
 example-function
 vinyl-lps
 relative-change-of-the-dow-jones-average
+solutions-1
+aroc-of-a-function-1
+measuring-daily-rainfall-1
+sketching-a-function-1
+slope-and-concavity-1
+example-function-1
+vinyl-lps-1
+relative-change-of-the-dow-jones-average-1
 exponential-and-logarithmic-functions
 goals-2
 activities-2
@@ -76,7 +88,7 @@ review-problems
 units
 dimensional-analysis
 fermi-estimation
-solutions
+solutions-2
 units-1
 dimensional-analysis-1
 fermi-estimation-1
