@@ -39,7 +39,7 @@ Write a formula representing the function.
 
 ### Allometry of pectoral fins
 
-Allometry is the study of the relative sizes of parts of an animal.  Often, as an animal grows, the size of a body part will be proportional to its length. Here is a table of fish body lengths $L$ and pectoral fin lengths $F$.
+Allometry is the study of the relative sizes of parts of an animal.  Often, as an animal grows, the size of a body part will be a power function of its length. Here is a table of fish body lengths $L$ and pectoral fin lengths $F$.
 
 **Body Length (cm)**   | 6.35 | 7.03 | 8.17 | 9.03 | 9.21 | 9.39 | 9.58 | 11.59 
 -------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------
@@ -56,5 +56,5 @@ The specific heat $s$ of an element is the number of calories of heat required t
 
 **Element**   | Li | Mg | Al | Fe | Ag | Pb | Hg 
 -------|-------|-------|-------|-------|-------|-------|-------|-------
-$w$ | 6.9 | 24.3 | 27.0 | 55.8 | 107.9 | 207.2 | 200.6 
-$s$ | 0.92 | 0.25 | 0.21 | 0.11 | 0.056 | 0.031 | 0.033 
+weight $w$ (g/mol) | 6.9 | 24.3 | 27.0 | 55.8 | 107.9 | 207.2 | 200.6 
+$s$ (cal) | 0.92  | 0.25 | 0.21 | 0.11 | 0.056 | 0.031 | 0.033 
