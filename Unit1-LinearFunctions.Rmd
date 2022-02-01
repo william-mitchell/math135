@@ -1,3 +1,6 @@
+
+# (PART) Functions {-}
+
 # Linear Functions
 
 
@@ -99,10 +102,9 @@ $$
 Note that there is no "unlocking" fee in this plan. If there was an unlocking fee, then we would need a **second** input variable: the number of times that the scooter is ridden. 
 
 ### Oil reserves
-There were 1650 billion barrels of proven oil reserves in the world as of 2016. At constant consumption levels (and excluding unproven reserves), the world had enough oil to last about 47 more years beyond 2016. 
 
 1. We use all 1650 barrels in 47 years, so the slope is $-1650/47=-35.11$. The formula is
-$$ B(t) = 1650 - 35.11t.$$
+$$ B(t) =  - 35.11t+ 1650.$$
 
 2. The rate of change is 35.11 billions of barrels per year. This is the annual consumption of oil. The vertical intercept os 1650 barrels. This is the amount of oil reserves in 2016.
 

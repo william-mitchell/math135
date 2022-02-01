@@ -141,7 +141,7 @@ $$
 
 
 2. The function appears to be decreasing on $2000-2005$ and increasing on the other intervals.
-3. The function appears to concave down at 2000 and concave up at the other points.
+3. The function appears to concave down at 2000 because the slope "gets more negative" at this point. It appears to be concave up at the other points because the slope "gets more positive." 
 
 
 ### Relative change of the Dow Jones average 
