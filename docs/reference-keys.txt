@@ -95,7 +95,13 @@ descriptions-of-power-functions
 allometry-of-pectoral-fins
 specific-heat
 periodic-functions
-tasks
+goals-4
+activities-4
+periodic-function-examples
+find-a-periodic-formula
+variable-star
+tides-and-currents
+rainfall-in-seattle
 units-dimension-estimation-review
 review-problems
 units

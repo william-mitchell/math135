@@ -56,5 +56,5 @@ The specific heat $s$ of an element is the number of calories of heat required t
 
 **Element**   | Li | Mg | Al | Fe | Ag | Pb | Hg 
 -------|-------|-------|-------|-------|-------|-------|-------|-------
-weight $w$ (g/mol) | 6.9 | 24.3 | 27.0 | 55.8 | 107.9 | 207.2 | 200.6 
-$s$ (cal) | 0.92  | 0.25 | 0.21 | 0.11 | 0.056 | 0.031 | 0.033 
+**weight** $w$ (g/mol) | 6.9 | 24.3 | 27.0 | 55.8 | 107.9 | 207.2 | 200.6 
+**specific heat** $s$ (cal) | 0.92  | 0.25 | 0.21 | 0.11 | 0.056 | 0.031 | 0.033 
