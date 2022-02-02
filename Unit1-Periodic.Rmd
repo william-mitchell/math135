@@ -89,7 +89,7 @@ Image Source: https://tidesandcurrents.noaa.gov/
 
 <!--   actually take 25 hour cycle!!!  Unlike a 24-hour solar day, a lunar day lasts 24 hours and 50 minutes. This occurs because the moon revolves around the Earth in the same direction that the Earth is rotating on its axis  -->
 
-## Rainfall in Seattle
+### Rainfall in Seattle
 
 Here is the average rainfall in Seattle.
 
