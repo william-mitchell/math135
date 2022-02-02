@@ -17,7 +17,7 @@ suppressPackageStartupMessages(library(mosaic))
 
 ### Periodic function examples
 
-Brainstorm at your table! Give four examples of periodic phenomena. Can you think of a period phenomenon that doesn't "look like" a sine function. (We've already seen one: the electrocardiagram pattern for the heart),
+Brainstorm at your table! Give four examples of periodic phenomena. Can you think of a periodic phenomenon that doesn't "look like" a sine function. (We've already seen one: the electrocardiagram pattern for a heartbeat),
 
 
 ### Find a periodic formula
