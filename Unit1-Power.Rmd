@@ -32,7 +32,7 @@ Determine whether each of the following is a power function $y=k x^p$. If so, th
 
 Write a formula representing the function.
 
-1. The average velocity $v$ for a 100-mile trip is inversely proportional to the time of travel $t$.
+1. The energy $E$ expended by a swimming dolphin is proportional to the cube of its speed $v$.
 2. The number $N$ of animal species with body length $L$ is inversely proportional to the square of the body length.
 
 
