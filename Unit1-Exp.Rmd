@@ -30,7 +30,7 @@ The consumer price index (CPI) for a given year is the amount of money in that y
 
 
 ### Two data sets
-Here are approximate values of two functions, $f$ and $g$.  For each function, if you think it could be linear or exponential, give a reason and find an approximate formula.
+Here are approximate values of two functions. For each one, decide whether it could be a linear function or an exponentialfunction. Give a reason and then find an approximate formula.
 
 |    |    |    |    |    |    |    |    |
 |----|----|----|----|----|----|----|----|
@@ -47,6 +47,7 @@ Here are approximate values of two functions, $f$ and $g$.  For each function, i
 
 ### Interest rate for an investment
 Suppose that an investment triples in 15 years.
+
 1. What is the interest rate $r$ if the interest is compounded annually: $I(t) = I_0 (1+r)^t$.
 2. What is the interest rate $r$ if interest is compounded continuously: $I(t) = I_0 e^{rt}$.
 3. Which rate is larger? Why does that make sense?
