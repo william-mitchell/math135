@@ -94,6 +94,11 @@ examples-and-non-examples
 descriptions-of-power-functions
 allometry-of-pectoral-fins
 specific-heat
+solutions-3
+examples-and-non-examples-1
+descriptions-of-power-functions-1
+allometry-of-pectoral-fins-1
+specific-heat-1
 periodic-functions
 goals-4
 activities-4
@@ -107,7 +112,7 @@ review-problems
 units
 dimensional-analysis
 fermi-estimation
-solutions-3
+solutions-4
 units-1
 dimensional-analysis-1
 fermi-estimation-1

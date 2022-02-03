@@ -26,7 +26,7 @@ Determine whether each of the following is a power function $y=k x^p$. If so, th
 2. $y = 10 \sqrt{x}$
 3. $\displaystyle{y = \frac{7}{2x}}$
 4. $y = 9x^2 -2$
-5. $(4x)^3$
+5. $y = (4x)^3$
 
 ### Descriptions of power functions
 
@@ -47,14 +47,52 @@ Allometry is the study of the relative sizes of parts of an animal.  Often, as a
 
 
 1. Create a log-log plot of this data and explain why this provides evidence that there is a proportional relationship between fin length and body length.
-1. Find the power function $F = k L^p$ that fits this data.
-2. Do the fin lengths increase faster, slower or at the same rate as the body lengths? How do you know?
+2. Find the power function $F = k L^p$ that fits this data.
+3. Do the fin lengths increase faster, slower or at the same rate as the body lengths? How do you know?
 
 ### Specific heat
 
-The specific heat $s$ of an element is the number of calories of heat required to raise the temperature of one gram of the element by one degree Celcius. Use the following data to decide if $s$ is proportional or inversely proportional to the atomic weight $w$. If so, find the constant of proportionality.
+The specific heat $s$ of an element is the number of calories of heat required to raise the temperature of one gram of the element by one degree Celcius. Use the following data to decide if $s$ is proportional or inversely proportional to the atomic weight $w$. Then find the function $s(w)$.
 
 **Element**   | Li | Mg | Al | Fe | Ag | Pb | Hg 
 -------|-------|-------|-------|-------|-------|-------|-------|-------
 **weight** $w$ (g/mol) | 6.9 | 24.3 | 27.0 | 55.8 | 107.9 | 207.2 | 200.6 
 **specific heat** $s$ (cal) | 0.92  | 0.25 | 0.21 | 0.11 | 0.056 | 0.031 | 0.033 
+
+
+## Solutions
+
+### Examples and non-examples
+
+1. $y=5 \cdot 3^x \quad$ No, this is an exponential function.
+2. $y = 10 x^{1/2} \quad$ Yes.
+3. $\displaystyle{y = \frac{7}{2} x^{-1}} \quad$ Yes.
+4. $y = 9x^2 -2 \quad$ No because it has a constant term.
+5. $y = (4x)^3 = 64x^3\quad$ Yes.
+
+### Descriptions of power functions
+
+Write a formula representing the function.
+
+1. $E = k v^3$
+2. $N = k L^{-2}$
+
+### Allometry of pectoral fins
+
+You can find my [desmos calculations here](https://www.desmos.com/calculator/rtmpxre4l4). 
+
+1. The log-log plot looks pretty linear. So the original function could be a power function.
+2. Fitting $\ln(F) \sim p \ln(L) + c$ gives $p=1.32$ and $c=-1.37$. Therefore $k=e^c=0.255$ and the power function is
+$$
+F = 0.255 L^{1.32}.
+$$
+3. Since $p>1$, the fin lengths increase faster than the body length. This makes sense to me, since those fins have to push around all of that mass (which grows faster than the length, too).
+
+### Specific heat
+
+Here are [my desmos calculations](https://www.desmos.com/calculator/mkpxf7fnaf).
+
+The log-log plot looks linear with a negative slope. So the specific heat is inversely proportional to atomic weight. Fitting $\ln(s) = p \ln(w) + c$ gives $p=-0.985$ and $c=1.760$. Therefore $k=e^{1.76} = 5.812$. So our power function is
+$$
+s = 5.812 w^{-0.985}.
+$$

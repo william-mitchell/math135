@@ -95,6 +95,6 @@ Here is the average rainfall in Seattle.
 
 **Month**   | Jan | Feb | Mar | Apr | May | Jun | Jul | Aug | Sep | Oct | Nov | Dec 
 -------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------
-**Rainfall** (in) | 5.1 | 3.9 | 4 | 2.8 | 1.9 | 1.5 | 0.9 | 1.2 | 1.9 | 3.2 | 5.4 |  6.1
+**Rainfall** (inches) | 5.1 | 3.9 | 4 | 2.8 | 1.9 | 1.5 | 0.9 | 1.2 | 1.9 | 3.2 | 5.4 |  6.1
 
 Model the monthly rainfall with a periodic function $r(t)$ where $t=0$ corresponds to January. Your function must attain its maximum in December, so you will need a horizontal shift!
