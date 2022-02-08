@@ -16,7 +16,7 @@ suppressPackageStartupMessages(library(mosaic))
 
 Biologists study the relative sizes of physiological features based on the total length $x$ of the animal. The general hypothesis is that the size $y$ of a feature is a power function $y = k x^p$ of the length for some appropriate choice of constants $k$ and $p$.
 
-A fish researcher has collected some data inthe length $x$ of a fish and the area $y$ of its pectoral fin.
+A fish researcher has collected some data in the length $x$ of a fish and the area $y$ of its pectoral fin.
 
 
 |   |   |   |   |    |   |

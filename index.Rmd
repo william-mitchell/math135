@@ -11,6 +11,9 @@ documentclass: book
 link-citations: yes
 github-repo: mathbeveridge/math135_f21
 description: "This is the class activity manual for MATH 135 at Macalester College."
+header-includes:
+  - \usepackage{pgf}
+  - \usepackage{pgfplots}
 ---
 
 

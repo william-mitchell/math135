@@ -80,7 +80,10 @@ Find a formula that models the brightness of Mira as a function of time, with $t
 
  Here is a plot of the water level (in red) and the current speed (in blue) of the St. Johns River. The period of each is 24.83 hours. This is the length of one **lunar day**: the time it takes for a point on the Earth to rotate from an exact point under the Moon to that same point under the Moon. (This is slightly longer than one day because the Moon revolves around the Earth in the same direction as the Earth's rotation.)
 
-Model the water level $w(t)$ and the current speed $c(t)$ using periodic functions, where $t$ is the number of hours since midnight April 28, 1998. Be sure to use the appropriate vertical axis for each one!
+Model the water level $w(t)$ and the current speed $c(t)$ using periodic functions, where $t$ is the number of hours since midnight April 28, 1998. 
+
+* Be sure to use the appropriate vertical axis for each one!
+* Decide which one will be easier to model: $w(t)$ or $c(t)$? Do that one first, and then adjust that function to get the other one.
 
 ![](images/tidevscurrentstjohns.jpeg){width=80%}
 

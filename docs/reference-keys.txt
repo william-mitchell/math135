@@ -107,6 +107,10 @@ find-a-periodic-formula
 variable-star
 tides-and-currents
 rainfall-in-seattle
+multivariable-functions
+goals-5
+activities-5
+matching-contours
 units-dimension-estimation-review
 review-problems
 units

@@ -10,6 +10,7 @@ rmd_files: ["index.Rmd",
   "Unit1-Exp.Rmd",
   "Unit1-Power.Rmd",
   "Unit1-Periodic.Rmd",
+  "Unit1-Multivariable.Rmd",
   "Unit2-Review.Rmd",
   "Unit4-DerivativeRules.Rmd"]
 language:

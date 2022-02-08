@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 Power Functions | MATH 135: AMC I</title>
+  <title>9 Multivariable Functions | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 Power Functions | MATH 135: AMC I" />
+  <meta property="og:title" content="9 Multivariable Functions | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 Power Functions | MATH 135: AMC I" />
+  <meta name="twitter:title" content="9 Multivariable Functions | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="exponential-and-logarithmic-functions.html"/>
-<link rel="next" href="periodic-functions.html"/>
+<link rel="prev" href="periodic-functions.html"/>
+<link rel="next" href="units-dimension-estimation-review.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -301,180 +301,63 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="power-functions" class="section level1">
-<h1><span class="header-section-number">7</span> Power Functions</h1>
-<div id="goals-3" class="section level2">
-<h2><span class="header-section-number">7.1</span> Goals</h2>
+<div id="multivariable-functions" class="section level1">
+<h1><span class="header-section-number">9</span> Multivariable Functions</h1>
+<div id="goals-5" class="section level2">
+<h2><span class="header-section-number">9.1</span> Goals</h2>
 <ul>
-<li>Describe proportional and inversely proportional relationships</li>
-<li>Recognize power functions by creating a log-log plot.</li>
-<li>Fit a power function to data</li>
+<li>Identify and explain independent and dependent variables in
+multivariable functions</li>
+<li>Interpret functions represented as tables and equations</li>
+<li>Interpret contour diagrams and make function value estimates</li>
+<li>Interpret cross sections and connect them with contour
+diagrams</li>
 </ul>
-<p>When you have data that you suspect comes from a power function
-<span class="math display">\[y=k x^p,\]</span>
-here is how you can find the constants <span class="math inline">\(p\)</span> and <span class="math inline">\(k\)</span></p>
-<ol style="list-style-type: decimal">
-<li>Take the natural log of both the <span class="math inline">\(x\)</span>-axis data and the <span class="math inline">\(y\)</span>-axis data</li>
-<li>Fit a line to the resulting data</li>
-<li>Use the slope and <span class="math inline">\(y\)</span>-intercept of this line to find the values of the power <span class="math inline">\(p\)</span> and the constant <span class="math inline">\(k\)</span>.</li>
-</ol>
 </div>
-<div id="activities-3" class="section level2">
-<h2><span class="header-section-number">7.2</span> Activities</h2>
-<div id="examples-and-non-examples" class="section level3">
-<h3><span class="header-section-number">7.2.1</span> Examples and non-examples</h3>
-<p>Determine whether each of the following is a power function <span class="math inline">\(y=k x^p\)</span>. If so, then find the leading constant <span class="math inline">\(k\)</span> and the power <span class="math inline">\(p\)</span>.</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(y=5 \cdot 3^x\)</span></li>
-<li><span class="math inline">\(y = 10 \sqrt{x}\)</span></li>
-<li><span class="math inline">\(\displaystyle{y = \frac{7}{2x}}\)</span></li>
-<li><span class="math inline">\(y = 9x^2 -2\)</span></li>
-<li><span class="math inline">\(y = (4x)^3\)</span></li>
-</ol>
-</div>
-<div id="descriptions-of-power-functions" class="section level3">
-<h3><span class="header-section-number">7.2.2</span> Descriptions of power functions</h3>
-<p>Write a formula representing the function.</p>
-<ol style="list-style-type: decimal">
-<li>The energy <span class="math inline">\(E\)</span> expended by a swimming dolphin is proportional to the cube of its speed <span class="math inline">\(v\)</span>.</li>
-<li>The number <span class="math inline">\(N\)</span> of animal species with body length <span class="math inline">\(L\)</span> is inversely proportional to the square of the body length.</li>
-</ol>
-</div>
-<div id="allometry-of-pectoral-fins" class="section level3">
-<h3><span class="header-section-number">7.2.3</span> Allometry of pectoral fins</h3>
-<p>Allometry is the study of the relative sizes of parts of an animal. Often, as an animal grows, the size of a body part will be a power function of its length. Here is a table of fish body lengths <span class="math inline">\(L\)</span> and pectoral fin lengths <span class="math inline">\(F\)</span>.</p>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Body Length (cm)</strong></th>
-<th>6.35</th>
-<th>7.03</th>
-<th>8.17</th>
-<th>9.03</th>
-<th>9.21</th>
-<th>9.39</th>
-<th>9.58</th>
-<th>11.59</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Pectoral Fin Length (cm)</strong></td>
-<td>2.72</td>
-<td>3.49</td>
-<td>4.06</td>
-<td>4.95</td>
-<td>4.86</td>
-<td>5.00</td>
-<td>5.05</td>
-<td>6.05</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ol style="list-style-type: decimal">
-<li>Create a log-log plot of this data and explain why this provides evidence that there is a proportional relationship between fin length and body length.</li>
-<li>Find the power function <span class="math inline">\(F = k L^p\)</span> that fits this data.</li>
-<li>Do the fin lengths increase faster, slower or at the same rate as the body lengths? How do you know?</li>
-</ol>
-</div>
-<div id="specific-heat" class="section level3">
-<h3><span class="header-section-number">7.2.4</span> Specific heat</h3>
-<p>The specific heat <span class="math inline">\(s\)</span> of an element is the number of calories of heat required to raise the temperature of one gram of the element by one degree Celcius. Use the following data to decide if <span class="math inline">\(s\)</span> is proportional or inversely proportional to the atomic weight <span class="math inline">\(w\)</span>. Then find the function <span class="math inline">\(s(w)\)</span>.</p>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Element</strong></th>
-<th>Li</th>
-<th>Mg</th>
-<th>Al</th>
-<th>Fe</th>
-<th>Ag</th>
-<th>Pb</th>
-<th>Hg</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>weight</strong> <span class="math inline">\(w\)</span> (g/mol)</td>
-<td>6.9</td>
-<td>24.3</td>
-<td>27.0</td>
-<td>55.8</td>
-<td>107.9</td>
-<td>207.2</td>
-<td>200.6</td>
-<td></td>
-</tr>
-<tr class="even">
-<td><strong>specific heat</strong> <span class="math inline">\(s\)</span> (cal)</td>
-<td>0.92</td>
-<td>0.25</td>
-<td>0.21</td>
-<td>0.11</td>
-<td>0.056</td>
-<td>0.031</td>
-<td>0.033</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="solutions-3" class="section level2">
-<h2><span class="header-section-number">7.3</span> Solutions</h2>
-<div id="examples-and-non-examples-1" class="section level3">
-<h3><span class="header-section-number">7.3.1</span> Examples and non-examples</h3>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(y=5 \cdot 3^x \quad\)</span> No, this is an exponential function.</li>
-<li><span class="math inline">\(y = 10 x^{1/2} \quad\)</span> Yes.</li>
-<li><span class="math inline">\(\displaystyle{y = \frac{7}{2} x^{-1}} \quad\)</span> Yes.</li>
-<li><span class="math inline">\(y = 9x^2 -2 \quad\)</span> No because it has a constant term.</li>
-<li><span class="math inline">\(y = (4x)^3 = 64x^3\quad\)</span> Yes.</li>
-</ol>
-</div>
-<div id="descriptions-of-power-functions-1" class="section level3">
-<h3><span class="header-section-number">7.3.2</span> Descriptions of power functions</h3>
-<p>Write a formula representing the function.</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(E = k v^3\)</span></li>
-<li><span class="math inline">\(N = k L^{-2}\)</span></li>
-</ol>
-</div>
-<div id="allometry-of-pectoral-fins-1" class="section level3">
-<h3><span class="header-section-number">7.3.3</span> Allometry of pectoral fins</h3>
-<p>You can find my <a href="https://www.desmos.com/calculator/rtmpxre4l4">desmos calculations here</a>.</p>
-<ol style="list-style-type: decimal">
-<li>The log-log plot looks pretty linear. So the original function could be a power function.</li>
-<li>Fitting <span class="math inline">\(\ln(F) \sim p \ln(L) + c\)</span> gives <span class="math inline">\(p=1.32\)</span> and <span class="math inline">\(c=-1.37\)</span>. Therefore <span class="math inline">\(k=e^c=0.255\)</span> and the power function is
-<span class="math display">\[
-F = 0.255 L^{1.32}.
-\]</span></li>
-<li>Since <span class="math inline">\(p&gt;1\)</span>, the fin lengths increase faster than the body length. This makes sense to me, since those fins have to push around all of that mass (which grows faster than the length, too).</li>
-</ol>
-</div>
-<div id="specific-heat-1" class="section level3">
-<h3><span class="header-section-number">7.3.4</span> Specific heat</h3>
-<p>Here are <a href="https://www.desmos.com/calculator/mkpxf7fnaf">my desmos calculations</a>.</p>
-<p>The log-log plot looks linear with a negative slope. So the specific heat is inversely proportional to atomic weight. Fitting <span class="math inline">\(\ln(s) = p \ln(w) + c\)</span> gives <span class="math inline">\(p=-0.985\)</span> and <span class="math inline">\(c=1.760\)</span>. Therefore <span class="math inline">\(k=e^{1.76} = 5.812\)</span>. So our power function is
-<span class="math display">\[
-s = 5.812 w^{-0.985}.
-\]</span></p>
+<div id="activities-5" class="section level2">
+<h2><span class="header-section-number">9.2</span> Activities</h2>
+<div id="matching-contours" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Matching Contours</h3>
+<p>Match contours I - IV to surfaces A - D.</p>
+<p><img src="images/contour-match.png" style="width:80.0%" />
+<!--
+## Drawing contours on a data table
+--></p>
+<!--
+
+Draw contours for $g(x,y)=k$ on the given table for $k=3,6,9$.
+
+\begin{tikzpicture}
+\node at (0,0) {
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
+\cellcolor{gray} g & \cellcolor{gray} 0 & \cellcolor{gray} 10 & \cellcolor{gray} 20 & \cellcolor{gray} 30 & \cellcolor{gray} 40 & \cellcolor{gray} 50 & \cellcolor{gray} 60 & \cellcolor{gray} 70 & \cellcolor{gray} 80 \\ 
+\cellcolor{gray} 80 & 2 & 3 & 4 & 6 & 6 & 7 & 7 & 6 & 6 \\ \hline
+\cellcolor{gray} 70 & 3 & 4 & 5 & 6 & 8 & 8 & 8 & 8 & 7 \\ \hline
+\cellcolor{gray} 60 & 4 & 5 & 6 & 8 & 9 & 10 & 9 & 9 & 8 \\ \hline
+\cellcolor{gray} 50 & 3 & 4 & 5 & 7 & 8 & 9 & 9 & 8 & 7 \\ \hline
+\cellcolor{gray} 40 & 2 & 3 & 4 & 5 & 7 & 8 & 8 & 7 & 6 \\ \hline
+\cellcolor{gray} 30 & 1 & 2 & 3 & 5 & 6 & 7 & 6 & 6 & 5 \\ \hline
+\cellcolor{gray} 20 & 0 & 1 & 2 & 4 & 5 & 6 & 5 & 5 & 4 \\ \hline
+\cellcolor{gray} 10 & 0 & 0 & 1 & 3 & 4 & 4 & 4 & 3 & 2 \\ \hline
+\cellcolor{gray} 0 & -1 & -1 & 0 & 2 & 3 & 3 & 2 & 2 & 1 \\ \hline
+\end{tabular}
+};
+\end{tikzpicture}
+-->
 
 </div>
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="exponential-and-logarithmic-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="periodic-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="periodic-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="units-dimension-estimation-review.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
