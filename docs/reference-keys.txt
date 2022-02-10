@@ -111,6 +111,7 @@ multivariable-functions
 goals-5
 activities-5
 matching-contours
+plotting-in-rstudio
 units-dimension-estimation-review
 review-problems
 units

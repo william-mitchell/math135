@@ -21,6 +21,51 @@ Match contours I - IV to surfaces A - D.
 -->
 
 
+### Plotting in RStudio
+
+Create these plots using RStudio. You will need to import the mosaic package.
+
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+
+
+
+1. Windchill Function
+
+
+Surface plot
+
+```{r}
+plotFun(35.74+0.6215*T-35.75*V^(0.16)+0.4275*T*V^(0.16)~T & V, T.lim=range(-30,30),
+V.lim=range(5,40),surface=TRUE,zlab="V",xlab="T",ylab="W")
+```
+
+Contour Plot
+
+```{r}
+plotFun(35.74+0.6215*T-35.75*V^(0.16)+0.4275*T*V^(0.16)~T & V, T.lim=range(-30,30), filled=FALSE,
+V.lim=range(5,40),zlab="V",xlab="T",ylab="W")
+```
+
+
+2. Another Function
+
+Surface Plot
+
+```{r}
+plotFun(sin(x^2+y^2)/(0.1+x^2+y^2)+(x^2+4*y^2)*exp(1-x^2-y^2)/2~x&y,
+surface=TRUE,zlab="f(x,y)",x.lim=range(-3,3),y.lim=range(-3,3))
+```
+
+Contour Plot
+
+```{r}
+plotFun(sin(x^2+y^2)/(0.1+x^2+y^2)+(x^2+4*y^2)*exp(1-x^2-y^2)/2~x&y,
+filled=FALSE,zlab="f(x,y)",x.lim=range(-3,3),y.lim=range(-3,3))
+```
 
 
 <!--
