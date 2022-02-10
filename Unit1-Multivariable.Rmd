@@ -23,12 +23,16 @@ Match contours I - IV to surfaces A - D.
 
 ### Plotting in RStudio
 
-Create these plots using RStudio. You will need to import the mosaic package.
+Create these plots using RStudio. 
 
-```{r setup, include=FALSE, warning=FALSE}
+You will need to import the mosaic package. Cut and paste this code chunk into your RMD file and run it. This will load in the `plotFun` command to create surface plots and contour plots. 
+
+````
+```{r setup, include=FALSE, warning=FALSE}`r ''`
 knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
 ```
+````
 
 
 

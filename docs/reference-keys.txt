@@ -107,6 +107,12 @@ find-a-periodic-formula
 variable-star
 tides-and-currents
 rainfall-in-seattle
+solutions-4
+periodic-function-examples-1
+find-a-periodic-formula-1
+variable-star-1
+tides-and-currents-1
+rainfall-in-seattle-1
 multivariable-functions
 goals-5
 activities-5
@@ -117,7 +123,7 @@ review-problems
 units
 dimensional-analysis
 fermi-estimation
-solutions-4
+solutions-5
 units-1
 dimensional-analysis-1
 fermi-estimation-1
