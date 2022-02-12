@@ -11,6 +11,11 @@ diagrams
 
 ## Activities
 
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
 ### Matching Contours
 
 Match contours I - IV to surfaces A - D.
@@ -39,24 +44,30 @@ suppressPackageStartupMessages(library(mosaic))
 
 1. Windchill Function
 
+$$
+W(T,V) = 35.74+0.6215 \, T-35.75 \, V^{0.16}+0.4275 \, T \,  V^{0.16}
+$$ 
 
 Surface plot
 
 ```{r}
 plotFun(35.74+0.6215*T-35.75*V^(0.16)+0.4275*T*V^(0.16)~T & V, T.lim=range(-30,30),
-V.lim=range(5,40),surface=TRUE,zlab="V",xlab="T",ylab="W")
+V.lim=range(5,40),surface=TRUE,zlab="W",xlab="T",ylab="V")
 ```
 
 Contour Plot
 
 ```{r}
-plotFun(35.74+0.6215*T-35.75*V^(0.16)+0.4275*T*V^(0.16)~T & V, T.lim=range(-30,30), filled=FALSE,
-V.lim=range(5,40),zlab="V",xlab="T",ylab="W")
+plotFun(35.74+0.6215*T-35.75*V^(0.16)+0.4275*T*V^(0.16)~T & V, T.lim=range(-40,40), filled=FALSE,
+V.lim=range(5,60),zlab="V",xlab="T",ylab="V", levels = seq(-100,40,10))
 ```
 
 
 2. Another Function
 
+$$
+f(x,y) = \frac{\sin(x^2+y^2)}{0.1+x^2+y^2}+ \frac{1}{2}(x^2+4y^2)e^{1-x^2-y^2}
+$$
 Surface Plot
 
 ```{r}
@@ -69,6 +80,85 @@ Contour Plot
 ```{r}
 plotFun(sin(x^2+y^2)/(0.1+x^2+y^2)+(x^2+4*y^2)*exp(1-x^2-y^2)/2~x&y,
 filled=FALSE,zlab="f(x,y)",x.lim=range(-3,3),y.lim=range(-3,3))
+```
+
+
+### Cross Sections
+
+For each of the the two functions in the previous problem:
+
+* Sketch two or three horizontal cross sections
+* Sketch two or three verical cross sections
+* Then use RStudio to create these cross sections and compare to your sketches. How well did you do?
+
+
+
+
+
+## Solutions
+
+
+
+### Matching Contours
+
+
+1. C
+2. B
+3. D
+4. A
+
+
+### Plotting in RStudio
+
+
+The expected plots are ahoqn in the question.
+
+
+### Cross Sections
+
+1. Here are some cross sections for the windchill function
+$$W(T,V) = 35.74+0.6215 \, T-35.75 \, V^{0.16}+0.4275 \, T \,  V^{0.16}$$
+
+```{r}
+W = makeFun(35.74+0.6215*T-35.75*V^(0.16)+0.4275*T*V^(0.16)~T & V)
+
+plotFun(W(T,20)~T, T.lim=range(-40,40), xlab="T",ylab="W",  main="Windchill for V=20",levels = seq(-100,40,10))
+
+plotFun(W(T,40)~T, T.lim=range(-40,40), xlab="T",ylab="W",  main="Windchill for V=40",levels = seq(-100,40,10))
+
+```
+
+
+```{r}
+plotFun(W(-20,V)~V, V.lim=range(0,60), xlab="V",ylab="W",  main="Windchill for T=-20")
+
+plotFun(W(20,V)~V, V.lim=range(0,60), xlab="V",ylab="W",  main="Windchill for T=20")
+
+```
+
+
+2. Here are some cross sections for the second function.
+$$
+f(x,y) = \frac{\sin(x^2+y^2)}{0.1+x^2+y^2}+ \frac{1}{2}(x^2+4y^2)e^{1-x^2-y^2}
+$$
+
+
+
+
+
+```{r}
+f = makeFun(sin(x^2+y^2)/(0.1+x^2+y^2)+(x^2+4*y^2)*exp(1-x^2-y^2)/2~x&y)
+```
+
+```{r}
+plotFun(f(x,-1.5)~x,x.lim=range(-1,1))
+plotFun(f(x,0)~x,x.lim=range(-1,1))
+plotFun(f(x,1.5)~x,x.lim=range(-1,1))
+```
+```{r}
+plotFun(f(-1.5,y)~y,y.lim=range(-1,1))
+plotFun(f(0,y)~y,y.lim=range(-1,1))
+plotFun(f(1.5,y)~y,y.lim=range(-1,1))
 ```
 
 
