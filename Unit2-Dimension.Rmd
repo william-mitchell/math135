@@ -30,7 +30,8 @@ Force            | $\frac{ML}{T^2}$   | mass $\times$ acceleration            | 
 Energy (Work)    | $\frac{ML^2}{T^2}$ | force $\times$ displacement           | Joule (J), calorie, kilowatt hour ($kwh$), foot-pound|
 Power            | $\frac{ML^2}{T^3}$ | energy/time                           | Watt (W), horsepower                         |
 Density          | $\frac{M}{L^3}$    | mass/volume                     | kilogram/meter$^3$                       |
-Pressure         | $\frac{M}{LT^2}$   | force/area                            | newton/meter$^2$, pascal ($Pa$), psi, atm       |   
+Pressure         | $\frac{M}{LT^2}$   | force/area                            | newton/meter$^2$, pascal ($Pa$), psi, atm       |  
+Electric Charge | $I T$ | current $\times$ time | coulomb
 
 Table: Derived Dimensions
 
