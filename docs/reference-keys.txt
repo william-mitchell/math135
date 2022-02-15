@@ -119,9 +119,10 @@ activities-5
 matching-contours
 plotting-in-rstudio
 cross-sections
+plotting-in-rstudio-1
 solutions-5
 matching-contours-1
-plotting-in-rstudio-1
+plotting-in-rstudio-2
 cross-sections-1
 dimensions-and-units
 activities-6

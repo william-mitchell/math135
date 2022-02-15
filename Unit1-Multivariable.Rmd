@@ -8,6 +8,7 @@ multivariable functions
 * Interpret contour diagrams and make function value estimates
 * Interpret cross sections and connect them with contour
 diagrams
+* Use RStudio to create a contour plot and a surface plot of a function $z=f(x,y)$.
 
 ## Activities
 
@@ -88,12 +89,36 @@ filled=FALSE,zlab="f(x,y)",x.lim=range(-3,3),y.lim=range(-3,3))
 For each of the the two functions in the previous problem:
 
 * Sketch two or three horizontal cross sections
-* Sketch two or three verical cross sections
+* Sketch two or three vertical cross sections
 * Then use RStudio to create these cross sections and compare to your sketches. How well did you do?
 
 
+### Plotting in RStudio
+
+Here is some sample RStudio code that defines a function `P(x,y) = x^2 - 4x y^3` and then creates two contour plots. The first plot uses the default domain and default level curves (chosen by RStudio). The second plot specifies both of these using additional arguments. 
+
+```{r}
+P = makeFun(x^2 - 4*x*y^3 ~ x&y)
+
+plotFun(P(x,y) ~ x&y, filled=FALSE)
+
+plotFun(P(x,y) ~ x&y, filled=FALSE, x.lim=range(-5,5),y.lim=range(-5,5), levels = seq(-1000, 1000, 200))
+
+```
 
 
+
+Using RStudio,
+
+* Use `makeFun` to create each of these functions. 
+* Then use `plotFun` to create a contour plot.
+
+Try out different horizontal and vertical domains that are centered around the origin. Change the level curves.
+
+
+1. $f(x,y) = \sin(\sqrt{x^2+y^2})$
+2. $g(x,y) = x^2 y^2 e^{-x^2-y^2}$
+3. $h(x,y) = \sin^2x + \frac{1}{4}y^2$ 
 
 ## Solutions
 
@@ -111,7 +136,7 @@ For each of the the two functions in the previous problem:
 ### Plotting in RStudio
 
 
-The expected plots are ahoqn in the question.
+The expected plots are shown in the question.
 
 
 ### Cross Sections
