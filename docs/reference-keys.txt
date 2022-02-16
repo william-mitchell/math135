@@ -124,6 +124,7 @@ solutions-5
 matching-contours-1
 plotting-in-rstudio-2
 cross-sections-1
+plotting-in-rstudio-3
 dimensions-and-units
 activities-6
 find-the-dimension
