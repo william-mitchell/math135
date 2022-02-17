@@ -12,8 +12,10 @@ rmd_files: ["index.Rmd",
   "Unit1-Periodic.Rmd",
   "Unit1-Multivariable.Rmd",
   "Unit2-Dimension.Rmd",
+  "Unit2-DimensionalAnalysis.Rmd",
   "Unit2-Review.Rmd",
-  "Unit4-DerivativeRules.Rmd"]
+  "Unit4-DerivativeRules.Rmd",
+  ]
 language:
   ui: 
     chapter_name: ""
