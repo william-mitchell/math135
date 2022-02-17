@@ -60,7 +60,7 @@ Decide whether each of the following formulas is dimensionally feasible or infea
 
 ### Geometric Formulas for a Cylinder
 
-A student is trying to remember the formulas for the surface area $A$ and the volume $V$ of a cylander of radius $r$ and height $h$. They come across the following two formulas:
+A student is trying to remember the formulas for the surface area $A$ and the volume $V$ of a cylinder of radius $r$ and height $h$. They come across the following two formulas:
 $$ \pi r^2 h$$
 and
 $$ 2\pi r (r+h).$$
@@ -76,5 +76,5 @@ This [unit conversion chart](https://www.mustangps.org/Downloads/conversion_char
 
 1. A car is going 35 miles per hour. How many feet per second is it traveling? 
 
-1. Sunight deposits energy at a rate of $250 W/m^2$ on a $10 m^2$ garden. How much energy (in Joules) is desposited in a week? Note that 1 Watt is 1 Joule per second) 
+1. Sunlight deposits energy at a rate of 250 W/m$^2$ on a 10 m$^2$ garden. How much energy (in Joules) is deposited in a week? Note that 1 Watt is 1 Joule per second) 
 

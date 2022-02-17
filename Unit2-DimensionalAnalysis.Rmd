@@ -5,10 +5,10 @@
 
 Given independent variables $x,y,z$ and dependent variable $w$:
 
-1. List dimensions of all quantites
-2. Write down the hypothesized "generalized product" $w = k x^a y^b z^c$
-3. Write \& simplify the dimensional version $[w] = [x]^a [y]^b [z]^c$
-4. Invoke dimensional compatability to solve.
+1. Write down the hypothesized "generalized product" $w = k x^a y^b z^c$
+2. Write \& simplify the dimensional version $[w] = [x]^a [y]^b [z]^c$
+3. List the dimensions of all quantities
+4. Invoke dimensional compatibility to solve.
 5. Rewrite your equation, marvel at your awesomeness!
 
 
