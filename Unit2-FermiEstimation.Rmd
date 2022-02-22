@@ -8,7 +8,7 @@ Here's a general game plan for Fermi Problems:
 1. Write down what you know. 
 2. Estimate what you don't know!
     a. Ask a series of smaller questions. 
-    b. Estimate (using an educated guess) the answers to the smaller questions. 
+    b. Estimate the answers to the smaller questions. 
 3. Multiply and pay attention to units.
 
 \bigskip
@@ -19,13 +19,13 @@ Remember, **we're trying to estimate!**
 * Do not guess blindly.
 * Find a middle ground!
 
-**Pro Tip \#1:** The key is to identify smaller problems that you can estimate using your everyday common sense. For example, rather than estimating the height of of  a building, I would estimate the height of one floor and estimate the number of floors, and then multiply.
+**Pro Tip \#1:** Identify smaller problems that you can estimate using your everyday common sense. For example, rather than estimating the height of of  a building, I would estimate the height of one floor and estimate the number of floors, and then multiply.
 
 **Pro Tip \#2:** When estimating, determine the order of magnitude (10, 100, 1000, etc). Use the geometric mean when you think the answer is somewhere in between. For example, if you think 1,000 is too small but that 10,000 is too big, then use 3,000.
 
 ## Some Useful Data
 
-The following approximate data may be useful in various Fermi problems. Each have been stated with one or two significant figures.
+The following approximate data may be useful in various Fermi problems. Each has been stated with one or two significant figures.
 
 * Population of the world: $7 \times 10^9$ people 
 * Population of the United States: $3 \times 10^8$ people
