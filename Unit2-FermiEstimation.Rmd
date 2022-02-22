@@ -1,0 +1,62 @@
+# Fermi Estimation
+
+
+## Working Fermi Problems
+
+Here's a general game plan for Fermi Problems:
+
+1. Write down what you know. 
+2. Estimate what you don't know!
+    a. Ask a series of smaller questions. 
+    b. Estimate (educated guess) the answers to the smaller questions
+3. Multiply and pay attention to units.
+
+\bigskip
+
+Remember, **we're trying to estimate!**
+
+* Do not obsess over details, but also,
+* Do not guessing blindly.
+* Find a middle ground!
+
+## Some Useful Data
+
+The following approximate data may be useful in various Fermi problems. Each have been stated with 1 or 2 significant figures.
+
+* Population of the world: $7 \times 10^9$ people 
+* Population of the United States: $3 \times 10^8$ people
+* Average human life span worldwide (in years): 71 years  
+* United States national debt (in dollars): $\$1.8 \times 10^{13}$ 
+* United States federal spending (in dollars per year): $\$3.8 \times 10^{12}$.
+* Fraction of United States federal spending devoted to defense (as a decimal): 0.16
+* Fraction of United States federal spending devoted to Medicare/Medicaid (as a decimal): 0.27
+* Radius of earth (in km): 6400 km
+* Acceleration due to gravity on the surface of the Earth: $9.8 \text{ m/}\text{s}^2$
+* Fraction of Earth’s surface covered by water (as a decimal): 0.7
+* Density of water at sea level: $1 \text{ g}/\text{cm}^3$
+
+
+## Activities
+
+
+1. How many blades of grass are there on a football field?
+
+1. How many babies are born each day? It will be helpful to know that (a) there are 7.8 billion people on the planet, (b) the average life expectancy is 73 years, and (c) the population doesn't change that much (relatively speakiing) in one year.
+
+1. If all 7.8 billion humans in the world were crammed together, how much area would we require? Is this closer to the size of a city, a state, the U.S., or North America? Start by figuring out how many people would fit in 1 square meter. Then figure out how many square kilometers we would need.
+
+
+<!--
+## Solutions
+
+
+1. I think that I can estimate the number of blades in a square inch. 10 is too small, 100 seems okay, but 1000 is too many. Among my choices of 30, 100 and 300, I guess that I like 100 blades per square inch. I know that a football field is 100 yards long. I guess that the end zones are 10 yards deep, for 120 yards total.  I'll estimate that the field is 30 yards across. 
+
+So my answer would be
+$$
+\left(100 \, \frac{\mbox{blades}}{\mbox{in}^2} \right) \left(36^2 \, \frac{\mbox{in}^2}{\mbox{yard}^2} \right) \left(120 \mbox{ yards} \right) \left(30 \mbox{ yards} \right)
+= 4.7 \times 10^8
+$$
+and my final estimate is 500 million blades of grass.
+-->
+  

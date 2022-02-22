@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="dimensions-and-units.html"/>
-<link rel="next" href="units-dimension-estimation-review.html"/>
+<link rel="next" href="fermi-estimation.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -293,19 +293,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="11.2.2" data-path="dimensional-analysis.html"><a href="dimensional-analysis.html#mixer-power"><i class="fa fa-check"></i><b>11.2.2</b> Mixer Power</a></li>
 <li class="chapter" data-level="11.2.3" data-path="dimensional-analysis.html"><a href="dimensional-analysis.html#velocity-of-an-ocean-wave"><i class="fa fa-check"></i><b>11.2.3</b> Velocity of an Ocean Wave</a></li>
 </ul></li>
+<li class="chapter" data-level="11.3" data-path="dimensional-analysis.html"><a href="dimensional-analysis.html#solutions-6"><i class="fa fa-check"></i><b>11.3</b> Solutions</a></li>
 </ul></li>
-<li class="part"><span><b>III Units, Dimension, Estimation</b></span></li>
-<li class="chapter" data-level="12" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html"><i class="fa fa-check"></i><b>12</b> Units, Dimension, Estimation Review</a><ul>
-<li class="chapter" data-level="12.1" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#review-problems"><i class="fa fa-check"></i><b>12.1</b> Review Problems</a><ul>
-<li class="chapter" data-level="12.1.1" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#units"><i class="fa fa-check"></i><b>12.1.1</b> Units</a></li>
-<li class="chapter" data-level="12.1.2" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#dimensional-analysis-1"><i class="fa fa-check"></i><b>12.1.2</b> Dimensional Analysis</a></li>
-<li class="chapter" data-level="12.1.3" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#fermi-estimation"><i class="fa fa-check"></i><b>12.1.3</b> Fermi Estimation</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#solutions-6"><i class="fa fa-check"></i><b>12.2</b> Solutions</a><ul>
-<li class="chapter" data-level="12.2.1" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#units-1"><i class="fa fa-check"></i><b>12.2.1</b> Units</a></li>
-<li class="chapter" data-level="12.2.2" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#dimensional-analysis-2"><i class="fa fa-check"></i><b>12.2.2</b> Dimensional Analysis</a></li>
-<li class="chapter" data-level="12.2.3" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#fermi-estimation-1"><i class="fa fa-check"></i><b>12.2.3</b> Fermi Estimation</a></li>
-</ul></li>
+<li class="chapter" data-level="12" data-path="fermi-estimation.html"><a href="fermi-estimation.html"><i class="fa fa-check"></i><b>12</b> Fermi Estimation</a><ul>
+<li class="chapter" data-level="12.1" data-path="fermi-estimation.html"><a href="fermi-estimation.html#working-fermi-problems"><i class="fa fa-check"></i><b>12.1</b> Working Fermi Problems</a></li>
+<li class="chapter" data-level="12.2" data-path="fermi-estimation.html"><a href="fermi-estimation.html#some-useful-data"><i class="fa fa-check"></i><b>12.2</b> Some Useful Data</a></li>
+<li class="chapter" data-level="12.3" data-path="fermi-estimation.html"><a href="fermi-estimation.html#activities-8"><i class="fa fa-check"></i><b>12.3</b> Activities</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html"><i class="fa fa-check"></i><b>13</b> Rules of Differentiation</a><ul>
 <li class="chapter" data-level="13.1" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#derivatives-of-familiar-functions"><i class="fa fa-check"></i><b>13.1</b> Derivatives of Familiar Functions</a></li>
@@ -360,20 +353,73 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="velocity-of-an-ocean-wave" class="section level3">
 <h3><span class="header-section-number">11.2.3</span> Velocity of an Ocean Wave</h3>
 <p>The velocity <span class="math inline">\(V\)</span> of a large ocean wave depends upon the period <span class="math inline">\(P\)</span>, the acceleration of gravity <span class="math inline">\(g\)</span>, and the density <span class="math inline">\(\mu\)</span> of the water. Find a formula for the velocity <span class="math inline">\(V=V(P,g,\mu)\)</span>.</p>
+</div>
+</div>
+<div id="solutions-6" class="section level2">
+<h2><span class="header-section-number">11.3</span> Solutions</h2>
+<ol style="list-style-type: decimal">
+<li><p>We have
+<span class="math display">\[
+\begin{array}{rcl}
+f &amp;=&amp; k \ell^a s^b \mu^c \\
+[f] &amp;=&amp;  [\ell]^a [s]^b [\mu]^c \\
+T^{-1} &amp;=&amp; \left( L\right)^a \left(MLT^{-2}\right)^b \left( M L^{-1}  \right)^c \\
+M^0L^0T^{-1} &amp;=&amp; M^{b+c} L^{a+b-c} T^{-2b}
+\end{array}
+\]</span>
+and so we have
+<span class="math display">\[
+0 = b+c \qquad 0 = a+b-c \qquad -1=-2b.
+\]</span>
+Therefore <span class="math inline">\(b=1/2\)</span> and <span class="math inline">\(c=-1/2\)</span> and <span class="math inline">\(a=1\)</span>. Our formula is
+<span class="math display">\[
+f = k \ell \sqrt{\frac{s}{\mu}}.
+\]</span></p></li>
+<li><p>We have
+<span class="math display">\[
+\begin{array}{rcl}
+A &amp;=&amp; k P^a D^b H^c \\
+[A] &amp;=&amp;  [P]^a [D]^b [H]^c \\
+T^{-1} &amp;=&amp; \left( ML^2T^{-3}\right)^a L^b \left( M L^{-1} T^{-1}  \right)^c \\
+M^0L^0T^{-1} &amp;=&amp; M^{a+c} L^{2a+b-c} T^{-3a-c}
+\end{array}
+\]</span>
+and so we have
+<span class="math display">\[
+0 = a+c \qquad 0 = 2a+b-c \qquad -1 = -3a-c
+\]</span>
+which means that <span class="math inline">\(a=1/2\)</span> and <span class="math inline">\(c=-1/2\)</span> and <span class="math inline">\(b=-3/4\)</span>. So our final equation is
+<span class="math display">\[
+A = k \sqrt{\frac{P}{D^3H}}
+\]</span></p></li>
+<li><p>We have
+<span class="math display">\[
+\begin{array}{rcl}
+V &amp;=&amp; k P^a g^b \mu^c \\
+[V] &amp;=&amp; [P]^a [g]^b [\mu]^c \\
+LT^{-1} &amp;=&amp; (T)^a (LT^{-2})^b (ML^{-3})^c \\
+ L^1 T^{-1} M^0 &amp;=&amp; L^{b-3c} T^{a-2b} M^{c}
+\end{array}
+\]</span>
+so we have the equations
+<span class="math display">\[
+1 = b - 3c \qquad -1 = a-2b \qquad 0 = c
+\]</span>
+which means that <span class="math inline">\(c=0\)</span> and <span class="math inline">\(b=1\)</span> and <span class="math inline">\(a=1\)</span>. So our final equation is
+<span class="math display">\[
+V = k Pg
+\]</span></p></li>
+</ol>
 
 </div>
 </div>
-</div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
 <a href="dimensions-and-units.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="units-dimension-estimation-review.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="fermi-estimation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

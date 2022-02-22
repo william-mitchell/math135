@@ -13,7 +13,7 @@ rmd_files: ["index.Rmd",
   "Unit1-Multivariable.Rmd",
   "Unit2-Dimension.Rmd",
   "Unit2-DimensionalAnalysis.Rmd",
-  "Unit2-Review.Rmd",
+  "Unit2-FermiEstimation.Rmd",
   "Unit4-DerivativeRules.Rmd",
   ]
 language:
