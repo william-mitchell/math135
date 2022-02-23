@@ -50,17 +50,32 @@ The following approximate data may be useful in various Fermi problems. Each has
 1. If all 7.8 billion humans in the world were crammed together, how much area would we require? Is this closer to the size of a city, a state, the U.S., or North America? Start by figuring out how many people would fit in 1 square meter. Then figure out how many square kilometers we would need.
 
 
-<!--
+
 ## Solutions
 
 
 1. I think that I can estimate the number of blades in a square inch. 10 is too small, 100 seems okay, but 1000 is too many. Among my choices of 30, 100 and 300, I guess that I like 100 blades per square inch. I know that a football field is 100 yards long. I guess that the end zones are 10 yards deep, for 120 yards total.  I'll estimate that the field is 30 yards across. 
-
 So my answer would be
 $$
 \left(100 \, \frac{\mbox{blades}}{\mbox{in}^2} \right) \left(36^2 \, \frac{\mbox{in}^2}{\mbox{yard}^2} \right) \left(120 \mbox{ yards} \right) \left(30 \mbox{ yards} \right)
 = 4.7 \times 10^8
 $$
 and my final estimate is 500 million blades of grass.
--->
+
+  1. The population  of the earth is growing, but not very quickly.  So let's assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is also born each year. This leads to the estimation:
+$$
+7.8 \times 10^9 \mbox{ people} \times \frac{1 \mbox{ birth/year}}{73 \mbox{ people}}  \times \frac{1 \mbox{ year}}{365 \mbox{ days}} = 292,738 \frac{\mbox{ births}}{\mbox{ day}}. 
+$$
+So my final estimation is $300,000$ babies born per day.
   
+  1. Let's start with the hint: How many people could we cram  into one square meter? I think that we could fit about 10 people (but not 30). So  we would need 
+$$
+\left( 7.8 \times 10^9 \mbox{ people} \right) \left( \frac{1 \mbox{ m}^2}{10 \mbox{ people}} \right) = 7.8 \times 10^8 \mbox{ m}^2
+$$ 
+to fit everyone on the planet.  Converting to square kilometers requires dividing by $(10^3)^2 = 10^6$, which gives
+$$
+\left( 7.8 \times 10^8 \mbox{ m}^2 \right) \left( \frac{1 \mbox{ km}^2}{10^6 \mbox{ m}^2} \right)
+= 780 \mbox{ km}^2.
+$$
+
+This is less than $30^2=900$, which is much closer to the size of a city than the size of a state. In fact, $30 \mbox{ km} \times 30 \mbox{ km}$  is similar to the size of the  "metro area"  of a big city. 

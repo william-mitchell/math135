@@ -142,6 +142,7 @@ fermi-estimation
 working-fermi-problems
 some-useful-data
 activities-8
+solutions-7
 rules-of-differentiation
 derivatives-of-familiar-functions
 arithmetic-rules-for-derivatives

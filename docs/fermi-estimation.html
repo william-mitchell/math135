@@ -299,6 +299,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="12.1" data-path="fermi-estimation.html"><a href="fermi-estimation.html#working-fermi-problems"><i class="fa fa-check"></i><b>12.1</b> Working Fermi Problems</a></li>
 <li class="chapter" data-level="12.2" data-path="fermi-estimation.html"><a href="fermi-estimation.html#some-useful-data"><i class="fa fa-check"></i><b>12.2</b> Some Useful Data</a></li>
 <li class="chapter" data-level="12.3" data-path="fermi-estimation.html"><a href="fermi-estimation.html#activities-8"><i class="fa fa-check"></i><b>12.3</b> Activities</a></li>
+<li class="chapter" data-level="12.4" data-path="fermi-estimation.html"><a href="fermi-estimation.html#solutions-7"><i class="fa fa-check"></i><b>12.4</b> Solutions</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html"><i class="fa fa-check"></i><b>13</b> Rules of Differentiation</a><ul>
 <li class="chapter" data-level="13.1" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#derivatives-of-familiar-functions"><i class="fa fa-check"></i><b>13.1</b> Derivatives of Familiar Functions</a></li>
@@ -376,19 +377,33 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><p>How many babies are born each day? It will be helpful to know that (a) there are 7.8 billion people on the planet, (b) the average life expectancy is 73 years, and (c) the population doesn’t change that much (relatively speakiing) in one year.</p></li>
 <li><p>If all 7.8 billion humans in the world were crammed together, how much area would we require? Is this closer to the size of a city, a state, the U.S., or North America? Start by figuring out how many people would fit in 1 square meter. Then figure out how many square kilometers we would need.</p></li>
 </ol>
-<!--
-## Solutions
-
-
-1. I think that I can estimate the number of blades in a square inch. 10 is too small, 100 seems okay, but 1000 is too many. Among my choices of 30, 100 and 300, I guess that I like 100 blades per square inch. I know that a football field is 100 yards long. I guess that the end zones are 10 yards deep, for 120 yards total.  I'll estimate that the field is 30 yards across. 
-
+</div>
+<div id="solutions-7" class="section level2">
+<h2><span class="header-section-number">12.4</span> Solutions</h2>
+<ol style="list-style-type: decimal">
+<li><p>I think that I can estimate the number of blades in a square inch. 10 is too small, 100 seems okay, but 1000 is too many. Among my choices of 30, 100 and 300, I guess that I like 100 blades per square inch. I know that a football field is 100 yards long. I guess that the end zones are 10 yards deep, for 120 yards total. I’ll estimate that the field is 30 yards across.
 So my answer would be
-$$
+<span class="math display">\[
 \left(100 \, \frac{\mbox{blades}}{\mbox{in}^2} \right) \left(36^2 \, \frac{\mbox{in}^2}{\mbox{yard}^2} \right) \left(120 \mbox{ yards} \right) \left(30 \mbox{ yards} \right)
 = 4.7 \times 10^8
-$$
-and my final estimate is 500 million blades of grass.
--->
+\]</span>
+and my final estimate is 500 million blades of grass.</p></li>
+<li><p>The population of the earth is growing, but not very quickly. So let’s assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is also born each year. This leads to the estimation:
+<span class="math display">\[
+7.8 \times 10^9 \mbox{ people} \times \frac{1 \mbox{ birth/year}}{73 \mbox{ people}}  \times \frac{1 \mbox{ year}}{365 \mbox{ days}} = 292,738 \frac{\mbox{ births}}{\mbox{ day}}. 
+\]</span>
+So my final estimation is <span class="math inline">\(300,000\)</span> babies born per day.</p></li>
+<li><p>Let’s start with the hint: How many people could we cram into one square meter? I think that we could fit about 10 people (but not 30). So we would need
+<span class="math display">\[
+\left( 7.8 \times 10^9 \mbox{ people} \right) \left( \frac{1 \mbox{ m}^2}{10 \mbox{ people}} \right) = 7.8 \times 10^8 \mbox{ m}^2
+\]</span>
+to fit everyone on the planet. Converting to square kilometers requires dividing by <span class="math inline">\((10^3)^2 = 10^6\)</span>, which gives
+<span class="math display">\[
+\left( 7.8 \times 10^8 \mbox{ m}^2 \right) \left( \frac{1 \mbox{ km}^2}{10^6 \mbox{ m}^2} \right)
+= 780 \mbox{ km}^2.
+\]</span></p></li>
+</ol>
+<p>This is less than <span class="math inline">\(30^2=900\)</span>, which is much closer to the size of a city than the size of a state. In fact, <span class="math inline">\(30 \mbox{ km} \times 30 \mbox{ km}\)</span> is similar to the size of the “metro area” of a big city.</p>
 
 </div>
 </div>
