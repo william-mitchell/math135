@@ -143,6 +143,15 @@ working-fermi-problems
 some-useful-data
 activities-8
 solutions-7
+the-derivative
+what-is-the-derivative
+definition-1
+definition-2
+activities-9
+studying
+marginal-cost
+farmland-in-the-united-states
+a-moving-particle
 rules-of-differentiation
 derivatives-of-familiar-functions
 arithmetic-rules-for-derivatives

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Intro to RStudio | MATH 135: AMC I</title>
+  <title>13 The Derivative | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Intro to RStudio | MATH 135: AMC I" />
+  <meta property="og:title" content="13 The Derivative | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Intro to RStudio | MATH 135: AMC I" />
+  <meta name="twitter:title" content="13 The Derivative | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rstudio-quick-referrence.html"/>
-<link rel="next" href="linear-functions.html"/>
+<link rel="prev" href="fermi-estimation.html"/>
+<link rel="next" href="rules-of-differentiation.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -342,228 +342,104 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro-to-rstudio" class="section level1">
-<h1><span class="header-section-number">3</span> Intro to RStudio</h1>
-<p>Welcome to our RStudio Introduction! RStudio is a front end (user friendly) interface for R, a programming
-language for statistics. We’ll be using it to work with data and our various forms of functions.</p>
-<p>RStudio is a <strong>long term learning goal</strong> for us. We will be adding new functions and learning new
-things throughout the semester.</p>
-<div id="getting-started" class="section level2">
-<h2><span class="header-section-number">3.1</span> Getting Started</h2>
-<p>Follow my lead as we get ourselves going with RStudio. We will</p>
-<ul>
-<li>Log in to RStudio</li>
-<li>Add some <em>packages</em> to the R environment</li>
-<li>Create a math135 directory to work in</li>
-<li>Create our first Rmd (‘R Markdown’) file</li>
-<li>Knit that Rmd file to create a PDF</li>
-</ul>
-<p>You will need to replace the auto-generated code block at the top of your Rmd file with this one, which loads the mosaic functionality into the R environment when we knit to PDF.</p>
-<pre><code>```{r setup, include=FALSE, warning=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-suppressPackageStartupMessages(library(mosaic))
-```</code></pre>
-<p><strong>Pro Tip:</strong> Be kind to future you.</p>
-<ul>
-<li>Save all of your work for this class in the <code>math135</code> subdirectory that we create today.</li>
-<li>Give your files meaningful names. Include the unit, the topic, the date, etc, or a helpful combination of these identifiers.</li>
-</ul>
+<div id="the-derivative" class="section level1">
+<h1><span class="header-section-number">13</span> The Derivative</h1>
+<div id="what-is-the-derivative" class="section level2">
+<h2><span class="header-section-number">13.1</span> What is the Derivative?</h2>
+<p>We have two (complementary) definitions of the derivative.</p>
+<div id="definition-1" class="section level3">
+<h3><span class="header-section-number">13.1.1</span> Definition #1</h3>
+<p>The  measures the  of outputs to a small change in input.</p>
+<p>If my inputs are <span class="math inline">\(x\)</span> and my outputs are <span class="math inline">\(y\)</span>, then
+<span class="math display">\[
+\text{the derivative} \, \approx \, \frac{\text{change in output}}{\text{change in input}} \, = \, \frac{\Delta y}{\Delta x}
+\]</span></p>
 </div>
-<div id="r-markdown-files" class="section level2">
-<h2><span class="header-section-number">3.2</span> R Markdown files</h2>
-<p>An R Markdown file is a hybrid file that has both text and code. You can then <strong>knit</strong> this Rmd file to make a lovely PDF.</p>
-<div id="formatting-regular-text" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Formatting Regular Text</h3>
-<p>The regular text uses Markdown, which has simple commands to create formatting such has sections, bold, italic, links, itemized lists, and much more. Here are is some example Markdown syntax.</p>
-<pre><code># Heading 
+<div id="definition-2" class="section level3">
+<h3><span class="header-section-number">13.1.2</span> Definition #2</h3>
+<p>When we have a function <span class="math inline">\(y=f(x)\)</span>, then we have a geometric description of the derivative.</p>
 
-This is a regular sentence.
+<p>The <strong>derivative of a function</strong> <span class="math inline">\(f\)</span> at a point <span class="math inline">\(c\)</span> is the slope of the tangent line at <span class="math inline">\(x=c\)</span> .It’s also sometimes called the .</p>
 
-## Sub Heading
+<p>We denote the derivative at <span class="math inline">\(x=c\)</span> by <span class="math inline">\(f&#39;(c)\)</span>. We approximate this derivative with the formula
+<span class="math display">\[
+ f&#39;(c)  \approx \frac{f(c+a) - f(c)}{a} 
+\]</span>
+where <span class="math inline">\(a\)</span> is a <strong>very, very small number</strong>.</p>
+<!-- 
+We have two notations for the derivative of $f(x)$ at $x=c$:
+$$
+f'(c) \qquad \mbox{and} \qquad \frac{df}{dx}(c)
+$$
+-->
+</div>
+</div>
+<div id="activities-9" class="section level2">
+<h2><span class="header-section-number">13.2</span> Activities</h2>
+<div id="studying" class="section level3">
+<h3><span class="header-section-number">13.2.1</span> Studying</h3>
+<p>Suppose that spending 3 extra hours on studying increases our percent grade on an exam by 14 percent.</p>
+<ol style="list-style-type: decimal">
+<li>Calculate the derivative, give the units, and give an interpretation of the number you get.</li>
+<li>Is this rate of change constant? Explain.</li>
+</ol>
+</div>
+<div id="marginal-cost" class="section level3">
+<h3><span class="header-section-number">13.2.2</span> Marginal Cost</h3>
+<p>Economists use the term “marginal cost” for the derivative of the cost of production. Here is the definition:</p>
 
-You get *italics like this.* 
+<p>The  is the cost to produce 1 additional good.</p>
 
-Skipping a line starts a new paragraph.
-But if you don&#39;t skip a line then it&#39;s part of the same paragraph
-
-### Sub Sub Heading
-
-You get **bold text like this.**
-
-Here is how to make an itemized list
-
-* Make sure to skip a line before your first item
-* The asterisk must be the **first** character on the line (no spaces!)
-* If you want a sublist
-   + Start the sublist on the line below the item
-   + Indent by three spaces.
-   + Use a plus sign
-</code></pre>
-<p>Here is a nice reference page for <a href="https://rmarkdown.rstudio.com/authoring_basics.html">common R Markdown syntax</a>.</p>
-</div>
-<div id="code-chunks" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Code Chunks</h3>
-<p>Your R code must be placed inside <strong>code chunks.</strong> Here is what a code chuck looks like</p>
-<pre><code>```{r}
-1 + 1
-
-sin(pi/4)
-```</code></pre>
-<p>When you knit your Rmd file, the code chunks are executed in order. You can also
-run an individual chunk by clicking on the green arrow in its upper right corner.</p>
-<p>Adding a code chunk is easy!</p>
-<ul>
-<li>In the top bar of the Markdown window, there’s a small, green plus C button.</li>
-<li>When you click this button, it’ll bring up options for code blocks to insert</li>
-<li>Select “R” which is the first option. (It’s the only one we will use.)</li>
-</ul>
+<p>Suppose that it costs $250,000 to produce 1000 iPhones.</p>
+<ol style="list-style-type: decimal">
+<li>If it costs $250,440 to produce 1002 iPhones, what’s the marginal cost of 1 iPhone?</li>
+<li>Using the marginal cost from part 1, estimate how much it will cost to produce 1030 iPhones.</li>
+</ol>
 </div>
 </div>
-<div id="writing-code" class="section level2">
-<h2><span class="header-section-number">3.3</span> Writing Code</h2>
-<p>Add a code chunk and let’s get cracking!</p>
-<div id="basic-calculations" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Basic Calculations</h3>
-<p>We can use that code chunk to do some basic calculations.</p>
-<div id="you-try" class="section level4">
-<h4><span class="header-section-number">3.3.1.1</span> You Try</h4>
-<p>Create a code block and try to calculate each of the following. Try some other calculations, too!</p>
-<ul>
-<li><span class="math inline">\(8+13\)</span></li>
-<li><span class="math inline">\(7*9\)</span></li>
-<li><span class="math inline">\(\sin(\pi/2)\)</span></li>
-<li><span class="math inline">\(\sqrt{121}\)</span></li>
-<li><span class="math inline">\((2.25)^3\)</span></li>
-<li><span class="math inline">\(8 \cos( \pi/6)\)</span></li>
-</ul>
-<p>Which ones work? If you got an error, can you fix it? Can you guess the name of the square root function?</p>
-</div>
-</div>
-<div id="variables-lists-and-sequences" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> Variables, Lists and Sequences</h3>
-<p>When we do a calculation, we can store the result for later. Here are some examples:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="intro-to-rstudio.html#cb71-1"></a>a =<span class="st"> </span><span class="dv">15</span></span>
-<span id="cb71-2"><a href="intro-to-rstudio.html#cb71-2"></a>b =<span class="st"> </span><span class="dv">4</span> <span class="op">*</span><span class="st"> </span>a</span></code></pre></div>
-<p>R is particularly good at doing calculations on lists of data. So let’s make some lists!</p>
-<p>RStudio makes a list with the <code>c()</code> command. The “c” in short for “combine”.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="intro-to-rstudio.html#cb72-1"></a>P=<span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">11</span>, <span class="dv">-1</span>, <span class="dv">4</span>)</span>
-<span id="cb72-2"><a href="intro-to-rstudio.html#cb72-2"></a>P</span></code></pre></div>
-<pre><code>## [1]  3  5 11 -1  4</code></pre>
-<p>If you want to make a sequence, you use the <code>seq()</code> command. For example:</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="intro-to-rstudio.html#cb74-1"></a>S=<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
-<span id="cb74-2"><a href="intro-to-rstudio.html#cb74-2"></a>S</span></code></pre></div>
-<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<p>Notice that the values increment by 1. You can use a different step size by adding a third argument.
-For exmaple, if I wanted a sequence 1, 1.1, 1.2, 1.3, etc… all the way up to 2, I would write</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="intro-to-rstudio.html#cb76-1"></a>T=<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="fl">0.1</span>)</span>
-<span id="cb76-2"><a href="intro-to-rstudio.html#cb76-2"></a>T</span></code></pre></div>
-<pre><code>##  [1] 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0</code></pre>
-<p>Now look at the <strong>Environment</strong> tab in the upper right window. What do you notice?</p>
-<p><strong>Pro Tips</strong>: Be kind to future you as well as current collaborators.</p>
-<ul>
-<li>Always write <code>0.1</code> instead of <code>.1</code> in your code. It is much easier to read and to debug later!</li>
-<li>Consider adding a space after your commas to separate parameters. It’s easier to read!</li>
-</ul>
-<div id="you-try-1" class="section level4">
-<h4><span class="header-section-number">3.3.2.1</span> You Try</h4>
-<p>Try to do the following:</p>
-<ul>
-<li>Create a list <code>X</code> containing the values 8, 6, 7, 5, 3, 0, 9.</li>
-<li>Create a list <code>Y</code> containing the sequence of odd integers between (and including) 1 and 19</li>
-<li>What is the output of the command `X^2’? Can you see what R is doing?</li>
-<li>Try making another lists. Apply some functions to that list.</li>
-</ul>
-</div>
-</div>
-<div id="functions" class="section level3">
-<h3><span class="header-section-number">3.3.3</span> Functions</h3>
-<p>Now it’s time to write your own function. Here is how you create <span class="math inline">\(f(x)= x^2 -3\)</span>.</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="intro-to-rstudio.html#cb78-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">3</span> <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
-<p>Much of this is pretty intuitive, except for maybe the final <code>~ x</code>. This tilde symbol comes up a lot in RStudio and it indicates <em>dependence</em>. We need to tell RStudio that <span class="math inline">\(f\)</span> is in terms of this variable <span class="math inline">\(x\)</span>, so it knows where to put an input when I ask it to:</p>
-<p>Notice! In the right upper window, you now have a function called <code>f</code>. We can do a lot with this function, but
-to start, let’s evaluate it at 1.</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="intro-to-rstudio.html#cb79-1"></a><span class="kw">f</span>(<span class="dv">1</span>)</span></code></pre></div>
-<pre><code>## [1] -2</code></pre>
-<p>What do you think this code is doing?</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="intro-to-rstudio.html#cb81-1"></a><span class="kw">f</span>(S)</span></code></pre></div>
-<pre><code>##  [1] -2  1  6 13 22 33 46 61 78 97</code></pre>
-<div id="you-try-2" class="section level4">
-<h4><span class="header-section-number">3.3.3.1</span> You Try</h4>
-<ul>
-<li>Create a new function <span class="math inline">\(g\)</span> where <span class="math inline">\(g(t) = \sqrt{t-4}\)</span></li>
-<li>Evaluate this function at <span class="math inline">\(t=8\)</span>, and <span class="math inline">\(t=12.34\)</span> and <span class="math inline">\(t=100\)</span></li>
-<li>What happens when you try to evaluate this function at <span class="math inline">\(t=2\)</span>? What do you think that means?</li>
-</ul>
-</div>
-</div>
-<div id="plotting" class="section level3">
-<h3><span class="header-section-number">3.3.4</span> Plotting</h3>
-<p>Let’s see how to create plots using RStudio. First, let’s create a plot of this data</p>
+<div id="farmland-in-the-united-states" class="section level2">
+<h2><span class="header-section-number">13.3</span> Farmland in the United States</h2>
+<p>The total acreage of farmland has been shrinking in the United States since 1980.</p>
 <table>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>1980</th>
+<th>1985</th>
+<th>1990</th>
+<th>1995</th>
+<th>2000</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td>x</td>
-<td>0</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td>h(x)</td>
-<td>0</td>
-<td>1</td>
-<td>4</td>
-<td>9</td>
-<td>16</td>
-<td>25</td>
+<td>Farmland (millions of acres)</td>
+<td>1039</td>
+<td>1012</td>
+<td>987</td>
+<td>963</td>
+<td>945</td>
 </tr>
 </tbody>
 </table>
-<p>from the function <span class="math inline">\(h(x)=x^2\)</span>.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="intro-to-rstudio.html#cb83-1"></a>X =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
-<span id="cb83-2"><a href="intro-to-rstudio.html#cb83-2"></a>Y =<span class="st"> </span>X<span class="op">^</span><span class="dv">2</span></span>
-<span id="cb83-3"><a href="intro-to-rstudio.html#cb83-3"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-65-1.png" width="672" /></p>
-<p>Notice! We list the <strong>dependent</strong> variable <code>Y</code> first and then the <strong>independent</strong> variable <code>X</code> after the tidle <code>~</code> (which matches the syntax of <code>makeFun</code>).</p>
-<p>We can also plot a function. Once again the dependent variable appears after the tilde.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="intro-to-rstudio.html#cb84-1"></a><span class="kw">plotFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
-<p>We can actually plot the data and the function on the same graph. We will plot the data and then add the function by using the <code>add=TRUE</code> parameter for <code>plotFun</code>. I will also use the optional <code>col</code> parameter to change the color of the function curve.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="intro-to-rstudio.html#cb85-1"></a><span class="kw">plotPoints</span>(Y <span class="op">~</span><span class="st"> </span>X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="intro-to-rstudio.html#cb86-1"></a><span class="kw">plotFun</span>(x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-67-2.png" width="672" /></p>
-<div id="you-try-3" class="section level4">
-<h4><span class="header-section-number">3.3.4.1</span> You Try</h4>
-<ul>
-<li>Create a sequence of integer points <code>P</code> from 1 to 10.</li>
-<li>Define <code>Q = sin(P)</code></li>
-<li>Create a plot of <code>Q</code> versus <code>P</code> and then add the function plot of <code>sin(x)</code></li>
-<li>Try plotting some other data and fuunctions.</li>
-</ul>
+<ol style="list-style-type: decimal">
+<li>Let <span class="math inline">\(F(t)\)</span> denote the amount of farmland at a time <span class="math inline">\(t\)</span>. Use the data to estimate <span class="math inline">\(F&#39;(1995)\)</span>, the derivative at <span class="math inline">\(t=1995\)</span>.</li>
+<li>Did you use 1990 or 2000 as your estmation point? Did it matter? What does that mean?</li>
+<li>You got a negative number for <span class="math inline">\(F&#39;(1995)\)</span>. Does that make sense with the situation? Why?</li>
+<li>Give an example of a year that, if you had the data for it, would better help us estimate <span class="math inline">\(F&#39;(1995)\)</span>. Why?</li>
+</ol>
 </div>
-</div>
-</div>
-<div id="troubleshooting-1" class="section level2">
-<h2><span class="header-section-number">3.4</span> Troubleshooting</h2>
-<p>Without fail, you will make mistakes. Things will break and you’ll get error messages. That’s ok! That’s how
-we learn.</p>
-<div id="you-try-4" class="section level3">
-<h3><span class="header-section-number">3.4.1</span> You Try</h3>
-<p>Each of the following lines of code will break when run. Try them out, notice the error, and see if
-you can fix it.</p>
-<ul>
-<li><code>2 sin(pi/2)</code></li>
-<li><code>sqrt(3*(7+5)</code></li>
-<li><code>Sqrt(3*(7+5))</code></li>
-<li><code>makeFun(x^2-4, x)</code></li>
-<li><code>makeFun(x+1 ~ t)</code></li>
-<li><code>makefun(2x+1 ~ x)</code></li>
-</ul>
+<div id="a-moving-particle" class="section level2">
+<h2><span class="header-section-number">13.4</span> A Moving Particle</h2>
+<p>A particle’s position over time is given by the formula
+<span class="math display">\[
+s(t)=2+3\sin(4t)+1.2t^2
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Find the velocity at <span class="math inline">\(t=1\)</span> and <span class="math inline">\(t=2\)</span> numerically (using small subintervals). Remember that the velocity is the derivative of the position.</li>
+<li>Use desmos to graph the position curve <span class="math inline">\(x(t)\)</span> and the tangent lines at both <span class="math inline">\(t=1\)</span> and <span class="math inline">\(t=2\)</span>.</li>
+</ol>
 
-</div>
 </div>
 </div>
 
@@ -574,8 +450,8 @@ you can fix it.</p>
           </div>
         </div>
       </div>
-<a href="rstudio-quick-referrence.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="linear-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="fermi-estimation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rules-of-differentiation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,0 +1,101 @@
+# (PART) Computational Derivatives {-}
+
+# The Derivative
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+## What is the Derivative?
+
+We have two (complementary) definitions of the derivative.
+
+### Definition \#1
+
+The \textcolor{blue}{derivative} measures the \textcolor{blue}{sensitivity} of outputs to a small change in input. 
+
+If my inputs are $x$ and my outputs are $y$, then
+$$
+\text{the derivative} \, \approx \, \frac{\text{change in output}}{\text{change in input}} \, = \, \frac{\Delta y}{\Delta x}
+$$
+
+
+### Definition \#2
+
+When we have a function $y=f(x)$, then we have a geometric description of the derivative.
+
+\bigskip
+
+The **derivative of a function** $f$ at a point $c$ is the slope of the tangent line at $x=c$ .It's also sometimes called the \textcolor{blue}{instantaneous rate of change}.
+
+\bigskip
+
+We denote the derivative at $x=c$ by $f'(c)$. We approximate this derivative with the formula
+$$
+ f'(c)  \approx \frac{f(c+a) - f(c)}{a} 
+$$
+where $a$ is a **very, very small number**. 
+
+
+<!-- 
+We have two notations for the derivative of $f(x)$ at $x=c$:
+$$
+f'(c) \qquad \mbox{and} \qquad \frac{df}{dx}(c)
+$$
+-->
+
+## Activities
+
+### Studying
+
+Suppose that spending 3 extra hours on studying increases our percent grade on an exam by 14 percent. 
+
+1. Calculate the derivative, give the units, and give an interpretation of the number you get. 
+2. Is this rate of change constant? Explain.
+
+### Marginal Cost
+
+Economists use the term "marginal cost" for the derivative of the cost of production. Here is the definition: 
+
+\bigskip
+
+The \textcolor{blue}{marginal cost} is the cost to produce 1 additional good. 
+
+\bigskip
+
+Suppose that it costs \$250,000 to produce 1000 iPhones. 
+
+1. If it costs \$250,440 to produce 1002 iPhones, what's the marginal cost of 1 iPhone?
+2. Using the marginal cost from part 1, estimate how much it will cost to produce 1030 iPhones.
+
+
+## Farmland in the United States
+
+The total acreage of farmland has been shrinking in the United States since 1980.
+
+
+Year | 1980 | 1985 | 1990 | 1995 | 2000 
+----------------------------|------|------|------|------|------
+Farmland (millions of acres) | 1039 | 1012 | 987  | 963  | 945 
+
+
+1. Let $F(t)$ denote the amount of farmland at a time $t$. Use the data to estimate $F'(1995)$, the derivative at $t=1995$.
+2. Did you use 1990 or 2000 as your estmation point? Did it matter? What does that mean? 
+3. You got a negative number for $F'(1995)$. Does that make sense with the situation? Why?
+4. Give an example of a year that, if you had the data for it, would better help us estimate $F'(1995)$.  Why? 
+
+
+## A Moving Particle
+
+A particle's position over time is given by the formula 
+$$
+s(t)=2+3\sin(4t)+1.2t^2
+$$
+
+1. Find the velocity at $t=1$ and $t=2$ numerically (using small subintervals). Remember that the velocity is the derivative of the position.
+2. Use desmos to graph the position curve $x(t)$ and the tangent lines at both  $t=1$ and $t=2$.
+
+
+
