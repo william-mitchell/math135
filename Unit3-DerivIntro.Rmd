@@ -28,7 +28,7 @@ When we have a function $y=f(x)$, then we have a geometric description of the de
 
 \bigskip
 
-The **derivative of a function** $f$ at a point $c$ is the slope of the tangent line at $x=c$ .It's also sometimes called the \textcolor{blue}{instantaneous rate of change}.
+The **derivative of a function** $f$ at a point $c$ is the slope of the tangent line at $x=c$ .It's also sometimes called the **instantaneous rate of change**.
 
 \bigskip
 
@@ -61,7 +61,7 @@ Economists use the term "marginal cost" for the derivative of the cost of produc
 
 \bigskip
 
-The \textcolor{blue}{marginal cost} is the cost to produce 1 additional good. 
+The **marginal cost** is the cost to produce 1 additional good. 
 
 \bigskip
 

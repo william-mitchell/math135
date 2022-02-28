@@ -78,7 +78,7 @@ Find a formula that models the brightness of Mira as a function of time, with $t
 
 ### Tides and currents
 
- Here is a plot of the water level (in red) and the current speed (in blue) of the St. Johns River. The period of each is 24.83 hours. This is the length of one **lunar day**: the time it takes for a point on the Earth to rotate from an exact point under the Moon to that same point under the Moon. (This is slightly longer than one day because the Moon revolves around the Earth in the same direction as the Earth's rotation.)
+ Here is a plot of the water level (in red) and the current speed (in blue) of the St. Johns River. Each of them go through two cycles in 24.83 hours. This is the length of one **lunar day**: the time it takes for a point on the Earth to rotate from an exact point under the Moon to that same point under the Moon. (This is slightly longer than one day because the Moon revolves around the Earth in the same direction as the Earth's rotation.) So you can assume that the period for each is 12.415 hours.
 
 Model the water level $w(t)$ and the current speed $c(t)$ using periodic functions, where $t$ is the number of hours since midnight April 28, 1998. 
 
@@ -136,14 +136,22 @@ $$ 4 \cos \left( \frac{2 \pi}{335} t\right).$$
 
 ### Tides and currents
 
-The water level is modeled by a cosine curve shifted to the right. The water level has amplitude $(5.5 - (-0.5))/2) = 6/2=3$ and vertical shift $(5.5 + (-0.5))/2) = 3$. The period is $24.83$ hours, and we must shift to the right by one fourth of that amount, so $\phi=-24.83=-6.207$. So
-$$ w(t) = 3 \cos \left( \frac{2 \pi}{24.83} ( t - 6.207) \right)$$
+
+The current speed uses the vertical axis on the left. The maximum is 3 and the minimum is -3. So the amplitude is 3 and there is no vertical shift. The maximuum is achieved at $t=0$, so we can just use a cosine curve:
+$$
+c(t) = 3 \cos \left( \frac{2 \pi}{12.415} t \right)
+$$
+
+The water level is modeled by a cosine curve *shifted to the right*. The water level has amplitude $(5.5 - (-0.5))/2) = 6/2=3$ and vertical shift $(5.5 + (-0.5))/2) = 3$. The period is $12.415$ hours, and we must shift to the right by one fourth of that amount, so $\phi=-12.415/4 \approx  -3.1$. So
+$$ w(t) = 3 \cos \left( \frac{2 \pi}{12.415} ( t - 3.1) \right)  +3$$
+
+
 
 <!--   actually take 25 hour cycle!!!  Unlike a 24-hour solar day, a lunar day lasts 24 hours and 50 minutes. This occurs because the moon revolves around the Earth in the same direction that the Earth is rotating on its axis  -->
 
 ### Rainfall in Seattle
 
 The amplitude is about $5/2=2.5$ and the vertical shift is $7/2=3.5$. The period is 12 months. We reach our peak in December, so we must shift a cosine curve to the left by $\phi=1$ unit. So our function is
-$$ r(t) = 2.5 \cos \left( \frac{2\pi}{12} ( t + 1) \right).$$
+$$ r(t) = 2.5 \cos \left( \frac{2\pi}{12} ( t + 1) \right) + 3.5.$$
 
 

@@ -388,7 +388,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </div>
 <div id="tides-and-currents" class="section level3">
 <h3><span class="header-section-number">8.2.4</span> Tides and currents</h3>
-<p>Here is a plot of the water level (in red) and the current speed (in blue) of the St. Johns River. The period of each is 24.83 hours. This is the length of one <strong>lunar day</strong>: the time it takes for a point on the Earth to rotate from an exact point under the Moon to that same point under the Moon. (This is slightly longer than one day because the Moon revolves around the Earth in the same direction as the Earth’s rotation.)</p>
+<p>Here is a plot of the water level (in red) and the current speed (in blue) of the St. Johns River. Each of them go through two cycles in 24.83 hours. This is the length of one <strong>lunar day</strong>: the time it takes for a point on the Earth to rotate from an exact point under the Moon to that same point under the Moon. (This is slightly longer than one day because the Moon revolves around the Earth in the same direction as the Earth’s rotation.) So you can assume that the period for each is 12.415 hours.</p>
 <p>Model the water level <span class="math inline">\(w(t)\)</span> and the current speed <span class="math inline">\(c(t)\)</span> using periodic functions, where <span class="math inline">\(t\)</span> is the number of hours since midnight April 28, 1998.</p>
 <ul>
 <li>Be sure to use the appropriate vertical axis for each one!</li>
@@ -466,14 +466,18 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </div>
 <div id="tides-and-currents-1" class="section level3">
 <h3><span class="header-section-number">8.3.4</span> Tides and currents</h3>
-<p>The water level is modeled by a cosine curve shifted to the right. The water level has amplitude <span class="math inline">\((5.5 - (-0.5))/2) = 6/2=3\)</span> and vertical shift <span class="math inline">\((5.5 + (-0.5))/2) = 3\)</span>. The period is <span class="math inline">\(24.83\)</span> hours, and we must shift to the right by one fourth of that amount, so <span class="math inline">\(\phi=-24.83=-6.207\)</span>. So
-<span class="math display">\[ w(t) = 3 \cos \left( \frac{2 \pi}{24.83} ( t - 6.207) \right)\]</span></p>
+<p>The current speed uses the vertical axis on the left. The maximum is 3 and the minimum is -3. So the amplitude is 3 and there is no vertical shift. The maximuum is achieved at <span class="math inline">\(t=0\)</span>, so we can just use a cosine curve:
+<span class="math display">\[
+c(t) = 3 \cos \left( \frac{2 \pi}{12.415} t \right)
+\]</span></p>
+<p>The water level is modeled by a cosine curve <em>shifted to the right</em>. The water level has amplitude <span class="math inline">\((5.5 - (-0.5))/2) = 6/2=3\)</span> and vertical shift <span class="math inline">\((5.5 + (-0.5))/2) = 3\)</span>. The period is <span class="math inline">\(12.415\)</span> hours, and we must shift to the right by one fourth of that amount, so <span class="math inline">\(\phi=-12.415/4 \approx -3.1\)</span>. So
+<span class="math display">\[ w(t) = 3 \cos \left( \frac{2 \pi}{12.415} ( t - 3.1) \right)  +3\]</span></p>
 <!--   actually take 25 hour cycle!!!  Unlike a 24-hour solar day, a lunar day lasts 24 hours and 50 minutes. This occurs because the moon revolves around the Earth in the same direction that the Earth is rotating on its axis  -->
 </div>
 <div id="rainfall-in-seattle-1" class="section level3">
 <h3><span class="header-section-number">8.3.5</span> Rainfall in Seattle</h3>
 <p>The amplitude is about <span class="math inline">\(5/2=2.5\)</span> and the vertical shift is <span class="math inline">\(7/2=3.5\)</span>. The period is 12 months. We reach our peak in December, so we must shift a cosine curve to the left by <span class="math inline">\(\phi=1\)</span> unit. So our function is
-<span class="math display">\[ r(t) = 2.5 \cos \left( \frac{2\pi}{12} ( t + 1) \right).\]</span></p>
+<span class="math display">\[ r(t) = 2.5 \cos \left( \frac{2\pi}{12} ( t + 1) \right) + 3.5.\]</span></p>
 
 </div>
 </div>
