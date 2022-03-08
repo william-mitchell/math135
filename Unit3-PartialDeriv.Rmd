@@ -69,10 +69,16 @@ $$
 Here is a contour plot of the production function.
 
 
+```{r, echo=FALSE, fig.asp=1, include=FALSE}
+
+
+plotFun(10* x^{2/7} * y^{5/7}~x&y, xlim=c(0,1000), ylim=c(0,1000), levels = seq(1000,9000,1000), filled = FALSE, xlab="labor L", ylab = "capital K", lwd = 3)
+ladd( panel.abline(h=seq(100,900,100),v=seq(100,900,100),col='gray50') )
+```
+
 ```{r, echo=FALSE, fig.asp=1}
 
-plotFun(10* x^{2/7} * y^{5/7}~x&y, xlim=c(0,1000), ylim=c(0,1000), levels = seq(1000,9000,1000), filled = FALSE, xlab="labor L", ylab = "capital K")
-
+ladd( panel.abline(h=seq(100,900,100),v=seq(100,900,100),col='gray50') )
 ```
 
 1. Estimate the production output for $L=400$ and $K=600$.
