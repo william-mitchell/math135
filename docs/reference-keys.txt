@@ -158,6 +158,11 @@ estimating-the-first-and-second-derivatives-from-a-graph
 function-matching
 a-plot-of-velocity
 characterize-the-derivatives
+partial-derivatives
+activities-11
+estimating-from-data
+estimating-from-contour-plot
+estimating-using-desmos
 rules-of-differentiation
 derivatives-of-familiar-functions
 arithmetic-rules-for-derivatives

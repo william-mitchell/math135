@@ -1,13 +1,93 @@
 # Partial Derivatives
 
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+suppressPackageStartupMessages(library(mosaicCalc))
+```
+
 ## Activities
 
-### Estimate from data
+### Estimating from data
+
+The maximum duration of a scuba dive $T$ (in minutes) depends on the volume $V$ of air (at sea-level pressure) in the tank and the depth $D$ (in feet) of the dive.
+The following table shows the estimated dive times for various combinations of air volume and dive depth.
+
+<table style="width: 70%; margin-left: auto; margin-right: auto;" border="1" cellspacing="2" cellpadding="2" align="center">
+<tbody>
+<tr>
+<td style="margin-left: 30px; text-align: center;" rowspan="2" colspan="2"><strong>Dive Time (minutes)</strong> </td>
+<td style="text-align: center;" colspan="4"><strong> Air Volume</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>20 ft<sup>3</sup></strong></td>
+<td style="text-align: center;"><strong>40 ft<sup>3</sup></strong></td>
+<td style="text-align: center;"><strong>60 ft<sup>3</sup></strong></td>
+<td style="text-align: center;"><strong>80 ft<sup>3</sup></strong></td>
+</tr>
+<tr align="right">
+<td style="margin-left: 30px; text-align: center;" rowspan="5"><strong>Depth</strong></td>
+<td style="text-align: center;"><strong>20 ft</strong></td>
+<td style="text-align: center;">12.5</td>
+<td style="text-align: center;">25.0</td>
+<td style="text-align: center;">37.5</td>
+<td style="text-align: center;">50.0</td>
+</tr>
+<tr align="right">
+<td style="text-align: center;"><strong>40 ft</strong></td>
+<td style="text-align: center;">9.0</td>
+<td style="text-align: center;">18.0</td>
+<td style="text-align: center;">27.0</td>
+<td style="text-align: center;">36.0</td>
+</tr>
+<tr align="right">
+<td style="text-align: center;"><strong>60 ft</strong></td>
+<td style="text-align: center;">7.1</td>
+<td style="text-align: center;">14.2</td>
+<td style="text-align: center;">21.3</td>
+<td style="text-align: center;">28.4</td>
+</tr>
+<tr align="right">
+<td style="text-align: center;"><strong>80 ft</strong></td>
+<td style="text-align: center;">5.8</td>
+<td style="text-align: center;">11.6</td>
+<td style="text-align: center;">17.4</td>
+<td style="text-align: center;">23.2</td>
+</tr>
+</tbody>
+</table>
+
+Use this table to estimate the derivatives
+$\displaystyle{\frac{\partial T}{\partial V}}$ and $\displaystyle{\frac{\partial T}{\partial D}}$ at the point $(V=60, T=40)$. Give units for each of these derivatives and then interpret what these numbers mean.
+
+### Estimating from contour plot
+
+The production function $F(L,K)$ for a factory gives the number of units produced by labor $L$ and capital $K$ (both measured in dollars). This production function is given by
+$$
+F(L,K) = 10 L^{2/7}K^{5/7}.
+$$
+Here is a contour plot of the production function.
 
 
-### Estimate from contour plot
+```{r, echo=FALSE, fig.asp=1}
+
+plotFun(10* x^{2/7} * y^{5/7}~x&y, xlim=c(0,1000), ylim=c(0,1000), levels = seq(1000,9000,1000), filled = FALSE, xlab="labor L", ylab = "capital K")
+
+```
+
+1. Estimate the production output for $L=400$ and $K=600$.
+2. Estimate the partial derivative $\displaystyle{\frac{\partial F}{\partial L}}$ at $(400,600)$.
+3. Estimate the partial derivative $\displaystyle{\frac{\partial F}{\partial K}}$ at $(400,600)$.
 
 
-### Estimate using desmos
 
+### Estimating using desmos
 
+Use desmos to define the prodution function $F(L,K) = L^{2/7}  K^{5/7}$ from the previous problem and to answer the analogous questions
+
+1. Calculate the production outpuut $F(400,600)$.
+2. Estimate the partial derivative $\displaystyle{\frac{\partial F}{\partial L}}$ at $(400,600)$. Your answer must be correct to two decimal places.
+3. Estimate the partial derivative $\displaystyle{\frac{\partial F}{\partial K}}$ at $(400,600)$.
+Your answer must be correct to two decimal places.
+
+Compare your three answers to the estimates from the contour plot in the previous problem. 

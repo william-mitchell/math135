@@ -16,6 +16,7 @@ rmd_files: ["index.Rmd",
   "Unit2-FermiEstimation.Rmd",
   "Unit3-DerivIntro.Rmd",
   "Unit3-SecondDeriv.Rmd",
+  "Unit3-PartialDeriv.Rmd",
   "Unit4-DerivativeRules.Rmd",
   ]
 language:
