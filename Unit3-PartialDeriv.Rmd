@@ -1,0 +1,13 @@
+# Partial Derivatives
+
+## Activities
+
+### Estimate from data
+
+
+### Estimate from contour plot
+
+
+### Estimate using desmos
+
+

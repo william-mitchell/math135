@@ -1,0 +1,56 @@
+# The Second Derivative
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+suppressPackageStartupMessages(library(mosaicCalc))
+```
+
+## Activities
+
+### Estimating the first and second derivatives from a graph
+
+Here is a plot of the function $f(x)$.
+```{r, echo=FALSE}
+
+plotFun(10 * (x-1)*(x-2)*(x)*(x+1) /(exp(x^2)+1)~x, xlim=c(0,3), ylab = "f(x)")
+
+```
+
+1. Estimate the intervals on which the derivative $f'(x)$ is positive and the intervals on which the derivative $f'(x)$ is negative
+1. Estimate the intervals on which the second derivative $f''(x)$ is positive and the intervals on which the second derivative $f''(x)$ is negative
+
+## Function Matching
+
+Three curves $f(x), g(x), h(x)$ are plotted below. These curves are actually a function, its derivative, and its second derivative. Which is which? How do you know?
+
+<!-- 2\ \frac{\sin\left(\pi\ \frac{x^{2}}{8}\right)}{1+x^{2}} -->
+
+![](images/deriv-higher.png){width=75%}
+
+## A Plot of Velocity
+
+Recall that displacement $x(t)$, velocity $v(t)$ and acceleration $a(t)$ are related by the equations
+
+$$  v = \frac{\partial x}{\partial t} \quad \mbox{and} \quad a = \frac{\partial v}{\partial t} = \frac{\partial^2 x}{\partial t^2}.$$
+Here is a plot of **velocity** $v(t)$ of an object.
+
+
+```{r, echo=FALSE}
+plotFun(sqrt(x) * sin( pi * x)~x, xlim=c(0,2), xlab='t', ylab='v(t)')
+
+```
+
+Identify the time interval(s) where:
+
+1. The object has positive acceleration.
+1. The position of the object is increasing.
+
+## Characterize the Derivatives
+
+Each of the scenarios below describes a quantity that is changing over time. For each one,  (a) determine whether the first derivative is positive, negative or zero and (b) determine whether the second derivative is positive, negative or zero.
+
+1. The number of views of a video that is going viral.
+2. The altitude of a bird that is about to have a gentle landing on the ground.
+3. The location of a car that is cruising at the speed limit on a straight highway.

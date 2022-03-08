@@ -152,6 +152,12 @@ studying
 marginal-cost
 farmland-in-the-united-states
 a-moving-particle
+the-second-derivative
+activities-10
+estimating-the-first-and-second-derivatives-from-a-graph
+function-matching
+a-plot-of-velocity
+characterize-the-derivatives
 rules-of-differentiation
 derivatives-of-familiar-functions
 arithmetic-rules-for-derivatives
