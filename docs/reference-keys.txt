@@ -152,6 +152,11 @@ studying
 marginal-cost
 farmland-in-the-united-states
 a-moving-particle
+solutions-8
+studying-1
+marginal-cost-1
+farmland-in-the-united-states-1
+a-moving-particle-1
 the-second-derivative
 activities-10
 estimating-the-first-and-second-derivatives-from-a-graph

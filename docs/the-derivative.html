@@ -313,6 +313,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="13.3" data-path="the-derivative.html"><a href="the-derivative.html#farmland-in-the-united-states"><i class="fa fa-check"></i><b>13.3</b> Farmland in the United States</a></li>
 <li class="chapter" data-level="13.4" data-path="the-derivative.html"><a href="the-derivative.html#a-moving-particle"><i class="fa fa-check"></i><b>13.4</b> A Moving Particle</a></li>
+<li class="chapter" data-level="13.5" data-path="the-derivative.html"><a href="the-derivative.html#solutions-8"><i class="fa fa-check"></i><b>13.5</b> Solutions</a><ul>
+<li class="chapter" data-level="13.5.1" data-path="the-derivative.html"><a href="the-derivative.html#studying-1"><i class="fa fa-check"></i><b>13.5.1</b> Studying</a></li>
+<li class="chapter" data-level="13.5.2" data-path="the-derivative.html"><a href="the-derivative.html#marginal-cost-1"><i class="fa fa-check"></i><b>13.5.2</b> Marginal Cost</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="the-derivative.html"><a href="the-derivative.html#farmland-in-the-united-states-1"><i class="fa fa-check"></i><b>13.6</b> Farmland in the United States</a></li>
+<li class="chapter" data-level="13.7" data-path="the-derivative.html"><a href="the-derivative.html#a-moving-particle-1"><i class="fa fa-check"></i><b>13.7</b> A Moving Particle</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="the-second-derivative.html"><a href="the-second-derivative.html"><i class="fa fa-check"></i><b>14</b> The Second Derivative</a><ul>
 <li class="chapter" data-level="14.1" data-path="the-second-derivative.html"><a href="the-second-derivative.html#activities-10"><i class="fa fa-check"></i><b>14.1</b> Activities</a><ul>
@@ -452,8 +458,72 @@ s(t)=2+3\sin(4t)+1.2t^2
 \]</span></p>
 <ol style="list-style-type: decimal">
 <li>Find the velocity at <span class="math inline">\(t=1\)</span> and <span class="math inline">\(t=2\)</span> numerically (using small subintervals). Remember that the velocity is the derivative of the position.</li>
-<li>Use desmos to graph the position curve <span class="math inline">\(x(t)\)</span> and the tangent lines at both <span class="math inline">\(t=1\)</span> and <span class="math inline">\(t=2\)</span>.</li>
+<li>Use desmos to graph the position curve <span class="math inline">\(s(t)\)</span> and the tangent lines at both <span class="math inline">\(t=1\)</span> and <span class="math inline">\(t=2\)</span>.</li>
 </ol>
+</div>
+<div id="solutions-8" class="section level2">
+<h2><span class="header-section-number">13.5</span> Solutions</h2>
+<div id="studying-1" class="section level3">
+<h3><span class="header-section-number">13.5.1</span> Studying</h3>
+<p>Suppose that spending 3 extra hours on studying increases our percent grade on an exam by 14 percent.</p>
+<ol style="list-style-type: decimal">
+<li>The derivative is <span class="math inline">\(\frac{14}{3} = 4.67\)</span> percent per hour. The interpretation: for every hour that you spend studying, your grade increases by <span class="math inline">\(4.67\%\)</span>.</li>
+<li>This rate of change is not constant. After studying for a while, you reach “burn out”, or perhaps you run out of new material to master. In addition, your grade tops out at 100%, so we cannot increase forever.</li>
+</ol>
+</div>
+<div id="marginal-cost-1" class="section level3">
+<h3><span class="header-section-number">13.5.2</span> Marginal Cost</h3>
+<ol style="list-style-type: decimal">
+<li><p>The marginal cost is
+<span class="math display">\[ 
+\frac{250,440 - 250,000}{102-100}=\frac{440}{2} =220 \mbox{ dollars per phone}
+\]</span></p></li>
+<li><p>I estimate that the cost of making 1030 phones is
+<span class="math display">\[
+250,000 + 200 \cdot 30 = 256,600.
+\]</span></p></li>
+</ol>
+</div>
+</div>
+<div id="farmland-in-the-united-states-1" class="section level2">
+<h2><span class="header-section-number">13.6</span> Farmland in the United States</h2>
+<ol style="list-style-type: decimal">
+<li><p>When estimating the derivative, we need to “stay local” in order to get the most reliable estimate. There are three equally good choices here:
+<span class="math display">\[
+\begin{array}{rcl}
+f&#39;(1995) &amp;\approx&amp; \frac{f(2000)-f(1995)}{2000-1995}=\frac{945-963}{5} = - \frac{18}{5} = -3.6 \\
+f&#39;(1995) &amp;\approx&amp; \frac{f(1995)-f(1990)}{1995-1990}=\frac{963-987}{5} = - \frac{24}{5} = -4.8 \\
+f&#39;(1995) &amp;\approx&amp; \frac{f(2000)-f(1990)}{2000-1990}=\frac{945-987}{10} = - \frac{42}{10} = -4.2 \\
+\end{array}
+\]</span></p></li>
+<li><p>Any of the three estimates are good answers. Since we are estimating there isn’t a “right answer.” All three stay close to 1995, so each one is good.</p></li>
+<li><p>We got a negative number because the acreage is decreasing.</p></li>
+<li><p>If we had the data for 1994 or 1996, using these valuues would give us a better estimate. Using smaller and smaller intervals will give us a more accurate estimation. (But we cannot tell up front how “small” we need to be to get the accurracy we desire.)</p></li>
+</ol>
+</div>
+<div id="a-moving-particle-1" class="section level2">
+<h2><span class="header-section-number">13.7</span> A Moving Particle</h2>
+<ol style="list-style-type: decimal">
+<li><p>Using desmos, we know that
+<span class="math display">\[
+s&#39;(1) \approx \frac{s(1+h)-s(1)}{h} \approx -5.44
+\]</span>
+when <span class="math inline">\(0 &lt; h &lt; 0.00001\)</span>. Similarly, we have
+<span class="math display">\[
+s&#39;(1) \approx \frac{s(2+h)-s(2)}{h} \approx 5.03
+\]</span>
+when <span class="math inline">\(0 &lt; h &lt; 0.00001\)</span>.</p></li>
+<li><p>Here are the commands to plot the curve and the two tangent lines.</p></li>
+</ol>
+<p><span class="math display">\[
+\begin{array}{l}
+s\left(t\right)=2+3\sin(4t)+1.2t^{2} \\
+\\
+y = -5.44(t-1) + s(1) \\
+\\
+y = 5.03(t-2) + s(2) \\
+\end{array}
+\]</span></p>
 
 </div>
 </div>

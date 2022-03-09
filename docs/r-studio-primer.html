@@ -313,6 +313,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="chapter" data-level="13.3" data-path="the-derivative.html"><a href="the-derivative.html#farmland-in-the-united-states"><i class="fa fa-check"></i><b>13.3</b> Farmland in the United States</a></li>
 <li class="chapter" data-level="13.4" data-path="the-derivative.html"><a href="the-derivative.html#a-moving-particle"><i class="fa fa-check"></i><b>13.4</b> A Moving Particle</a></li>
+<li class="chapter" data-level="13.5" data-path="the-derivative.html"><a href="the-derivative.html#solutions-8"><i class="fa fa-check"></i><b>13.5</b> Solutions</a><ul>
+<li class="chapter" data-level="13.5.1" data-path="the-derivative.html"><a href="the-derivative.html#studying-1"><i class="fa fa-check"></i><b>13.5.1</b> Studying</a></li>
+<li class="chapter" data-level="13.5.2" data-path="the-derivative.html"><a href="the-derivative.html#marginal-cost-1"><i class="fa fa-check"></i><b>13.5.2</b> Marginal Cost</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="the-derivative.html"><a href="the-derivative.html#farmland-in-the-united-states-1"><i class="fa fa-check"></i><b>13.6</b> Farmland in the United States</a></li>
+<li class="chapter" data-level="13.7" data-path="the-derivative.html"><a href="the-derivative.html#a-moving-particle-1"><i class="fa fa-check"></i><b>13.7</b> A Moving Particle</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="the-second-derivative.html"><a href="the-second-derivative.html"><i class="fa fa-check"></i><b>14</b> The Second Derivative</a><ul>
 <li class="chapter" data-level="14.1" data-path="the-second-derivative.html"><a href="the-second-derivative.html#activities-10"><i class="fa fa-check"></i><b>14.1</b> Activities</a><ul>
@@ -701,7 +707,7 @@ f=makeFun(3*x+2*sin(pi*x)~x)
 plotFun(f(x)~x)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-22-1.png" width="432" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-18-1.png" width="432" style="display: block; margin: auto;" />
 
 `plotFun` takes a whole variety of parameters, here are a few useful ones:
 
@@ -723,7 +729,7 @@ plotFun(f(x)~x, xlim=range(1,4), ylim=range(3,60),
 plotFun(g(x)~x, col="red", add=TRUE)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-23-1.png" width="432" style="display: block; margin: auto;" /><img src="math135_handbook_files/figure-html/unnamed-chunk-23-2.png" width="432" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-19-1.png" width="432" style="display: block; margin: auto;" /><img src="math135_handbook_files/figure-html/unnamed-chunk-19-2.png" width="432" style="display: block; margin: auto;" />
 
 RStudio is a little weird about plots in the RMarkdown in that you might get multiples if you're adding plots together. If you want the chunk to hold all plots until the end, add `fig.show='hold'` into the script braces at the top of the chunk.
 
@@ -737,7 +743,7 @@ g=makeFun(-x*y*exp(-x^2-y^2)~x&y)
 plotFun(g(x,y)~x&y)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-24-1.png" width="480" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-20-1.png" width="480" style="display: block; margin: auto;" />
 
 We are given quite a colorful plot! Since the function takes two variables, $x$ and $y$, we need some third way to display the output. That's what the colors and contours do. The colors show the relative values of the function (cooler colors for smaller values) while the contours connect all points $(x,y)$ that have the same function output. Again, this plotFun comes with parameters which can make a better picture. The ones from the single variable section still hold, so we'll list just the new ones here.
 
@@ -756,7 +762,7 @@ plotFun(g(x,y)~x&y, xlim=range(-1.5,1.5),
         ylim=range(-1.5,1.5), filled=FALSE, levels=seq(from=-.2,to=.2,by=0.05))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-25-1.png" width="480" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-21-1.png" width="480" style="display: block; margin: auto;" />
 
 
 ```r
@@ -764,7 +770,7 @@ f=makeFun(3*x^2-x-2*y^2+y-2~x&y)
 plotFun(f(x,y)~x&y, surface=TRUE, xlim=range(-5,5), ylim=range(-5,5), zlab="f(x,y)")
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-26-1.png" width="432" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-22-1.png" width="432" style="display: block; margin: auto;" />
 
 ### Plotting data
 
@@ -782,7 +788,7 @@ This is all great for nice, continuous, algebraic functions, but one of our jobs
 plotPoints(c(6,4,2,0,-2)~c(-2.2,-2.0,-1.8,-1.6,-1.4))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-27-1.png" width="480" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-23-1.png" width="480" style="display: block; margin: auto;" />
 
 *Notice:* the $y$ coordinates go first! This is because we once again use the tilde to denote dependency. 
 
@@ -793,7 +799,7 @@ If you want to plot points from a data set, you'll use the same command with som
 plotPoints(temp~time,data=somedata)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-28-1.png" width="480" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-24-1.png" width="480" style="display: block; margin: auto;" />
 
 Cool, we've got our plot. Two things to note:
 
