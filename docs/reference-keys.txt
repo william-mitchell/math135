@@ -163,6 +163,11 @@ estimating-the-first-and-second-derivatives-from-a-graph
 function-matching
 a-plot-of-velocity
 characterize-the-derivatives
+solutions-9
+estimating-the-first-and-second-derivatives-from-a-graph-1
+function-matching-1
+a-plot-of-velocity-1
+characterize-the-derivatives-1
 partial-derivatives
 activities-11
 estimating-from-data

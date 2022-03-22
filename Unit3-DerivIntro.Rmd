@@ -139,7 +139,7 @@ $$
 
 2. Any of the three estimates are good answers. Since we are estimating there isn't a "right answer." All three stay close to 1995, so each one is good. 
 3. We got a negative number because the acreage is decreasing. 
-4. If we had the data for 1994 or 1996, using these valuues would give us a better estimate. Using smaller and smaller intervals will give us a more accurate estimation. (But we cannot tell up front how "small" we need to be to get the accurracy we desire.)
+4. If we had the data for 1994 or 1996, using these values would give us a better estimate. Using smaller and smaller intervals will give us a more accurate estimation. (But we cannot tell up front how "small" we need to be to get the accurracy we desire.)
 
 
 ## A Moving Particle
