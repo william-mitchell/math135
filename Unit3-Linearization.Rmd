@@ -1,0 +1,67 @@
+# Local Linear Approximation
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+suppressPackageStartupMessages(library(mosaicCalc))
+```
+
+The linearization of $f(x)$ at $x=a$ is
+$$
+L_a(x) = f(a) + f'(a) (x-a).
+$$
+
+<!--
+The linearization of $f(x,y)$ at point $(a,b)$ is
+$$
+L_{(a,b)(x,y) = f(a,b) + f_x(a,b) (x-a) + f_y(a,b) (x-b).
+$$
+-->
+
+## Estimating Sugar Solution Temperature
+
+ 
+We are boiling a sugar solution to make salt water taffy. When we start, the temperature of the solution is $80^\circ$F, after 5 minutes it's $115^\circ$F, and after 10 minutes it's $165^\circ$F. 
+
+1. Estimate the temperature after 17 minutes.
+1. The sugar solution needs to reach $289^\circ$F to be the consistancy of taffy. Estimate when this will happen.
+
+## Comparing Linearizations
+
+1. Draw two (nonlinear) functions $f(x)$ and $g(x)$ and their linearizations at $x=1$. One function should be "well estimated" by the linearization around $x=1$ and the other should be "poorly estimated" by the linearization around $x=1$. 
+2. What feature(s) of the curve $y=f(x)$ result in a good approximation?
+2. What feature(s) of the curve $y=g(x)$ result in a bad approximation?
+
+## Estimating a Functiion
+
+1. Find the linearization $L_2(x)$ the function $g(t)=t^3+e^t-4$.    
+   * Remember that $L_2(x)$ means "the local linear approximation at $x=2$."  
+   * You will need to use desmos to approximate $f'(2)$.
+
+2. Use your formula for $L_2(x)$ to estimate $g(2.1)$, $g(1.98)$, $g(3)$ and $g(0.7)$. 
+
+3. Check your estimations with the original function.
+  
+4. What do you notice about your approximations as you get further from the spot where you built the linearization?
+
+
+
+## Estimating the Windchill
+
+We've  talked about windchill $w(t,v)$ as a function of temperature $t$ and wind speed $v$. Here is the table that we've used
+
+![](images/wind-chill.png){width=100%}
+
+1. The perceived temperature when $t=-10 ^\circ$F and $v=40$ mph is $w(-10,40)=-43$. I have used desmos to estimate that
+$$
+w_t(-10,-40) = 1.39, \qquad w_v(-10,40)= −0.28.
+$$
+Use these values to find the linearization $L_{(-10,40)}(t,v)$ at the point $(-10,40)$.
+
+2. Use your linearization (and desmos!) to estimate the four windchill values $w(-5,40)$, $w(-15,40)$, $(10,45)$ and $(10,35)$. Are your estimates close to the actual values? 
+
+
+3. Find the linearization of $w(t,v)$ at $t=30$ and $v=10$. 
+   a. Estimate the partial derivatives using the table above.
+   b. Estimate the partial derivatives using desmos and the formula $w(t,v) = 35.74+0.6215 t-35.75 v^{0.16}+0.4275 t \, v^{0.16}$. Here is a [link to my desmos calculator for the partial derivatives of this function. ](https://www.desmos.com/calculator/dvuhpknthj)

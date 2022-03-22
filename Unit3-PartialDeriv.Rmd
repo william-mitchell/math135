@@ -8,7 +8,7 @@ suppressPackageStartupMessages(library(mosaicCalc))
 
 ## Activities
 
-### Estimating from data
+### Estimating From Data
 
 The maximum duration of a scuba dive $T$ (in minutes) depends on the volume $V$ of air (at sea-level pressure) in the tank and the depth $D$ (in feet) of the dive.
 The following table shows the estimated dive times for various combinations of air volume and dive depth.
@@ -60,7 +60,7 @@ The following table shows the estimated dive times for various combinations of a
 Use this table to estimate the derivatives
 $\displaystyle{\frac{\partial T}{\partial V}}$ and $\displaystyle{\frac{\partial T}{\partial D}}$ at the point $(V=60, T=40)$. Give units for each of these derivatives and then interpret what these numbers mean.
 
-### Estimating from contour plot
+### Estimating From a Contour Plot
 
 The production function $F(L,K)$ for a factory gives the number of units produced by labor $L$ and capital $K$ (both measured in dollars). This production function is given by
 $$
@@ -87,7 +87,7 @@ ladd( panel.abline(h=seq(100,900,100),v=seq(100,900,100),col='gray50') )
 
 
 
-### Estimating using desmos
+### Estimating Using Desmos
 
 Use desmos to define the prodution function $F(L,K) = L^{2/7}  K^{5/7}$ from the previous problem and to answer the analogous questions
 

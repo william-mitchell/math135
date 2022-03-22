@@ -171,8 +171,13 @@ characterize-the-derivatives-1
 partial-derivatives
 activities-11
 estimating-from-data
-estimating-from-contour-plot
+estimating-from-a-contour-plot
 estimating-using-desmos
+local-linear-approximation
+estimating-sugar-solution-temperature
+comparing-linearizations
+estimating-a-functiion
+estimating-the-windchill
 rules-of-differentiation
 derivatives-of-familiar-functions
 arithmetic-rules-for-derivatives

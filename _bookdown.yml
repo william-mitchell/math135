@@ -17,6 +17,7 @@ rmd_files: ["index.Rmd",
   "Unit3-DerivIntro.Rmd",
   "Unit3-SecondDeriv.Rmd",
   "Unit3-PartialDeriv.Rmd",
+  "Unit3-Linearization.Rmd",  
   "Unit4-DerivativeRules.Rmd",
   ]
 language:
