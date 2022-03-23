@@ -33,7 +33,7 @@ We are boiling a sugar solution to make salt water taffy. When we start, the tem
 2. What feature(s) of the curve $y=f(x)$ result in a good approximation?
 2. What feature(s) of the curve $y=g(x)$ result in a bad approximation?
 
-## Estimating a Functiion
+## Estimating a Function
 
 1. Find the linearization $L_2(x)$ the function $g(t)=t^3+e^t-4$.    
    * Remember that $L_2(x)$ means "the local linear approximation at $x=2$."  

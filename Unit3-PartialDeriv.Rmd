@@ -10,7 +10,7 @@ suppressPackageStartupMessages(library(mosaicCalc))
 
 ### Estimating From Data
 
-The maximum duration of a scuba dive $T$ (in minutes) depends on the volume $V$ of air (at sea-level pressure) in the tank and the depth $D$ (in feet) of the dive.
+The maximum duration of a scuba dive $T(V,D)$ (in minutes) depends on the volume $V$ of air (at sea-level pressure) in the tank and the depth $D$ (in feet) of the dive.
 The following table shows the estimated dive times for various combinations of air volume and dive depth.
 
 <table style="width: 70%; margin-left: auto; margin-right: auto;" border="1" cellspacing="2" cellpadding="2" align="center">
@@ -96,4 +96,52 @@ Use desmos to define the prodution function $F(L,K) = L^{2/7}  K^{5/7}$ from the
 3. Estimate the partial derivative $\displaystyle{\frac{\partial F}{\partial K}}$ at $(400,600)$.
 Your answer must be correct to two decimal places.
 
-Compare your three answers to the estimates from the contour plot in the previous problem. 
+Compare your three answers to the estimates from the contour plot in the previous problem.
+
+
+## Solutions
+
+### Estimating From Data
+
+We estimate the partial derivatives. We have
+$$
+T_V(60,40) \approx \frac{T(80,40) - T(60,40)}{80-60}
+= \frac{36 - 27}{80-60} = \frac{9}{20} = 0.45 \mbox{ min/ft}^3
+$$
+where we have used the interval $60 \leq V \leq 80$ for our estimate. We could also use $40 \leq V \leq 80$ or $40 \leq V \leq 80$ as the interval for our estimate.
+$$
+T_D(60,40) \approx \frac{T(60,60) - T(60,40)}{60-40}
+= \frac{21.3 - 27}{60-40} = - \frac{5.7}{20} = -0.285 \mbox{ min/ft}
+$$
+where we have used the interval $40 \leq D \leq 60$ for our estimate. We could also use $20 \leq D \leq 40$ or $20 \leq D \leq 60$ as the interval for our estimate.
+
+
+The units for $T_V(V,D)$ are minutes per cubic feet. An  additional cubic foot of air will allow you to dive for an extra 0.45 minutes.
+
+The units for $T_V(V,D)$ are minutes per feet. An  additional foot of dive depth will reduce your dive time: the change is $-0.285$ minutes.
+
+### Estimating From a Contour Plot
+
+We have
+$$
+F(400,600) \approx 5300.
+$$
+
+Let's estimate by using the contour line $F(L,K) = 5000$. I estimate that $F(325,600)=5000$ and that $F(400,550)=5000$. Therefore
+
+$$
+F_L(400,600) \approx \frac{5300 - 5000}{400 - 325} = \frac{300}{75} = 4
+$$
+and
+$$
+F_K(400,600) \approx \frac{5300 - 5000}{600-550}
+= \frac{300}{50} = 6.
+$$
+
+### Estimating Using Desmos
+
+Here is a [link to my desmos calculations](https://www.desmos.com/calculator/piexczmrsn).
+
+1. $F(400,600) = 534.37$
+1. $F_L(400,600) = 0.38$
+1. $F(400,600) = 0.64$

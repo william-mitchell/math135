@@ -173,10 +173,14 @@ activities-11
 estimating-from-data
 estimating-from-a-contour-plot
 estimating-using-desmos
+solutions-10
+estimating-from-data-1
+estimating-from-a-contour-plot-1
+estimating-using-desmos-1
 local-linear-approximation
 estimating-sugar-solution-temperature
 comparing-linearizations
-estimating-a-functiion
+estimating-a-function
 estimating-the-windchill
 rules-of-differentiation
 derivatives-of-familiar-functions
