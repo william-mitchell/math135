@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>13 The Derivative | MATH 135: AMC I</title>
+  <title>18 Differentiation | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="13 The Derivative | MATH 135: AMC I" />
+  <meta property="og:title" content="18 Differentiation | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="13 The Derivative | MATH 135: AMC I" />
+  <meta name="twitter:title" content="18 Differentiation | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="fermi-estimation.html"/>
-<link rel="next" href="the-second-derivative.html"/>
+<link rel="prev" href="rules-of-differentiation.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -399,167 +399,123 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-derivative" class="section level1">
-<h1><span class="header-section-number">13</span> The Derivative</h1>
-<div id="what-is-the-derivative" class="section level2">
-<h2><span class="header-section-number">13.1</span> What is the Derivative?</h2>
-<p>We have two (complementary) definitions of the derivative.</p>
-<div id="definition-1" class="section level3">
-<h3><span class="header-section-number">13.1.1</span> Definition #1</h3>
-<p>The  measures the  of outputs to a small change in input.</p>
-<p>If my inputs are <span class="math inline">\(x\)</span> and my outputs are <span class="math inline">\(y\)</span>, then
-<span class="math display">\[
-\text{the derivative} \, \approx \, \frac{\text{change in output}}{\text{change in input}} \, = \, \frac{\Delta y}{\Delta x}
-\]</span></p>
+<div id="differentiation" class="section level1">
+<h1><span class="header-section-number">18</span> Differentiation</h1>
+<div id="basic-derivative-practice" class="section level2">
+<h2><span class="header-section-number">18.1</span> Basic Derivative Practice</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(W(r) = r^3 + 5r - 12\)</span></li>
+<li><span class="math inline">\(f(x) = x^2 - 3\ln x\)</span></li>
+<li><span class="math inline">\(P(t) = 4t^2 + 7\sin t\)</span></li>
+<li><span class="math inline">\(f(x) = 1/x^2 + 5\sqrt{x} - 7\)</span></li>
+<li><span class="math inline">\(s(x) = 2e^{x} + x^2\)</span></li>
+<li><span class="math inline">\(h(\theta) = 1/\sqrt[3]{\theta}\)</span></li>
+<li><span class="math inline">\(b(t) = t^2 + 5\cos t\)</span></li>
+</ol>
 </div>
-<div id="definition-2" class="section level3">
-<h3><span class="header-section-number">13.1.2</span> Definition #2</h3>
-<p>When we have a function <span class="math inline">\(y=f(x)\)</span>, then we have a geometric description of the derivative.</p>
+<div id="more-basic-derivative-practice" class="section level2">
+<h2><span class="header-section-number">18.2</span> More Basic Derivative Practice</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(g(x) = -\frac{1}{2}\left(x^5 +2x -9 \right)\)</span></li>
+<li><span class="math inline">\(s(t) = 6t^{-2} + 3t^3 - 4t^{1/2}\)</span></li>
+<li><span class="math inline">\(q(x) = 3x - 2\cdot 4^x\)</span></li>
+<li><span class="math inline">\(y(x) = \sqrt{x}(x+1)\)</span></li>
+<li><span class="math inline">\(P(t) = 3000(1.02)^t\)</span></li>
+<li><span class="math inline">\(f(x) = 2^x + x^2 + 1\)</span></li>
+<li><span class="math inline">\(d(r) = Ae^{r} - Br^2 + C\)</span></li>
+<li><span class="math inline">\(s(t) = t^2 + 2\ln t\)</span></li>
+<li><span class="math inline">\(g(x) = 2x - \frac{1}{\sqrt[3]{x}} + 3^x - e\)</span></li>
+<li><span class="math inline">\(y(g) = 5\sin g - 5g + 4\)</span></li>
+</ol>
+</div>
+<div id="product-rule-and-quotient-rule-practice" class="section level2">
+<h2><span class="header-section-number">18.3</span> Product Rule and Quotient Rule Practice</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(s(t)=(t^2+4)(5t-1)\)</span></li>
+<li><span class="math inline">\(y(x)=x^2\ln x\)</span></li>
+<li><span class="math inline">\(g(x)= \frac{25x^2}{e^x}\)</span></li>
+<li><span class="math inline">\(h(t)=\frac{t+4}{t-4}\)</span></li>
+<li><span class="math inline">\(y(x)=x^2\cos x\)</span></li>
+</ol>
+<!--
 
-<p>The <strong>derivative of a function</strong> <span class="math inline">\(f\)</span> at a point <span class="math inline">\(c\)</span> is the slope of the tangent line at <span class="math inline">\(x=c\)</span> .It’s also sometimes called the <strong>instantaneous rate of change</strong>.</p>
+1. $s'(t) = 2t(5t-1) + (t^2+4)5$
+1. $y'(x) = 2x\ln x + x^2 \cdot 1/x$
+1. $f'(x) = 50xe^{-x} - 25x^2e^{-x}$
+1. $h'(t) = \frac{(t-4) - (t+4)}{(t-4)^2}$
+1. $y'(x) = 2x\cos x - x^2\sin x$
 
-<p>We denote the derivative at <span class="math inline">\(x=c\)</span> by <span class="math inline">\(f&#39;(c)\)</span>. We approximate this derivative with the formula
-<span class="math display">\[
- f&#39;(c)  \approx \frac{f(c+a) - f(c)}{a} 
-\]</span>
-where <span class="math inline">\(a\)</span> is a <strong>very, very small number</strong>.</p>
-<!-- 
-We have two notations for the derivative of $f(x)$ at $x=c$:
-$$
-f'(c) \qquad \mbox{and} \qquad \frac{df}{dx}(c)
-$$
 -->
 </div>
-</div>
-<div id="activities-9" class="section level2">
-<h2><span class="header-section-number">13.2</span> Activities</h2>
-<div id="studying" class="section level3">
-<h3><span class="header-section-number">13.2.1</span> Studying</h3>
-<p>Suppose that spending 3 extra hours on studying increases our percent grade on an exam by 14 percent.</p>
+<div id="chain-rule-practice" class="section level2">
+<h2><span class="header-section-number">18.4</span> Chain Rule Practice</h2>
 <ol style="list-style-type: decimal">
-<li>Calculate the derivative, give the units, and give an interpretation of the number you get.</li>
-<li>Is this rate of change constant? Explain.</li>
+<li><span class="math inline">\(g(z)=(z^2+5)^3\)</span></li>
+<li><span class="math inline">\(g(m) = 200 e^{0.12m}\)</span></li>
+<li><span class="math inline">\(h(x) = e^{5x^2+1}\)</span></li>
+<li><span class="math inline">\(g(x) = \sqrt{1+x^3}\)</span></li>
+<li><span class="math inline">\(f(t) = \cos(2t^3+5t^2)\)</span></li>
+<li><span class="math inline">\(k(x) = \ln(4x^2)\)</span></li>
 </ol>
-</div>
-<div id="marginal-cost" class="section level3">
-<h3><span class="header-section-number">13.2.2</span> Marginal Cost</h3>
-<p>Economists use the term “marginal cost” for the derivative of the cost of production. Here is the definition:</p>
+<!--
+Solutions
 
-<p>The <strong>marginal cost</strong> is the cost to produce 1 additional good.</p>
+1. $g'(z) = 3(z^2+5)^2\cdot 2z$
+1. $g'(m) = 200 \cdot 0.12 \cdot e^{0.12m}$
+1. $h'(x) = e^{5x^2+1}\cdot (10x)$
+1. $g'(x) = \frac{1}{2}(1+x^3)^{-1/2}\cdot(3x^2)$
+1. $f'(t) = -\sin(2t^3+5t^2)\cdot(6t^2+10t)$
+1. $k'(x) = \frac{1}{4x^2}\cdot 8x$
+-->
+</div>
+<div id="more-chain-rule-practice" class="section level2">
+<h2><span class="header-section-number">18.5</span> More Chain Rule Practice</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x)=\sin(2x)\)</span></li>
+<li><span class="math inline">\(P(t)=e^{2t}\)</span></li>
+<li><span class="math inline">\(y(x)=x e^{3x}\)</span></li>
+<li><span class="math inline">\(f(z)=\ln(z^2+1)\)</span></li>
+<li><span class="math inline">\(R(t)=(\sin t)^5\)</span></li>
+<li><span class="math inline">\(f(t)=\sin \sqrt{e^{t}+1}\)</span></li>
+<li><span class="math inline">\(g(y)=e^{2e^{y^3}}\)</span></li>
+</ol>
+<!--
+1. $f'(x) = 2\cos(2x)$
+1. $P'(t) = 2e^{2t}$
+1. $y'(x) = e^{3x} + 3xe^{3x}$
+1. $f'(z) = \frac{2z}{z^2+1}$
+1. $R'(t) = 5 (\sin t)^4 \cdot \cos t$
+1. $f'(t) = \cos \sqrt{e^{t}+1} \cdot \frac{1}{2}\left(e^{t}+1\right)^{-1/2}\cdot e^{t}$
+1. $g'(y) = e^{2e^{y^3}} \cdot 2e^{y^3}\cdot 3y^2$
 
-<p>Suppose that it costs $250,000 to produce 1000 iPhones.</p>
-<ol style="list-style-type: decimal">
-<li>If it costs $250,440 to produce 1002 iPhones, what’s the marginal cost of 1 iPhone?</li>
-<li>Using the marginal cost from part 1, estimate how much it will cost to produce 1030 iPhones.</li>
-</ol>
-</div>
-</div>
-<div id="farmland-in-the-united-states" class="section level2">
-<h2><span class="header-section-number">13.3</span> Farmland in the United States</h2>
-<p>The total acreage of farmland has been shrinking in the United States since 1980.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Year</th>
-<th>1980</th>
-<th>1985</th>
-<th>1990</th>
-<th>1995</th>
-<th>2000</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Farmland (millions of acres)</td>
-<td>1039</td>
-<td>1012</td>
-<td>987</td>
-<td>963</td>
-<td>945</td>
-</tr>
-</tbody>
-</table>
-<ol style="list-style-type: decimal">
-<li>Let <span class="math inline">\(F(t)\)</span> denote the amount of farmland at a time <span class="math inline">\(t\)</span>. Use the data to estimate <span class="math inline">\(F&#39;(1995)\)</span>, the derivative at <span class="math inline">\(t=1995\)</span>.</li>
-<li>Did you use 1990 or 2000 as your estmation point? Did it matter? What does that mean?</li>
-<li>You got a negative number for <span class="math inline">\(F&#39;(1995)\)</span>. Does that make sense with the situation? Why?</li>
-<li>Give an example of a year that, if you had the data for it, would better help us estimate <span class="math inline">\(F&#39;(1995)\)</span>. Why?</li>
-</ol>
-</div>
-<div id="a-moving-particle" class="section level2">
-<h2><span class="header-section-number">13.4</span> A Moving Particle</h2>
-<p>A particle’s position over time is given by the formula
-<span class="math display">\[
-s(t)=2+3\sin(4t)+1.2t^2
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Find the velocity at <span class="math inline">\(t=1\)</span> and <span class="math inline">\(t=2\)</span> numerically (using small subintervals). Remember that the velocity is the derivative of the position.</li>
-<li>Use desmos to graph the position curve <span class="math inline">\(s(t)\)</span> and the tangent lines at both <span class="math inline">\(t=1\)</span> and <span class="math inline">\(t=2\)</span>.</li>
-</ol>
-</div>
-<div id="solutions-8" class="section level2">
-<h2><span class="header-section-number">13.5</span> Solutions</h2>
-<div id="studying-1" class="section level3">
-<h3><span class="header-section-number">13.5.1</span> Studying</h3>
-<p>Suppose that spending 3 extra hours on studying increases our percent grade on an exam by 14 percent.</p>
-<ol style="list-style-type: decimal">
-<li>The derivative is <span class="math inline">\(\frac{14}{3} = 4.67\)</span> percent per hour. The interpretation: for every hour that you spend studying, your grade increases by <span class="math inline">\(4.67\%\)</span>.</li>
-<li>This rate of change is not constant. After studying for a while, you reach “burn out”, or perhaps you run out of new material to master. In addition, your grade tops out at 100%, so we cannot increase forever.</li>
-</ol>
-</div>
-<div id="marginal-cost-1" class="section level3">
-<h3><span class="header-section-number">13.5.2</span> Marginal Cost</h3>
-<ol style="list-style-type: decimal">
-<li><p>The marginal cost is
-<span class="math display">\[ 
-\frac{250,440 - 250,000}{102-100}=\frac{440}{2} =220 \mbox{ dollars per phone}
-\]</span></p></li>
-<li><p>I estimate that the cost of making 1030 phones is
-<span class="math display">\[
-250,000 + 200 \cdot 30 = 256,600.
-\]</span></p></li>
-</ol>
-</div>
-</div>
-<div id="farmland-in-the-united-states-1" class="section level2">
-<h2><span class="header-section-number">13.6</span> Farmland in the United States</h2>
-<ol style="list-style-type: decimal">
-<li><p>When estimating the derivative, we need to “stay local” in order to get the most reliable estimate. There are three equally good choices here:
-<span class="math display">\[
-\begin{array}{rcl}
-f&#39;(1995) &amp;\approx&amp; \frac{f(2000)-f(1995)}{2000-1995}=\frac{945-963}{5} = - \frac{18}{5} = -3.6 \\
-f&#39;(1995) &amp;\approx&amp; \frac{f(1995)-f(1990)}{1995-1990}=\frac{963-987}{5} = - \frac{24}{5} = -4.8 \\
-f&#39;(1995) &amp;\approx&amp; \frac{f(2000)-f(1990)}{2000-1990}=\frac{945-987}{10} = - \frac{42}{10} = -4.2 \\
-\end{array}
-\]</span></p></li>
-<li><p>Any of the three estimates are good answers. Since we are estimating there isn’t a “right answer.” All three stay close to 1995, so each one is good.</p></li>
-<li><p>We got a negative number because the acreage is decreasing.</p></li>
-<li><p>If we had the data for 1994 or 1996, using these values would give us a better estimate. Using smaller and smaller intervals will give us a more accurate estimation. (But we cannot tell up front how “small” we need to be to get the accurracy we desire.)</p></li>
-</ol>
-</div>
-<div id="a-moving-particle-1" class="section level2">
-<h2><span class="header-section-number">13.7</span> A Moving Particle</h2>
-<ol style="list-style-type: decimal">
-<li><p>Using desmos, we know that
-<span class="math display">\[
-s&#39;(1) \approx \frac{s(1+h)-s(1)}{h} \approx -5.44
-\]</span>
-when <span class="math inline">\(0 &lt; h &lt; 0.00001\)</span>. Similarly, we have
-<span class="math display">\[
-s&#39;(1) \approx \frac{s(2+h)-s(2)}{h} \approx 5.03
-\]</span>
-when <span class="math inline">\(0 &lt; h &lt; 0.00001\)</span>.</p></li>
-<li><p>Here are the commands to plot the curve and the two tangent lines.</p></li>
-</ol>
-<p><span class="math display">\[
-\begin{array}{l}
-s\left(t\right)=2+3\sin(4t)+1.2t^{2} \\
-\\
-y = -5.44(t-1) + s(1) \\
-\\
-y = 5.03(t-2) + s(2) \\
-\end{array}
-\]</span></p>
+-->
+<!--
+
+## Basic
+
+1. $W'(r) = 3r^2 + 5$
+1. $f'(x) = 2x - 3/x$
+1. $P'(t) = 8t + 7\cos t$
+1. $f'(x) = -2x^{-3} + \frac{5}{2}x^{-1/2}$
+1. $s'(x) = 2e^{x} + 2x$
+1. $h'(\theta) = -\frac{1}{3}\theta^{-4/3}$
+1. $b'(t) = 2t - 5\sin t$
+
+
+# More 
+
+1. $g'(x) = -\frac{1}{2}(5x^4 + 2)$
+1. $s'(t) = -12 t^{-3} + 9t^2 -2t^{-1/2}$
+1. $q'(x) = 3 - 2\cdot \ln 4 \cdot 4^x$
+1. $y'(x) = \frac{3}{2}x^{1/2} + \frac{1}{2}x^{-1/2}$
+1. $P'(t) = 3000\cdot \ln 1.02 \cdot (1.02)^t$
+1. $f'(x) = \ln 2 \cdot 2^x + 2x$
+1. $d'(r) = Ae^{r} - 2Br$
+1. $s'(t) = 2t + 2/t$
+1. $g'(x) = 2 + \frac{1}{3}x^{-4/3} + \ln 3 \cdot 3^x $
+1. $y'(g) = 5\cos g - 5$
+
+-->
 
 </div>
 </div>
@@ -568,8 +524,8 @@ y = 5.03(t-2) + s(2) \\
           </div>
         </div>
       </div>
-<a href="fermi-estimation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="the-second-derivative.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rules-of-differentiation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -19,6 +19,7 @@ rmd_files: ["index.Rmd",
   "Unit3-PartialDeriv.Rmd",
   "Unit3-Linearization.Rmd",  
   "Unit4-DerivativeRules.Rmd",
+  "Unit4-Differentiation.Rmd",
   ]
 language:
   ui: 
