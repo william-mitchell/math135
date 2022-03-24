@@ -197,7 +197,7 @@ rules-for-combinations-of-functions
 product-rule
 quotient-rule
 chain-rule
-differentiation
+symbolic-differentiation
 basic-derivative-practice
 more-basic-derivative-practice
 product-rule-and-quotient-rule-practice

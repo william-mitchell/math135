@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Average Rate of Change | MATH 135: AMC I</title>
+  <title>18 Symbolic Differentiation | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Average Rate of Change | MATH 135: AMC I" />
+  <meta property="og:title" content="18 Symbolic Differentiation | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Average Rate of Change | MATH 135: AMC I" />
+  <meta name="twitter:title" content="18 Symbolic Differentiation | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="linear-functions.html"/>
-<link rel="next" href="exponential-and-logarithmic-functions.html"/>
+<link rel="prev" href="rules-of-differentiation.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -399,181 +399,125 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="average-rate-of-change" class="section level1">
-<h1><span class="header-section-number">5</span> Average Rate of Change</h1>
-<div id="goals-1" class="section level2">
-<h2><span class="header-section-number">5.1</span> Goals</h2>
-<ul>
-<li>Calculate average rate of change (AROC) on an interval</li>
-<li>Recognize when a function is increasing or decreasing</li>
-<li>Recognize when a function is concave up or concave down</li>
-</ul>
-</div>
-<div id="activities-1" class="section level2">
-<h2><span class="header-section-number">5.2</span> Activities</h2>
-<div id="aroc-of-a-function" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> AROC of a function</h3>
-<p>Find the average rate of change (AROC) of the function <span class="math inline">\(f(x) = 2x^2 -3x + 1\)</span> on the interval between <span class="math inline">\(x=-1\)</span> and <span class="math inline">\(x=3\)</span>.</p>
-</div>
-<div id="measuring-daily-rainfall" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> Measuring daily rainfall</h3>
-<p>One rainy summer day, hourly measurements of the total rainfall were recorded (in inches) by a rain gauge.</p>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Time</strong></th>
-<th>8 am</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>noon</th>
-<th>1 pm</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5 pm</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Amount</strong></td>
-<td>0.15</td>
-<td>0.17</td>
-<td>0.2</td>
-<td>0.45</td>
-<td>0.48</td>
-<td>0.75</td>
-<td>1.03</td>
-<td>1.20</td>
-<td>1.45</td>
-<td>1.60</td>
-</tr>
-</tbody>
-</table>
+<div id="symbolic-differentiation" class="section level1">
+<h1><span class="header-section-number">18</span> Symbolic Differentiation</h1>
+<div id="basic-derivative-practice" class="section level2">
+<h2><span class="header-section-number">18.1</span> Basic Derivative Practice</h2>
 <ol style="list-style-type: decimal">
-<li>What was the average rate of rainfall from 8 a.m. to 5 p.m.?</li>
-<li>What are the units of this rate of change?</li>
+<li><span class="math inline">\(W(r) = r^3 + 5r - 12\)</span></li>
+<li><span class="math inline">\(f(x) = x^2 - 3\ln x\)</span></li>
+<li><span class="math inline">\(P(t) = 4t^2 + 7\sin t\)</span></li>
+<li><span class="math inline">\(f(x) = 1/x^2 + 5\sqrt{x} - 7\)</span></li>
+<li><span class="math inline">\(s(x) = 2e^{x} + x^2\)</span></li>
+<li><span class="math inline">\(h(\theta) = 1/\sqrt[3]{\theta}\)</span></li>
+<li><span class="math inline">\(b(t) = t^2 + 5\cos t\)</span></li>
 </ol>
 </div>
-<div id="sketching-a-function" class="section level3">
-<h3><span class="header-section-number">5.2.3</span> Sketching a function</h3>
+<div id="more-basic-derivative-practice" class="section level2">
+<h2><span class="header-section-number">18.2</span> More Basic Derivative Practice</h2>
 <ol style="list-style-type: decimal">
-<li>Sketch a <em>nonlinear</em> function that has an average rate of change of 1 on the interval <span class="math inline">\([0,2]\)</span>.</li>
-<li>Compare sketches at your table. Are they similar?</li>
-<li>Sketch a function with an AROC of 1 on <span class="math inline">\([0,2]\)</span> that is <em>very different</em> from everyone else’s function.</li>
-</ol>
-<p><strong>The take away:</strong> AROC is an estimation of the behavior of the function on the interval. But there is no guarantee about the quality of the estimate.</p>
-</div>
-<div id="slope-and-concavity" class="section level3">
-<h3><span class="header-section-number">5.2.4</span> Slope and Concavity</h3>
-<p>Sketch an example of a function that is</p>
-<ol style="list-style-type: decimal">
-<li>Increasing and concave up</li>
-<li>Increasing and concave down</li>
-<li>Decreasing and concave up</li>
-<li>Decreasing and concave down</li>
+<li><span class="math inline">\(g(x) = -\frac{1}{2}\left(x^5 +2x -9 \right)\)</span></li>
+<li><span class="math inline">\(s(t) = 6t^{-2} + 3t^3 - 4t^{1/2}\)</span></li>
+<li><span class="math inline">\(q(x) = 3x - 2\cdot 4^x\)</span></li>
+<li><span class="math inline">\(y(x) = \sqrt{x}(x+1)\)</span></li>
+<li><span class="math inline">\(P(t) = 3000(1.02)^t\)</span></li>
+<li><span class="math inline">\(f(x) = 2^x + x^2 + 1\)</span></li>
+<li><span class="math inline">\(d(r) = Ae^{r} - Br^2 + C\)</span></li>
+<li><span class="math inline">\(s(t) = t^2 + 2\ln t\)</span></li>
+<li><span class="math inline">\(g(x) = 2x - \frac{1}{\sqrt[3]{x}} + 3^x - e\)</span></li>
+<li><span class="math inline">\(y(g) = 5\sin g - 5g + 4\)</span></li>
 </ol>
 </div>
-<div id="example-function" class="section level3">
-<h3><span class="header-section-number">5.2.5</span> Example Function</h3>
-<p>Here is the graph of a function.
-<img src="images/slope-concavity-example.png" style="width:50.0%" /></p>
-<p>Find the subintervals of <span class="math inline">\([0,10]\)</span> where the function is</p>
+<div id="product-rule-and-quotient-rule-practice" class="section level2">
+<h2><span class="header-section-number">18.3</span> Product Rule and Quotient Rule Practice</h2>
 <ol style="list-style-type: decimal">
-<li>Increasing</li>
-<li>Decreasing</li>
-<li>Concave up</li>
-<li>Concave down</li>
+<li><span class="math inline">\(s(t)=(t^2+4)(5t-1)\)</span></li>
+<li><span class="math inline">\(y(x)=x^2\ln x\)</span></li>
+<li><span class="math inline">\(g(x)= \frac{25x^2}{e^x}\)</span></li>
+<li><span class="math inline">\(y(x)=x^2\cos x\)</span></li>
+<li><span class="math inline">\(h(t)=\frac{t+4}{t-4}\)</span></li>
 </ol>
-<!-- y=\frac{-\left(x-1\right)\left(\frac{x}{3}-3\right)\left(x-7\right)\left(x-2\right)}{8}+5 -->
-</div>
-<div id="vinyl-lps" class="section level3">
-<h3><span class="header-section-number">5.2.6</span> Vinyl LPs</h3>
-<p>Let <span class="math inline">\(V(t)\)</span> denote the number of vinyl LP records sold in the US (in millions) in year <span class="math inline">\(t\)</span>.</p>
-<p><span class="math display">\[
-\begin{array}{c|c|c|c|c|c|c}
-t &amp; 1995 &amp; 2000 &amp; 2005 &amp; 2010 &amp; 2015 &amp; 2020 \\
-\hline
-V(t) &amp; 0.8 &amp; 1.5 &amp; 0.9 &amp; 2.8 &amp; 11.9 &amp; 27.5
-\end{array}
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Calculate the average rate of change for each of the five year intervals 1995-2000, 2000-2005, 2005-2010, 2010-15, 2015-2020.</li>
-<li>Use your answers from part 1 to determine whether the function <span class="math inline">\(V(t)\)</span> is increasing or decreasing on these five year intervals.</li>
-<li>Use your answers from part 1 to estimate whether the function <span class="math inline">\(V(t)\)</span> is concave up or concave down at each of the points 2000, 2005, 2010 and 2015.</li>
-</ol>
-</div>
-<div id="relative-change-of-the-dow-jones-average" class="section level3">
-<h3><span class="header-section-number">5.2.7</span> Relative change of the Dow Jones average</h3>
-<p>The <em>relative change</em> of a function <span class="math inline">\(f(x)\)</span> on interval <span class="math inline">\([a,b]\)</span> is
-<span class="math display">\[ \frac{f(b)-f(a)}{f(a)}.\]</span></p>
-<ol style="list-style-type: decimal">
-<li>What is the <em>relative change</em> in the Dow Jones average from 169.84 to 77.90 (from 1 January 1931 to 31 December 1931)?</li>
-<li>Compare this to the <em>relative change</em> in the Dow Jones average from 35,443.82 to 35369.09 (from 2 September 2021 to 3 September 2021).</li>
-</ol>
-</div>
-</div>
-<div id="solutions-1" class="section level2">
-<h2><span class="header-section-number">5.3</span> Solutions</h2>
-<div id="aroc-of-a-function-1" class="section level3">
-<h3><span class="header-section-number">5.3.1</span> AROC of a function</h3>
-<p><span class="math display">\[
-\frac{f(3)-f(-1)}{3- (-1)} = \frac{10-6}{3+1} = \frac{4}{4}=1
-\]</span></p>
-</div>
-<div id="measuring-daily-rainfall-1" class="section level3">
-<h3><span class="header-section-number">5.3.2</span> Measuring daily rainfall</h3>
-<ol style="list-style-type: decimal">
-<li>The rate of change is
-<span class="math display">\[\frac{1.60 - 0.15}{9} = \frac{1.45}{9} = 0.16\]</span></li>
-<li>The units are inches per hour.</li>
-</ol>
-</div>
-<div id="sketching-a-function-1" class="section level3">
-<h3><span class="header-section-number">5.3.3</span> Sketching a function</h3>
-<p>Here are three very different functions that all have an average rate of change of 1 on the interval <span class="math inline">\([0,2]\)</span>.</p>
-<p><strong>The take away:</strong> AROC is an estimation of the behavior of the function on the interval. But there is no guarantee about the quality of the estimate.</p>
-<p><img src="images/three-graphs.png" style="width:50.0%" /></p>
-</div>
-<div id="slope-and-concavity-1" class="section level3">
-<h3><span class="header-section-number">5.3.4</span> Slope and Concavity</h3>
-<p><img src="images/inc-dec-cu-cd.png" style="width:50.0%" /></p>
-</div>
-<div id="example-function-1" class="section level3">
-<h3><span class="header-section-number">5.3.5</span> Example Function</h3>
-<ol style="list-style-type: decimal">
-<li>Increasing on <span class="math inline">\((-\infty,1.5)\)</span> and <span class="math inline">\((4.6,8.1)\)</span></li>
-<li>Decreasing on <span class="math inline">\((1.5,4.6)\)</span> and <span class="math inline">\((8.1,\infty)\)</span></li>
-<li>Concave up on <span class="math inline">\((3,6.5)\)</span></li>
-<li>Concave down on <span class="math inline">\((-\infty,3)\)</span> and <span class="math inline">\((6.5,\infty)\)</span></li>
-</ol>
-<!-- y=\frac{-\left(x-1\right)\left(\frac{x}{3}-3\right)\left(x-7\right)\left(x-2\right)}{8}+5 -->
-</div>
-<div id="vinyl-lps-1" class="section level3">
-<h3><span class="header-section-number">5.3.6</span> Vinyl LPs</h3>
-<ol style="list-style-type: decimal">
-<li><p>Here are the AROC for the intervals:
-<span class="math display">\[
-\begin{array}{c|c|c|c|c|c|c}
-\mbox{interval} &amp; 1995-2000 &amp; 2000-2005 &amp; 2005-2010 &amp; 2010-2015 &amp; 2015-2020 \\
-\hline
-\mbox{AROC} &amp; 0.14 &amp; -0.12 &amp; 0.38&amp; 1.82 &amp; 3.12 &amp; 
-\end{array}
-\]</span></p></li>
-<li><p>The function appears to be decreasing on <span class="math inline">\(2000-2005\)</span> and increasing on the other intervals.</p></li>
-<li><p>The function appears to concave down at 2000 because the slope “gets more negative” at this point. It appears to be concave up at the other points because the slope “gets more positive.”</p></li>
-</ol>
-</div>
-<div id="relative-change-of-the-dow-jones-average-1" class="section level3">
-<h3><span class="header-section-number">5.3.7</span> Relative change of the Dow Jones average</h3>
-<ol style="list-style-type: decimal">
-<li>The relative change is
-<span class="math display">\[ \frac{77.90-169.84}{169.84}=-0.541,\]</span></li>
-<li>The relative change is
-<span class="math display">\[\frac{35369.09-35443.82}{35443.82}=-0.002.\]</span></li>
-</ol>
+<!--
 
+1. $s'(t) = 2t(5t-1) + (t^2+4)5$
+1. $y'(x) = 2x\ln x + x^2 \cdot 1/x$
+1. $f'(x) = 50xe^{-x} - 25x^2e^{-x}$
+1. $y'(x) = 2x\cos x - x^2\sin x$
+1. $h'(t) = \frac{(t-4) - (t+4)}{(t-4)^2}$
+
+
+-->
 </div>
+<div id="chain-rule-practice" class="section level2">
+<h2><span class="header-section-number">18.4</span> Chain Rule Practice</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(g(z)=(z^2+5)^3\)</span></li>
+<li><span class="math inline">\(g(m) = 200 e^{0.12m}\)</span></li>
+<li><span class="math inline">\(h(x) = e^{5x^2+1}\)</span></li>
+<li><span class="math inline">\(g(x) = \sqrt{1+x^3}\)</span></li>
+<li><span class="math inline">\(f(t) = \cos(2t^3+5t^2)\)</span></li>
+<li><span class="math inline">\(k(x) = \ln(4x^2)\)</span></li>
+</ol>
+<!--
+Solutions
+
+1. $g'(z) = 3(z^2+5)^2\cdot 2z$
+1. $g'(m) = 200 \cdot 0.12 \cdot e^{0.12m}$
+1. $h'(x) = e^{5x^2+1}\cdot (10x)$
+1. $g'(x) = \frac{1}{2}(1+x^3)^{-1/2}\cdot(3x^2)$
+1. $f'(t) = -\sin(2t^3+5t^2)\cdot(6t^2+10t)$
+1. $k'(x) = \frac{1}{4x^2}\cdot 8x$
+-->
+</div>
+<div id="more-chain-rule-practice" class="section level2">
+<h2><span class="header-section-number">18.5</span> More Chain Rule Practice</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x)=\sin(2x)\)</span></li>
+<li><span class="math inline">\(P(t)=e^{2t}\)</span></li>
+<li><span class="math inline">\(y(x)=x e^{3x}\)</span></li>
+<li><span class="math inline">\(f(z)=\ln(z^2+1)\)</span></li>
+<li><span class="math inline">\(R(t)=(\sin t)^5\)</span></li>
+<li><span class="math inline">\(f(t)=\sin \sqrt{e^{t}+1}\)</span></li>
+<li><span class="math inline">\(g(y)=e^{2e^{y^3}}\)</span></li>
+</ol>
+<!--
+1. $f'(x) = 2\cos(2x)$
+1. $P'(t) = 2e^{2t}$
+1. $y'(x) = e^{3x} + 3xe^{3x}$
+1. $f'(z) = \frac{2z}{z^2+1}$
+1. $R'(t) = 5 (\sin t)^4 \cdot \cos t$
+1. $f'(t) = \cos \sqrt{e^{t}+1} \cdot \frac{1}{2}\left(e^{t}+1\right)^{-1/2}\cdot e^{t}$
+1. $g'(y) = e^{2e^{y^3}} \cdot 2e^{y^3}\cdot 3y^2$
+
+-->
+<!--
+
+## Basic
+
+1. $W'(r) = 3r^2 + 5$
+1. $f'(x) = 2x - 3/x$
+1. $P'(t) = 8t + 7\cos t$
+1. $f'(x) = -2x^{-3} + \frac{5}{2}x^{-1/2}$
+1. $s'(x) = 2e^{x} + 2x$
+1. $h'(\theta) = -\frac{1}{3}\theta^{-4/3}$
+1. $b'(t) = 2t - 5\sin t$
+
+
+# More 
+
+1. $g'(x) = -\frac{1}{2}(5x^4 + 2)$
+1. $s'(t) = -12 t^{-3} + 9t^2 -2t^{-1/2}$
+1. $q'(x) = 3 - 2\cdot \ln 4 \cdot 4^x$
+1. $y'(x) = \frac{3}{2}x^{1/2} + \frac{1}{2}x^{-1/2}$
+1. $P'(t) = 3000\cdot \ln 1.02 \cdot (1.02)^t$
+1. $f'(x) = \ln 2 \cdot 2^x + 2x$
+1. $d'(r) = Ae^{r} - 2Br$
+1. $s'(t) = 2t + 2/t$
+1. $g'(x) = 2 + \frac{1}{3}x^{-4/3} + \ln 3 \cdot 3^x $
+1. $y'(g) = 5\cos g - 5$
+
+-->
+
 </div>
 </div>
             </section>
@@ -581,8 +525,8 @@ V(t) &amp; 0.8 &amp; 1.5 &amp; 0.9 &amp; 2.8 &amp; 11.9 &amp; 27.5
           </div>
         </div>
       </div>
-<a href="linear-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exponential-and-logarithmic-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rules-of-differentiation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

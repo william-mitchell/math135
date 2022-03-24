@@ -1,4 +1,4 @@
-# Differentiation
+# Symbolic Differentiation
 
 ## Basic Derivative Practice
 
@@ -31,16 +31,17 @@
 1. $s(t)=(t^2+4)(5t-1)$
 1. $y(x)=x^2\ln x$
 1. $g(x)= \frac{25x^2}{e^x}$
-1. $h(t)=\frac{t+4}{t-4}$
 1. $y(x)=x^2\cos x$
+1. $h(t)=\frac{t+4}{t-4}$
 
 <!--
 
 1. $s'(t) = 2t(5t-1) + (t^2+4)5$
 1. $y'(x) = 2x\ln x + x^2 \cdot 1/x$
 1. $f'(x) = 50xe^{-x} - 25x^2e^{-x}$
-1. $h'(t) = \frac{(t-4) - (t+4)}{(t-4)^2}$
 1. $y'(x) = 2x\cos x - x^2\sin x$
+1. $h'(t) = \frac{(t-4) - (t+4)}{(t-4)^2}$
+
 
 -->
 
