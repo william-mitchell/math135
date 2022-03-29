@@ -2,6 +2,8 @@
 
 ## Basic Derivative Practice
 
+Find the derivative for each of the following functions.
+
 1. $W(r) = r^3 + 5r - 12$
 1. $f(x) = x^2 - 3\ln x$
 1. $P(t) = 4t^2 + 7\sin t$
@@ -12,6 +14,8 @@
 
 
 ## More Basic Derivative Practice
+
+Find the derivative for each of the following functions.
 
 1. $g(x) = -\frac{1}{2}\left(x^5 +2x -9 \right)$
 1. $s(t) = 6t^{-2} + 3t^3 - 4t^{1/2}$
@@ -27,6 +31,7 @@
 
 ## Product Rule and Quotient Rule Practice
 
+Find the derivative for each of the following functions.
 
 1. $s(t)=(t^2+4)(5t-1)$
 1. $y(x)=x^2\ln x$
@@ -54,6 +59,8 @@
 
 ## Chain Rule Practice
 
+Find the derivative for each of the following functions.
+
 1. $g(z)=(z^2+5)^3$
 1. $g(m) = 200 e^{0.12m}$
 1. $h(x) = e^{5x^2+1}$
@@ -73,6 +80,8 @@ Solutions
 -->
 
 ## More Chain Rule Practice
+
+Find the derivative for each of the following functions.
 
 1. $f(x)=\sin(2x)$
 1. $P(t)=e^{2t}$

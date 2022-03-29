@@ -178,10 +178,16 @@ estimating-from-data-1
 estimating-from-a-contour-plot-1
 estimating-using-desmos-1
 local-linear-approximation
+activities-12
 estimating-sugar-solution-temperature
 comparing-linearizations
 estimating-a-function
 estimating-the-windchill
+solutions-11
+estimating-sugar-solution-temperature-1
+comparing-linearizations-1
+estimating-a-function-1
+estimating-the-windchill-1
 rules-of-differentiation
 derivatives-of-familiar-functions
 constant-rule
@@ -203,3 +209,9 @@ more-basic-derivative-practice
 product-rule-and-quotient-rule-practice
 chain-rule-practice
 more-chain-rule-practice
+the-gradient
+partial-derivative-practice
+second-partial-derivative-practice
+gradient-practice
+gradient-on-a-contour-diagram
+gradient-and-the-direction-of-greatest-increase

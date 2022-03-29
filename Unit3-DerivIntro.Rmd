@@ -28,15 +28,15 @@ When we have a function $y=f(x)$, then we have a geometric description of the de
 
 \bigskip
 
-The **derivative of a function** $f$ at a point $c$ is the slope of the tangent line at $x=c$ .It's also sometimes called the **instantaneous rate of change**.
+The **derivative of a function** $f$ at a point $a$ is the slope of the tangent line at $x=a$ .It's also sometimes called the **instantaneous rate of change**.
 
 \bigskip
 
-We denote the derivative at $x=c$ by $f'(c)$. We approximate this derivative with the formula
+We denote the derivative at $x=a$ by $f'(a)$. We approximate this derivative with the formula
 $$
- f'(c)  \approx \frac{f(c+a) - f(c)}{a} 
+ f'(a)  \approx \frac{f(a+h) - f(a)}{h} 
 $$
-where $a$ is a **very, very small number**. 
+where $h$ is a **very, very small number**. 
 
 
 <!-- 

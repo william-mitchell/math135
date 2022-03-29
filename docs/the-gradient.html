@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MATH 135: AMC I</title>
+  <title>19 The Gradient | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="MATH 135: AMC I" />
+  <meta property="og:title" content="19 The Gradient | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MATH 135: AMC I" />
+  <meta name="twitter:title" content="19 The Gradient | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="symbolic-differentiation.html"/>
 
-<link rel="next" href="r-studio-primer.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -414,32 +414,57 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">MATH 135: AMC I</h1>
+<div id="the-gradient" class="section level1">
+<h1><span class="header-section-number">19</span> The Gradient</h1>
+<div id="partial-derivative-practice" class="section level2">
+<h2><span class="header-section-number">19.1</span> Partial Derivative Practice</h2>
+<p>Find the partial derivatives <span class="math inline">\(f_x\)</span> and <span class="math inline">\(f_y\)</span> for each of these functions.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = x^5 + x^2y^3 + y^4\)</span></li>
+<li><span class="math inline">\(f(x,y) = e^x \sin(y) + \ln(y) \cos(x)\)</span></li>
+<li><span class="math inline">\(f(x,y) = \ln (x^2 - y^2)\)</span></li>
+<li><span class="math inline">\(f(x,y) = x^2 y^3 e^x \sin(y)\)</span></li>
+</ol>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is the class handbook for Math 135 AMC I at Macalester College. The content here was made by <a href="https://mathbeveridge.github.io">Andrew Beveridge</a>
-and draws upon:</p>
-<ul>
-<li>Material prepared by <a href="https://www.macalester.edu/~kheysse/">Kristin Heysse</a>, <a href="https://www.loriziegelmeier.com/">Lori Ziegelmeier</a> and other faculty in the <a href="https://www.macalester.edu/mscs/">Department of Mathematics, Statistics and Computer Science</a> at <a href="https://www.macalester.edu/">Macalester College</a>.</li>
-<li>The open textbook <a href="http://www.opentextbookstore.com/details.php?id=14">Applied Calculus</a> by Shana Calaway, Dale Hoffman, and David Lippman.</li>
-</ul>
-<p><br>
-<br>
-<br></p>
-<p><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></p>
-<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<div id="second-partial-derivative-practice" class="section level2">
+<h2><span class="header-section-number">19.2</span> Second Partial Derivative Practice</h2>
+<p>For each of these functions, find the second partial derivatives <span class="math inline">\(f_{xx}, f_{yy}, f_{xy}\)</span> and <span class="math inline">\(f_{yx}\)</span>. Confirm that <span class="math inline">\(f_{xy} = f_{yx}\)</span></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = 7x^3 + \cos(4y)\)</span></li>
+<li><span class="math inline">\(f(x,y) = e^{2x+3y}\)</span></li>
+</ol>
+</div>
+<div id="gradient-practice" class="section level2">
+<h2><span class="header-section-number">19.3</span> Gradient Practice</h2>
+<p>Calculate the gradient <span class="math inline">\(\nabla f(x,y)\)</span> for each of these functions</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = 8x^2y^4\)</span></li>
+<li><span class="math inline">\(\displaystyle{f(x,y) = \frac{x}{y}}\)</span></li>
+<li><span class="math inline">\(f(x,y) = \ln(xy)\)</span></li>
+</ol>
+</div>
+<div id="gradient-on-a-contour-diagram" class="section level2">
+<h2><span class="header-section-number">19.4</span> Gradient on a Contour Diagram</h2>
+<p>Here is a contour plot of <span class="math inline">\(f(x,y)\)</span>. At each of the three points indicated by <span class="math inline">\(*\)</span>, draw a vector in the direction of the gradient <span class="math inline">\(\nabla f\)</span>.</p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
+</div>
+<div id="gradient-and-the-direction-of-greatest-increase" class="section level2">
+<h2><span class="header-section-number">19.5</span> Gradient and the Direction of Greatest Increase</h2>
+<p>Let <span class="math inline">\(f(x,y) = 3x^2 - 4xy + y^2\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Find the gradient vector <span class="math inline">\(\nabla f(2,1)\)</span> the at the point <span class="math inline">\((2,1)\)</span>.</li>
+<li>Find the rate of change of <span class="math inline">\(f(x,y)\)</span> at <span class="math inline">\((2,1)\)</span> in the direction of greatest increase.</li>
+</ol>
 
-<!--# (PART) RStudio {-}-->
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="symbolic-differentiation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="r-studio-primer.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

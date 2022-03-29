@@ -1,0 +1,48 @@
+# The Gradient
+
+
+
+
+
+## Partial Derivative Practice
+
+Find the partial derivatives $f_x$ and $f_y$ for each of these functions.
+
+1.  $f(x,y) = x^5 + x^2y^3 + y^4$
+1. $f(x,y) = e^x \sin(y) + \ln(y) \cos(x)$
+1. $f(x,y) = \ln (x^2 - y^2)$
+1. $f(x,y) = x^2 y^3 e^x \sin(y)$
+
+## Second Partial Derivative Practice
+
+For each of these functions, find the second partial derivatives $f_{xx}, f_{yy}, f_{xy}$ and $f_{yx}$. Confirm that $f_{xy} = f_{yx}$
+
+1. $f(x,y) = 7x^3 + \cos(4y)$
+2. $f(x,y) = e^{2x+3y}$
+
+## Gradient Practice
+
+Calculate the gradient $\nabla f(x,y)$ for each of these functions
+
+1. $f(x,y) = 8x^2y^4$
+1. $\displaystyle{f(x,y) = \frac{x}{y}}$
+1. $f(x,y) = \ln(xy)$
+
+## Gradient on a Contour Diagram
+
+Here is a contour plot of $f(x,y)$. At each of the three points indicated by $*$, draw a vector in the direction of the gradient $\nabla f$. 
+
+```{r, echo=FALSE, fig.keep = "last"}
+P = makeFun(2*(x-4)^2 - 2*(x-4)*(y-3) - 3*(y-3)^2 ~ x&y)
+
+
+plotFun(P(x,y) ~ x&y, filled=FALSE, x.lim=range(0,7),y.lim=range(0,7), levels =seq(-50,50,10) )
+plotPoints(c(5,2,6)~c(0.9,2.2,4.5), add=TRUE, col='blue', pch=8)
+```
+
+## Gradient and the Direction of Greatest Increase
+
+Let $f(x,y) = 3x^2 - 4xy + y^2$.
+
+1. Find the gradient vector $\nabla f(2,1)$ the at the point $(2,1)$. 
+1. Find the rate of change of $f(x,y)$ at $(2,1)$ in the direction of greatest increase.
