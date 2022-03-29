@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>11 Dimensional Analysis | MATH 135: AMC I</title>
+  <title>19 The Chain Rule | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="11 Dimensional Analysis | MATH 135: AMC I" />
+  <meta property="og:title" content="19 The Chain Rule | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="11 Dimensional Analysis | MATH 135: AMC I" />
+  <meta name="twitter:title" content="19 The Chain Rule | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="dimensions-and-units.html"/>
-<link rel="next" href="fermi-estimation.html"/>
+<link rel="prev" href="symbolic-differentiation.html"/>
+<link rel="next" href="the-gradient.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -422,90 +422,69 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dimensional-analysis" class="section level1">
-<h1><span class="header-section-number">11</span> Dimensional Analysis</h1>
-<div id="performing-a-dimensional-analysis" class="section level2">
-<h2><span class="header-section-number">11.1</span> Performing a Dimensional Analysis</h2>
-<p>Given independent variables <span class="math inline">\(x,y,z\)</span> and dependent variable <span class="math inline">\(w\)</span>:</p>
+<div id="the-chain-rule" class="section level1">
+<h1><span class="header-section-number">19</span> The Chain Rule</h1>
+<div id="activities-14" class="section level2">
+<h2><span class="header-section-number">19.1</span> Activities</h2>
+<div id="chain-rule-practice" class="section level3">
+<h3><span class="header-section-number">19.1.1</span> Chain Rule Practice</h3>
+<p>Find the derivative for each of the following functions.</p>
 <ol style="list-style-type: decimal">
-<li>Write down the hypothesized “generalized product” <span class="math inline">\(w = k x^a y^b z^c\)</span></li>
-<li>Write &amp; simplify the dimensional version <span class="math inline">\([w] = [x]^a [y]^b [z]^c\)</span></li>
-<li>List the dimensions of all quantities</li>
-<li>Invoke dimensional compatibility to solve.</li>
-<li>Rewrite your equation, marvel at your awesomeness!</li>
+<li><span class="math inline">\(g(z)=(z^2+5)^3\)</span></li>
+<li><span class="math inline">\(g(m) = 200 e^{0.12m}\)</span></li>
+<li><span class="math inline">\(h(x) = e^{5x^2+1}\)</span></li>
+<li><span class="math inline">\(g(x) = \sqrt{1+x^3}\)</span></li>
+<li><span class="math inline">\(f(t) = \cos(2t^3+5t^2)\)</span></li>
+<li><span class="math inline">\(k(x) = \ln(4x^2)\)</span></li>
 </ol>
-</div>
-<div id="activities-7" class="section level2">
-<h2><span class="header-section-number">11.2</span> Activities</h2>
-<div id="vocal-chord-frequency" class="section level3">
-<h3><span class="header-section-number">11.2.1</span> Vocal Chord Frequency</h3>
-<p>The frequency <span class="math inline">\(f\)</span> of the sound of an organism’s vocal chords depend on their length <span class="math inline">\(\ell\)</span>, tension <span class="math inline">\(s\)</span> (a force) and mass density <span class="math inline">\(\mu\)</span> (mass per unit length). Find a formula for the frequency <span class="math inline">\(f = f(\ell, s, \mu).\)</span></p>
-</div>
-<div id="mixer-power" class="section level3">
-<h3><span class="header-section-number">11.2.2</span> Mixer Power</h3>
-<p>A mixer with power <span class="math inline">\(P\)</span> turns a mixer with wings of length <span class="math inline">\(D\)</span> through a liquid of viscosity <span class="math inline">\(H\)</span>. Find a formula for the angular velocity <span class="math inline">\(A = A(P,D,H)\)</span>. Note that since angles are dimensionless, we have <span class="math inline">\([A] = 1/T\)</span>. The dimensions of viscosity are <span class="math inline">\([H] = M/(LT)\)</span>.</p>
-</div>
-<div id="velocity-of-an-ocean-wave" class="section level3">
-<h3><span class="header-section-number">11.2.3</span> Velocity of an Ocean Wave</h3>
-<p>The velocity <span class="math inline">\(V\)</span> of a large ocean wave depends upon the period <span class="math inline">\(P\)</span>, the acceleration of gravity <span class="math inline">\(g\)</span>, and the density <span class="math inline">\(\mu\)</span> of the water. Find a formula for the velocity <span class="math inline">\(V=V(P,g,\mu)\)</span>.</p>
-</div>
-</div>
-<div id="solutions-6" class="section level2">
-<h2><span class="header-section-number">11.3</span> Solutions</h2>
-<ol style="list-style-type: decimal">
-<li><p>We have
-<span class="math display">\[
-\begin{array}{rcl}
-f &amp;=&amp; k \ell^a s^b \mu^c \\
-[f] &amp;=&amp;  [\ell]^a [s]^b [\mu]^c \\
-T^{-1} &amp;=&amp; \left( L\right)^a \left(MLT^{-2}\right)^b \left( M L^{-1}  \right)^c \\
-M^0L^0T^{-1} &amp;=&amp; M^{b+c} L^{a+b-c} T^{-2b}
-\end{array}
-\]</span>
-and so we have
-<span class="math display">\[
-0 = b+c \qquad 0 = a+b-c \qquad -1=-2b.
-\]</span>
-Therefore <span class="math inline">\(b=1/2\)</span> and <span class="math inline">\(c=-1/2\)</span> and <span class="math inline">\(a=1\)</span>. Our formula is
-<span class="math display">\[
-f = k \ell \sqrt{\frac{s}{\mu}}.
-\]</span></p></li>
-<li><p>We have
-<span class="math display">\[
-\begin{array}{rcl}
-A &amp;=&amp; k P^a D^b H^c \\
-[A] &amp;=&amp;  [P]^a [D]^b [H]^c \\
-T^{-1} &amp;=&amp; \left( ML^2T^{-3}\right)^a L^b \left( M L^{-1} T^{-1}  \right)^c \\
-M^0L^0T^{-1} &amp;=&amp; M^{a+c} L^{2a+b-c} T^{-3a-c}
-\end{array}
-\]</span>
-and so we have
-<span class="math display">\[
-0 = a+c \qquad 0 = 2a+b-c \qquad -1 = -3a-c
-\]</span>
-which means that <span class="math inline">\(a=1/2\)</span> and <span class="math inline">\(c=-1/2\)</span> and <span class="math inline">\(b=-3/4\)</span>. So our final equation is
-<span class="math display">\[
-A = k \sqrt{\frac{P}{D^3H}}
-\]</span></p></li>
-<li><p>We have
-<span class="math display">\[
-\begin{array}{rcl}
-V &amp;=&amp; k P^a g^b \mu^c \\
-[V] &amp;=&amp; [P]^a [g]^b [\mu]^c \\
-LT^{-1} &amp;=&amp; (T)^a (LT^{-2})^b (ML^{-3})^c \\
- L^1 T^{-1} M^0 &amp;=&amp; L^{b-3c} T^{a-2b} M^{c}
-\end{array}
-\]</span>
-so we have the equations
-<span class="math display">\[
-1 = b - 3c \qquad -1 = a-2b \qquad 0 = c
-\]</span>
-which means that <span class="math inline">\(c=0\)</span> and <span class="math inline">\(b=1\)</span> and <span class="math inline">\(a=1\)</span>. So our final equation is
-<span class="math display">\[
-V = k Pg
-\]</span></p></li>
-</ol>
+<!--
+Solutions
 
+1. $g'(z) = 3(z^2+5)^2\cdot 2z$
+1. $g'(m) = 200 \cdot 0.12 \cdot e^{0.12m}$
+1. $h'(x) = e^{5x^2+1}\cdot (10x)$
+1. $g'(x) = \frac{1}{2}(1+x^3)^{-1/2}\cdot(3x^2)$
+1. $f'(t) = -\sin(2t^3+5t^2)\cdot(6t^2+10t)$
+1. $k'(x) = \frac{1}{4x^2}\cdot 8x$
+-->
+</div>
+<div id="more-chain-rule-practice" class="section level3">
+<h3><span class="header-section-number">19.1.2</span> More Chain Rule Practice</h3>
+<p>Find the derivative for each of the following functions.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x)=\sin(2x)\)</span></li>
+<li><span class="math inline">\(P(t)=e^{2t}\)</span></li>
+<li><span class="math inline">\(y(x)=x e^{3x}\)</span></li>
+<li><span class="math inline">\(f(z)=\ln(z^2+1)\)</span></li>
+<li><span class="math inline">\(R(t)=(\sin t)^5\)</span></li>
+<li><span class="math inline">\(f(t)=\sin \sqrt{e^{t}+1}\)</span></li>
+<li><span class="math inline">\(g(y)=e^{2e^{y^3}}\)</span></li>
+</ol>
+<!--
+1. $f'(x) = 2\cos(2x)$
+1. $P'(t) = 2e^{2t}$
+1. $y'(x) = e^{3x} + 3xe^{3x}$
+1. $f'(z) = \frac{2z}{z^2+1}$
+1. $R'(t) = 5 (\sin t)^4 \cdot \cos t$
+1. $f'(t) = \cos \sqrt{e^{t}+1} \cdot \frac{1}{2}\left(e^{t}+1\right)^{-1/2}\cdot e^{t}$
+1. $g'(y) = e^{2e^{y^3}} \cdot 2e^{y^3}\cdot 3y^2$
+
+-->
+</div>
+<div id="conceptual-chain-rule-problems" class="section level3">
+<h3><span class="header-section-number">19.1.3</span> Conceptual Chain Rule Problems</h3>
+<ol style="list-style-type: decimal">
+<li><p>The amount of gasoline <span class="math inline">\(G\)</span>, in gallons, used by a car is a function of the distance traveled <span class="math inline">\(s\)</span>, in miles. The distance traveled <span class="math inline">\(s\)</span> depends on the time <span class="math inline">\(t\)</span>, in hours, spent driving.
+If the rate at which gas is consumed is 0.06 gallons per mile, and if the car is traveling at 40 miles per hour, how fast is the gas being used?</p></li>
+<li><p>The radius of a circular oil spill is increasing at a rate of 2 meters per minute. Find how fast the area is changing.</p></li>
+</ol>
+</div>
+<div id="visual-chain-rule-problem" class="section level3">
+<h3><span class="header-section-number">19.1.4</span> Visual Chain Rule Problem</h3>
+<p>Below are the graphs of two functions, <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span>. Use the chain rule to calculate the derivatives specified below</p>
+<p><img src="images/TwoFunctions.jpg" style="width:70.0%" /></p>
+
+</div>
 </div>
 </div>
             </section>
@@ -513,8 +492,8 @@ V = k Pg
           </div>
         </div>
       </div>
-<a href="dimensions-and-units.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fermi-estimation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="symbolic-differentiation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-gradient.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -204,11 +204,16 @@ product-rule
 quotient-rule
 chain-rule
 symbolic-differentiation
+activities-13
 basic-derivative-practice
 more-basic-derivative-practice
 product-rule-and-quotient-rule-practice
+the-chain-rule
+activities-14
 chain-rule-practice
 more-chain-rule-practice
+conceptual-chain-rule-problems
+visual-chain-rule-problem
 the-gradient
 partial-derivative-practice
 second-partial-derivative-practice

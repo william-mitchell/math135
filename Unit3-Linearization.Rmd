@@ -116,7 +116,7 @@ We've  talked about windchill $w(t,v)$ as a function of temperature $t$ and wind
 2. My estimates are  $w(-5,40) \approx -36.05$, $w(-15,40) \approx -49.95$, $w(-10,45) \approx 41.8$ and $w(-10,35) \approx -44.2$. These are pretty close to the values on the table.
 
 
-3. Using the function and the partial derivatives from [this desmos calculation ](https://www.desmos.com/calculator/dvuhpknthj), we get
+3. Using the function and the partial derivatives from [this desmos calculation](https://www.desmos.com/calculator/dvuhpknthj), we get
 $$
 L_{(-10,40)}(t,v) = -42.70 + 1.39(t+10) -0.29(v-40)
 $$
