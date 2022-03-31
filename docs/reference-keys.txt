@@ -208,6 +208,11 @@ activities-13
 basic-derivative-practice
 more-basic-derivative-practice
 product-rule-and-quotient-rule-practice
+solutions-12
+basic-derivative-practice-1
+basic
+more-basic-derivative-practice-1
+product-rule-and-quotient-rule-practice-1
 the-chain-rule
 activities-14
 chain-rule-practice
