@@ -219,6 +219,11 @@ chain-rule-practice
 more-chain-rule-practice
 conceptual-chain-rule-problems
 visual-chain-rule-problem
+solutions-13
+chain-rule-practice-1
+more-chain-rule-practice-1
+conceptual-chain-rule-problems-1
+visual-chain-rule-problem-1
 the-gradient
 partial-derivative-practice
 second-partial-derivative-practice
