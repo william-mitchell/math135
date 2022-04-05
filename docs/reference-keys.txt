@@ -144,9 +144,7 @@ some-useful-data
 activities-8
 solutions-7
 the-derivative
-what-is-the-derivative
-definition-1
-definition-2
+the-derivative-1
 activities-9
 studying
 marginal-cost
@@ -188,6 +186,11 @@ estimating-sugar-solution-temperature-1
 comparing-linearizations-1
 estimating-a-function-1
 estimating-the-windchill-1
+unit-3-summary
+the-derivative-2
+the-second-derivative-1
+partial-derivatives-1
+local-linear-approximation-1
 rules-of-differentiation
 derivatives-of-familiar-functions
 constant-rule
@@ -230,3 +233,9 @@ second-partial-derivative-practice
 gradient-practice
 gradient-on-a-contour-diagram
 gradient-and-the-direction-of-greatest-increase
+d-optimization
+activities-15
+characterize-the-extrema
+first-derivative-test
+second-derivative-test
+cupcake-store

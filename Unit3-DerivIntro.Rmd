@@ -8,36 +8,26 @@ knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
 ```
 
-## What is the Derivative?
+## The Derivative
 
-We have two (complementary) definitions of the derivative.
+The derivative is the **instantaneous rate of change**. 
 
-### Definition \#1
-
-The \textcolor{blue}{derivative} measures the \textcolor{blue}{sensitivity} of outputs to a small change in input. 
-
-If my inputs are $x$ and my outputs are $y$, then
+* The derivative of $f(x)$ is denoted by $f'(x)$ and by $\displaystyle{\frac{df}{dx}}$.
+* We approximate this the derivative $f'(x)$ at the point $x=a$ with the formula
+$$
+ f'(a)  \approx \frac{f(a+h) - f(a)}{h} 
+$$
+where $h$ is a **very, very small number**.
+* The **derivative** measures the **sensitivity** of outputs to a small change in input. 
 $$
 \text{the derivative} \, \approx \, \frac{\text{change in output}}{\text{change in input}} \, = \, \frac{\Delta y}{\Delta x}
 $$
 
+* The **derivative of a function** $f$ at a point $a$ is the slope of the tangent line at $x=a$.
 
-### Definition \#2
+* **Economics.** Given a cost function $C(x)$, the **marginal cost** at $x=a$ is the cost of producing one additional unit of a good. The formula is for the marginal cost at $x=a$ is $C(a+1)-C(a)$.
 
-When we have a function $y=f(x)$, then we have a geometric description of the derivative.
-
-\bigskip
-
-The **derivative of a function** $f$ at a point $a$ is the slope of the tangent line at $x=a$ .It's also sometimes called the **instantaneous rate of change**.
-
-\bigskip
-
-We denote the derivative at $x=a$ by $f'(a)$. We approximate this derivative with the formula
-$$
- f'(a)  \approx \frac{f(a+h) - f(a)}{h} 
-$$
-where $h$ is a **very, very small number**. 
-
+* **Physics.** Given a displacement function $s(t)$, the velocity is $v(t) = s'(t)$, and the acceleration is $a(t)=v'(t)$.
 
 <!-- 
 We have two notations for the derivative of $f(x)$ at $x=c$:

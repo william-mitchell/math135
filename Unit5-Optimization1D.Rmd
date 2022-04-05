@@ -1,0 +1,45 @@
+# (PART) Optimization {-}
+
+# 1D Optimization
+
+
+## Activities
+
+
+### Characterize the Extrema
+
+1. Each of the functions below is defined on $(-\infty, \infty)$. Find all the local extrema and global extrema. 
+
+![](images/minmax-ex1.png){width=100%}
+
+
+
+2. Each of the functions below is defined on a finite interval. Find all the local extrema and global extrema. 
+
+![](images/minmax-ex2.png){width=100%}
+
+
+### First Derivative Test
+
+Find the critical point(s) of the following functions. Then use the first derivative test to determine whether it is a local minimum, a local maximum, or neither
+
+1. $f(x) = x - e^x$
+1. $g(x) = x + \sin(x)$ on $[0,2\pi]$
+
+
+### Second Derivative Test
+
+The function $f(x) = x^4-8 x^3+22 x^2-24 x$ has critical points at $x=1$ and $x=2$ and $x=3$.
+
+1. Find $f''(x)$.
+2. Use the second derivative test to determine whether each of the critical points is a minimum or a maximum.
+
+
+### Cupcake Store
+
+A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every \$.25 decrease in price, the demand increases by 20 cupcakes. 
+
+1. Define a function $q(x)$ that gives the demand for cupcakes at a price of $x$ dollars.
+2. The revenue for a price of $x$ dollars is $r(x) = x \cdot q(x)$. Use your function from part (a) to find the price that maximizes revenue.
+
+Find the price and quantity that maximize the revenue.

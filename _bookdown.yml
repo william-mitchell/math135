@@ -18,10 +18,12 @@ rmd_files: ["index.Rmd",
   "Unit3-SecondDeriv.Rmd",
   "Unit3-PartialDeriv.Rmd",
   "Unit3-Linearization.Rmd",  
+  "Unit3-Summary.Rmd", 
   "Unit4-DerivativeRules.Rmd",
   "Unit4-Differentiation.Rmd",
   "Unit4-ChainRule.Rmd",
   "Unit4-PartialGradient.Rmd",
+  "Unit5-Optimization1D.Rmd",
   ]
 language:
   ui: 
