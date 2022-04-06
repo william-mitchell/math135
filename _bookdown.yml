@@ -23,7 +23,9 @@ rmd_files: ["index.Rmd",
   "Unit4-Differentiation.Rmd",
   "Unit4-ChainRule.Rmd",
   "Unit4-PartialGradient.Rmd",
+  "Unit4-Summary.Rmd",
   "Unit5-Optimization1D.Rmd",
+
   ]
 language:
   ui: 

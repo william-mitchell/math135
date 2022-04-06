@@ -15,7 +15,7 @@ I can...
 * Estimate the derivatives from the plot of a function and its tangent line.
 * Estimate the derivative $f'(x)$ at $x=a$ using the average rate of change.
 $$
-f'(a) = \frac{f(a+h)-f(a)}{h}
+f'(a) \approx \frac{f(a+h)-f(a)}{h}
 $$
 where $h$ is a very small number
 * Use desmos to find an approximation of the derivative of a function to a desired accuracy.
@@ -59,4 +59,4 @@ $$
 $$
 L_{(a,b)}(x,y) = f(a,b) + f_x(a,b) (x-a) + f_y(a,b) (y-b).
 $$
-* Approximate $f(x,y)$ using the linearization $L_{(a,b)}(x)$.
+* Approximate $f(x,y)$ near the point $(x,y)$ using the linearization $L_{(a,b)}(x)$.

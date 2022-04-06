@@ -240,6 +240,10 @@ second-partial-derivative-practice-1
 gradient-practice-1
 gradient-on-a-contour-diagram-1
 gradient-and-the-direction-of-greatest-increase-1
+unit-4-summary
+symbolic-derivatives
+partial-derivatives-2
+the-gradient-1
 d-optimization
 activities-16
 characterize-the-extrema
