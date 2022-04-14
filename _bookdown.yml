@@ -25,7 +25,7 @@ rmd_files: ["index.Rmd",
   "Unit4-PartialGradient.Rmd",
   "Unit4-Summary.Rmd",
   "Unit5-Optimization1D.Rmd",
-
+  "Unit5-Optimization2D.Rmd",
   ]
 language:
   ui: 

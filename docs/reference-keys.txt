@@ -250,3 +250,11 @@ characterize-the-extrema
 first-derivative-test
 second-derivative-test
 cupcake-store
+d-optimization-1
+summary
+activities-17
+characterize-the-extrema-1
+classifying-a-critical-point-using-a-small-circle-of-values
+the-2d-second-derivative-test
+classify-the-critical-points
+optimizing-flight-control

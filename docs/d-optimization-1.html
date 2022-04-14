@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>17 Unit 3 Summary | MATH 135: AMC I</title>
+  <title>24 2D Optimization | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="17 Unit 3 Summary | MATH 135: AMC I" />
+  <meta property="og:title" content="24 2D Optimization | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="17 Unit 3 Summary | MATH 135: AMC I" />
+  <meta name="twitter:title" content="24 2D Optimization | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="local-linear-approximation.html"/>
-<link rel="next" href="rules-of-differentiation.html"/>
+<link rel="prev" href="d-optimization.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -471,86 +471,97 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="unit-3-summary" class="section level1">
-<h1><span class="header-section-number">17</span> Unit 3 Summary</h1>
-<div id="the-derivative-2" class="section level2">
-<h2><span class="header-section-number">17.1</span> The Derivative</h2>
-<p>I can…</p>
+<div id="d-optimization-1" class="section level1">
+<h1><span class="header-section-number">24</span> 2D Optimization</h1>
+<div id="summary" class="section level2">
+<h2><span class="header-section-number">24.1</span> Summary</h2>
+<p>The <strong>critical points</strong> of <span class="math inline">\(f(x,y)\)</span> are the points <span class="math inline">\((a,b)\)</span> where both <span class="math inline">\(f_x(a,b)=0\)</span> and <span class="math inline">\(f_y(a,b)=0\)</span>.</p>
+<p>There are three ways to determine whether a critical point <span class="math inline">\((a,b)\)</span> is a minimum, a maximum, or a saddle point.</p>
+<ol style="list-style-type: decimal">
+<li><p>The second derivative test relies on the value
+<span class="math display">\[
+D = f_{xx} f_{yy} - (f_{xy})^2.
+\]</span></p>
 <ul>
-<li>Define what a derivative is.</li>
-<li>Interpret the derivative <span class="math inline">\(f&#39;(x)\)</span> as
-<ul>
-<li>a rate of change</li>
-<li>a measure of the sensitivity of output to changes in input</li>
-<li>the slope of a tangent line.</li>
+<li>If <span class="math inline">\(D &gt; 0\)</span> and <span class="math inline">\(f_{xx} &gt; 0\)</span> then <span class="math inline">\((a,b)\)</span> is a local minimum.</li>
+<li>If <span class="math inline">\(D &gt; 0\)</span> and <span class="math inline">\(f_{xx} &lt; 0\)</span> then <span class="math inline">\((a,b)\)</span> is a local maximum</li>
+<li>If <span class="math inline">\(D &lt; 0\)</span> then <span class="math inline">\((a,b)\)</span> is a saddle point</li>
+<li>If <span class="math inline">\(D=0\)</span> then the test fails</li>
 </ul></li>
-<li>Estimate the derivative using a table of data.</li>
-<li>Estimate the derivatives from the plot of a function and its tangent line.</li>
-<li>Estimate the derivative <span class="math inline">\(f&#39;(x)\)</span> at <span class="math inline">\(x=a\)</span> using the average rate of change.
+<li><p>Create a contour plot for <span class="math inline">\(f(x,y)\)</span> on a very small neighborhood of <span class="math inline">\((a,b)\)</span>. Use the contours to figure out whether it is a local max, a local min, or a saddle point.</p></li>
+<li><p>Find the values of <span class="math inline">\(f(a,b) - f(x,y)\)</span> for points <span class="math inline">\((x,y)\)</span> in a small circle around <span class="math inline">\((a,b)\)</span>.</p>
+<ul>
+<li>If these values are ALL positive then <span class="math inline">\((a,b)\)</span> is a local maximum</li>
+<li>If these values are ALL negative then <span class="math inline">\((a,b)\)</span> is a local minimum</li>
+<li>If some values are positive and some values are negative, then <span class="math inline">\((a,b)\)</span> is a saddle point.</li>
+</ul></li>
+</ol>
+<p>Here is some R code that you can use to check values of <span class="math inline">\(f(x,y)\)</span> in a small circle around a point <span class="math inline">\((a,b)\)</span>.</p>
+<pre><code>r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) </code></pre>
+</div>
+<div id="activities-17" class="section level2">
+<h2><span class="header-section-number">24.2</span> Activities</h2>
+<div id="characterize-the-extrema-1" class="section level3">
+<h3><span class="header-section-number">24.2.1</span> Characterize the Extrema</h3>
+<p>Multiple 2D functions have been (contour) plotted below. For each, identify the critical points and determine if they are maximums, minimums, or saddle points.</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="d-optimization-1.html#cb109-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(x<span class="op">^</span><span class="dv">2</span><span class="op">+</span>y<span class="op">^</span><span class="dv">2</span><span class="op">+</span><span class="dv">3</span><span class="op">~</span>x<span class="op">&amp;</span>y)</span>
+<span id="cb109-2"><a href="d-optimization-1.html#cb109-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-98-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="d-optimization-1.html#cb110-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(<span class="op">-</span>x<span class="op">*</span>y<span class="op">*</span><span class="kw">exp</span>(<span class="op">-</span>x<span class="op">^</span><span class="dv">2</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">~</span>x<span class="op">&amp;</span>y)</span>
+<span id="cb110-2"><a href="d-optimization-1.html#cb110-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-99-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="d-optimization-1.html#cb111-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(y<span class="op">^</span><span class="dv">2</span><span class="op">-</span>x<span class="op">^</span><span class="dv">2</span><span class="op">~</span>x<span class="op">&amp;</span>y)</span>
+<span id="cb111-2"><a href="d-optimization-1.html#cb111-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-100-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="d-optimization-1.html#cb112-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(<span class="kw">cos</span>(x)<span class="op">*</span>(x<span class="op">^</span><span class="dv">2</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">~</span>x<span class="op">&amp;</span>y)</span>
+<span id="cb112-2"><a href="d-optimization-1.html#cb112-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-101-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="classifying-a-critical-point-using-a-small-circle-of-values" class="section level2">
+<h2><span class="header-section-number">24.3</span> Classifying a critical point using a small circle of values</h2>
+<p>The function <span class="math inline">\(f(x,y) =3x^2y + y^3 -3x^2-3y^2+3\)</span> has four critical points:
 <span class="math display">\[
-f&#39;(a) = \frac{f(a+h)-f(a)}{h}
+(0,0) \qquad (0,2) \qquad (1,1) \qquad (1,,-1).
 \]</span>
-where <span class="math inline">\(h\)</span> is a very small number</li>
-<li>Use desmos to find an approximation of the derivative of a function to a desired accuracy.</li>
-<li>Use the derivative to determine whether a function is increasing or decreasing.</li>
-<li>Define marginal cost.</li>
-<li>Calculate the marginal cost of <span class="math inline">\(C(x)\)</span> at <span class="math inline">\(x=a\)</span> using the formula <span class="math inline">\(C(a+1)-C(a)\)</span></li>
-<li>Explain why marginal cost is an example of an approximate derivative</li>
-<li>Explain how the derivative connects displacement, velocity and acceleration.</li>
-</ul>
+For each critical point <span class="math inline">\((a,b)\)</span>, evaluate <span class="math inline">\(f(a,b) - f(x,y)\)</span> in a small circle centered at <span class="math inline">\((a,b)\)</span> to determine whether it is a local minimum, a local maximum, or a saddle point</p>
 </div>
-<div id="the-second-derivative-1" class="section level2">
-<h2><span class="header-section-number">17.2</span> The Second Derivative</h2>
-<p>I can…</p>
-<ul>
-<li>Give the definition of the <span class="math inline">\(k\)</span>th derivative
-<span class="math inline">\(\displaystyle{\frac{d^kf}{dx^k} = f^{(k)}(x)}.\)</span></li>
-<li>Explain why acceleration <span class="math inline">\(a(t)\)</span> is the second derivative of displacement <span class="math inline">\(s(t)\)</span>. That is, <span class="math inline">\(a(t) = s&#39;&#39;(t).\)</span></li>
-<li>Use the second derivative to determine the concavity of a function.</li>
-</ul>
+<div id="the-2d-second-derivative-test" class="section level2">
+<h2><span class="header-section-number">24.4</span> The 2D Second Derivative Test</h2>
+<p>The function <span class="math inline">\(f(x,y)=10 + x^2 + 8y^2 - 3xy\)</span> has two critical points: <span class="math inline">\((0,0)\)</span> and <span class="math inline">\((1/2,1/4)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Use the second derivative test to classify each point as a local minimum, local maximum, or saddle point. For convenience, here are the second derivatives of <span class="math inline">\(f(x,y)\)</span>.</li>
+</ol>
+<p><span class="math display">\[
+f_{xx} = 6x, \qquad f_{yy} = 48y, \qquad f_{xy} = -3.
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Confirm that your answer is correct by creating a contour plot on a very small neighborhood around each critical point.</li>
+</ol>
 </div>
-<div id="partial-derivatives-1" class="section level2">
-<h2><span class="header-section-number">17.3</span> Partial Derivatives</h2>
-<ul>
-<li>Define what a partial derivative is.</li>
-<li>Explain the difference between <span class="math inline">\(\displaystyle{f_x = \frac{df}{dx}}\)</span> and <span class="math inline">\(\displaystyle{f_y = \frac{df}{dy}}\)</span></li>
-<li>Estimate the partial derivatives from a table of data</li>
-<li>Estimate the partial derivatives from a contour plot.</li>
-<li>Use desmos to approximate the partial derivatives using
+<div id="classify-the-critical-points" class="section level2">
+<h2><span class="header-section-number">24.5</span> Classify the Critical Points</h2>
+<p>Find the critical points of <span class="math inline">\(f(x,y)=9-2x+4y-x^2-4y^2\)</span>. Then use any method that you like to classify each one as a local minimum, a local maximuum or a saddle point.</p>
+</div>
+<div id="optimizing-flight-control" class="section level2">
+<h2><span class="header-section-number">24.6</span> Optimizing Flight Control</h2>
+<p>The range over which a flying drone can be guided is related to the atmospheric temperature and humidity. The range function is
 <span class="math display">\[
-\frac{\partial f}{\partial x} \approx \frac{f(x+h,y) - f(x,y)}{h} \quad \mbox{and} \quad \frac{\partial f}{\partial y} \approx \frac{f(x,y+h) - f(x,y)}{h}
+R(t,h)=27800-5t^2-6ht-3h^2+400t+300h
 \]</span>
-where <span class="math inline">\(h\)</span> is a very, very small number.</li>
-</ul>
-</div>
-<div id="local-linear-approximation-1" class="section level2">
-<h2><span class="header-section-number">17.4</span> Local Linear Approximation</h2>
-<p>I can…</p>
-<ul>
-<li>Create the linearization <span class="math inline">\(L_a(x)\)</span> for function <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=a\)</span> using the formula
-<span class="math display">\[
-L_a(x) = f(a) + f&#39;(a) (x-a).
-\]</span></li>
-<li>Approximate <span class="math inline">\(f(x)\)</span> using the linearization <span class="math inline">\(L_a(x)\)</span>.</li>
-<li>Create the linearization <span class="math inline">\(L_{(a,b)}(x,y)\)</span> for function <span class="math inline">\(f(x,y)\)</span> at point <span class="math inline">\((a,b)\)</span> using the formula
-<span class="math display">\[
-L_{(a,b)}(x,y) = f(a,b) + f_x(a,b) (x-a) + f_y(a,b) (y-b).
-\]</span></li>
-<li>Approximate <span class="math inline">\(f(x,y)\)</span> near the point <span class="math inline">\((x,y)\)</span> using the linearization <span class="math inline">\(L_{(a,b)}(x)\)</span>.</li>
-</ul>
+What are the optimal atmospheric conditions?</p>
 
 </div>
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="local-linear-approximation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rules-of-differentiation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="d-optimization.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

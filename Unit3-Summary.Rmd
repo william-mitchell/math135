@@ -15,7 +15,7 @@ I can...
 * Estimate the derivatives from the plot of a function and its tangent line.
 * Estimate the derivative $f'(x)$ at $x=a$ using the average rate of change.
 $$
-f'(a) \approx \frac{f(a+h)-f(a)}{h}
+f'(a) = \frac{f(a+h)-f(a)}{h}
 $$
 where $h$ is a very small number
 * Use desmos to find an approximation of the derivative of a function to a desired accuracy.
@@ -29,7 +29,7 @@ where $h$ is a very small number
 
 I can...
 
-* Explain the meaning of the $k$th derivative
+* Give the definition of the $k$th derivative
 $\displaystyle{\frac{d^kf}{dx^k} = f^{(k)}(x)}.$
 * Explain why acceleration $a(t)$ is the second derivative of displacement $s(t)$. That is, $a(t) = s''(t).$
 * Use the second derivative to determine the concavity of a function.
