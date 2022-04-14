@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>15 Partial Derivatives | MATH 135: AMC I</title>
+  <title>25 Gradient Search | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="15 Partial Derivatives | MATH 135: AMC I" />
+  <meta property="og:title" content="25 Gradient Search | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="15 Partial Derivatives | MATH 135: AMC I" />
+  <meta name="twitter:title" content="25 Gradient Search | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="the-second-derivative.html"/>
-<link rel="next" href="local-linear-approximation.html"/>
+<link rel="prev" href="d-optimization-1.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -477,181 +477,45 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="partial-derivatives" class="section level1">
-<h1><span class="header-section-number">15</span> Partial Derivatives</h1>
-<div id="activities-11" class="section level2">
-<h2><span class="header-section-number">15.1</span> Activities</h2>
-<div id="estimating-from-data" class="section level3">
-<h3><span class="header-section-number">15.1.1</span> Estimating From Data</h3>
-<p>The maximum duration of a scuba dive <span class="math inline">\(T(V,D)\)</span> (in minutes) depends on the volume <span class="math inline">\(V\)</span> of air (at sea-level pressure) in the tank and the depth <span class="math inline">\(D\)</span> (in feet) of the dive.
-The following table shows the estimated dive times for various combinations of air volume and dive depth.</p>
-<table style="width: 70%; margin-left: auto; margin-right: auto;" border="1" cellspacing="2" cellpadding="2" align="center">
-<tbody>
-<tr>
-<td style="margin-left: 30px; text-align: center;" rowspan="2" colspan="2">
-<strong>Dive Time (minutes)</strong> 
-</td>
-<td style="text-align: center;" colspan="4">
-<strong> Air Volume</strong>
-</td>
-</tr>
-<tr>
-<td style="text-align: center;">
-<strong>20 ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>40 ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>60 ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>80 ft<sup>3</sup></strong>
-</td>
-</tr>
-<tr align="right">
-<td style="margin-left: 30px; text-align: center;" rowspan="5">
-<strong>Depth</strong>
-</td>
-<td style="text-align: center;">
-<strong>20 ft</strong>
-</td>
-<td style="text-align: center;">
-12.5
-</td>
-<td style="text-align: center;">
-25.0
-</td>
-<td style="text-align: center;">
-37.5
-</td>
-<td style="text-align: center;">
-50.0
-</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>40 ft</strong>
-</td>
-<td style="text-align: center;">
-9.0
-</td>
-<td style="text-align: center;">
-18.0
-</td>
-<td style="text-align: center;">
-27.0
-</td>
-<td style="text-align: center;">
-36.0
-</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>60 ft</strong>
-</td>
-<td style="text-align: center;">
-7.1
-</td>
-<td style="text-align: center;">
-14.2
-</td>
-<td style="text-align: center;">
-21.3
-</td>
-<td style="text-align: center;">
-28.4
-</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>80 ft</strong>
-</td>
-<td style="text-align: center;">
-5.8
-</td>
-<td style="text-align: center;">
-11.6
-</td>
-<td style="text-align: center;">
-17.4
-</td>
-<td style="text-align: center;">
-23.2
-</td>
-</tr>
-</tbody>
-</table>
-<p>Use this table to estimate the derivatives
-<span class="math inline">\(\displaystyle{\frac{\partial T}{\partial V}}\)</span> and <span class="math inline">\(\displaystyle{\frac{\partial T}{\partial D}}\)</span> at the point <span class="math inline">\((V=60, T=40)\)</span>. Give units for each of these derivatives and then interpret what these numbers mean.</p>
-</div>
-<div id="estimating-from-a-contour-plot" class="section level3">
-<h3><span class="header-section-number">15.1.2</span> Estimating From a Contour Plot</h3>
-<p>The production function <span class="math inline">\(F(L,K)\)</span> for a factory gives the number of units produced by labor <span class="math inline">\(L\)</span> and capital <span class="math inline">\(K\)</span> (both measured in dollars). This production function is given by
+<div id="gradient-search-1" class="section level1">
+<h1><span class="header-section-number">25</span> Gradient Search</h1>
+<div id="gradient-search-example" class="section level2">
+<h2><span class="header-section-number">25.1</span> Gradient Search Example</h2>
+<p>Let’s use gradient search to find the maximum of the function
 <span class="math display">\[
-F(L,K) = 10 L^{2/7}K^{5/7}.
+f(x,y) = - x^4 -  x^3 + 10 x y + 2y - 8 y^2 
 \]</span>
-Here is a contour plot of the production function.</p>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
-<ol style="list-style-type: decimal">
-<li>Estimate the production output for <span class="math inline">\(L=400\)</span> and <span class="math inline">\(K=600\)</span>.</li>
-<li>Estimate the partial derivative <span class="math inline">\(\displaystyle{\frac{\partial F}{\partial L}}\)</span> at <span class="math inline">\((400,600)\)</span>.</li>
-<li>Estimate the partial derivative <span class="math inline">\(\displaystyle{\frac{\partial F}{\partial K}}\)</span> at <span class="math inline">\((400,600)\)</span>.</li>
-</ol>
-</div>
-<div id="estimating-using-desmos" class="section level3">
-<h3><span class="header-section-number">15.1.3</span> Estimating Using Desmos</h3>
-<p>Use desmos to define the prodution function <span class="math inline">\(F(L,K) = L^{2/7} K^{5/7}\)</span> from the previous problem and to answer the analogous questions</p>
-<ol style="list-style-type: decimal">
-<li>Calculate the production outpuut <span class="math inline">\(F(400,600)\)</span>.</li>
-<li>Estimate the partial derivative <span class="math inline">\(\displaystyle{\frac{\partial F}{\partial L}}\)</span> at <span class="math inline">\((400,600)\)</span>. Your answer must be correct to two decimal places.</li>
-<li>Estimate the partial derivative <span class="math inline">\(\displaystyle{\frac{\partial F}{\partial K}}\)</span> at <span class="math inline">\((400,600)\)</span>.
-Your answer must be correct to two decimal places.</li>
-</ol>
-<p>Compare your three answers to the estimates from the contour plot in the previous problem.</p>
-</div>
-</div>
-<div id="solutions-10" class="section level2">
-<h2><span class="header-section-number">15.2</span> Solutions</h2>
-<div id="estimating-from-data-1" class="section level3">
-<h3><span class="header-section-number">15.2.1</span> Estimating From Data</h3>
-<p>We estimate the partial derivatives. We have
+whose partial derivatives are
 <span class="math display">\[
-T_V(60,40) \approx \frac{T(80,40) - T(60,40)}{80-60}
-= \frac{36 - 27}{80-60} = \frac{9}{20} = 0.45 \mbox{ min/ft}^3
-\]</span>
-where we have used the interval <span class="math inline">\(60 \leq V \leq 80\)</span> for our estimate. We could also use <span class="math inline">\(40 \leq V \leq 80\)</span> or <span class="math inline">\(40 \leq V \leq 80\)</span> as the interval for our estimate.
-<span class="math display">\[
-T_D(60,40) \approx \frac{T(60,60) - T(60,40)}{60-40}
-= \frac{21.3 - 27}{60-40} = - \frac{5.7}{20} = -0.285 \mbox{ min/ft}
-\]</span>
-where we have used the interval <span class="math inline">\(40 \leq D \leq 60\)</span> for our estimate. We could also use <span class="math inline">\(20 \leq D \leq 40\)</span> or <span class="math inline">\(20 \leq D \leq 60\)</span> as the interval for our estimate.</p>
-<p>The units for <span class="math inline">\(T_V(V,D)\)</span> are minutes per cubic feet. An additional cubic foot of air will allow you to dive for an extra 0.45 minutes.</p>
-<p>The units for <span class="math inline">\(T_V(V,D)\)</span> are minutes per feet. An additional foot of dive depth will reduce your dive time: the change is <span class="math inline">\(-0.285\)</span> minutes.</p>
-</div>
-<div id="estimating-from-a-contour-plot-1" class="section level3">
-<h3><span class="header-section-number">15.2.2</span> Estimating From a Contour Plot</h3>
-<p>We have
-<span class="math display">\[
-F(400,600) \approx 5300.
+\frac{\partial f}{\partial x} = -4 x^3 -3 x^2  + 10 y
+\quad \mbox{and} \quad
+\frac{\partial f}{\partial x} = 10 x + 2 - 16 y
 \]</span></p>
-<p>Let’s estimate by using the contour line <span class="math inline">\(F(L,K) = 5000\)</span>. I estimate that <span class="math inline">\(F(325,600)=5000\)</span> and that <span class="math inline">\(F(400,550)=5000\)</span>. Therefore</p>
-<p><span class="math display">\[
-F_L(400,600) \approx \frac{5300 - 5000}{400 - 325} = \frac{300}{75} = 4
-\]</span>
-and
-<span class="math display">\[
-F_K(400,600) \approx \frac{5300 - 5000}{600-550}
-= \frac{300}{50} = 6.
-\]</span></p>
+<p>First, you define the partial derivatives and then choose your starting point <code>(newx, newy)</code>. In this case, we start at <code>(1,1)</code>.</p>
+
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="gradient-search-1.html#cb113-1"></a>partialx =<span class="st"> </span><span class="kw">makeFun</span>( <span class="dv">-4</span><span class="op">*</span>x<span class="op">^</span><span class="dv">3</span> <span class="dv">-3</span><span class="op">*</span>x<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">10</span><span class="op">*</span>y <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y)</span>
+<span id="cb113-2"><a href="gradient-search-1.html#cb113-2"></a>partialy =<span class="st"> </span><span class="kw">makeFun</span>(<span class="dv">10</span><span class="op">*</span>x <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">16</span><span class="op">*</span>y <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y)</span>
+<span id="cb113-3"><a href="gradient-search-1.html#cb113-3"></a>newx =<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb113-4"><a href="gradient-search-1.html#cb113-4"></a>newy =<span class="st"> </span><span class="dv">1</span></span></code></pre></div>
+
+<p>Next, you <strong>repeatedly</strong> run the following code block, which updates the current point by moving <code>0.1</code> times the gradient vector. This takes a small step in the uphill direction.</p>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="gradient-search-1.html#cb114-1"></a>newx =<span class="st"> </span>newx <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span><span class="op">*</span><span class="kw">partialx</span>(newx, newy)</span>
+<span id="cb114-2"><a href="gradient-search-1.html#cb114-2"></a>newy =<span class="st"> </span>newy <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span><span class="op">*</span><span class="kw">partialy</span>(newx, newy)</span>
+<span id="cb114-3"><a href="gradient-search-1.html#cb114-3"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb114-4"><a href="gradient-search-1.html#cb114-4"></a><span class="kw">c</span>(<span class="kw">partialx</span>(newx, newy), <span class="kw">partialy</span>(newx, newy))</span>
+<span id="cb114-5"><a href="gradient-search-1.html#cb114-5"></a><span class="co"># print new point</span></span>
+<span id="cb114-6"><a href="gradient-search-1.html#cb114-6"></a><span class="kw">c</span>(newx, newy)</span></code></pre></div>
+<p>Repeatedly run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.</p>
+<p>You will end at the point <code>(1.04,0.77)</code>. But note that starting at another initial point might take you to a different local maximum!</p>
 </div>
-<div id="estimating-using-desmos-1" class="section level3">
-<h3><span class="header-section-number">15.2.3</span> Estimating Using Desmos</h3>
-<p>Here is a <a href="https://www.desmos.com/calculator/piexczmrsn">link to my desmos calculations</a>.</p>
+<div id="activities-18" class="section level2">
+<h2><span class="header-section-number">25.2</span> Activities</h2>
+<div id="finding-a-local-minimum" class="section level3">
+<h3><span class="header-section-number">25.2.1</span> Finding a Local Minimum</h3>
 <ol style="list-style-type: decimal">
-<li><span class="math inline">\(F(400,600) = 534.37\)</span></li>
-<li><span class="math inline">\(F_L(400,600) = 0.38\)</span></li>
-<li><span class="math inline">\(F(400,600) = 0.64\)</span></li>
+<li>How should I change to the code if I want to find a <strong>local minimum</strong> instead of a local maximum? (Hint: we want to take a small step downhill.)</li>
+<li>Use gradient search to find a <strong>local minimum</strong> of
+<span class="math display">\[f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.\]</span></li>
 </ol>
 
 </div>
@@ -662,8 +526,8 @@ F_K(400,600) \approx \frac{5300 - 5000}{600-550}
           </div>
         </div>
       </div>
-<a href="the-second-derivative.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="local-linear-approximation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="d-optimization-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

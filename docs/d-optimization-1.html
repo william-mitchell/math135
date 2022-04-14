@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="d-optimization.html"/>
-
+<link rel="next" href="gradient-search-1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -451,6 +451,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="24.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points"><i class="fa fa-check"></i><b>24.5</b> Classify the Critical Points</a></li>
 <li class="chapter" data-level="24.6" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control"><i class="fa fa-check"></i><b>24.6</b> Optimizing Flight Control</a></li>
 </ul></li>
+<li class="chapter" data-level="25" data-path="gradient-search-1.html"><a href="gradient-search-1.html"><i class="fa fa-check"></i><b>25</b> Gradient Search</a><ul>
+<li class="chapter" data-level="25.1" data-path="gradient-search-1.html"><a href="gradient-search-1.html#gradient-search-example"><i class="fa fa-check"></i><b>25.1</b> Gradient Search Example</a></li>
+<li class="chapter" data-level="25.2" data-path="gradient-search-1.html"><a href="gradient-search-1.html#activities-18"><i class="fa fa-check"></i><b>25.2</b> Activities</a><ul>
+<li class="chapter" data-level="25.2.1" data-path="gradient-search-1.html"><a href="gradient-search-1.html#finding-a-local-minimum"><i class="fa fa-check"></i><b>25.2.1</b> Finding a Local Minimum</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -508,16 +514,16 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) </code></pre>
 <p>Multiple 2D functions have been (contour) plotted below. For each, identify the critical points and determine if they are maximums, minimums, or saddle points.</p>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="d-optimization-1.html#cb109-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(x<span class="op">^</span><span class="dv">2</span><span class="op">+</span>y<span class="op">^</span><span class="dv">2</span><span class="op">+</span><span class="dv">3</span><span class="op">~</span>x<span class="op">&amp;</span>y)</span>
 <span id="cb109-2"><a href="d-optimization-1.html#cb109-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-98-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-94-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="d-optimization-1.html#cb110-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(<span class="op">-</span>x<span class="op">*</span>y<span class="op">*</span><span class="kw">exp</span>(<span class="op">-</span>x<span class="op">^</span><span class="dv">2</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">~</span>x<span class="op">&amp;</span>y)</span>
 <span id="cb110-2"><a href="d-optimization-1.html#cb110-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-99-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-95-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="d-optimization-1.html#cb111-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(y<span class="op">^</span><span class="dv">2</span><span class="op">-</span>x<span class="op">^</span><span class="dv">2</span><span class="op">~</span>x<span class="op">&amp;</span>y)</span>
 <span id="cb111-2"><a href="d-optimization-1.html#cb111-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-100-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-96-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="d-optimization-1.html#cb112-1"></a>f =<span class="st"> </span><span class="kw">makeFun</span>(<span class="kw">cos</span>(x)<span class="op">*</span>(x<span class="op">^</span><span class="dv">2</span><span class="op">-</span>y<span class="op">^</span><span class="dv">2</span>)<span class="op">~</span>x<span class="op">&amp;</span>y)</span>
 <span id="cb112-2"><a href="d-optimization-1.html#cb112-2"></a><span class="kw">plotFun</span>(<span class="kw">f</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">ylim=</span><span class="kw">range</span>(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-101-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-97-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="classifying-a-critical-point-using-a-small-circle-of-values" class="section level2">
@@ -560,8 +566,8 @@ What are the optimal atmospheric conditions?</p>
           </div>
         </div>
       </div>
-<a href="d-optimization.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="d-optimization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gradient-search-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

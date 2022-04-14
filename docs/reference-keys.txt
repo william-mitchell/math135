@@ -258,3 +258,7 @@ classifying-a-critical-point-using-a-small-circle-of-values
 the-2d-second-derivative-test
 classify-the-critical-points
 optimizing-flight-control
+gradient-search-1
+gradient-search-example
+activities-18
+finding-a-local-minimum

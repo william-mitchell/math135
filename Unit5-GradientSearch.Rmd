@@ -1,0 +1,55 @@
+
+# Gradient Search
+
+
+## Gradient Search Example
+
+Let's use gradient search to find the maximum of the function 
+$$
+f(x,y) = - x^4 -  x^3 + 10 x y + 2y - 8 y^2 
+$$
+whose partial derivatives are
+$$
+\frac{\partial f}{\partial x} = -4 x^3 -3 x^2  + 10 y
+\quad \mbox{and} \quad
+\frac{\partial f}{\partial x} = 10 x + 2 - 16 y
+$$
+
+
+First, you define the partial derivatives and then choose your starting point `(newx, newy)`. In this case, we start at `(1,1)`.
+
+\medskip
+
+```{r}
+partialx = makeFun( -4*x^3 -3*x^2 + 10*y ~ x&y)
+partialy = makeFun(10*x + 2 - 16*y ~ x&y)
+newx = 1
+newy = 1
+```
+
+\medskip
+
+Next, you **repeatedly**  run the following code block, which updates the current point by moving `0.1` times the gradient vector. This takes a small step in the uphill direction.
+
+```{r eval=FALSE}
+newx = newx + 0.1*partialx(newx, newy)
+newy = newy + 0.1*partialy(newx, newy)
+# print new partial derivatives
+c(partialx(newx, newy), partialy(newx, newy))
+# print new point
+c(newx, newy)
+```
+
+
+Repeatedly run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.
+
+You will end at the point `(1.04,0.77)`. But note that starting at another initial point might take you to a different local maximum!
+
+
+## Activities
+
+### Finding a Local Minimum
+
+1. How should I change to the code if I want to find a **local minimum** instead of a local maximum? (Hint: we want to take a small step downhill.)
+2. Use gradient search to find a **local minimum** of 
+$$f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.$$
