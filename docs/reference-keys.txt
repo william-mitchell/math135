@@ -262,3 +262,9 @@ gradient-search-1
 gradient-search-example
 activities-18
 finding-a-local-minimum
+constrained-2d-optimization
+creating-a-contour-plot-for-2d-optimization
+activities-19
+constrained-production
+constrained-optimization-on-a-circle
+estimating-the-lagrange-multiplier
