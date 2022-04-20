@@ -440,16 +440,29 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="23.1.3" data-path="d-optimization.html"><a href="d-optimization.html#second-derivative-test"><i class="fa fa-check"></i><b>23.1.3</b> Second Derivative Test</a></li>
 <li class="chapter" data-level="23.1.4" data-path="d-optimization.html"><a href="d-optimization.html#cupcake-store"><i class="fa fa-check"></i><b>23.1.4</b> Cupcake Store</a></li>
 </ul></li>
+<li class="chapter" data-level="23.2" data-path="d-optimization.html"><a href="d-optimization.html#solutions-15"><i class="fa fa-check"></i><b>23.2</b> Solutions</a><ul>
+<li class="chapter" data-level="23.2.1" data-path="d-optimization.html"><a href="d-optimization.html#characterize-the-extrema-1"><i class="fa fa-check"></i><b>23.2.1</b> Characterize the Extrema</a></li>
+<li class="chapter" data-level="23.2.2" data-path="d-optimization.html"><a href="d-optimization.html#first-derivative-test-1"><i class="fa fa-check"></i><b>23.2.2</b> First Derivative Test</a></li>
+<li class="chapter" data-level="23.2.3" data-path="d-optimization.html"><a href="d-optimization.html#second-derivative-test-1"><i class="fa fa-check"></i><b>23.2.3</b> Second Derivative Test</a></li>
+<li class="chapter" data-level="23.2.4" data-path="d-optimization.html"><a href="d-optimization.html#cupcake-store-1"><i class="fa fa-check"></i><b>23.2.4</b> Cupcake Store</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="24" data-path="d-optimization-1.html"><a href="d-optimization-1.html"><i class="fa fa-check"></i><b>24</b> 2D Optimization</a><ul>
 <li class="chapter" data-level="24.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#summary"><i class="fa fa-check"></i><b>24.1</b> Summary</a></li>
 <li class="chapter" data-level="24.2" data-path="d-optimization-1.html"><a href="d-optimization-1.html#activities-17"><i class="fa fa-check"></i><b>24.2</b> Activities</a><ul>
-<li class="chapter" data-level="24.2.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-1"><i class="fa fa-check"></i><b>24.2.1</b> Characterize the Extrema</a></li>
+<li class="chapter" data-level="24.2.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-2"><i class="fa fa-check"></i><b>24.2.1</b> Characterize the Extrema</a></li>
 </ul></li>
 <li class="chapter" data-level="24.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values"><i class="fa fa-check"></i><b>24.3</b> Classifying a critical point using a small circle of values</a></li>
 <li class="chapter" data-level="24.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#the-2d-second-derivative-test"><i class="fa fa-check"></i><b>24.4</b> The 2D Second Derivative Test</a></li>
 <li class="chapter" data-level="24.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points"><i class="fa fa-check"></i><b>24.5</b> Classify the Critical Points</a></li>
 <li class="chapter" data-level="24.6" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control"><i class="fa fa-check"></i><b>24.6</b> Optimizing Flight Control</a></li>
+<li class="chapter" data-level="24.7" data-path="d-optimization-1.html"><a href="d-optimization-1.html#soluurions"><i class="fa fa-check"></i><b>24.7</b> Soluurions</a><ul>
+<li class="chapter" data-level="24.7.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-3"><i class="fa fa-check"></i><b>24.7.1</b> Characterize the Extrema</a></li>
+</ul></li>
+<li class="chapter" data-level="24.8" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values-1"><i class="fa fa-check"></i><b>24.8</b> Classifying a critical point using a small circle of values</a></li>
+<li class="chapter" data-level="24.9" data-path="d-optimization-1.html"><a href="d-optimization-1.html#the-2d-second-derivative-test-1"><i class="fa fa-check"></i><b>24.9</b> The 2D Second Derivative Test</a></li>
+<li class="chapter" data-level="24.10" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points-1"><i class="fa fa-check"></i><b>24.10</b> Classify the Critical Points</a></li>
+<li class="chapter" data-level="24.11" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control-1"><i class="fa fa-check"></i><b>24.11</b> Optimizing Flight Control</a></li>
 </ul></li>
 <li class="chapter" data-level="25" data-path="gradient-search-1.html"><a href="gradient-search-1.html"><i class="fa fa-check"></i><b>25</b> Gradient Search</a><ul>
 <li class="chapter" data-level="25.1" data-path="gradient-search-1.html"><a href="gradient-search-1.html#gradient-search-example"><i class="fa fa-check"></i><b>25.1</b> Gradient Search Example</a></li>
@@ -501,18 +514,18 @@ whose partial derivatives are
 \]</span></p>
 <p>First, you define the partial derivatives and then choose your starting point <code>(newx, newy)</code>. In this case, we start at <code>(1,1)</code>.</p>
 
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="gradient-search-1.html#cb113-1"></a>partialx =<span class="st"> </span><span class="kw">makeFun</span>( <span class="dv">-4</span><span class="op">*</span>x<span class="op">^</span><span class="dv">3</span> <span class="dv">-3</span><span class="op">*</span>x<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">10</span><span class="op">*</span>y <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y)</span>
-<span id="cb113-2"><a href="gradient-search-1.html#cb113-2"></a>partialy =<span class="st"> </span><span class="kw">makeFun</span>(<span class="dv">10</span><span class="op">*</span>x <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">16</span><span class="op">*</span>y <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y)</span>
-<span id="cb113-3"><a href="gradient-search-1.html#cb113-3"></a>newx =<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb113-4"><a href="gradient-search-1.html#cb113-4"></a>newy =<span class="st"> </span><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="gradient-search-1.html#cb126-1"></a>partialx =<span class="st"> </span><span class="kw">makeFun</span>( <span class="dv">-4</span><span class="op">*</span>x<span class="op">^</span><span class="dv">3</span> <span class="dv">-3</span><span class="op">*</span>x<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">10</span><span class="op">*</span>y <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y)</span>
+<span id="cb126-2"><a href="gradient-search-1.html#cb126-2"></a>partialy =<span class="st"> </span><span class="kw">makeFun</span>(<span class="dv">10</span><span class="op">*</span>x <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="op">-</span><span class="st"> </span><span class="dv">16</span><span class="op">*</span>y <span class="op">~</span><span class="st"> </span>x<span class="op">&amp;</span>y)</span>
+<span id="cb126-3"><a href="gradient-search-1.html#cb126-3"></a>newx =<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb126-4"><a href="gradient-search-1.html#cb126-4"></a>newy =<span class="st"> </span><span class="dv">1</span></span></code></pre></div>
 
 <p>Next, you <strong>repeatedly</strong> run the following code block, which updates the current point by moving <code>0.1</code> times the gradient vector. This takes a small step in the uphill direction.</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="gradient-search-1.html#cb114-1"></a>newx =<span class="st"> </span>newx <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span><span class="op">*</span><span class="kw">partialx</span>(newx, newy)</span>
-<span id="cb114-2"><a href="gradient-search-1.html#cb114-2"></a>newy =<span class="st"> </span>newy <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span><span class="op">*</span><span class="kw">partialy</span>(newx, newy)</span>
-<span id="cb114-3"><a href="gradient-search-1.html#cb114-3"></a><span class="co"># print new partial derivatives</span></span>
-<span id="cb114-4"><a href="gradient-search-1.html#cb114-4"></a><span class="kw">c</span>(<span class="kw">partialx</span>(newx, newy), <span class="kw">partialy</span>(newx, newy))</span>
-<span id="cb114-5"><a href="gradient-search-1.html#cb114-5"></a><span class="co"># print new point</span></span>
-<span id="cb114-6"><a href="gradient-search-1.html#cb114-6"></a><span class="kw">c</span>(newx, newy)</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="gradient-search-1.html#cb127-1"></a>newx =<span class="st"> </span>newx <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span><span class="op">*</span><span class="kw">partialx</span>(newx, newy)</span>
+<span id="cb127-2"><a href="gradient-search-1.html#cb127-2"></a>newy =<span class="st"> </span>newy <span class="op">+</span><span class="st"> </span><span class="fl">0.1</span><span class="op">*</span><span class="kw">partialy</span>(newx, newy)</span>
+<span id="cb127-3"><a href="gradient-search-1.html#cb127-3"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb127-4"><a href="gradient-search-1.html#cb127-4"></a><span class="kw">c</span>(<span class="kw">partialx</span>(newx, newy), <span class="kw">partialy</span>(newx, newy))</span>
+<span id="cb127-5"><a href="gradient-search-1.html#cb127-5"></a><span class="co"># print new point</span></span>
+<span id="cb127-6"><a href="gradient-search-1.html#cb127-6"></a><span class="kw">c</span>(newx, newy)</span></code></pre></div>
 <p>Repeatedly run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.</p>
 <p>You will end at the point <code>(1.04,0.77)</code>. But note that starting at another initial point might take you to a different local maximum!</p>
 </div>
