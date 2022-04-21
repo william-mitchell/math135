@@ -286,3 +286,4 @@ activities-20
 growing-bacteria
 the-change-in-world-population
 speed-tests
+estimating-area-with-rstudio

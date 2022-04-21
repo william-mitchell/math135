@@ -51,3 +51,27 @@ Estimate the total distance traveled by this car in the first eight seconds by u
 1. A left endpoint estimate
 2. A right endpoint estimate
 
+
+### Estimating Area with RStudio
+
+Here is some RStudio code that will estimate the area under the curve $f(x)=2+4x^2-x^3$ on the interval $0 \leq x \leq 4$ using a **right endpoint estimation** on intervals of size $0.5$. 
+
+```{r}
+f=makeFun(2+4*x^2-x^3~x)
+base = 0.5
+points = seq(from=0+base, to=4, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```
+
+1. Update this code to estimate this area using
+   1. A **right endpoint estimation** on intervals of size $0.1$
+   1. A **right endpoint estimation** on intervals of size $0.01$
+   1. A **left endpoint estimation** on intervals of size $0.5$
+   1. A **left endpoint estimation** on intervals of size $0.01$
+   1. A **left endpoint estimation** on intervals of size $0.00001$
+  
+2. Make a plot of $f(x)$ on $[0,4]$. Is is clear whether each of the values about is an over-estimate? an under-estimate? or neither?
+
+
