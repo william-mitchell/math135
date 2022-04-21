@@ -281,3 +281,8 @@ activities-19
 constrained-production
 constrained-optimization-on-a-circle
 estimating-the-lagrange-multiplier
+accumulating-change
+activities-20
+growing-bacteria
+the-change-in-world-population
+speed-tests

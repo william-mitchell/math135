@@ -27,7 +27,8 @@ rmd_files: ["index.Rmd",
   "Unit5-Optimization1D.Rmd",
   "Unit5-Optimization2D.Rmd",
   "Unit5-GradientSearch.Rmd", 
-  "Unit5-ConstrainedOptimization.Rmd", 
+  "Unit5-ConstrainedOptimization.Rmd",
+  "Unit6-AccumulatingChange.Rmd",  
   ]
 language:
   ui: 
