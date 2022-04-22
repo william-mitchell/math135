@@ -281,6 +281,10 @@ activities-19
 constrained-production
 constrained-optimization-on-a-circle
 estimating-the-lagrange-multiplier
+solutions-17
+constrained-production-1
+constrained-optimization-on-a-circle-1
+estimating-the-lagrange-multiplier-1
 accumulating-change
 activities-20
 growing-bacteria
