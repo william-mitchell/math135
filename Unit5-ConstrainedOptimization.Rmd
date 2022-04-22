@@ -130,12 +130,12 @@ The optimal point is at $(21,40)$ and the optimal production is approximately $f
 
 ### Estimating the Lagrange Multiplier
 
-1. The maximal production is $f(25,18)=250$.
-2. The maximal production is $f(32,26)=310$. 
+1. For a budget of 15, the maximal production is $f(25,18)=250$.
+2. For a budget of 20, the maximal production is $f(32,26)=310$. 
 3. The Lagrange multiplier is
 $$
-\lambda = \frac{\triangle \mbox{production}}{\triangle \mbox{constraint}} \approx \frac{310-250}{26-18}=\frac{60}{8}=7.5  \frac{\mbox{unit}}{\mbox{dollar}}
+\lambda = \frac{\triangle \mbox{production}}{\triangle \mbox{constraint}} \approx \frac{310-250}{20-15}=\frac{60}{5}=12  \frac{\mbox{units}}{\mbox{dollar}}
 $$
-So if we increase our budget by \$1, then we will produce 7.5 more units.
+So if we increase our budget by \$1, then we will produce 12 more units.
 
-4. The Lagrange multiplier is approximately $7.5$ units/dollar. We will break even if we can sell one unit for $1/7.5=0.133$ dollars/unit. So if the sale price is at least \$0.133, we will decide to increase production.
+4. The Lagrange multiplier is approximately $12$ units/dollar. We will break even if we can sell one unit for $1/12=0.133$ dollars/unit. So if the sale price is at least \$0.083, we will decide to increase production.
