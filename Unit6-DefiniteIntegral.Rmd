@@ -1,0 +1,85 @@
+# The Definite Integral
+
+## Introduction
+
+Here is some code that approximates the area under $f(x)=x^2$ on the interval $[a,b]$ using **right hand endpoints** on 100 subintervals. (How would you change this code to use **left hand endpoints** instead?)
+
+```{r}
+f=makeFun(x^2 ~ x)
+a = 0
+b = 3
+num = 100
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```
+
+## Activities
+
+### Drive My Car
+
+A car is driving at a rate of $v(t)=-t+5$. Here is a plot of the velocity.
+
+```{r  echo=FALSE, fig.keep='last'}
+plotFun(-t+5~t, xlim=range(0,12),xlab='t',ylab='v(t)')
+plotFun(0*t~t, add=TRUE)
+```
+
+
+1. Use RStudio to approximate these definite integrals using 1000 subintervals.
+  a. $\displaystyle{\int_0^5 v(x)dx}$
+  b. $\displaystyle{\int_0^8 v(x)dx}$
+  c. $\displaystyle{\int_0^{12} v(x)dx}$
+
+2. When does the car **turn around**? 
+
+3. When does the car **return to where it started**? 
+
+
+## Accelerate My Car
+
+A car is traveling at 55 feet per second at time $t=0$. The plot below shows the car's **acceleration** on the interval $[0,18]$.
+
+```{r echo=FALSE, fig.align="center", fig.keep="last"}
+a=makeFun(ifelse(x<2,8,ifelse(x<10,-2*x+12,ifelse(x<14,-8,ifelse(x<18,4*x-64,8))))~x)
+plotFun(a(t)~t,xlim=range(0,18))
+plotFun(0*t~t, add=TRUE)
+```
+
+1. Is the velocity increasing or decreasing at $t=2$? $t=15$? 
+2. What happens when $t=6$?
+3. When else (besides $t=0$) is the velocity 55 feet per second?
+4. What is the **maximum** velocity, and when does it occur? 
+5. What is the **minimum** velocity, and when does it occur?
+
+
+## Making Cupcakes
+
+The marginal cost of making cupcakes is given by $$K'(q)=\frac{1}{100}q^2+\frac{1}{5}q+1,$$ 
+where $q$ is in dozens of cupcakes. 
+
+1. Set up a definite integral to calculate $K(30)-K(0)$, which is the change in costs when we create 30 dozen cupcakes.
+2. Estimate this definite integral using *RStudio*. 
+3. If our fixed costs are \$1500, what is the **total cost** to make 30 dozen cupcakes? 
+
+## Area Between Curves
+
+Below is a graph of both $\sin(x)$ and $\cos(x)$ on the interval $[0,2\pi]$. 
+
+
+
+```{r fig.align="center", fig.keep='last'}
+plotFun(sin(x)~x,xlim=range(0,2*pi),ylim=range(-1.1,1.1),xlab="",ylab="")
+plotFun(cos(x)~x,add=TRUE)
+```
+
+1. Write a **sum of integrals** which represents the \emph{area} enclosed by the two curves on the interval $[0,2\pi]$.   
+Hint: $\sin(x) = \cos(x)$ at $x=\pi/4$ and $x=5\pi/4$.
+2. Use *RStudio* to estimate the area between these two curves.
+
+
+
+

@@ -496,6 +496,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="27.2.2" data-path="accumulating-change.html"><a href="accumulating-change.html#estimating-area-with-rstudio"><i class="fa fa-check"></i><b>27.2.2</b> Estimating Area with RStudio</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="28" data-path="the-definite-integral.html"><a href="the-definite-integral.html"><i class="fa fa-check"></i><b>28</b> The Definite Integral</a><ul>
+<li class="chapter" data-level="28.1" data-path="the-definite-integral.html"><a href="the-definite-integral.html#introduction"><i class="fa fa-check"></i><b>28.1</b> Introduction</a></li>
+<li class="chapter" data-level="28.2" data-path="the-definite-integral.html"><a href="the-definite-integral.html#activities-21"><i class="fa fa-check"></i><b>28.2</b> Activities</a><ul>
+<li class="chapter" data-level="28.2.1" data-path="the-definite-integral.html"><a href="the-definite-integral.html#drive-my-car"><i class="fa fa-check"></i><b>28.2.1</b> Drive My Car</a></li>
+</ul></li>
+<li class="chapter" data-level="28.3" data-path="the-definite-integral.html"><a href="the-definite-integral.html#accelerate-my-car"><i class="fa fa-check"></i><b>28.3</b> Accelerate My Car</a></li>
+<li class="chapter" data-level="28.4" data-path="the-definite-integral.html"><a href="the-definite-integral.html#making-cupcakes"><i class="fa fa-check"></i><b>28.4</b> Making Cupcakes</a></li>
+<li class="chapter" data-level="28.5" data-path="the-definite-integral.html"><a href="the-definite-integral.html#area-between-curves"><i class="fa fa-check"></i><b>28.5</b> Area Between Curves</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -583,11 +592,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb136-4"><a href="constrained-2d-optimization.html#cb136-4"></a><span class="kw">plotFun</span>(<span class="kw">P</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="constrained-2d-optimization.html#cb137-1"></a><span class="kw">plotFun</span>(<span class="kw">Q</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="dv">500</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
-<p>Now, the constrained isn’t tangent to any of the shown contours, but it IS tangent to a contour that we haven’t drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let’s make another plot on a smaller domain and pick some contours to draw.</p>
+<p>Now, the constraint isn’t tangent to any of the shown contours, but it IS tangent to a contour that we haven’t drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let’s make another plot on a smaller domain and pick some contours to draw.</p>
 <div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="constrained-2d-optimization.html#cb138-1"></a><span class="kw">plotFun</span>(<span class="kw">P</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">20</span>,<span class="dv">40</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">60</span>,<span class="dv">100</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="kw">seq</span>(<span class="dv">47</span>,<span class="dv">66</span>,<span class="dv">3</span>))</span></code></pre></div>
 <div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="constrained-2d-optimization.html#cb139-1"></a><span class="kw">plotFun</span>(<span class="kw">Q</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="dv">500</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
-<p>After some experimentation, I realized that <span class="math inline">\(P(x,y)=53\)</span> is the contour that is tangent $ Q(x,y)=500$. So the optimal point is <span class="math inline">\((27,80)\)</span> and the optimal output is 53.</p>
+<p>After some experimentation, I realized that <span class="math inline">\(P(x,y)=53\)</span> is the contour that is tangent $ Q(x,y)=500$. So the optimal point is <span class="math inline">\((26,80)\)</span> and the optimal output is 53.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Now we return to the original constraint function, but decrease the budget to <span class="math inline">\(300\)</span>.</li>
 </ol>

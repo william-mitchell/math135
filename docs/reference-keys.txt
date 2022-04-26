@@ -291,3 +291,10 @@ growing-bacteria
 the-change-in-world-population
 speed-tests
 estimating-area-with-rstudio
+the-definite-integral
+introduction
+activities-21
+drive-my-car
+accelerate-my-car
+making-cupcakes
+area-between-curves

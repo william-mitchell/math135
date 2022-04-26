@@ -91,7 +91,7 @@ plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE)
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
 ```
 
-Now, the constrained isn't tangent to any of the shown contours, but it IS tangent to a contour that we haven't drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let's make another plot on a smaller domain and pick some contours to draw.
+Now, the constraint isn't tangent to any of the shown contours, but it IS tangent to a contour that we haven't drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let's make another plot on a smaller domain and pick some contours to draw.
 
 ```{r fig.show='hide'}
 plotFun(P(x,y)~x&y, xlim=c(20,40), ylim=c(60,100), filled=FALSE, levels=seq(47,66,3))
@@ -101,7 +101,7 @@ plotFun(P(x,y)~x&y, xlim=c(20,40), ylim=c(60,100), filled=FALSE, levels=seq(47,6
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
 ```
 
-After some experimentation, I realized that $P(x,y)=53$ is the contour that is tangent $ Q(x,y)=500$. So the optimal point is $(27,80)$ and the optimal output is 53.
+After some experimentation, I realized that $P(x,y)=53$ is the contour that is tangent $ Q(x,y)=500$. So the optimal point is $(26,80)$ and the optimal output is 53.
 
 3. Now we return to the original constraint function, but decrease the budget to $300$.
 
