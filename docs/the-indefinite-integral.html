@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>22 Unit 4 Summary | MATH 135: AMC I</title>
+  <title>30 The Indefinite Integral | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="22 Unit 4 Summary | MATH 135: AMC I" />
+  <meta property="og:title" content="30 The Indefinite Integral | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="22 Unit 4 Summary | MATH 135: AMC I" />
+  <meta name="twitter:title" content="30 The Indefinite Integral | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="the-gradient.html"/>
-<link rel="next" href="d-optimization.html"/>
+<link rel="prev" href="rules-of-integration.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -560,57 +560,82 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="unit-4-summary" class="section level1">
-<h1><span class="header-section-number">22</span> Unit 4 Summary</h1>
-<div id="symbolic-derivatives" class="section level2">
-<h2><span class="header-section-number">22.1</span> Symbolic Derivatives</h2>
-<p>I can …</p>
-<ul>
-<li>Find the derivative of <span class="math inline">\(x^n\)</span>, <span class="math inline">\(\sin(x)\)</span>, <span class="math inline">\(\cos(x)\)</span>, <span class="math inline">\(e^x\)</span>, <span class="math inline">\(a^x\)</span>, <span class="math inline">\(\ln(x)\)</span>, and <span class="math inline">\(\log_a(x)\)</span>.</li>
-<li>Find the derivative …
-<ul>
-<li>of the sum of function</li>
-<li>using the product rule</li>
-<li>using the quotient rule</li>
-<li>using the chain rule</li>
-</ul></li>
-<li>Explain why the derivative is not defined for a cusp point.</li>
-<li>Solve a “word problem” about rates of change by using derivatives.</li>
-</ul>
+<div id="the-indefinite-integral" class="section level1">
+<h1><span class="header-section-number">30</span> The Indefinite Integral</h1>
+<div id="activities-22" class="section level2">
+<h2><span class="header-section-number">30.1</span> Activities</h2>
+<div id="indefinite-integral-practice" class="section level3">
+<h3><span class="header-section-number">30.1.1</span> Indefinite Integral Practice</h3>
+<p>Find the indefinite integral.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\displaystyle{\int 3x^4\,dx}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int r^5-\frac{7}{r^3}+r^{3/4}\,dr}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int 8t^2-t^{13}\,dt}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int 5e^{4x}\,dx}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int(x+2)^2\,dx}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int 4\sqrt{x}-9x+e\,dx}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int 3^t-7t^4 +\frac{9}{t}\,dt}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int \cos(x)+2e^x +7\,dx}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int \sin(3x)-2\cos(x)dx}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\int 7e^{-0.02t}+\frac{4}{t}\,dt}\)</span></li>
+</ol>
 </div>
-<div id="partial-derivatives-2" class="section level2">
-<h2><span class="header-section-number">22.2</span> Partial Derivatives</h2>
-<p>I can …</p>
-<ul>
-<li>Interpret the partial derivatives <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> as rates of change.</li>
-<li>Find the partial derivatives of a function <span class="math inline">\(f(x,y)\)</span> by holding one variable fixed and then applying the rules of differentiation.</li>
-<li>Find the second partial derivatives <span class="math inline">\(f_{xx}, f_{xy}, f_{yx}, f_{yy}\)</span>.</li>
-<li>Solve a “word problem” about rates of change of a multivariable function using partial derivatives.</li>
-</ul>
+<div id="area-between-curves-1" class="section level3">
+<h3><span class="header-section-number">30.1.2</span> Area Between Curves</h3>
+<p>Find the area enclosed by the curves <span class="math inline">\(f(x)=5-x^2\)</span> and <span class="math inline">\(g(x)=x^2-3\)</span> by following the steps below</p>
+<ol style="list-style-type: decimal">
+<li>Find the points of intersection of <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span>.</li>
+<li>Which curve is above the other?</li>
+<li>Set up the definite integral.</li>
+<li>Evaluate (symbolically or with RStudio)</li>
+</ol>
 </div>
-<div id="the-gradient-1" class="section level2">
-<h2><span class="header-section-number">22.3</span> The Gradient</h2>
-<p>I can …</p>
-<ul>
-<li>Explain what a vector <span class="math inline">\(\langle a, b \rangle\)</span> is, draw it as an arrrow, and find its magnitude <span class="math inline">\(\| \langle a, b \rangle \| = \sqrt{a^2+b^2}.\)</span></li>
-<li>Find the gradient vector <span class="math inline">\(\nabla f(x,y) = \langle f_x, f_y \rangle\)</span></li>
-<li>Evaluate the gradient vector at a point <span class="math inline">\((a,b)\)</span></li>
-<li>Use the gradient to find the direction of greatest increase, and the magnitude of the gradient to find the rate of change (slope) in that direction</li>
-<li>Draw a vector in the direction of greatest increase on a contour diagram.</li>
-</ul>
+<div id="average-value" class="section level3">
+<h3><span class="header-section-number">30.1.3</span> Average Value</h3>
+<p>The average value of a function <span class="math inline">\(f(x)\)</span> on interval <span class="math inline">\([a,b]\)</span> is given by
+<span class="math display">\[ \frac{1}{b-a} \int_a^b f(x) \, dx.\]</span></p>
+<p>Find the average value of function <span class="math inline">\(f(x)\)</span> on the given interval.</p>
+<ol style="list-style-type: decimal">
+<li>The average value of <span class="math inline">\(\sin(x)\)</span> on <span class="math inline">\([0, \pi]\)</span>.</li>
+<li>The average value of <span class="math inline">\(e^{2x}\)</span> on <span class="math inline">\([0,5]\)</span>.</li>
+<li>The average value of <span class="math inline">\(x^2 + 3\)</span> on <span class="math inline">\([4,6]\)</span></li>
+</ol>
+</div>
+<div id="modeling-population-growth" class="section level3">
+<h3><span class="header-section-number">30.1.4</span> Modeling Population Growth</h3>
+<p>The second phase of bacteria growth is called the . The rate of population growth is proportional to the number of bacteria at that time with proportionality constant 0.003. In other words</p>
+<p><span class="math display">\[
+\frac{dP}{dt} = 0.003 P
+\]</span></p>
+<p>This is equivalent to the integration formula
+<span class="math display">\[
+\int \frac{1}{P} \, dP = \int 0.003 \, dt.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Integrate both sides of this equation and find a general equation for <span class="math inline">\(P\)</span>.</li>
+<li>Suppose there are 1000 bacteria initially. Find the specific equation for <span class="math inline">\(P\)</span>.</li>
+</ol>
+</div>
+<div id="improper-integrals-and-zombie-apocalypses" class="section level3">
+<h3><span class="header-section-number">30.1.5</span> Improper Integrals and Zombie Apocalypses</h3>
+<p>The <strong>rate</strong> <span class="math inline">\(r(t)\)</span> at which people become zombies during the inevitable zombie apocalypse can be approximated by
+<span class="math display">\[ r(t)=1000 e^{-0.5t}\]</span>
+where <span class="math inline">\(t\)</span> is the number of days since the start of the outbreak.</p>
+<ol style="list-style-type: decimal">
+<li>Write the number of infected people <span class="math inline">\(I(t)\)</span> as an indefinite integral.</li>
+<li>How many total people get infected?</li>
+</ol>
 
 </div>
 </div>
-
-
-
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="the-gradient.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="d-optimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rules-of-integration.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

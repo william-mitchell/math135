@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>22 Unit 4 Summary | MATH 135: AMC I</title>
+  <title>29 Rules of Integration | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="22 Unit 4 Summary | MATH 135: AMC I" />
+  <meta property="og:title" content="29 Rules of Integration | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="22 Unit 4 Summary | MATH 135: AMC I" />
+  <meta name="twitter:title" content="29 Rules of Integration | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="the-gradient.html"/>
-<link rel="next" href="d-optimization.html"/>
+<link rel="prev" href="the-definite-integral.html"/>
+<link rel="next" href="the-indefinite-integral.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -560,57 +560,85 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="unit-4-summary" class="section level1">
-<h1><span class="header-section-number">22</span> Unit 4 Summary</h1>
-<div id="symbolic-derivatives" class="section level2">
-<h2><span class="header-section-number">22.1</span> Symbolic Derivatives</h2>
-<p>I can …</p>
-<ul>
-<li>Find the derivative of <span class="math inline">\(x^n\)</span>, <span class="math inline">\(\sin(x)\)</span>, <span class="math inline">\(\cos(x)\)</span>, <span class="math inline">\(e^x\)</span>, <span class="math inline">\(a^x\)</span>, <span class="math inline">\(\ln(x)\)</span>, and <span class="math inline">\(\log_a(x)\)</span>.</li>
-<li>Find the derivative …
-<ul>
-<li>of the sum of function</li>
-<li>using the product rule</li>
-<li>using the quotient rule</li>
-<li>using the chain rule</li>
-</ul></li>
-<li>Explain why the derivative is not defined for a cusp point.</li>
-<li>Solve a “word problem” about rates of change by using derivatives.</li>
-</ul>
+<div id="rules-of-integration" class="section level1">
+<h1><span class="header-section-number">29</span> Rules of Integration</h1>
+<div id="the-fundamental-theorem-of-calculus" class="section level2">
+<h2><span class="header-section-number">29.1</span> The Fundamental Theorem of Calculus</h2>
+<p><span class="math display">\[ \int f&#39;(x) \, dx = f(x) + C\]</span>
+and
+<span class="math display">\[ \int_a^b f&#39;(x) \, dx = f(b)-f(a)\]</span></p>
 </div>
-<div id="partial-derivatives-2" class="section level2">
-<h2><span class="header-section-number">22.2</span> Partial Derivatives</h2>
-<p>I can …</p>
-<ul>
-<li>Interpret the partial derivatives <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> as rates of change.</li>
-<li>Find the partial derivatives of a function <span class="math inline">\(f(x,y)\)</span> by holding one variable fixed and then applying the rules of differentiation.</li>
-<li>Find the second partial derivatives <span class="math inline">\(f_{xx}, f_{xy}, f_{yx}, f_{yy}\)</span>.</li>
-<li>Solve a “word problem” about rates of change of a multivariable function using partial derivatives.</li>
-</ul>
+<div id="integrals-of-familiar-functions" class="section level2">
+<h2><span class="header-section-number">29.2</span> Integrals of Familiar Functions</h2>
+<div id="constant-rule-1" class="section level3">
+<h3><span class="header-section-number">29.2.1</span> Constant Rule</h3>
+<p>The integral of a constant <span class="math inline">\(a\)</span> is <span class="math inline">\(ax+C\)</span>.
+<span class="math display">\[\int a \, dx= ax +C\]</span></p>
 </div>
-<div id="the-gradient-1" class="section level2">
-<h2><span class="header-section-number">22.3</span> The Gradient</h2>
-<p>I can …</p>
-<ul>
-<li>Explain what a vector <span class="math inline">\(\langle a, b \rangle\)</span> is, draw it as an arrrow, and find its magnitude <span class="math inline">\(\| \langle a, b \rangle \| = \sqrt{a^2+b^2}.\)</span></li>
-<li>Find the gradient vector <span class="math inline">\(\nabla f(x,y) = \langle f_x, f_y \rangle\)</span></li>
-<li>Evaluate the gradient vector at a point <span class="math inline">\((a,b)\)</span></li>
-<li>Use the gradient to find the direction of greatest increase, and the magnitude of the gradient to find the rate of change (slope) in that direction</li>
-<li>Draw a vector in the direction of greatest increase on a contour diagram.</li>
-</ul>
+<div id="power-rule-1" class="section level3">
+<h3><span class="header-section-number">29.2.2</span> Power Rule</h3>
+<p>For <span class="math inline">\(n \neq -1\)</span>,
+<span class="math display">\[\int x^n \, dx= \frac{1}{n+1} x^{n+1} +C\]</span></p>
+</div>
+<div id="trig-rules-1" class="section level3">
+<h3><span class="header-section-number">29.2.3</span> Trig Rules</h3>
+<p><span class="math display">\[\int \sin(x) \, dx = -\cos(x) +C\]</span>
+and
+<span class="math display">\[\int \cos(x) \, dx= \sin(x) + C\]</span></p>
+</div>
+<div id="exponential-rules-1" class="section level3">
+<h3><span class="header-section-number">29.2.4</span> Exponential Rules</h3>
+<p><span class="math display">\[\int e^x \, dx=e^x +C\]</span>
+and for any positive number <span class="math inline">\(a &gt;0\)</span>,
+<span class="math display">\[\int a^x \, dx =\frac{1}{\ln(a)}a^x + C\]</span></p>
+</div>
+<div id="logarithmic-rules-1" class="section level3">
+<h3><span class="header-section-number">29.2.5</span> Logarithmic Rules</h3>
+<p><span class="math display">\[\int \ln (x) \, dx =x \ln(x) -x + C\]</span>
+and for any positive number <span class="math inline">\(a &gt;0\)</span>,
+<span class="math display">\[\int \log_a (x) \, dx = x \log_a(x) - \frac{1}{\ln (a)} x + C \]</span></p>
+</div>
+</div>
+<div id="arithmetic-rules-for-integrals" class="section level2">
+<h2><span class="header-section-number">29.3</span> Arithmetic Rules for Integrals</h2>
+<div id="constant-multiple-rule-1" class="section level3">
+<h3><span class="header-section-number">29.3.1</span> Constant Multiple Rule</h3>
+<p>If <span class="math inline">\(c\)</span> is a constant, then
+<span class="math display">\[\int  cf(x) \, dx =c \int f(x) \, dx\]</span></p>
+</div>
+<div id="sum-and-difference-rules-1" class="section level3">
+<h3><span class="header-section-number">29.3.2</span> Sum and Difference Rules</h3>
+<p><span class="math display">\[\int (f(x)+g(x)) \,dx= \int f(x) \, dx + \int g(x)\, dx\]</span>
+and
+<span class="math display">\[\int (f(x)-g(x)) \,dx= \int f(x) \, dx - \int g(x)\, dx\]</span></p>
+</div>
+<div id="substitution-rule" class="section level3">
+<h3><span class="header-section-number">29.3.3</span> Substitution Rule</h3>
+<p>For any constant <span class="math inline">\(k\)</span>,
+<span class="math display">\[\int f&#39;(kx) = \frac{1}{k} f(x) + C\]</span></p>
+</div>
+</div>
+<div id="rules-for-endpoints" class="section level2">
+<h2><span class="header-section-number">29.4</span> Rules for Endpoints</h2>
+<div id="decomposition-rule" class="section level3">
+<h3><span class="header-section-number">29.4.1</span> Decomposition Rule</h3>
+<p>For <span class="math inline">\(a &lt; c &lt; b\)</span>, we have
+<span class="math display">\[ \int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx\]</span></p>
+</div>
+<div id="zero-integral-rule" class="section level3">
+<h3><span class="header-section-number">29.4.2</span> Zero Integral Rule</h3>
+<p><span class="math display">\[\int_c^c f(x) dx = 0\]</span></p>
 
 </div>
 </div>
-
-
-
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="the-gradient.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="d-optimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-definite-integral.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-indefinite-integral.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

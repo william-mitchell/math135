@@ -30,6 +30,8 @@ rmd_files: ["index.Rmd",
   "Unit5-ConstrainedOptimization.Rmd",
   "Unit6-AccumulatingChange.Rmd",  
   "Unit6-DefiniteIntegral.Rmd",  
+  "Unit6-IntegrationRules.Rmd", 
+  "Unit6-IndefiniteIntegral.Rmd", 
   ]
 language:
   ui: 

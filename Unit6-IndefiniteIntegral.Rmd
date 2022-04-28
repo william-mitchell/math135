@@ -1,0 +1,73 @@
+# The Indefinite Integral
+
+
+
+
+
+
+
+
+## Activities
+
+### Indefinite Integral Practice
+
+Find the indefinite integral.
+
+1. $\displaystyle{\int 3x^4\,dx}$
+2. $\displaystyle{\int r^5-\frac{7}{r^3}+r^{3/4}\,dr}$
+3. $\displaystyle{\int 8t^2-t^{13}\,dt}$
+4. $\displaystyle{\int 5e^{4x}\,dx}$
+5. $\displaystyle{\int(x+2)^2\,dx}$
+6. $\displaystyle{\int 4\sqrt{x}-9x+e\,dx}$
+7. $\displaystyle{\int 3^t-7t^4 +\frac{9}{t}\,dt}$
+8. $\displaystyle{\int \cos(x)+2e^x +7\,dx}$
+9. $\displaystyle{\int \sin(3x)-2\cos(x)dx}$
+10. $\displaystyle{\int 7e^{-0.02t}+\frac{4}{t}\,dt}$
+
+### Area Between Curves
+
+Find the area enclosed by the curves $f(x)=5-x^2$ and $g(x)=x^2-3$ by following the steps below
+
+1. Find the points of intersection of $f(x)$ and $g(x)$.
+2. Which curve is above the other?
+3. Set up the definite integral.
+4. Evaluate (symbolically or with RStudio)
+
+### Average Value
+
+The average value of a function $f(x)$ on interval $[a,b]$ is given by
+$$ \frac{1}{b-a} \int_a^b f(x) \, dx.$$
+
+Find the average value of function on the given interval.
+
+1. The average value of $\sin(x)$ on $[0, \pi]$.
+2. The average value of $e^{2x}$ on $[0,5]$.
+3. The average value of $x^2 + 3$ on $[4,6]$
+
+### Modeling Population Growth
+
+The second phase of bacteria growth is called the \emph{log phase}. The rate of population growth is proportional to the number of bacteria at that time with proportionality constant 0.003. In other words
+
+$$
+\frac{dP}{dt} = 0.003 P
+$$
+
+This is equivalent to the integration formula
+$$
+\int \frac{1}{P} \, dP = \int 0.003 \, dt.
+$$
+
+1. Integrate both sides of this equation and find a general equation for $P$. 
+2.  Suppose there are 1000 bacteria initially. Find the specific equation for $P$. 
+
+
+### Improper Integrals and Zombie Apocalypses
+
+The **rate** $r(t)$ at which people become zombies during the inevitable zombie apocalypse can be approximated by 
+$$ r(t)=1000 e^{-0.5t}$$
+where $t$ is the number of days since the start of the outbreak.
+
+1. Write the number of infected people $I(t)$ as an indefinite integral.
+2.  How many total people get infected? 
+
+
