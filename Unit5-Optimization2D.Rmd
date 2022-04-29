@@ -94,7 +94,7 @@ $$
 What are the optimal atmospheric conditions?
 
 
-## Soluurions
+## Solutions
 
 
 ### Characterize the Extrema

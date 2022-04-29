@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Exponential and Logarithmic Functions | MATH 135: AMC I</title>
+  <title>27 Unit 5 Summary | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Exponential and Logarithmic Functions | MATH 135: AMC I" />
+  <meta property="og:title" content="27 Unit 5 Summary | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Exponential and Logarithmic Functions | MATH 135: AMC I" />
+  <meta name="twitter:title" content="27 Unit 5 Summary | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="average-rate-of-change.html"/>
-<link rel="next" href="power-functions.html"/>
+<link rel="prev" href="constrained-2d-optimization.html"/>
+<link rel="next" href="accumulating-change.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -584,217 +584,63 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exponential-and-logarithmic-functions" class="section level1">
-<h1><span class="header-section-number">6</span> Exponential and Logarithmic Functions</h1>
-<div id="goals-2" class="section level2">
-<h2><span class="header-section-number">6.1</span> Goals</h2>
+<div id="unit-5-summary" class="section level1">
+<h1><span class="header-section-number">27</span> Unit 5 Summary</h1>
+<div id="d-optimization-2" class="section level2">
+<h2><span class="header-section-number">27.1</span> 1D Optimization</h2>
+<p>I can …</p>
 <ul>
-<li>Explain exponential functions in words, equations, and graphs</li>
-<li>Describe the effects of varying parameters in exponential functions</li>
-<li>Assess whether given data is exponential, and if so, model it</li>
-<li>Solve for unknowns in an exponent using the logarithm</li>
-<li>Write exponential functions in equivalent forms</li>
-<li>Determine half-lives and doubling times</li>
+<li>Find the local maxima, local minima, global maximum and global minimum for the graph of a function.</li>
+<li>Find the critical points of <span class="math inline">\(f(x)\)</span> by solving <span class="math inline">\(f&#39;(x)=0\)</span>.</li>
+<li>Use the first derivative test to determine whether a critical point is a local minimum, a local maximum or a point of inflection.</li>
+<li>Use the second derivative test to determine whether a critical point is a local minimum or a local maximum.</li>
 </ul>
 </div>
-<div id="activities-2" class="section level2">
-<h2><span class="header-section-number">6.2</span> Activities</h2>
-<div id="growing-population" class="section level3">
-<h3><span class="header-section-number">6.2.1</span> Growing population</h3>
-<p>A population starts with <span class="math inline">\(50,000\)</span> organisms and grows by <span class="math inline">\(6.7\%\)</span> each year. Find an exponential model for the population.</p>
+<div id="d-optimization-3" class="section level2">
+<h2><span class="header-section-number">27.2</span> 2D Optimization</h2>
+<p>I can …</p>
+<ul>
+<li>Find the 2D critical points of <span class="math inline">\(f(x,y)\)</span> by (simultaneously) solving <span class="math inline">\(f_x(x,y)=0\)</span> and <span class="math inline">\(f_y(x,y)=0\)</span>.</li>
+<li>Characterize a 2D critical point <span class="math inline">\((a,b)\)</span> as a local minimimum, local maximum or saddle point by:
+<ul>
+<li>Using the 2D second derivative test at <span class="math inline">\((a,b)\)</span></li>
+<li>Making a contour plot near <span class="math inline">\((a,b)\)</span></li>
+<li>Looking at the values of <span class="math inline">\(f(a,b)-f(x,y)\)</span> on a small circle around <span class="math inline">\((a,b)\)</span>.</li>
+</ul></li>
+</ul>
 </div>
-<div id="consumer-price-index" class="section level3">
-<h3><span class="header-section-number">6.2.2</span> Consumer price index</h3>
-<p>The consumer price index (CPI) for a given year is the amount of money in that year that has the same purchasing power as $100 in 1983. At the start of 2009, the CPI was 211. Write a formula for the CPI as a function of <span class="math inline">\(t\)</span> years after 2009, assuming the CPI increases by a rate of 2.8% every year.</p>
+<div id="gradient-search-2" class="section level2">
+<h2><span class="header-section-number">27.3</span> Gradient Search</h2>
+<p>I can …</p>
+<ul>
+<li>Find a local maximum of a 2D function <span class="math inline">\(f(x,y)\)</span> using gradient search.</li>
+<li>Find a local minimum of a 2D function <span class="math inline">\(f(x,y)\)</span> using gradient search.</li>
+<li>Explain why the extreme point found by gradient search depends upon the starting point that we use.</li>
+</ul>
 </div>
-<div id="two-data-sets" class="section level3">
-<h3><span class="header-section-number">6.2.3</span> Two data sets</h3>
-<p>Here are approximate values of two functions. For each one, decide whether it could be a linear function or an exponentialfunction. Give a reason and then find an approximate formula.</p>
-<table>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(x\)</span></td>
-<td>0</td>
-<td>0.5</td>
-<td>1</td>
-<td>1.5</td>
-<td>2</td>
-<td>2.5</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(f(x)\)</span></td>
-<td>26.00</td>
-<td>26.15</td>
-<td>26.30</td>
-<td>26.45</td>
-<td>26.60</td>
-<td>26.75</td>
-<td>26.90</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(g(x)\)</span></td>
-<td>190</td>
-<td>217</td>
-<td>247</td>
-<td>282</td>
-<td>321</td>
-<td>366</td>
-<td>418</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="interest-rate-for-an-investment" class="section level3">
-<h3><span class="header-section-number">6.2.4</span> Interest rate for an investment</h3>
-<p>Suppose that an investment triples in 15 years.</p>
-<ol style="list-style-type: decimal">
-<li>What is the interest rate <span class="math inline">\(r\)</span> if the interest is compounded annually: <span class="math inline">\(I(t) = I_0 (1+r)^t\)</span>.</li>
-<li>What is the interest rate <span class="math inline">\(r\)</span> if interest is compounded continuously: <span class="math inline">\(I(t) = I_0 e^{rt}\)</span>.</li>
-<li>Which rate is larger? Why does that make sense?</li>
-</ol>
-</div>
-<div id="exponential-decay" class="section level3">
-<h3><span class="header-section-number">6.2.5</span> Exponential decay</h3>
-<p>Radioactive cobalt-60 has a half-life of 5.3 years. If the initial amount is 60 grams, find a formula for the amount of cobalt-60 left after <span class="math inline">\(t\)</span> years.</p>
-</div>
-<div id="doubling-time" class="section level3">
-<h3><span class="header-section-number">6.2.6</span> Doubling time</h3>
-<p>The doubling time of an exponentially increasing fuunction is the amount of time it takes for the quantity to double. Find the doubling time for the function <span class="math inline">\(f(t) = 10 e^{1.2t}\)</span>.</p>
-</div>
-<div id="people-and-vehicles" class="section level3">
-<h3><span class="header-section-number">6.2.7</span> People and vehicles</h3>
-<p>In 1980, there were about 170 million vehicles (cars and trucks) and about 227 million people in the United States. The number of vehicles has been growing at an annual rate of 4% a year, while the population has been growing at an annual rate of 1% a year.</p>
-<ol style="list-style-type: decimal">
-<li><p>According to this model, when was there, on average, one vehicle per person?</p></li>
-<li><p>In desmos, make a plot of the number of vehicles and the number of people over time on the same graph with a different color for each curve.</p></li>
-<li><p>Use your models to predict the number of vehicles and the number of people in 2020. Then use Google to see how accurate these models are over time.</p></li>
-</ol>
-</div>
-</div>
-<div id="solutions-2" class="section level2">
-<h2><span class="header-section-number">6.3</span> Solutions</h2>
-<div id="growing-population-1" class="section level3">
-<h3><span class="header-section-number">6.3.1</span> Growing population</h3>
-<p>.
-<span class="math display">\[ P(t) = 50000 (1.067)^t\]</span></p>
-</div>
-<div id="consumer-price-index-1" class="section level3">
-<h3><span class="header-section-number">6.3.2</span> Consumer price index</h3>
-<p><span class="math display">\[C(t) = 211 (1.028)^t\]</span></p>
-</div>
-<div id="two-data-sets-1" class="section level3">
-<h3><span class="header-section-number">6.3.3</span> Two data sets</h3>
-<p>First, we note that the <span class="math inline">\(x\)</span> values are equally spaced. For <span class="math inline">\(f(x)\)</span>, the value increases by <span class="math inline">\(0.15\)</span> for each entry, suggesting a linear function <span class="math inline">\(f(x) = mx+b\)</span>. The slope is
-<span class="math display">\[
-m=\frac{26.15-26}{20.5-20} = \frac{0.15}{0.2}=0.3.
-\]</span>
-To find the vertical intercept, we plug in <span class="math inline">\(x=0\)</span> to find that <span class="math inline">\(26 = 0.3 \cdot 0 + b\)</span>, so <span class="math inline">\(b=26\)</span>. Therefore,
-<span class="math display">\[
-f=0.3x+26.
-\]</span>
-For <span class="math inline">\(g(x)\)</span>, we note that each successive value is the previous one multiplied by approximately <span class="math inline">\(1.14\)</span>. The points are evenly spaced so we have constant multiplicative change. This is an exponential function <span class="math inline">\(g(x) = C a^t.\)</span></p>
-<p>We have <span class="math inline">\(g(0) = 190 = C a^0 = C\)</span>, so <span class="math inline">\(c=90\)</span>. Next, let’s plug in any other point. We have
-<span class="math inline">\(g(0.5)=217= 190 a^(0.5) = 190 \sqrt{a}\)</span> which means that <span class="math inline">\(a = (217/190)^2=1.304\)</span> So
-<span class="math display">\[ g(x) = 190 (1.304)^t.\]</span></p>
-</div>
-<div id="interest-rate-for-an-investment-1" class="section level3">
-<h3><span class="header-section-number">6.3.4</span> Interest rate for an investment</h3>
-<p>Our initial investment is <span class="math inline">\(I_0\)</span> and we have <span class="math inline">\(I(15) = 3 I_0\)</span>.</p>
-<ol style="list-style-type: decimal">
-<li><p>For annual compounding, we have
-<span class="math display">\[
-\begin{array}{rcl}
-3 I_0 &amp;=&amp; I_0 (1+r)^{15} \\
-3  &amp;=&amp;  (1+r)^{15} \\
-3^{1/15} &amp;=&amp; 1+r \\
-\end{array}
-\]</span>
-so <span class="math inline">\(r = 3^{1/15} - 1 = 0.076.\)</span></p></li>
-<li><p>For continuous compounding, we have
-<span class="math display">\[
-\begin{array}{rcl}
-3 I_0 &amp;=&amp; I_0 e^{15r} \\
-3  &amp;=&amp;  e^{15r} \\
-\ln (3) &amp;=&amp; 15 r\\
-\end{array}
-\]</span>
-so <span class="math inline">\(r = \ln(3)/15= 0.073\)</span>.</p></li>
-<li><p>The rate for annual compounding is larger. That makes sense because the interest ``snowballs’’ faster when you compound continuously.</p></li>
-</ol>
-</div>
-<div id="exponential-decay-1" class="section level3">
-<h3><span class="header-section-number">6.3.5</span> Exponential decay</h3>
-<p>Radioactive cobalt-60 has a half-life of 5.3 years. If the initial amount is 60 grams, find a formula for the amount of cobalt-60 left after <span class="math inline">\(t\)</span> years.</p>
-<p>Our function is <span class="math inline">\(f(t) = P_0 a^t\)</span> where <span class="math inline">\(t\)</span> is time in years, and <span class="math inline">\(f(t)\)</span> is the amount of colbalt-60 in grams. Since <span class="math inline">\(60 = f(0) = P_0 a^0\)</span>, we know that <span class="math inline">\(P_0 = 60\)</span>. Hence, <span class="math inline">\(f(t) = 60 a^t\)</span>. Since The half life is 5.3 years, we know that
-<span class="math display">\[
-\begin{array}{rcl}
-30 &amp; = &amp; 60 a^{5.3}\\
-\frac{30}{60} &amp; = &amp; a^{5.3} \\
-\left( \frac{1}{2} \right) ^ {1/5.3} &amp; = &amp; a \\
-0.877 &amp; \approx &amp; a.
-\end{array}
-\]</span>
-Therefore, <span class="math inline">\(f(t) = 60(0.877)^t\)</span>.</p>
-</div>
-<div id="doubling-time-1" class="section level3">
-<h3><span class="header-section-number">6.3.6</span> Doubling time</h3>
-<p>We want to solve <span class="math inline">\(f(t)=20\)</span> for <span class="math inline">\(t\)</span>.
-<span class="math display">\[
-\begin{array}{rcl}
-20 &amp; = &amp; 10 e^{1.2t}\\
-2 &amp; = &amp; e^{1.2t} \\
-\ln(2) &amp;=&amp; 1.2 t
-\end{array}
-\]</span>
-so <span class="math inline">\(t = \ln(2)/1.2 = 0.578\)</span>.</p>
-</div>
-<div id="people-and-vehicles-1" class="section level3">
-<h3><span class="header-section-number">6.3.7</span> People and vehicles</h3>
-<p>Our formulas are
-<span class="math display">\[
-\begin{array}{rcl}
-v(t) &amp; = &amp; 170(1.04)^t\\
-p(t) &amp; = &amp; 227(1.01)^t.
-\end{array}
-\]</span>
-1. We want to solve
-<span class="math display">\[
-\begin{array}{rcl}
-v(t) &amp; = &amp; p(t) \\
-170(1.04)^t &amp; = &amp; 227(1.01)^t \\
-\left( \frac{1.04}{1.01} \right)^t &amp; = &amp; \frac{227}{170} \\
-(1.0297) ^ t &amp; = &amp; 227/170 \\
-t \ln (1.0297) &amp; = &amp; \ln (1.3353) \\
-t &amp; \approx &amp; 9.87.
-\end{array}
-\]</span>
-Since <span class="math inline">\(t\)</span> is years since 1980, there will be one car per person in the year 1980 + 9.87 = 1989.87, that is, nearly 1990.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Here is a plot of the two functions.</li>
-</ol>
-<p><img src="images/vehicles-people.png" style="width:50.0%" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Our models predict
-<span class="math display">\[
-\begin{array}{rcl}
-v(40) &amp; = &amp; 170(1.04)^{40} \approx 816.17 \text{ million vehicles}\\
-p(40) &amp; = &amp; 227(1.01)^{40} \approx 337.97 \text{ million vehicles.}
-\end{array}
-\]</span>
-Google says that in 2020, there were about 273.6 million vehicles and 328.2 million people. So our model’s predictions are not accurate.</li>
-</ol>
+<div id="constrained-optimization-1" class="section level2">
+<h2><span class="header-section-number">27.4</span> Constrained Optimization</h2>
+<p>I can …</p>
+<ul>
+<li>Identify the objective function and the constaint function for a constrained optimization problem.</li>
+<li>Explain why the extreme point for a constrained optimization problem occurs where the constraint contour is tangent to a contour of the objective function.</li>
+<li>Use RStudio to create a contour plot to solve a constrained optimization problem.</li>
+<li>Estimate the value of the Lagrange multiplier <span class="math inline">\(\lambda\)</span> using a contour plot.</li>
+<li>Interpret the Lagrange multiplier <span class="math inline">\(\lambda\)</span> as a rate of change.</li>
+</ul>
 
 </div>
 </div>
-</div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="average-rate-of-change.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="power-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="constrained-2d-optimization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="accumulating-change.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

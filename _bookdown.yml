@@ -28,10 +28,12 @@ rmd_files: ["index.Rmd",
   "Unit5-Optimization2D.Rmd",
   "Unit5-GradientSearch.Rmd", 
   "Unit5-ConstrainedOptimization.Rmd",
+  "Unit5-Summary.Rmd",
   "Unit6-AccumulatingChange.Rmd",  
   "Unit6-DefiniteIntegral.Rmd",  
   "Unit6-IntegrationRules.Rmd", 
   "Unit6-IndefiniteIntegral.Rmd", 
+  "Unit6-Summary.Rmd",
   ]
 language:
   ui: 
