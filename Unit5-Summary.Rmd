@@ -26,8 +26,9 @@ I can ...
 
 I can ...
 
-*  Find a local maximum of a 2D function $f(x,y)$ using gradient search.
-*  Find a local minimum of a 2D function $f(x,y)$ using gradient search.
+*  Find a local maximum of a 2D function $f(x,y)$ using gradient search in *RStudio*.
+*  Find a local minimum of a 2D function $f(x,y)$ using gradient search in *RStudio*.
+* Simulate gradient search using the contour plot of a 2D function to find the trajectory that gradient search follows to reach an extreme point.
 * Explain why the extreme point found by gradient search depends upon the starting point that we use. 
 
 ## Constrained Optimization
