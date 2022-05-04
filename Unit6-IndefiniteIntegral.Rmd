@@ -94,20 +94,20 @@ Find the indefinite integral.
 
 Find the area enclosed by the curves $f(x)=5-x^2$ and $g(x)=x^2-3$ by following the steps below
 
-1. Setting $f(x)=g(x)$ gives $5-x^2=x^2-3$ which means that $x^2=8$. So the curves  intersect at $x=\pm 2\sqrt{2}$.
-2. On the interval $[-2\sqrt{2}, 2\sqrt{2}]$, function $f(x)$ is above function $g(x)$.
+1. Setting $f(x)=g(x)$ gives $5-x^2=x^2-3$ which means that $x^2=4$. So the curves  intersect at $x=\pm 2$.
+2. On the interval $[-2, 2]$, function $f(x)$ is above function $g(x)$.
 3. The area between these curves is
 $$
-\int_{-2\sqrt{2}}^{2\sqrt{2}} ( f(x) -g(x)) dx
+\int_{-2}^{2} ( f(x) -g(x)) dx
 =
-\int_{-2\sqrt{2}}^{2\sqrt{2}} ( 8 -2x^2) dx
+\int_{-2}^{2} ( 8 -2x^2) dx
 $$
 4. Let's use RStudio. It's easier!
 
 ```{r}
 f=makeFun(8 - 2*x^2 ~ x)
-a = -2 * sqrt(2)
-b = 2 * sqrt(2)
+a = -2 
+b = 2 
 num = 100000
 ### the approximation of f(x) on interval [a,b]
 base = (b-a)/num

@@ -137,7 +137,7 @@ sum(areas)
 ``` 
 
 
-2. The car turns around at $t=6$. We have $v(t) > 0$ for $t < 6$ and $v(t) < 0$ for $t > 6$. 
+2. The car turns around at $t=5$. We have $v(t) > 0$ for $t < 5$ and $v(t) < 0$ for $t > 5$. 
 
 3. We must look at the signed area. When is the (positive) area above the $x$-axis equal to the (negative) area below the $x$-axis? This happens at $t=12$. So this is the time that the car returns to where it started.
 

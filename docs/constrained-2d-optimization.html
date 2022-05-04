@@ -640,7 +640,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb134-3"><a href="constrained-2d-optimization.html#cb134-3"></a></span>
 <span id="cb134-4"><a href="constrained-2d-optimization.html#cb134-4"></a><span class="kw">plotFun</span>(<span class="kw">P</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="constrained-2d-optimization.html#cb135-1"></a><span class="kw">plotFun</span>(<span class="kw">Q</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="dv">500</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-113-1.png" width="672" /></p>
 <p>The maximum output for our budget occurs where the <span class="math inline">\(Q(x,y)=500\)</span> constraint is tangent to a contour of <span class="math inline">\(P(x,y)\)</span>. This occurs at (approximately) the point <span class="math inline">\((38,78)\)</span> and we estimate that the maximum production is <span class="math inline">\(P(38,78)=60\)</span>.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>We need to make a new plot using an updated constraint function.</li>
@@ -650,11 +650,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb136-3"><a href="constrained-2d-optimization.html#cb136-3"></a></span>
 <span id="cb136-4"><a href="constrained-2d-optimization.html#cb136-4"></a><span class="kw">plotFun</span>(<span class="kw">P</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="constrained-2d-optimization.html#cb137-1"></a><span class="kw">plotFun</span>(<span class="kw">Q</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="dv">500</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
 <p>Now, the constraint isn’t tangent to any of the shown contours, but it IS tangent to a contour that we haven’t drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let’s make another plot on a smaller domain and pick some contours to draw.</p>
 <div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="constrained-2d-optimization.html#cb138-1"></a><span class="kw">plotFun</span>(<span class="kw">P</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">20</span>,<span class="dv">40</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">60</span>,<span class="dv">100</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="kw">seq</span>(<span class="dv">47</span>,<span class="dv">66</span>,<span class="dv">3</span>))</span></code></pre></div>
 <div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="constrained-2d-optimization.html#cb139-1"></a><span class="kw">plotFun</span>(<span class="kw">Q</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="dv">500</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
 <p>After some experimentation, I realized that <span class="math inline">\(P(x,y)=53\)</span> is the contour that is tangent $ Q(x,y)=500$. So the optimal point is <span class="math inline">\((26,80)\)</span> and the optimal output is 53.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Now we return to the original constraint function, but decrease the budget to <span class="math inline">\(300\)</span>.</li>
@@ -664,7 +664,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb140-3"><a href="constrained-2d-optimization.html#cb140-3"></a></span>
 <span id="cb140-4"><a href="constrained-2d-optimization.html#cb140-4"></a><span class="kw">plotFun</span>(<span class="kw">P</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="kw">seq</span>(<span class="dv">15</span>,<span class="dv">85</span>,<span class="dv">10</span>))</span></code></pre></div>
 <div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="constrained-2d-optimization.html#cb141-1"></a><span class="kw">plotFun</span>(<span class="kw">Q</span>(x,y)<span class="op">~</span>x<span class="op">&amp;</span>y, <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">filled=</span><span class="ot">FALSE</span>, <span class="dt">levels=</span><span class="dv">300</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-118-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
 <p>The optimal point is at <span class="math inline">\((21,40)\)</span> and the optimal production is approximately <span class="math inline">\(f(21,40)=35\)</span>. (This is a slight under-estimate, but it’s pretty close.)</p>
 </div>
 <div id="constrained-optimization-on-a-circle-1" class="section level3">
@@ -678,13 +678,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <h3><span class="header-section-number">26.3.3</span> Estimating the Lagrange Multiplier</h3>
 <ol style="list-style-type: decimal">
 <li><p>For a budget of 15, the maximal production is <span class="math inline">\(f(25,18)=250\)</span>.</p></li>
-<li><p>For a budget of 20, the maximal production is <span class="math inline">\(f(32,26)=310\)</span>.</p></li>
+<li><p>For a budget of 20, the maximal production is <span class="math inline">\(f(32,26)=360\)</span>.</p></li>
 <li><p>The Lagrange multiplier is
 <span class="math display">\[
-\lambda = \frac{\triangle \mbox{production}}{\triangle \mbox{constraint}} \approx \frac{310-250}{20-15}=\frac{60}{5}=12  \frac{\mbox{units}}{\mbox{dollar}}
+\lambda = \frac{\triangle \mbox{production}}{\triangle \mbox{constraint}} \approx \frac{360-250}{20-15}=\frac{110}{5}=22  \frac{\mbox{units}}{\mbox{dollar}}
 \]</span>
-So if we increase our budget by $1, then we will produce 12 more units.</p></li>
-<li><p>The Lagrange multiplier is approximately <span class="math inline">\(12\)</span> units/dollar. We will break even if we can sell one unit for <span class="math inline">\(1/12=0.133\)</span> dollars/unit. So if the sale price is at least $0.083, we will decide to increase production.</p></li>
+So if we increase our budget by $1, then we will produce 22 more units.</p></li>
+<li><p>The Lagrange multiplier is approximately <span class="math inline">\(22\)</span> units/dollar. We will break even if we can sell one unit for <span class="math inline">\(1/22=0.045\)</span> dollars/unit. So if the sale price is at least $0.045, we will decide to increase production.</p></li>
 </ol>
 
 </div>

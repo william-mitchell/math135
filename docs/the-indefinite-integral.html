@@ -673,19 +673,19 @@ where <span class="math inline">\(t\)</span> is the number of days since the sta
 <h3><span class="header-section-number">31.2.2</span> Area Between Curves</h3>
 <p>Find the area enclosed by the curves <span class="math inline">\(f(x)=5-x^2\)</span> and <span class="math inline">\(g(x)=x^2-3\)</span> by following the steps below</p>
 <ol style="list-style-type: decimal">
-<li>Setting <span class="math inline">\(f(x)=g(x)\)</span> gives <span class="math inline">\(5-x^2=x^2-3\)</span> which means that <span class="math inline">\(x^2=8\)</span>. So the curves intersect at <span class="math inline">\(x=\pm 2\sqrt{2}\)</span>.</li>
-<li>On the interval <span class="math inline">\([-2\sqrt{2}, 2\sqrt{2}]\)</span>, function <span class="math inline">\(f(x)\)</span> is above function <span class="math inline">\(g(x)\)</span>.</li>
+<li>Setting <span class="math inline">\(f(x)=g(x)\)</span> gives <span class="math inline">\(5-x^2=x^2-3\)</span> which means that <span class="math inline">\(x^2=4\)</span>. So the curves intersect at <span class="math inline">\(x=\pm 2\)</span>.</li>
+<li>On the interval <span class="math inline">\([-2, 2]\)</span>, function <span class="math inline">\(f(x)\)</span> is above function <span class="math inline">\(g(x)\)</span>.</li>
 <li>The area between these curves is
 <span class="math display">\[
-\int_{-2\sqrt{2}}^{2\sqrt{2}} ( f(x) -g(x)) dx
+\int_{-2}^{2} ( f(x) -g(x)) dx
 =
-\int_{-2\sqrt{2}}^{2\sqrt{2}} ( 8 -2x^2) dx
+\int_{-2}^{2} ( 8 -2x^2) dx
 \]</span></li>
 <li>Let’s use RStudio. It’s easier!</li>
 </ol>
 <div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="the-indefinite-integral.html#cb180-1"></a>f=<span class="kw">makeFun</span>(<span class="dv">8</span> <span class="op">-</span><span class="st"> </span><span class="dv">2</span><span class="op">*</span>x<span class="op">^</span><span class="dv">2</span> <span class="op">~</span><span class="st"> </span>x)</span>
-<span id="cb180-2"><a href="the-indefinite-integral.html#cb180-2"></a>a =<span class="st"> </span><span class="dv">-2</span> <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span>)</span>
-<span id="cb180-3"><a href="the-indefinite-integral.html#cb180-3"></a>b =<span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span>)</span>
+<span id="cb180-2"><a href="the-indefinite-integral.html#cb180-2"></a>a =<span class="st"> </span><span class="dv">-2</span> </span>
+<span id="cb180-3"><a href="the-indefinite-integral.html#cb180-3"></a>b =<span class="st"> </span><span class="dv">2</span> </span>
 <span id="cb180-4"><a href="the-indefinite-integral.html#cb180-4"></a>num =<span class="st"> </span><span class="dv">100000</span></span>
 <span id="cb180-5"><a href="the-indefinite-integral.html#cb180-5"></a><span class="co">### the approximation of f(x) on interval [a,b]</span></span>
 <span id="cb180-6"><a href="the-indefinite-integral.html#cb180-6"></a>base =<span class="st"> </span>(b<span class="op">-</span>a)<span class="op">/</span>num</span>
@@ -693,7 +693,7 @@ where <span class="math inline">\(t\)</span> is the number of days since the sta
 <span id="cb180-8"><a href="the-indefinite-integral.html#cb180-8"></a>heights =<span class="st"> </span><span class="kw">f</span>(points)</span>
 <span id="cb180-9"><a href="the-indefinite-integral.html#cb180-9"></a>areas =<span class="st"> </span>base<span class="op">*</span>heights</span>
 <span id="cb180-10"><a href="the-indefinite-integral.html#cb180-10"></a><span class="kw">sum</span>(areas)</span></code></pre></div>
-<pre><code>## [1] 15.08494</code></pre>
+<pre><code>## [1] 21.33333</code></pre>
 </div>
 <div id="average-value-1" class="section level3">
 <h3><span class="header-section-number">31.2.3</span> Average Value</h3>
