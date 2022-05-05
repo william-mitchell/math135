@@ -39,7 +39,7 @@ plotFun(0*t~t, add=TRUE)
 3. When does the car **return to where it started**? 
 
 
-## Accelerate My Car
+### Accelerate My Car
 
 A car is traveling at 55 feet per second at time $t=0$. The plot below shows the car's **acceleration** on the interval $[0,18]$.
 
@@ -59,7 +59,7 @@ plotFun(0*t~t, add=TRUE)
 
 
 
-## Making Cupcakes
+### Making Cupcakes
 
 The marginal cost of making cupcakes is given by $$K'(q)=\frac{1}{100}q^2+\frac{1}{5}q+1,$$ 
 where $q$ is in dozens of cupcakes. 
@@ -68,7 +68,7 @@ where $q$ is in dozens of cupcakes.
 2. Estimate this definite integral using *RStudio*. 
 3. If our fixed costs are \$1500, what is the **total cost** to make 30 dozen cupcakes? 
 
-## Area Between Curves
+### Area Between Curves
 
 Below is a graph of both $\sin(x)$ and $\cos(x)$ on the interval $[0,2\pi]$. 
 
@@ -141,7 +141,7 @@ sum(areas)
 
 3. We must look at the signed area. When is the (positive) area above the $x$-axis equal to the (negative) area below the $x$-axis? This happens at $t=12$. So this is the time that the car returns to where it started.
 
-## Accelerate My Car
+### Accelerate My Car
 
 *See the class slides for a visual explanation of this problem. Here is a descriptive solution.*
 
@@ -154,7 +154,7 @@ sum(areas)
 
 
 
-## Making Cupcakes
+### Making Cupcakes
 
 The marginal cost of making cupcakes is given by $$K'(q)=\frac{1}{100}q^2+\frac{1}{5}q+1,$$ 
 where $q$ is in dozens of cupcakes. 
@@ -180,7 +180,7 @@ sum(areas)
 
 3. The total costs are approximate $1500+210$, which is the sum of our fixed costs and our production costs.
 
-## Area Between Curves
+### Area Between Curves
 
 
 

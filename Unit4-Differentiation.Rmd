@@ -66,10 +66,6 @@ Find the derivative for each of the following functions.
 
 ### Basic Derivative Practice
 
-
-
-## Basic
-
 1. $W'(r) = 3r^2 + 5$
 1. $f'(x) = 2x - 3/x$
 1. $P'(t) = 8t + 7\cos t$

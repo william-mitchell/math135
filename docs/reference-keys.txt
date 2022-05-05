@@ -131,18 +131,23 @@ find-the-dimension
 dimensionally-feasible
 geometric-formulas-for-a-cylinder
 unit-conversions
+solutions-6
+find-the-dimension-1
+dimensionally-feasible-1
+geometric-formulas-for-a-cylinder-1
+unit-conversions-1
 dimensional-analysis
 performing-a-dimensional-analysis
 activities-7
 vocal-chord-frequency
 mixer-power
 velocity-of-an-ocean-wave
-solutions-6
+solutions-7
 fermi-estimation
 working-fermi-problems
 some-useful-data
 activities-8
-solutions-7
+solutions-8
 the-derivative
 the-derivative-1
 activities-9
@@ -150,7 +155,7 @@ studying
 marginal-cost
 farmland-in-the-united-states
 a-moving-particle
-solutions-8
+solutions-9
 studying-1
 marginal-cost-1
 farmland-in-the-united-states-1
@@ -161,7 +166,7 @@ estimating-the-first-and-second-derivatives-from-a-graph
 function-matching
 a-plot-of-velocity
 characterize-the-derivatives
-solutions-9
+solutions-10
 estimating-the-first-and-second-derivatives-from-a-graph-1
 function-matching-1
 a-plot-of-velocity-1
@@ -171,7 +176,7 @@ activities-11
 estimating-from-data
 estimating-from-a-contour-plot
 estimating-using-desmos
-solutions-10
+solutions-11
 estimating-from-data-1
 estimating-from-a-contour-plot-1
 estimating-using-desmos-1
@@ -181,7 +186,7 @@ estimating-sugar-solution-temperature
 comparing-linearizations
 estimating-a-function
 estimating-the-windchill
-solutions-11
+solutions-12
 estimating-sugar-solution-temperature-1
 comparing-linearizations-1
 estimating-a-function-1
@@ -211,9 +216,8 @@ activities-13
 basic-derivative-practice
 more-basic-derivative-practice
 product-rule-and-quotient-rule-practice
-solutions-12
+solutions-13
 basic-derivative-practice-1
-basic
 more-basic-derivative-practice-1
 product-rule-and-quotient-rule-practice-1
 the-chain-rule
@@ -222,7 +226,7 @@ chain-rule-practice
 more-chain-rule-practice
 conceptual-chain-rule-problems
 visual-chain-rule-problem
-solutions-13
+solutions-14
 chain-rule-practice-1
 more-chain-rule-practice-1
 conceptual-chain-rule-problems-1
@@ -234,7 +238,7 @@ second-partial-derivative-practice
 gradient-practice
 gradient-on-a-contour-diagram
 gradient-and-the-direction-of-greatest-increase
-solutions-14
+solutions-15
 partial-derivative-practice-1
 second-partial-derivative-practice-1
 gradient-practice-1
@@ -250,7 +254,7 @@ characterize-the-extrema
 first-derivative-test
 second-derivative-test
 cupcake-store
-solutions-15
+solutions-16
 characterize-the-extrema-1
 first-derivative-test-1
 second-derivative-test-1
@@ -263,7 +267,7 @@ classifying-a-critical-point-using-a-small-circle-of-values
 the-2d-second-derivative-test
 classify-the-critical-points
 optimizing-flight-control
-solutions-16
+solutions-17
 characterize-the-extrema-3
 classifying-a-critical-point-using-a-small-circle-of-values-1
 the-2d-second-derivative-test-1
@@ -273,7 +277,7 @@ gradient-search-1
 gradient-search-example
 activities-18
 finding-a-local-minimum
-solutions-17
+solutions-18
 finding-a-local-minimum-1
 constrained-2d-optimization
 creating-a-contour-plot-for-2d-optimization
@@ -281,7 +285,7 @@ activities-19
 constrained-production
 constrained-optimization-on-a-circle
 estimating-the-lagrange-multiplier
-solutions-18
+solutions-19
 constrained-production-1
 constrained-optimization-on-a-circle-1
 estimating-the-lagrange-multiplier-1
@@ -296,7 +300,7 @@ growing-bacteria
 the-change-in-world-population
 speed-tests
 estimating-area-with-rstudio
-solutions-19
+solutions-20
 growing-bacteria-1
 the-change-in-world-population-1
 speed-tests-1
@@ -308,7 +312,7 @@ drive-my-car
 accelerate-my-car
 making-cupcakes
 area-between-curves
-solutions-20
+solutions-21
 drive-my-car-1
 accelerate-my-car-1
 making-cupcakes-1
@@ -335,7 +339,7 @@ area-between-curves-2
 average-value
 modeling-population-growth
 zombie-apocalypse
-solutions-21
+solutions-22
 indefinite-integral-practice-1
 area-between-curves-3
 average-value-1

@@ -78,3 +78,60 @@ This [unit conversion chart](https://www.mustangps.org/Downloads/conversion_char
 
 1. Sunlight deposits energy at a rate of 250 W/m$^2$ on a 10 m$^2$ garden. How much energy (in Joules) is deposited in a week? Note that 1 Watt is 1 Joule per second) 
 
+## Solutions
+
+### Find the Dimension
+
+
+
+1. $M L T^{-1}$
+1. $L T^{-3}$
+1. $ML^2T^{-2} / IT = ML^2 T^{-3}I^{-1}$
+
+
+
+### Dimensionally Feasible
+
+
+
+1. $[s]=L$ and $\left[vt + \frac{1}{2}at^2\right] = [vt] + [at^2] = L + LT^{-2}T^2 = L + L = L$. So this formula is dimensionally feasible. 
+1. $[P] = ML^{-1}T^{-2}$ and $[E/A] = ML^2T^{-2}L^{-2} = MT^{-2}$. This formula is **not** dimensionally feasible. 
+
+
+### Geometric Formulas for a Cylinder
+
+We know that $[V]=L^3$ and $[A]=L^2$.
+
+We have $[\pi r^2h] = L^3$ and $[2\pi r (r+h)] = L (L+L) = L^2$. So dimensional analysis tells us that $V=\pi r^2h$ and $A=2\pi r (r+h)$.
+
+### Unit Conversions
+
+Solve the following problems by multiplying by the appropriate unit conversions.
+This [unit conversion chart](https://www.mustangps.org/Downloads/conversion_chart.pdf)  will be helpful, or you can use Google to find a particular conversion, for example just search for "km to miles".
+<!-- This [online unit converter](https://www.unitconverters.net/) or [Google's unit converter](https://www.google.com/search?q=unit+conversion) will help you to solve these problems -->
+
+1. The density is
+
+$$ 
+\left( 3 \, \frac{g}{mL} \right) \left( \frac{1}{1000} \, \frac{kg}{g} \right)\left( \frac{1}{0.45} \, \frac{pound}{kg} \right)\left( \frac{16.39}{1} \,\frac{mL}{in^3} \right)
+= 0.11
+\frac{pound}{in^3}
+$$
+
+2. The car is traveling at 
+
+$$ 
+\left( 35  \, \frac{mi}{hr} \right) \left( \frac{5280}{1} \, \frac{ft}{mi} \right)\left( \frac{1}{3600} \, \frac{hr}{sec} \right)
+= 51.33
+\frac{ft}{sec}
+$$
+
+
+3. The energy is
+
+
+$$ 
+\left( 250   \frac{W}{m^2} \right) \left( 10 \, m^2 \right) \left( 7 \, days \right)  \left( \frac{1}{1} \, \frac{J/sec}{W} \right)  \left( \frac{24}{1} \, \frac{hr}{day} \right)  
+\left( \frac{3600}{1} \frac{sec}{hr} \right)
+= 1.512 \times 10^9 \, J
+$$
