@@ -159,9 +159,10 @@ sum(areas)
 The marginal cost of making cupcakes is given by $$K'(q)=\frac{1}{100}q^2+\frac{1}{5}q+1,$$ 
 where $q$ is in dozens of cupcakes. 
 
-1. Set up a definite integral to calculate $K(30)-K(0)$, which is the change in costs when we create 30 dozen cupcakes.
+1. By the Fundamental Theorem of Calculus, the definite integral that calculates $K(30)-K(0)$ is
 
-$\displaystyle{\int_0^{30} K'(q) dq = \int_0^{30} \left( \frac{1}{100}q^2+\frac{1}{5}q+1 \right) dq }$
+$$\int_0^{30} K'(q) dq = \int_0^{30} \left( \frac{1}{100}q^2+\frac{1}{5}q+1 \right) dq 
+$$
 
 2. Here is our *RStudio* estimate. 
 
@@ -189,8 +190,6 @@ sum(areas)
 1. The sine curve is above the cosine curve. So the area is
 $$\displaystyle{\int_{\pi/4}^{5\pi/4} ( \sin(x) - \cos(x)) dx}.$$
 
-  
-Hint: $\sin(x) = \cos(x)$ at $x=\pi/4$ and $x=5\pi/4$.
 2. Our *RStudio* estimate is
 
 ```{r}

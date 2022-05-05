@@ -23,7 +23,7 @@ We have already estimated the change in population from $t=0$ to $t=3$ using int
 You can do this by hand, or use Desmos to help out. Decide whether your value is an over-estimate or an under-estimate.
 
 
-## The Change in World Population
+### The Change in World Population
 
 The rate of change of the world's population, in millions of people per year, is in the table below. 
 
@@ -68,11 +68,11 @@ sum(areas)
 ```
 
 1. Update this code to estimate this area using
-   1. A **right endpoint estimation** on intervals of size $0.1$
-   1. A **right endpoint estimation** on intervals of size $0.01$
-   1. A **left endpoint estimation** on intervals of size $0.5$
-   1. A **left endpoint estimation** on intervals of size $0.01$
-   1. A **left endpoint estimation** on intervals of size $0.00001$
+   a. A **right endpoint estimation** on intervals of size $0.1$
+   b. A **right endpoint estimation** on intervals of size $0.01$
+   c. A **left endpoint estimation** on intervals of size $0.5$
+   d. A **left endpoint estimation** on intervals of size $0.01$
+   e. A **left endpoint estimation** on intervals of size $0.00001$
   
 2. Make a plot of $f(x)$ on $[0,4]$. Is is clear whether each of the values about is an over-estimate? an under-estimate? or neither?
 
@@ -102,7 +102,7 @@ f(0)*0.5 + f(0.5)*0.5 + f(1)*0.5 + f(1.5)*0.5 + f(2)*0.5 + f(2.5)*0.5
 
 
 
-## The Change in World Population
+### The Change in World Population
 
 1. Left endpoint estimate
 
@@ -138,7 +138,7 @@ f(0)*0.5 + f(0.5)*0.5 + f(1)*0.5 + f(1.5)*0.5 + f(2)*0.5 + f(2.5)*0.5
 
 
 1. We estimate the area below $f(x)=2+4x^2-x^3$ on the interval $0 \leq x \leq 4$ using
-   1. A **right endpoint estimation** on intervals of size $0.1$
+   a. A **right endpoint estimation** on intervals of size $0.1$
 
 ```{r}
 f=makeFun(2+4*x^2-x^3~x)
@@ -153,7 +153,7 @@ sum(areas)
 
    
    
-   1. A **right endpoint estimation** on intervals of size $0.01$
+   b. A **right endpoint estimation** on intervals of size $0.01$
    
 ```{r}
 f=makeFun(2+4*x^2-x^3~x)
@@ -166,7 +166,7 @@ areas = base*heights
 sum(areas)
 ```    
    
-   1. A **left endpoint estimation** on intervals of size $0.5$
+   c. A **left endpoint estimation** on intervals of size $0.5$
    
 ```{r}
 f=makeFun(2+4*x^2-x^3~x)
@@ -179,7 +179,7 @@ areas = base*heights
 sum(areas)
 ``` 
 
-   1. A **left endpoint estimation** on intervals of size $0.01$
+   d. A **left endpoint estimation** on intervals of size $0.01$
    
 ```{r}
 f=makeFun(2+4*x^2-x^3~x)
@@ -192,7 +192,7 @@ areas = base*heights
 sum(areas)
 ``` 
 
-   1. A **left endpoint estimation** on intervals of size $0.00001$
+   e. A **left endpoint estimation** on intervals of size $0.00001$
    
 ```{r}
 f=makeFun(2+4*x^2-x^3~x)

@@ -59,7 +59,8 @@ f = makeFun(cos(x)*(x^2-y^2)~x&y)
 plotFun(f(x,y)~x&y, xlim=range(-1.5,1.5), ylim=range(-1.5,1.5), filled=FALSE)
 ```
 
-## Classifying a critical point using a small circle of values
+
+### Classifying a critical point using a small circle of values
 
 The function $f(x,y) =3x^2y + y^3 -3x^2-3y^2+3$ has four critical points:
 $$
@@ -68,7 +69,7 @@ $$
 For each critical point $(a,b)$, evaluate $f(a,b) - f(x,y)$ in a small circle centered at $(a,b)$ to determine whether it is a local minimum, a local maximum, or a saddle point
 
 
-## The 2D Second Derivative Test
+### The 2D Second Derivative Test
 
 The function $f(x,y)=10 + x^3 + 8y^3 - 3xy$ has two critical points: $(0,0)$ and $(1/2,1/4)$. 
 
@@ -81,11 +82,11 @@ $$
 2. Confirm that your answer is correct by creating a contour plot on a very small neighborhood around each critical point.
 
 
-## Classify the Critical Points
+### Classify the Critical Points
 
 Find the critical points of $f(x,y)=9-2x+4y-x^2-4y^2$. Then use any method that you like to classify each one as a local minimum, a local maximum or a saddle point.
 
-## Optimizing Flight Control
+### Optimizing Flight Control
 
 The range over which a flying drone can be guided is related to the atmospheric temperature and humidity. The range function is 
 $$
@@ -116,7 +117,7 @@ Plot 4
 
 
 
-## Classifying a critical point using a small circle of values
+### Classifying a critical point using a small circle of values
 
 Let's define our function and then check each of our critical points.
 
@@ -169,7 +170,7 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
 
 
 
-## The 2D Second Derivative Test
+### The 2D Second Derivative Test
 
 The function $f(x,y)=10 + x^3 + 8y^3 - 3xy$ has two critical points: $(0,0)$ and $(1/2,1/4)$. 
 
@@ -199,7 +200,7 @@ plotFun(f(x,y)~x&y, xlim=range(0,1), ylim=range(0,1), filled=FALSE)
 ```
 
 
-## Classify the Critical Points
+### Classify the Critical Points
 
 Let's find the critical points of $f(x,y)=9-2x+4y-x^2-4y^2$. We have
 $$
@@ -220,7 +221,7 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
 
 This is a local maximum!
 
-## Optimizing Flight Control
+### Optimizing Flight Control
 
 Our function is $R(t,h)=27800-5t^2-6ht-3h^2+400t+300h$. Our partial derivatives are
 $$
