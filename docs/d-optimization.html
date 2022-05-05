@@ -668,14 +668,14 @@ Using the first derivative test, we have <span class="math inline">\(f&#39;(-1) 
 <li><p>We have <span class="math inline">\(g(x) = x + \sin(x)\)</span> and therefore <span class="math inline">\(g&#39;(x) = 1 + \sin(x)\)</span>. There is one critical point:
 <span class="math display">\[
 \begin{array}{rcl}
-1 + \sin(x) &amp;=&amp; 0 \\
-\sin(x) &amp;=&amp; -1 \\
-x &amp;=&amp; 3\pi/2
+1 + \cos(x) &amp;=&amp; 0 \\
+\cos(x) &amp;=&amp; -1 \\
+x &amp;=&amp; \pi
 \end{array}
 \]</span></p></li>
 </ol>
-<p>We have <span class="math inline">\(g&#39;(\pi) = 1 &gt; 0\)</span> and <span class="math inline">\(g&#39;(2 \pi) = 1 &gt; 0\)</span>. Therefore this point is not an extremum.</p>
-<p>To find all the extrema of <span class="math inline">\(g(x)\)</span>, we need to consider the endpoints of <span class="math inline">\([0,2\pi]\)</span>. It turns out that <span class="math inline">\(x=0\)</span> is the global minimum, and <span class="math inline">\(x=2\pi\)</span> is the global maximum.</p>
+<p>We have <span class="math inline">\(g&#39;(\pi/2) = 1 &gt; 0\)</span> and <span class="math inline">\(g&#39;(3 \pi/2) = 1 &gt; 0\)</span>. (In fact, <span class="math inline">\(1+\cos(x)\)</span> is never negative) Therefore this point is not an extremum.</p>
+<p>To find all the extrema of <span class="math inline">\(g(x)\)</span>, we need to consider the endpoints of <span class="math inline">\([0,2\pi]\)</span>. The function never decreases as we move from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\pi\)</span>.So <span class="math inline">\(x=0\)</span> is the global minimum, and <span class="math inline">\(x=2\pi\)</span> is the global maximum.</p>
 </div>
 <div id="second-derivative-test-1" class="section level3">
 <h3><span class="header-section-number">23.2.3</span> Second Derivative Test</h3>
@@ -700,10 +700,15 @@ f&#39;&#39;(3) &amp;=&amp; 108 - 144 + 44 &gt; 0 \\
 <h3><span class="header-section-number">23.2.4</span> Cupcake Store</h3>
 <p>A cupcake store finds that at a price of $4.00, the demand is 400 cupcakes. For every $.25 decrease in price, the demand increases by 20 cupcakes.</p>
 <ol style="list-style-type: decimal">
-<li><p>The demand is
-<span class="math display">\[q(x) = 400 + \frac{20}{0.25}( 4 - x)= 400 + 80(4-x)\]</span></p></li>
+<li><p>The description of the demand function tells us that <span class="math inline">\(q(x)\)</span> is a linear function with a negative slope. The slope is <span class="math inline">\(20/(-.25)=-80\)</span>. So <span class="math inline">\(q(x) = -80x + c\)</span> and we can determine <span class="math inline">\(c\)</span> by using the fact that <span class="math inline">\(q(4)=400\)</span>.
+We have
+<span class="math display">\[
+400 = -80 \cdot 4 + c = -320 + c
+\]</span>
+so <span class="math inline">\(c=720\)</span>. In conclusion, our demand function is
+<span class="math display">\[q(x) = -80x + 720.\]</span></p></li>
 <li><p>The revenue at price <span class="math inline">\(x\)</span> is
-<span class="math display">\[r(x) = x q(x) = x \left(400 + 80(4-x) \right) = -80x^2 + 720x.\]</span>
+<span class="math display">\[r(x) = x q(x) = x \left(-80x + 720 \right) = -80x^2 + 720x.\]</span>
 Taking the derivative and solving for critical points gives
 <span class="math display">\[
 -160 x + 720 = 0
