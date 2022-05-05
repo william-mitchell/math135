@@ -24,6 +24,17 @@ Find the indefinite integral.
 9. $\displaystyle{\int \sin(3x)-2\cos(x)dx}$
 10. $\displaystyle{\int 7e^{-0.02t}+\frac{4}{t}\,dt}$
 
+
+### Definite Integral Practice
+
+Evaluate the definite integral using antiderivates.
+
+1. $\displaystyle{\int_{-2}^5 x^2 \,dx}$
+2. $\displaystyle{\int_0^{\pi/4} \sin(x) + e^{x}\,dx}$
+3. $\displaystyle{\int_1^e 4t + \frac{1}{4t} \,dt}$
+
+
+
 ### Area Between Curves
 
 Find the area enclosed by the curves $f(x)=5-x^2$ and $g(x)=x^2-3$ by following the steps below
@@ -89,6 +100,32 @@ Find the indefinite integral.
 9. $-\frac{1}{3} \cos(3x) - 2\sin(x) + C$
 10. $-350 e^{-0.02t} + 4\ln t + C$
 
+### Definite Integral Practice
+
+We solve each of these using the Fundamental Theorem of Calculus. If $F'(x)=f(x)$ then
+$$
+\int_a^b f(x) dx = F(b) - F(a).
+$$
+
+1. We have
+\begin{align}
+\int_{-2}^5 x^2 \,dx &=& \left. \frac{1}{3}x^3  \right|_{-2}^5 = \frac{125}{3} + \frac{8}{3} = \frac{133}{3}. 
+\end{align}
+
+
+
+2. We have
+\begin{align}
+\int_0^{\pi/4} \sin(x) + e^{x}\,dx &= \left. -\cos(x) + e^x \right|_0^{\pi/4} = -\cos(\pi/4) + e^{\pi/4} - (-\cos(0) + e^0)  \\
+&= -\frac{\sqrt{2}}{2} + e^{\pi/4} - (-1+1) = -\frac{\sqrt{2}}{2} + e^{\pi/4}.
+\end{align}
+
+
+3. We have
+\begin{align}
+\int_1^e 4t + \frac{1}{4t} \,dt &=& \left. 2t^2 + \frac{1}{4} \ln(t) \right|_1^e = 2e^2 + \frac{1}{4} \ln(e^2) - \left( 2e^0 + \frac{1}{4} \ln(1) \right) \\
+&=& 2e^2 + \frac{1}{2} - 2 - 0 = 2e^2 + \frac{3}{2}
+\end{align}
 
 ### Area Between Curves
 
