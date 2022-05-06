@@ -530,7 +530,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="30.1" data-path="rules-of-integration.html"><a href="rules-of-integration.html#the-fundamental-theorem-of-calculus"><i class="fa fa-check"></i><b>30.1</b> The Fundamental Theorem of Calculus</a></li>
 <li class="chapter" data-level="30.2" data-path="rules-of-integration.html"><a href="rules-of-integration.html#integrals-of-familiar-functions"><i class="fa fa-check"></i><b>30.2</b> Integrals of Familiar Functions</a><ul>
 <li class="chapter" data-level="30.2.1" data-path="rules-of-integration.html"><a href="rules-of-integration.html#constant-rule-1"><i class="fa fa-check"></i><b>30.2.1</b> Constant Rule</a></li>
-<li class="chapter" data-level="30.2.2" data-path="rules-of-integration.html"><a href="rules-of-integration.html#power-rule-1"><i class="fa fa-check"></i><b>30.2.2</b> Power Rule</a></li>
+<li class="chapter" data-level="30.2.2" data-path="rules-of-integration.html"><a href="rules-of-integration.html#power-rules"><i class="fa fa-check"></i><b>30.2.2</b> Power Rules</a></li>
 <li class="chapter" data-level="30.2.3" data-path="rules-of-integration.html"><a href="rules-of-integration.html#trig-rules-1"><i class="fa fa-check"></i><b>30.2.3</b> Trig Rules</a></li>
 <li class="chapter" data-level="30.2.4" data-path="rules-of-integration.html"><a href="rules-of-integration.html#exponential-rules-1"><i class="fa fa-check"></i><b>30.2.4</b> Exponential Rules</a></li>
 <li class="chapter" data-level="30.2.5" data-path="rules-of-integration.html"><a href="rules-of-integration.html#logarithmic-rules-1"><i class="fa fa-check"></i><b>30.2.5</b> Logarithmic Rules</a></li>
@@ -603,10 +603,14 @@ and
 <p>The integral of a constant <span class="math inline">\(a\)</span> is <span class="math inline">\(ax+C\)</span>.
 <span class="math display">\[\int a \, dx= ax +C\]</span></p>
 </div>
-<div id="power-rule-1" class="section level3">
-<h3><span class="header-section-number">30.2.2</span> Power Rule</h3>
+<div id="power-rules" class="section level3">
+<h3><span class="header-section-number">30.2.2</span> Power Rules</h3>
 <p>For <span class="math inline">\(n \neq -1\)</span>,
-<span class="math display">\[\int x^n \, dx= \frac{1}{n+1} x^{n+1} +C\]</span></p>
+<span class="math display">\[\int x^n \, dx= \frac{1}{n+1} x^{n+1} +C\]</span>
+and
+<span class="math display">\[
+\int \frac{1}{x} \, dx = \ln (x) + C
+\]</span></p>
 </div>
 <div id="trig-rules-1" class="section level3">
 <h3><span class="header-section-number">30.2.3</span> Trig Rules</h3>
@@ -643,7 +647,7 @@ and
 <div id="substitution-rule" class="section level3">
 <h3><span class="header-section-number">30.3.3</span> Substitution Rule</h3>
 <p>For any constant <span class="math inline">\(k\)</span>,
-<span class="math display">\[\int f&#39;(kx) = \frac{1}{k} f(x) + C\]</span></p>
+<span class="math display">\[\int f&#39;(kx) = \frac{1}{k} f(kx) + C\]</span></p>
 </div>
 </div>
 <div id="rules-for-endpoints" class="section level2">

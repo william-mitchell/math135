@@ -321,7 +321,7 @@ rules-of-integration
 the-fundamental-theorem-of-calculus
 integrals-of-familiar-functions
 constant-rule-1
-power-rule-1
+power-rules
 trig-rules-1
 exponential-rules-1
 logarithmic-rules-1

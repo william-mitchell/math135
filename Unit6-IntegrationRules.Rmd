@@ -17,10 +17,15 @@ $$\int a \, dx= ax +C$$
 
 
 
-### Power Rule
+### Power Rules
 
 For $n \neq -1$, 
 $$\int x^n \, dx= \frac{1}{n+1} x^{n+1} +C$$
+and
+$$
+\int \frac{1}{x} \, dx = \ln (x) + C
+$$
+
 
 ### Trig Rules
 
@@ -57,7 +62,7 @@ $$\int (f(x)-g(x)) \,dx= \int f(x) \, dx - \int g(x)\, dx$$
 ### Substitution Rule
 
 For any constant  $k$,
-$$\int f'(kx) = \frac{1}{k} f(x) + C$$
+$$\int f'(kx) = \frac{1}{k} f(kx) + C$$
 
 
 ## Rules for Endpoints
