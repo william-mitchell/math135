@@ -10,7 +10,7 @@
 2. Make some observations and collect the corresponding data.
 3. Conjecture a model or modify a known model based on the data.
 4. Test the model against known data (from step 2.) and modify the model as needed.
-5. Repeat steps 2.-4. to improve the model
+5. Repeat steps 2, 3 and 4 to improve the model
 
 ## Goals
 
@@ -37,7 +37,7 @@ In the Andes mountains in Peru, the number $N$ of species of bats is a *function
 3. Interpret the statement $f(500)=200$ if $f$ represents this function.
 4. Do you expect this function to be increasing or decreasing? Why?
 
-### Slope and cconcavity
+### Slope and concavity
 Sketch each of the following:
 
 1. An increasing function that is concave up

@@ -45,6 +45,7 @@ A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For
 
 Find the price and quantity that maximize the revenue.
 
+<!--
 ## Solutions
 
 ### Characterize the Extrema
@@ -134,3 +135,5 @@ $$
 and therefore $x=720/160= 4.5$. By the second derivative test, this is a local maximum.  
 
 We sell $q(4.5) = 400 - 40 = 360$ cupcakes and obtain revenue $r(4.5) = 4.5 \cdot 360 = 1620$.
+
+-->

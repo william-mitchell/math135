@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>23 Unit 4 Summary | MATH 135: AMC I</title>
+  <title>4 Functions | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="23 Unit 4 Summary | MATH 135: AMC I" />
+  <meta property="og:title" content="4 Functions | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="23 Unit 4 Summary | MATH 135: AMC I" />
+  <meta name="twitter:title" content="4 Functions | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="the-gradient.html"/>
-<link rel="next" href="d-optimization.html"/>
+<link rel="prev" href="intro-to-rstudio.html"/>
+<link rel="next" href="linear-functions.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -473,45 +473,107 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="unit-4-summary" class="section level1">
-<h1><span class="header-section-number">23</span> Unit 4 Summary</h1>
-<div id="symbolic-derivatives" class="section level2">
-<h2><span class="header-section-number">23.1</span> Symbolic Derivatives</h2>
-<p>I can …</p>
+<div id="functions-1" class="section level1">
+<h1><span class="header-section-number">4</span> Functions</h1>
+<div id="steps-of-the-modeling-cycle" class="section level2">
+<h2><span class="header-section-number">4.1</span> Steps of the Modeling Cycle</h2>
+<ol style="list-style-type: decimal">
+<li>Ask a question about reality.</li>
+<li>Make some observations and collect the corresponding data.</li>
+<li>Conjecture a model or modify a known model based on the data.</li>
+<li>Test the model against known data (from step 2.) and modify the model as needed.</li>
+<li>Repeat steps 2, 3 and 4 to improve the model</li>
+</ol>
+</div>
+<div id="goals" class="section level2">
+<h2><span class="header-section-number">4.2</span> Goals</h2>
 <ul>
-<li>Find the derivative of <span class="math inline">\(x^n\)</span>, <span class="math inline">\(\sin(x)\)</span>, <span class="math inline">\(\cos(x)\)</span>, <span class="math inline">\(e^x\)</span>, <span class="math inline">\(a^x\)</span>, <span class="math inline">\(\ln(x)\)</span>, and <span class="math inline">\(\log_a(x)\)</span>.</li>
-<li>Find the derivative …
-<ul>
-<li>of the sum of function</li>
-<li>using the product rule</li>
-<li>using the quotient rule</li>
-<li>using the chain rule</li>
-</ul></li>
-<li>Explain why the derivative is not defined for a cusp point.</li>
-<li>Solve a “word problem” about rates of change by using derivatives.</li>
+<li>Explain what a function is</li>
+<li>Identify and explain independent and dependent variables</li>
+<li>Recognize functions in a variety of forms</li>
+<li>Find a function’s intercept(s)</li>
+<li>Identify regions where a function is increasing/decreasing</li>
+<li>Compute the average rate of change between two points on a function</li>
+<li>Determine where a function is concave up/down</li>
+<li>Compute the relative change between two points on a function</li>
 </ul>
 </div>
-<div id="partial-derivatives-2" class="section level2">
-<h2><span class="header-section-number">23.2</span> Partial Derivatives</h2>
-<p>I can …</p>
-<ul>
-<li>Interpret the partial derivatives <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> as rates of change.</li>
-<li>Find the partial derivatives of a function <span class="math inline">\(f(x,y)\)</span> by holding one variable fixed and then applying the rules of differentiation.</li>
-<li>Find the second partial derivatives <span class="math inline">\(f_{xx}, f_{xy}, f_{yx}, f_{yy}\)</span>.</li>
-<li>Solve a “word problem” about rates of change of a multivariable function using partial derivatives.</li>
-</ul>
+<div id="activities" class="section level2">
+<h2><span class="header-section-number">4.3</span> Activities</h2>
+<div id="life-insurance" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Life insurance</h3>
+<p>A family needs to purchase life insurance. What possible inputs might be used to determine the premium (monthly payment) for life insurance?</p>
 </div>
-<div id="the-gradient-1" class="section level2">
-<h2><span class="header-section-number">23.3</span> The Gradient</h2>
-<p>I can …</p>
-<ul>
-<li>Explain what a vector <span class="math inline">\(\langle a, b \rangle\)</span> is, draw it as an arrrow, and find its magnitude <span class="math inline">\(\| \langle a, b \rangle \| = \sqrt{a^2+b^2}.\)</span></li>
-<li>Find the gradient vector <span class="math inline">\(\nabla f(x,y) = \langle f_x, f_y \rangle\)</span></li>
-<li>Evaluate the gradient vector at a point <span class="math inline">\((a,b)\)</span></li>
-<li>Use the gradient to find the direction of greatest increase, and the magnitude of the gradient to find the rate of change (slope) in that direction</li>
-<li>Draw a vector in the direction of greatest increase on a contour diagram.</li>
-</ul>
+<div id="bat-species" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Bat species</h3>
+<p>In the Andes mountains in Peru, the number <span class="math inline">\(N\)</span> of species of bats is a <em>function</em> of the elevation <span class="math inline">\(h\)</span> in feet above sea level.</p>
+<ol style="list-style-type: decimal">
+<li>What is the independent variable?</li>
+<li>What is the dependent variable?</li>
+<li>Interpret the statement <span class="math inline">\(f(500)=200\)</span> if <span class="math inline">\(f\)</span> represents this function.</li>
+<li>Do you expect this function to be increasing or decreasing? Why?</li>
+</ol>
+</div>
+<div id="slope-and-concavity" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Slope and concavity</h3>
+<p>Sketch each of the following:</p>
+<ol style="list-style-type: decimal">
+<li>An increasing function that is concave up</li>
+<li>An increasing function that is concave down</li>
+<li>A decreasing function that is concave up</li>
+<li>A decreasing function that is concave down</li>
+</ol>
+</div>
+<div id="relative-change-of-the-dow-jones-average" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> Relative change of the Dow Jones average</h3>
+<p>The <em>relative change</em> of a function <span class="math inline">\(f(x)\)</span> on interval <span class="math inline">\([a,b]\)</span> is
+<span class="math display">\[ \frac{f(b)-f(a)}{f(a)}.\]</span></p>
+<ol style="list-style-type: decimal">
+<li>What is the <em>relative change</em> in the Dow Jones average from 169.84 to 77.90 (from 1 January 1931 to 31 December 1931)?</li>
+<li>Compare this to the <em>relative change</em> in the Dow Jones average from 35,443.82 to 35369.09 (from 2 September 2021 to 3 September 2021).</li>
+</ol>
+</div>
+<div id="measuring-rainfall" class="section level3">
+<h3><span class="header-section-number">4.3.5</span> Measuring rainfall</h3>
+<p>One rainy summer day, measurements were recorded (in inches) from a rain gauge every hour.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Time</strong></th>
+<th>8 am</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>noon</th>
+<th>1 pm</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5 pm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Amount</strong></td>
+<td>0.15</td>
+<td>0.17</td>
+<td>0.2</td>
+<td>0.45</td>
+<td>0.48</td>
+<td>0.75</td>
+<td>1.03</td>
+<td>1.20</td>
+<td>1.45</td>
+<td>1.60</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li>What was the average rate of rainfall from 8 a.m. to 5 p.m.?</li>
+<li>What are the units of this rate of change?</li>
+</ol>
 
+</div>
 </div>
 </div>
 
@@ -522,8 +584,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           </div>
         </div>
       </div>
-<a href="the-gradient.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="d-optimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro-to-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="linear-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

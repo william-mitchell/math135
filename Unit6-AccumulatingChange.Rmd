@@ -76,7 +76,7 @@ sum(areas)
   
 2. Make a plot of $f(x)$ on $[0,4]$. Is is clear whether each of the values about is an over-estimate? an under-estimate? or neither?
 
-
+<!--
 ## Solutions
 
 
@@ -219,3 +219,5 @@ It is **not** clear whether any of these values is an over-estimate or an under-
 * A right endpoint estimate will be an over-estimate on $[0,2.75]$ and an under-estimate on $[2.75,4]$.
 
 So we can't easily tell whether it's an under-estimate or an over-estimate.
+
+-->

@@ -84,7 +84,7 @@ $$ \frac{f(b)-f(a)}{f(a)}.$$
 2. Compare this to the *relative change* in the Dow Jones average from 35,443.82 to 35369.09 (from 2 September 2021 to 3 September 2021).
 
 
-
+<!--
 ## Solutions
 
 ### AROC of a function
@@ -124,7 +124,6 @@ Here are three very different functions that all have an average rate of change 
 
 
 
-<!-- y=\frac{-\left(x-1\right)\left(\frac{x}{3}-3\right)\left(x-7\right)\left(x-2\right)}{8}+5 -->
 
 
 ### Vinyl LPs
@@ -150,5 +149,5 @@ $$
 $$ \frac{77.90-169.84}{169.84}=-0.541,$$
 2. The relative change is 
 $$\frac{35369.09-35443.82}{35443.82}=-0.002.$$
-
+-->
 

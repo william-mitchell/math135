@@ -82,6 +82,7 @@ where $t$ is the number of days since the start of the outbreak.
 2.  How many total people get infected by time $T$ where $T$ is a very large number? 
 
 
+<!--
 
 ## Solutions
 
@@ -221,3 +222,7 @@ $$
 \int_0^T 1000 e^{-0.5t} \, dt = \left. \frac{1000}{-0.5} e^{-0.5t} \right|_0^T = - \frac{1000}{0.5} e^{-0.5 T} + \frac{1000}{0.5} e^{0} = 2000 \left( 1 - \frac{1}{e^{0.5 T}}\right).
 $$
 For very large $T$ the second term is basically 0. So we have 2000 zombies by the end of the outbreak. Gosh, that's not too bad! 
+
+-->
+
+

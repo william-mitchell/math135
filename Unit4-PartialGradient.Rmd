@@ -48,6 +48,7 @@ Let $f(x,y) = 3x^2 - 4xy + y^2$.
 1. Find the rate of change of $f(x,y)$ at $(2,1)$ in the direction of greatest increase.
 
 
+<!--
 ## Solutions
 
 
@@ -136,3 +137,5 @@ plotPoints(c(5,2,6)~c(0.9,2.2,4.5), add=TRUE, col='blue', pch=8)
 1. $\nabla f(x,y) = \langle 6x - 4y, -4x + 2y \rangle$ so 
 $\nabla f(x,y) = \langle 12 - 4, -8 + 2 \rangle = \langle 8, -6 \rangle$.
 1. $\| \nabla f(2,1) \| = \sqrt{8^2 + (-6)^2} = \sqrt{64+36} = \sqrt{100} = 10.$
+
+-->

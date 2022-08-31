@@ -53,7 +53,7 @@ You will end at the point `(1.04,0.77)`. But note that starting at another initi
 1. How should I change to the code if I want to find a **local minimum** instead of a local maximum? (Hint: we want to take a small step downhill.)
 2. Use gradient search to find a **local minimum** of 
 $$f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.$$
-
+<!--
 ## Solutions
 
 ### Finding a Local Minimum
@@ -87,3 +87,5 @@ c(newx, newy)
 ```
 
 If we run this 20 or 30 times, the partial derivatives become zero, and we estimate our local minimum to be the point $(-1.37, -0.13)$.
+
+-->
