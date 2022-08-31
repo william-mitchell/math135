@@ -55,11 +55,6 @@ graph-of-a-linear-function
 height-and-weight-of-american-men
 scooter-rates
 oil-reserves
-solutions
-graph-of-a-linear-function-1
-height-and-weight-of-american-men-1
-scooter-rates-1
-oil-reserves-1
 average-rate-of-change
 goals-2
 activities-2

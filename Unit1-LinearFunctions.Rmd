@@ -70,6 +70,9 @@ plotPoints(R~Y,main="World Population Growth Rate",xlab="Year (since 1995)",ylab
    
 -->
 
+
+
+<!--
 ## Solutions
 
 ### Graph of a linear function
@@ -106,6 +109,8 @@ Note that there is no "unlocking" fee in this plan. If there was an unlocking fe
 $$ B(t) =  - 35.11t+ 1650.$$
 
 2. The rate of change is 35.11 billions of barrels per year. This is the annual consumption of oil. The vertical intercept os 1650 barrels. This is the amount of oil reserves in 2016.
+
+-->
 
 
 
