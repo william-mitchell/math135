@@ -30,7 +30,7 @@ The consumer price index (CPI) for a given year is the amount of money in that y
 
 
 ### Two data sets
-Here are approximate values of two functions. For each one, decide whether it could be a linear function or an exponentialfunction. Give a reason and then find an approximate formula.
+Here are approximate values of two functions. For each one, decide whether it could be a linear function or an exponential function. Give a reason and then find an approximate formula.
 
 |    |    |    |    |    |    |    |    |
 |----|----|----|----|----|----|----|----|
@@ -60,7 +60,7 @@ Radioactive cobalt-60 has a half-life of 5.3 years. If the initial amount is 60 
 
 ### Doubling time
 
-The doubling time of an exponentially increasing fuunction is the amount of time it takes for the quantity to double. Find the doubling time for the function $f(t) = 10 e^{1.2t}$.
+The doubling time of an exponentially increasing function is the amount of time it takes for the quantity to double. Find the doubling time for the function $f(t) = 10 e^{1.2t}$.
 
 ### People and vehicles
 In 1980, there were about 170 million vehicles (cars and trucks) and about 227 million people in the United States. The number of vehicles has been  growing at an annual rate of  4\% a year, while the population has been growing at an annual rate of 1\% a year. 

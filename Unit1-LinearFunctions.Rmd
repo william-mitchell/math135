@@ -9,6 +9,18 @@
  - Describe the effects of varying parameters in linear functions
  - Assess whether given data is linear and, if so, model it with a function
  
+## Linear Funtions
+
+Here are three ways to write a linear function, depending on the information that you have. 
+
+* Line with slope $m$ and vertical intercept $b$
+$$y = mx + b$$
+* Line with slope $m$ and containing point $(a,b)$
+$$ (y-b) = m (x-a)$$
+* Line that contains points $(a_1,b_1)$ and $(a_2,b_2)$
+$$ (y-b_1) = \frac{b_2 - b_1}{a_2 - a_1} (x - a_1)$$
+
+ 
 ## Activities
 
 ### Graph of a linear function

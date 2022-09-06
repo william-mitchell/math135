@@ -10,3 +10,5 @@ bookdown::gitbook:
       after: |
         <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
     # download: [pdf]
+bookdown::pdf_book:
+  keep_tex: yes

@@ -50,7 +50,7 @@ The *relative change* of a function $f(x)$ on interval $[a,b]$ is
 $$ \frac{f(b)-f(a)}{f(a)}.$$
 
 1. What is the *relative change* in the Dow Jones average from 169.84 to 77.90 (from 1 January 1931 to 31 December 1931)? 
-2. Compare this to the *relative change* in the Dow Jones average from 35,443.82 to 35369.09 (from 2 September 2021 to 3 September 2021).
+2. Compare this to the *relative change* in the Dow Jones average from 35,443.82 to 35,369.09 (from 2 September 2021 to 3 September 2021).
 
 ### Measuring rainfall
 One rainy summer day, measurements were recorded (in inches) from a rain gauge every hour. 

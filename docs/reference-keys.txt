@@ -50,6 +50,7 @@ relative-change-of-the-dow-jones-average
 measuring-rainfall
 linear-functions
 goals-1
+linear-funtions
 activities-1
 graph-of-a-linear-function
 height-and-weight-of-american-men
