@@ -56,6 +56,11 @@ graph-of-a-linear-function
 height-and-weight-of-american-men
 scooter-rates
 oil-reserves
+solutions
+graph-of-a-linear-function-1
+height-and-weight-of-american-men-1
+scooter-rates-1
+oil-reserves-1
 average-rate-of-change
 goals-2
 activities-2
@@ -66,6 +71,14 @@ slope-and-concavity-1
 example-function
 vinyl-lps
 relative-change-of-the-dow-jones-average-1
+solutions-1
+aroc-of-a-function-1
+measuring-daily-rainfall-1
+sketching-a-function-1
+slope-and-concavity-2
+example-function-1
+vinyl-lps-1
+relative-change-of-the-dow-jones-average-2
 exponential-and-logarithmic-functions
 goals-3
 activities-3
