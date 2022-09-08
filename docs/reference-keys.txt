@@ -89,6 +89,14 @@ interest-rate-for-an-investment
 exponential-decay
 doubling-time
 people-and-vehicles
+solutions-2
+growing-population-1
+consumer-price-index-1
+two-data-sets-1
+interest-rate-for-an-investment-1
+exponential-decay-1
+doubling-time-1
+people-and-vehicles-1
 power-functions
 goals-4
 activities-4
