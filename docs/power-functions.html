@@ -271,6 +271,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="8.2.3" data-path="power-functions.html"><a href="power-functions.html#allometry-of-pectoral-fins"><i class="fa fa-check"></i><b>8.2.3</b> Allometry of pectoral fins</a></li>
 <li class="chapter" data-level="8.2.4" data-path="power-functions.html"><a href="power-functions.html#specific-heat"><i class="fa fa-check"></i><b>8.2.4</b> Specific heat</a></li>
 </ul></li>
+<li class="chapter" data-level="8.3" data-path="power-functions.html"><a href="power-functions.html#solutions-3"><i class="fa fa-check"></i><b>8.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="power-functions.html"><a href="power-functions.html#examples-and-non-examples-1"><i class="fa fa-check"></i><b>8.3.1</b> Examples and non-examples</a></li>
+<li class="chapter" data-level="8.3.2" data-path="power-functions.html"><a href="power-functions.html#descriptions-of-power-functions-1"><i class="fa fa-check"></i><b>8.3.2</b> Descriptions of power functions</a></li>
+<li class="chapter" data-level="8.3.3" data-path="power-functions.html"><a href="power-functions.html#allometry-of-pectoral-fins-1"><i class="fa fa-check"></i><b>8.3.3</b> Allometry of pectoral fins</a></li>
+<li class="chapter" data-level="8.3.4" data-path="power-functions.html"><a href="power-functions.html#specific-heat-1"><i class="fa fa-check"></i><b>8.3.4</b> Specific heat</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="periodic-functions.html"><a href="periodic-functions.html"><i class="fa fa-check"></i><b>9</b> Periodic Functions</a>
 <ul>
@@ -707,45 +714,47 @@ here is how you can find the constants <span class="math inline">\(p\)</span> an
 </tr>
 </tbody>
 </table>
-<!--
-## Solutions
-
-### Examples and non-examples
-
-1. $y=5 \cdot 3^x \quad$ No, this is an exponential function.
-2. $y = 10 x^{1/2} \quad$ Yes.
-3. $\displaystyle{y = \frac{7}{2} x^{-1}} \quad$ Yes.
-4. $y = 9x^2 -2 \quad$ No because it has a constant term.
-5. $y = (4x)^3 = 64x^3\quad$ Yes.
-
-### Descriptions of power functions
-
-Write a formula representing the function.
-
-1. $E = k v^3$
-2. $N = k L^{-2}$
-
-### Allometry of pectoral fins
-
-You can find my [desmos calculations here](https://www.desmos.com/calculator/rtmpxre4l4). 
-
-1. The log-log plot looks pretty linear. So the original function could be a power function.
-2. Fitting $\ln(F) \sim p \ln(L) + c$ gives $p=1.32$ and $c=-1.37$. Therefore $k=e^c=0.255$ and the power function is
-$$
+</div>
+</div>
+<div id="solutions-3" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Solutions<a href="power-functions.html#solutions-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="examples-and-non-examples-1" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Examples and non-examples<a href="power-functions.html#examples-and-non-examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(y=5 \cdot 3^x \quad\)</span> No, this is an exponential function.</li>
+<li><span class="math inline">\(y = 10 x^{1/2} \quad\)</span> Yes.</li>
+<li><span class="math inline">\(\displaystyle{y = \frac{7}{2} x^{-1}} \quad\)</span> Yes.</li>
+<li><span class="math inline">\(y = 9x^2 -2 \quad\)</span> No because it has a constant term.</li>
+<li><span class="math inline">\(y = (4x)^3 = 64x^3\quad\)</span> Yes.</li>
+</ol>
+</div>
+<div id="descriptions-of-power-functions-1" class="section level3 hasAnchor" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Descriptions of power functions<a href="power-functions.html#descriptions-of-power-functions-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Write a formula representing the function.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(E = k v^3\)</span></li>
+<li><span class="math inline">\(N = k L^{-2}\)</span></li>
+</ol>
+</div>
+<div id="allometry-of-pectoral-fins-1" class="section level3 hasAnchor" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Allometry of pectoral fins<a href="power-functions.html#allometry-of-pectoral-fins-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can find my <a href="https://www.desmos.com/calculator/rtmpxre4l4">desmos calculations here</a>.</p>
+<ol style="list-style-type: decimal">
+<li>The log-log plot looks pretty linear. So the original function could be a power function.</li>
+<li>Fitting <span class="math inline">\(\ln(F) \sim p \ln(L) + c\)</span> gives <span class="math inline">\(p=1.32\)</span> and <span class="math inline">\(c=-1.37\)</span>. Therefore <span class="math inline">\(k=e^c=0.255\)</span> and the power function is
+<span class="math display">\[
 F = 0.255 L^{1.32}.
-$$
-3. Since $p>1$, the fin lengths increase faster than the body length. This makes sense to me, since those fins have to push around all of that mass (which grows faster than the length, too).
-
-### Specific heat
-
-Here are [my desmos calculations](https://www.desmos.com/calculator/mkpxf7fnaf).
-
-The log-log plot looks linear with a negative slope. So the specific heat is inversely proportional to atomic weight. Fitting $\ln(s) = p \ln(w) + c$ gives $p=-0.985$ and $c=1.760$. Therefore $k=e^{1.76} = 5.812$. So our power function is
-$$
+\]</span></li>
+<li>Since <span class="math inline">\(p&gt;1\)</span>, the fin lengths increase faster than the body length. This makes sense to me, since those fins have to push around all of that mass (which grows faster than the length, too).</li>
+</ol>
+</div>
+<div id="specific-heat-1" class="section level3 hasAnchor" number="8.3.4">
+<h3><span class="header-section-number">8.3.4</span> Specific heat<a href="power-functions.html#specific-heat-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here are <a href="https://www.desmos.com/calculator/mkpxf7fnaf">my desmos calculations</a>.</p>
+<p>The log-log plot looks linear with a negative slope. So the specific heat is inversely proportional to atomic weight. Fitting <span class="math inline">\(\ln(s) = p \ln(w) + c\)</span> gives <span class="math inline">\(p=-0.985\)</span> and <span class="math inline">\(c=1.760\)</span>. Therefore <span class="math inline">\(k=e^{1.76} = 5.812\)</span>. So our power function is
+<span class="math display">\[
 s = 5.812 w^{-0.985}.
-$$
-
--->
+\]</span></p>
 
 </div>
 </div>

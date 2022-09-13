@@ -104,6 +104,11 @@ examples-and-non-examples
 descriptions-of-power-functions
 allometry-of-pectoral-fins
 specific-heat
+solutions-3
+examples-and-non-examples-1
+descriptions-of-power-functions-1
+allometry-of-pectoral-fins-1
+specific-heat-1
 periodic-functions
 goals-5
 activities-5
