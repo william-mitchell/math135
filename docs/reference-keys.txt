@@ -117,6 +117,12 @@ find-a-periodic-formula
 variable-star
 tides-and-currents
 rainfall-in-seattle
+solutions-4
+periodic-function-examples-1
+find-a-periodic-formula-1
+variable-star-1
+tides-and-currents-1
+rainfall-in-seattle-1
 multivariable-functions
 goals-6
 activities-6
