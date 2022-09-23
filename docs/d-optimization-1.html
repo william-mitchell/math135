@@ -309,6 +309,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="10.2.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.2.3</b> Cross Sections</a></li>
 <li class="chapter" data-level="10.2.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.2.4</b> Plotting in RStudio</a></li>
 </ul></li>
+<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.3.1</b> Matching Contours</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.3.2</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.3.3</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.3.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.3.4</b> Plotting in RStudio</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>II Units and Estimation</b></span></li>
 <li class="chapter" data-level="11" data-path="dimensions-and-units.html"><a href="dimensions-and-units.html"><i class="fa fa-check"></i><b>11</b> Dimensions and Units</a>
@@ -611,17 +618,17 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) </code></pre>
 <div id="characterize-the-extrema-1" class="section level3 hasAnchor" number="25.2.1">
 <h3><span class="header-section-number">25.2.1</span> Characterize the Extrema<a href="d-optimization-1.html#characterize-the-extrema-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Multiple 2D functions have been (contour) plotted below. For each, identify the critical points and determine if they are maximums, minimums, or saddle points.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="d-optimization-1.html#cb95-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span>y<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
-<span id="cb95-2"><a href="d-optimization-1.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="d-optimization-1.html#cb109-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span>y<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb109-2"><a href="d-optimization-1.html#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-94-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="d-optimization-1.html#cb96-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span>x<span class="sc">*</span>y<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
-<span id="cb96-2"><a href="d-optimization-1.html#cb96-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="d-optimization-1.html#cb110-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span>x<span class="sc">*</span>y<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb110-2"><a href="d-optimization-1.html#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-95-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="d-optimization-1.html#cb97-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(y<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
-<span id="cb97-2"><a href="d-optimization-1.html#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="d-optimization-1.html#cb111-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(y<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb111-2"><a href="d-optimization-1.html#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-96-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="d-optimization-1.html#cb98-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fu">cos</span>(x)<span class="sc">*</span>(x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
-<span id="cb98-2"><a href="d-optimization-1.html#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="d-optimization-1.html#cb112-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fu">cos</span>(x)<span class="sc">*</span>(x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb112-2"><a href="d-optimization-1.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-97-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="classifying-a-critical-point-using-a-small-circle-of-values" class="section level3 hasAnchor" number="25.2.2">
@@ -700,9 +707,8 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
 ```
 
 ```
-##  [1] 0.03000000 0.02913197 0.02864279 0.02863197 0.02886731 0.02900000 0.02886731 0.02863197
-##  [9] 0.02864279 0.02913197 0.03000000 0.03086803 0.03135721 0.03136803 0.03113269 0.03100000
-## [17] 0.03113269 0.03136803 0.03135721 0.03086803 0.03000000
+##  [1] 0.03000000 0.02913197 0.02864279 0.02863197 0.02886731 0.02900000 0.02886731 0.02863197 0.02864279 0.02913197 0.03000000
+## [12] 0.03086803 0.03135721 0.03136803 0.03113269 0.03100000 0.03113269 0.03136803 0.03135721 0.03086803 0.03000000
 ```
 
 
@@ -718,9 +724,9 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
 ```
 
 ```
-##  [1] -0.03000000 -0.03086803 -0.03135721 -0.03136803 -0.03113269 -0.03100000 -0.03113269
-##  [8] -0.03136803 -0.03135721 -0.03086803 -0.03000000 -0.02913197 -0.02864279 -0.02863197
-## [15] -0.02886731 -0.02900000 -0.02886731 -0.02863197 -0.02864279 -0.02913197 -0.03000000
+##  [1] -0.03000000 -0.03086803 -0.03135721 -0.03136803 -0.03113269 -0.03100000 -0.03113269 -0.03136803 -0.03135721 -0.03086803
+## [11] -0.03000000 -0.02913197 -0.02864279 -0.02863197 -0.02886731 -0.02900000 -0.02886731 -0.02863197 -0.02864279 -0.02913197
+## [21] -0.03000000
 ```
 
 
@@ -736,9 +742,9 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
 ```
 
 ```
-##  [1]  0.00000000 -0.01850159 -0.02988890 -0.02989973 -0.01876625 -0.00100000  0.01650087
-##  [8]  0.02716366  0.02717449  0.01676552  0.00000000 -0.01676552 -0.02717449 -0.02716366
-## [15] -0.01650087  0.00100000  0.01876625  0.02989973  0.02988890  0.01850159  0.00000000
+##  [1]  0.00000000 -0.01850159 -0.02988890 -0.02989973 -0.01876625 -0.00100000  0.01650087  0.02716366  0.02717449  0.01676552
+## [11]  0.00000000 -0.01676552 -0.02717449 -0.02716366 -0.01650087  0.00100000  0.01876625  0.02989973  0.02988890  0.01850159
+## [21]  0.00000000
 ```
 
 
@@ -754,9 +760,8 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
 ```
 
 ```
-##  [1]  1.2600000  0.8119458  0.2955892 -0.2353778 -0.7292137 -1.1410000 -1.4355873 -1.5889990
-##  [9] -1.5889882 -1.4353227 -1.1400000 -0.7272129 -0.2326526  0.2983144  0.8139466  1.2610000
-## [17]  1.5908545  1.7660624  1.7660516  1.5905898  1.2600000
+##  [1]  1.2600000  0.8119458  0.2955892 -0.2353778 -0.7292137 -1.1410000 -1.4355873 -1.5889990 -1.5889882 -1.4353227 -1.1400000
+## [12] -0.7272129 -0.2326526  0.2983144  0.8139466  1.2610000  1.5908545  1.7660624  1.7660516  1.5905898  1.2600000
 ```
 
 
@@ -818,9 +823,8 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
 ```
 
 ```
-##  [1] 0.01000000 0.01286475 0.02036475 0.02963525 0.03713525 0.04000000 0.03713525 0.02963525
-##  [9] 0.02036475 0.01286475 0.01000000 0.01286475 0.02036475 0.02963525 0.03713525 0.04000000
-## [17] 0.03713525 0.02963525 0.02036475 0.01286475 0.01000000
+##  [1] 0.01000000 0.01286475 0.02036475 0.02963525 0.03713525 0.04000000 0.03713525 0.02963525 0.02036475 0.01286475 0.01000000
+## [12] 0.01286475 0.02036475 0.02963525 0.03713525 0.04000000 0.03713525 0.02963525 0.02036475 0.01286475 0.01000000
 ```
 
 This is a local maximum!

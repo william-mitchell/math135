@@ -186,7 +186,7 @@ Now it's time to write your own function. Here is how you create $f(x)= x^2 -3$.
 f = makeFun(x^2 - 3 ~ x)
 ```
 
-Much of this is pretty intuitive, except for maybe the final `~ x`. This tilde symbol comes up a lot in RStudio and it indicates *dependence*. We need to tell RStudio that $f$ is in terms of this variable $x$, so it knows where to put an input when I ask it to:
+Much of this is pretty intuitive, except for maybe the final `~ x`. This tilde symbol comes up a lot in RStudio and it indicates *dependence*. We need to tell RStudio that $f$ is in terms of this variable $x$, so it knows where to put an input when I ask it to.
 
 
 Notice! In the right upper window, you now have a function called `f`. We can do a lot with this function, but
@@ -199,6 +199,7 @@ f(1)
 What do you think this code is doing?
 
 ```{r, echo=TRUE}
+S=seq(1, 10)
 f(S)
 ```
 
