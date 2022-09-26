@@ -22,15 +22,15 @@ Everything else is a **derived dimension**. Here are some examples.
 
 | Dimension | Symbol  | Intuition  | Sample Units  |
 |-----------|---------|------------|---------------|
-Area             | $L^2$              | length $\times$ width                 | square foot (ft$^2$), square meter ($m^2$), acre    |
-Volume           | $L^3$              | length $\times$ width $\times$ height | cubic meter (m$^3$), liter($L$), gallon ($gal$)              |
+Area             | L$^2$              | length $\times$ width                 | square foot (ft$^2$), square meter (m$^2$), acre    |
+Volume           | $L^3$              | length $\times$ width $\times$ height | cubic meter (m$^3$), liter(L), gallon (gal)              |
 Velocity         | $\frac{L}{T}$      | distance/time                         | meter/second, miles/hour                 |
 Acceleration     | $\frac{L}{T^2}$    | velocity/time                         | meters/second$^2$                        |
 Force            | $\frac{ML}{T^2}$   | mass $\times$ acceleration            | Newton (N), pound (lb)                            |
-Energy (Work)    | $\frac{ML^2}{T^2}$ | force $\times$ displacement           | Joule (J), calorie, kilowatt hour ($kwh$), foot-pound|
+Energy (Work)    | $\frac{ML^2}{T^2}$ | force $\times$ displacement           | Joule (J), calorie, kilowatt hour (kwh), foot-pound|
 Power            | $\frac{ML^2}{T^3}$ | energy/time                           | Watt (W), horsepower                         |
 Density          | $\frac{M}{L^3}$    | mass/volume                     | kilogram/meter$^3$                       |
-Pressure         | $\frac{M}{LT^2}$   | force/area                            | newton/meter$^2$, pascal ($Pa$), psi, atm       |  
+Pressure         | $\frac{M}{LT^2}$   | force/area                            | newton/meter$^2$, pascal (Pa), psi, atm       |  
 Electric Charge | $I T$ | current $\times$ time | coulomb
 
 Table: Derived Dimensions
