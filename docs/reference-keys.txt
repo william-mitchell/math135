@@ -141,6 +141,11 @@ find-the-dimension
 dimensionally-feasible
 geometric-formulas-for-a-cylinder
 unit-conversions
+solutions-6
+find-the-dimension-1
+dimensionally-feasible-1
+geometric-formulas-for-a-cylinder-1
+unit-conversions-1
 dimensional-analysis
 performing-a-dimensional-analysis
 activities-8
