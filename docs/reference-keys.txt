@@ -135,6 +135,14 @@ matching-contours-1
 plotting-in-rstudio-2
 cross-sections-1
 plotting-in-rstudio-3
+unit-1-summary
+functions-2
+linear-functions-1
+average-rate-of-change-1
+exponential-and-logarithmic-functions-1
+power-functions-1
+periodic-functions-1
+multivariable-functions-1
 dimensions-and-units
 activities-7
 find-the-dimension
@@ -156,6 +164,10 @@ fermi-estimation
 working-fermi-problems
 some-useful-data
 activities-9
+unit-2-summary
+dimensions-and-units-1
+dimensional-analysis-1
+fermi-estimation-1
 the-derivative
 the-derivative-1
 activities-10
