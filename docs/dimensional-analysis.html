@@ -354,12 +354,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="13.2.2" data-path="dimensional-analysis.html"><a href="dimensional-analysis.html#mixer-power"><i class="fa fa-check"></i><b>13.2.2</b> Mixer Power</a></li>
 <li class="chapter" data-level="13.2.3" data-path="dimensional-analysis.html"><a href="dimensional-analysis.html#velocity-of-an-ocean-wave"><i class="fa fa-check"></i><b>13.2.3</b> Velocity of an Ocean Wave</a></li>
 </ul></li>
+<li class="chapter" data-level="13.3" data-path="dimensional-analysis.html"><a href="dimensional-analysis.html#solutions-7"><i class="fa fa-check"></i><b>13.3</b> Solutions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="fermi-estimation.html"><a href="fermi-estimation.html"><i class="fa fa-check"></i><b>14</b> Fermi Estimation</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="fermi-estimation.html"><a href="fermi-estimation.html#working-fermi-problems"><i class="fa fa-check"></i><b>14.1</b> Working Fermi Problems</a></li>
 <li class="chapter" data-level="14.2" data-path="fermi-estimation.html"><a href="fermi-estimation.html#some-useful-data"><i class="fa fa-check"></i><b>14.2</b> Some Useful Data</a></li>
 <li class="chapter" data-level="14.3" data-path="fermi-estimation.html"><a href="fermi-estimation.html#activities-9"><i class="fa fa-check"></i><b>14.3</b> Activities</a></li>
+<li class="chapter" data-level="14.4" data-path="fermi-estimation.html"><a href="fermi-estimation.html#solutions-8"><i class="fa fa-check"></i><b>14.4</b> Solutions</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="unit-2-summary.html"><a href="unit-2-summary.html"><i class="fa fa-check"></i><b>15</b> Unit 2 Summary</a>
 <ul>
@@ -632,65 +634,64 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="velocity-of-an-ocean-wave" class="section level3 hasAnchor" number="13.2.3">
 <h3><span class="header-section-number">13.2.3</span> Velocity of an Ocean Wave<a href="dimensional-analysis.html#velocity-of-an-ocean-wave" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The velocity <span class="math inline">\(V\)</span> of a large ocean wave depends upon the period <span class="math inline">\(P\)</span>, the acceleration of gravity <span class="math inline">\(g\)</span>, and the density <span class="math inline">\(\mu\)</span> of the water. Find a formula for the velocity <span class="math inline">\(V=V(P,g,\mu)\)</span>.</p>
-<!--
-## Solutions
-
-1. We have
-$$
-\begin{array}{rcl}
-f &=& k \ell^a s^b \mu^c \\
-[f] &=&  [\ell]^a [s]^b [\mu]^c \\
-T^{-1} &=& \left( L\right)^a \left(MLT^{-2}\right)^b \left( M L^{-1}  \right)^c \\
-M^0L^0T^{-1} &=& M^{b+c} L^{a+b-c} T^{-2b}
-\end{array}
-$$
-and so we have
-$$
-0 = b+c \qquad 0 = a+b-c \qquad -1=-2b.
-$$
-Therefore $b=1/2$ and $c=-1/2$ and $a=1$. Our formula is
-$$
-f = k \ell \sqrt{\frac{s}{\mu}}.
-$$
-2. We have
-$$
-\begin{array}{rcl}
-A &=& k P^a D^b H^c \\
-[A] &=&  [P]^a [D]^b [H]^c \\
-T^{-1} &=& \left( ML^2T^{-3}\right)^a L^b \left( M L^{-1} T^{-1}  \right)^c \\
-M^0L^0T^{-1} &=& M^{a+c} L^{2a+b-c} T^{-3a-c}
-\end{array}
-$$
-and so  we have
-$$
-0 = a+c \qquad 0 = 2a+b-c \qquad -1 = -3a-c
-$$
-which means that $a=1/2$ and $c=-1/2$ and $b=-3/2$. So our final equation is
-$$
-A = k a^{1/2} b^{-3/2} c^{-1/2} = k \sqrt{\frac{P}{D^3H}}
-$$
-
-3. We have
-$$
-\begin{array}{rcl}
-V &=& k P^a g^b \mu^c \\
-[V] &=& [P]^a [g]^b [\mu]^c \\
-LT^{-1} &=& (T)^a (LT^{-2})^b (ML^{-3})^c \\
- L^1 T^{-1} M^0 &=& L^{b-3c} T^{a-2b} M^{c}
-\end{array}
-$$
-so we have the equations
-$$
-1 = b - 3c \qquad -1 = a-2b \qquad 0 = c
-$$
-which means that $c=0$ and $b=1$ and $a=1$. So our final equation is
-$$
-V = k Pg
-$$
-
--->
-
 </div>
+</div>
+<div id="solutions-7" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Solutions<a href="dimensional-analysis.html#solutions-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>We have
+<span class="math display">\[
+\begin{array}{rcl}
+f &amp;=&amp; k \ell^a s^b \mu^c \\
+[f] &amp;=&amp;  [\ell]^a [s]^b [\mu]^c \\
+T^{-1} &amp;=&amp; \left( L\right)^a \left(MLT^{-2}\right)^b \left( M L^{-1}  \right)^c \\
+M^0L^0T^{-1} &amp;=&amp; M^{b+c} L^{a+b-c} T^{-2b}
+\end{array}
+\]</span>
+and so we have
+<span class="math display">\[
+0 = b+c \qquad 0 = a+b-c \qquad -1=-2b.
+\]</span>
+Therefore <span class="math inline">\(b=1/2\)</span> and <span class="math inline">\(c=-1/2\)</span> and <span class="math inline">\(a=-1\)</span>. Our formula is
+<span class="math display">\[
+f = k \ell^{-1} s^{1/2} \mu^{-1/2} k \frac{1}{\ell} \sqrt{\frac{s}{\mu}}.
+\]</span></p></li>
+<li><p>We have
+<span class="math display">\[
+\begin{array}{rcl}
+A &amp;=&amp; k P^a D^b H^c \\
+[A] &amp;=&amp;  [P]^a [D]^b [H]^c \\
+T^{-1} &amp;=&amp; \left( ML^2T^{-3}\right)^a L^b \left( M L^{-1} T^{-1}  \right)^c \\
+M^0L^0T^{-1} &amp;=&amp; M^{a+c} L^{2a+b-c} T^{-3a-c}
+\end{array}
+\]</span>
+and so we have
+<span class="math display">\[
+0 = a+c \qquad 0 = 2a+b-c \qquad -1 = -3a-c
+\]</span>
+which means that <span class="math inline">\(a=1/2\)</span> and <span class="math inline">\(c=-1/2\)</span> and <span class="math inline">\(b=-3/2\)</span>. So our final equation is
+<span class="math display">\[
+A = k a^{1/2} b^{-3/2} c^{-1/2} = k \sqrt{\frac{P}{D^3H}}
+\]</span></p></li>
+<li><p>We have
+<span class="math display">\[
+\begin{array}{rcl}
+V &amp;=&amp; k P^a g^b \mu^c \\
+[V] &amp;=&amp; [P]^a [g]^b [\mu]^c \\
+LT^{-1} &amp;=&amp; (T)^a (LT^{-2})^b (ML^{-3})^c \\
+L^1 T^{-1} M^0 &amp;=&amp; L^{b-3c} T^{a-2b} M^{c}
+\end{array}
+\]</span>
+so we have the equations
+<span class="math display">\[
+1 = b - 3c \qquad -1 = a-2b \qquad 0 = c
+\]</span>
+which means that <span class="math inline">\(c=0\)</span> and <span class="math inline">\(b=1\)</span> and <span class="math inline">\(a=1\)</span>. So our final equation is
+<span class="math display">\[
+V = k Pg
+\]</span></p></li>
+</ol>
+
 </div>
 </div>
             </section>

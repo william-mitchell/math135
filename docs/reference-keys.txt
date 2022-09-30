@@ -160,10 +160,12 @@ activities-8
 vocal-chord-frequency
 mixer-power
 velocity-of-an-ocean-wave
+solutions-7
 fermi-estimation
 working-fermi-problems
 some-useful-data
 activities-9
+solutions-8
 unit-2-summary
 dimensions-and-units-1
 dimensional-analysis-1
