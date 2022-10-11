@@ -28,6 +28,7 @@ I can ...
 I can ...
 
 * Calculate the average rate of change (AROC) of function $y=f(x)$ on the interval $[a,b]$
+* Determine where a function is increasing and where it is decreasing
 * Determine where a function is concave up and where it is concave down
 
 ## Exponential and Logarithmic Functions
@@ -40,6 +41,7 @@ I can ...
 * Model discrete exponential growth using $P(t) = P_0 (1+r)^t$
 * Find the exponential function that fits a set of data
 * Given a half life or doubling time, find the corresponding rate of growth $r$.
+* Given an exponential function, find its half life or its doubling time
 
 ## Power Functions
 
@@ -48,7 +50,7 @@ I can ...
 * Describe proportional and inversely proportional relationships
 * Recognize power functions by creating a log-log plot.
 * Enter a table of data into desmos
-* Use desmos to fit a power function $y=kx^p$ to data using a command like $ln (y_1) ~ c + p ln(x_1)$ or $ln (y_1) ~ ln(k) + p ln(x_1)$ 
+* Use desmos to fit a power function $y=kx^p$ to data using a command like $\ln (y_1) \sim c + p \ln(x_1)$ or $\ln (y_1) \sim \ln(k) + p \ln(x_1)$ 
 
 ## Periodic Functions
 
@@ -57,9 +59,9 @@ I can ...
 * Describe periodic phenomena using words, equations and graphs.
 * Explain the effect of changing the constants $A,C,\omega,\phi$ in the functions $f(t) = A\sin(\omega(t+\phi)) +C$ and $g(t) = A\cos(\omega(t+\phi)) +C$ 
 * Model periodic data (graph or table) by choosing sine or cosine and estimating the parameters $A,C,\omega,\phi$.
-  * $ A = \frac{\max-\min}{2}$ is the amplitude
-  * $ C = \frac{\max+\min}{2}$ the center
-  * $ \omega = \frac{2\pi}{\mbox{period}}$ is the frequency
+  * $A = \frac{\max-\min}{2}$ is the amplitude
+  * $C = \frac{\max+\min}{2}$ the center
+  * $\omega = \frac{2\pi}{\mbox{period}}$ is the frequency
   * $\phi$ is the horizontal shift
 
 ## Multivariable Functions
@@ -69,4 +71,4 @@ I can ...
 * Work with functions when the output depends on multiple inputs
 * Interpret functions of the form $z=f(x,y)$ represented as formulas, tables of data, or contour plots
 * Create and interpret a cross section of a function of two variables
-* Use RStudio to create a contour plot of $z=f(x,y)$ and interpret what you see.
+* Use RStudio to create a contour plot of $z=f(x,y)$ and interpret what I see.
