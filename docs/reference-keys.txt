@@ -199,6 +199,10 @@ activities-12
 estimating-from-data
 estimating-from-a-contour-plot
 estimating-using-desmos
+solutions-11
+estimating-from-data-1
+estimating-from-a-contour-plot-1
+estimating-using-desmos-1
 local-linear-approximation
 activities-13
 estimating-sugar-solution-temperature

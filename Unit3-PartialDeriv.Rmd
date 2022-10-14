@@ -98,7 +98,6 @@ Your answer must be correct to two decimal places.
 
 Compare your three answers to the estimates from the contour plot in the previous problem.
 
-<!--
 
 ## Solutions
 
@@ -146,5 +145,3 @@ Here is a [link to my desmos calculations](https://www.desmos.com/calculator/pie
 1. $F(400,600) = 534.37$
 1. $F_L(400,600) = 0.38$
 1. $F(400,600) = 0.64$
-
--->
