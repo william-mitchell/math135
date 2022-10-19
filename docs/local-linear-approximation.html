@@ -430,6 +430,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="19.1.3" data-path="local-linear-approximation.html"><a href="local-linear-approximation.html#estimating-a-function"><i class="fa fa-check"></i><b>19.1.3</b> Estimating a Function</a></li>
 <li class="chapter" data-level="19.1.4" data-path="local-linear-approximation.html"><a href="local-linear-approximation.html#estimating-the-windchill"><i class="fa fa-check"></i><b>19.1.4</b> Estimating the Windchill</a></li>
 </ul></li>
+<li class="chapter" data-level="19.2" data-path="local-linear-approximation.html"><a href="local-linear-approximation.html#solutions-12"><i class="fa fa-check"></i><b>19.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="19.2.1" data-path="local-linear-approximation.html"><a href="local-linear-approximation.html#estimating-sugar-solution-temperature-1"><i class="fa fa-check"></i><b>19.2.1</b> Estimating Sugar Solution Temperature</a></li>
+<li class="chapter" data-level="19.2.2" data-path="local-linear-approximation.html"><a href="local-linear-approximation.html#comparing-linearizations-1"><i class="fa fa-check"></i><b>19.2.2</b> Comparing Linearizations</a></li>
+<li class="chapter" data-level="19.2.3" data-path="local-linear-approximation.html"><a href="local-linear-approximation.html#estimating-a-function-1"><i class="fa fa-check"></i><b>19.2.3</b> Estimating a Function</a></li>
+<li class="chapter" data-level="19.2.4" data-path="local-linear-approximation.html"><a href="local-linear-approximation.html#estimating-the-windchill-1"><i class="fa fa-check"></i><b>19.2.4</b> Estimating the Windchill</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="20" data-path="unit-3-summary.html"><a href="unit-3-summary.html"><i class="fa fa-check"></i><b>20</b> Unit 3 Summary</a>
 <ul>
@@ -687,60 +694,55 @@ Use these values to find the linearization <span class="math inline">\(L_{(-10,4
 <li><p>Find the linearization of <span class="math inline">\(w(t,v)\)</span> at <span class="math inline">\(t=-10\)</span> and <span class="math inline">\(v=40\)</span> using the
 the partial derivatives of the formula <span class="math inline">\(w(t,v) = 35.74+0.6215 t-35.75 v^{0.16}+0.4275 t \, v^{0.16}\)</span>. Here is a <a href="https://www.desmos.com/calculator/dvuhpknthj">link to my desmos calculator for the partial derivatives of this function.</a></p></li>
 </ol>
-<!--
-## Solutions
-
-
-### Estimating Sugar Solution Temperature
-
-1. Let's use $f(t)$ to denote the temperature.We need to estimate the rate of change at $t=10$. We have
-$$ f'(10) \approx \frac{165 - 115}{10-5} = \frac{50}{5}=10$$.
+</div>
+</div>
+<div id="solutions-12" class="section level2 hasAnchor" number="19.2">
+<h2><span class="header-section-number">19.2</span> Solutions<a href="local-linear-approximation.html#solutions-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="estimating-sugar-solution-temperature-1" class="section level3 hasAnchor" number="19.2.1">
+<h3><span class="header-section-number">19.2.1</span> Estimating Sugar Solution Temperature<a href="local-linear-approximation.html#estimating-sugar-solution-temperature-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Let’s use <span class="math inline">\(f(t)\)</span> to denote the temperature.We need to estimate the rate of change at <span class="math inline">\(t=10\)</span>. We have
+<span class="math display">\[ f&#39;(10) \approx \frac{165 - 115}{10-5} = \frac{50}{5}=10\]</span>.
 We use the linear approximation
-$$L_{10}(t) = 165 + 10 (t-10)$$
+<span class="math display">\[L_{10}(t) = 165 + 10 (t-10)\]</span>
 to estimate the temperature. We have
-$$f(17) \approx L_{10}(17) = 165 + 10 (17-10) = 235.$$
-
-
-2. We must solve
-$$ 289 = 165 + 10 (t-10) = 65t$$
-to find that $10t = 224$ and so $t=22.4$ minutes.
-
-
-### Comparing Linearizations
-
-1. In the graph below, the blue function is well estimated by its tangent line, while the red function is not.
-
-![](images/linear-approx.png){width=30%}
-
-2. If the curve has low concavity near the point $x=a$ then the tangent line is a good approximation. In other words, the second derivative remains near zero around the point $x=a$
-2. If the curve has a lot of concavity near the point $x=a$ then then tangent line is not a good approximation. This is because the curve bends away from the tangent line.
-
-### Estimating a Function
-
-1. Using desmos, I found that $f(2)=11.39$ and $f'(2)=19.39$. Therefore
-$$ L_2(t) = 11.39 + 19.39 ( t-2).$$
-
-2. I get the estimates $g(2.1) \approx 13.33$, $g(1.98) \approx 11.00$, $g(3) \approx 30.78$ and $g(0.7) \approx -13.82$. 
-
-3. The true values are $g(2.1) = 13.43$, $g(1.98) = 11.01$, $g(3) = 43.09$ and $g(0.7) \approx -1.64$.. 
-  
-4. The approximations close to $t=2$ are much better!
-
-
-
-### Estimating the Windchill
-
-1. $L_{(-10,40)}(t,v) = -43 + 1.39(t+10) -0.24(v-40)$
-
-2. My estimates are  $w(-5,40) \approx -36.05$, $w(-15,40) \approx -49.95$, $w(-10,45) \approx 41.8$ and $w(-10,35) \approx -44.2$. These are pretty close to the values on the table.
-
-
-3. Using the function and the partial derivatives from [this desmos calculation](https://www.desmos.com/calculator/dvuhpknthj), we get
-$$
+<span class="math display">\[f(17) \approx L_{10}(17) = 165 + 10 (17-10) = 235.\]</span></p></li>
+<li><p>We must solve
+<span class="math display">\[ 289 = 165 + 10 (t-10) = 65t\]</span>
+to find that <span class="math inline">\(10t = 224\)</span> and so <span class="math inline">\(t=22.4\)</span> minutes.</p></li>
+</ol>
+</div>
+<div id="comparing-linearizations-1" class="section level3 hasAnchor" number="19.2.2">
+<h3><span class="header-section-number">19.2.2</span> Comparing Linearizations<a href="local-linear-approximation.html#comparing-linearizations-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>In the graph below, the blue function is well estimated by its tangent line, while the red function is not.</li>
+</ol>
+<p><img src="images/linear-approx.png" style="width:30.0%" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>If the curve has low concavity near the point <span class="math inline">\(x=a\)</span> then the tangent line is a good approximation. In other words, the second derivative remains near zero around the point <span class="math inline">\(x=a\)</span></li>
+<li>If the curve has a lot of concavity near the point <span class="math inline">\(x=a\)</span> then then tangent line is not a good approximation. This is because the curve bends away from the tangent line.</li>
+</ol>
+</div>
+<div id="estimating-a-function-1" class="section level3 hasAnchor" number="19.2.3">
+<h3><span class="header-section-number">19.2.3</span> Estimating a Function<a href="local-linear-approximation.html#estimating-a-function-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Using desmos, I found that <span class="math inline">\(f(2)=11.39\)</span> and <span class="math inline">\(f&#39;(2)=19.39\)</span>. Therefore
+<span class="math display">\[ L_2(t) = 11.39 + 19.39 ( t-2).\]</span></p></li>
+<li><p>I get the estimates <span class="math inline">\(g(2.1) \approx 13.33\)</span>, <span class="math inline">\(g(1.98) \approx 11.00\)</span>, <span class="math inline">\(g(3) \approx 30.78\)</span> and <span class="math inline">\(g(0.7) \approx -13.82\)</span>.</p></li>
+<li><p>The true values are <span class="math inline">\(g(2.1) = 13.43\)</span>, <span class="math inline">\(g(1.98) = 11.01\)</span>, <span class="math inline">\(g(3) = 43.09\)</span> and <span class="math inline">\(g(0.7) \approx -1.64\)</span>..</p></li>
+<li><p>The approximations close to <span class="math inline">\(t=2\)</span> are much better!</p></li>
+</ol>
+</div>
+<div id="estimating-the-windchill-1" class="section level3 hasAnchor" number="19.2.4">
+<h3><span class="header-section-number">19.2.4</span> Estimating the Windchill<a href="local-linear-approximation.html#estimating-the-windchill-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(L_{(-10,40)}(t,v) = -43 + 1.39(t+10) -0.24(v-40)\)</span></p></li>
+<li><p>My estimates are <span class="math inline">\(w(-5,40) \approx -36.05\)</span>, <span class="math inline">\(w(-15,40) \approx -49.95\)</span>, <span class="math inline">\(w(-10,45) \approx 41.8\)</span> and <span class="math inline">\(w(-10,35) \approx -44.2\)</span>. These are pretty close to the values on the table.</p></li>
+<li><p>Using the function and the partial derivatives from <a href="https://www.desmos.com/calculator/dvuhpknthj">this desmos calculation</a>, we get
+<span class="math display">\[
 L_{(-10,40)}(t,v) = -42.70 + 1.39(t+10) -0.29(v-40)
-$$
-
--->
+\]</span></p></li>
+</ol>
 
 </div>
 </div>

@@ -13,13 +13,13 @@ The First Derivative
 
 * $f'(c) > 0$ means that the function is **increasing** at $x=c$
 * $f'(c) < 0$ means that the function is **decreasing** at $x=c$
-* if $f'(c) = 0$ then it might be a local minimum or a local maximum
+* if $f'(c) = 0$ then $x=c$ might be a local minimum or a local maximum
 
 The Second Derivative
 
 * $f''(c) > 0$ means that the function is **concave up** at $x=c$
-* $f'(c) < 0$ means that the function is **concave down** at $x=c$
-* if $f'(c)$ then $x=c$ might be a point of inflection
+* $f''(c) < 0$ means that the function is **concave down** at $x=c$
+* if $f'(c) = 0$ then $x=c$ might be a point of inflection
 
 ## Activities
 

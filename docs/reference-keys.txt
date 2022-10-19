@@ -209,6 +209,11 @@ estimating-sugar-solution-temperature
 comparing-linearizations
 estimating-a-function
 estimating-the-windchill
+solutions-12
+estimating-sugar-solution-temperature-1
+comparing-linearizations-1
+estimating-a-function-1
+estimating-the-windchill-1
 unit-3-summary
 the-derivative-2
 the-second-derivative-1
