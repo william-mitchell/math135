@@ -477,6 +477,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="22.1.2" data-path="symbolic-differentiation.html"><a href="symbolic-differentiation.html#more-basic-derivative-practice"><i class="fa fa-check"></i><b>22.1.2</b> More Basic Derivative Practice</a></li>
 <li class="chapter" data-level="22.1.3" data-path="symbolic-differentiation.html"><a href="symbolic-differentiation.html#product-rule-and-quotient-rule-practice"><i class="fa fa-check"></i><b>22.1.3</b> Product Rule and Quotient Rule Practice</a></li>
 </ul></li>
+<li class="chapter" data-level="22.2" data-path="symbolic-differentiation.html"><a href="symbolic-differentiation.html#solutions-13"><i class="fa fa-check"></i><b>22.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="22.2.1" data-path="symbolic-differentiation.html"><a href="symbolic-differentiation.html#basic-derivative-practice-1"><i class="fa fa-check"></i><b>22.2.1</b> Basic Derivative Practice</a></li>
+<li class="chapter" data-level="22.2.2" data-path="symbolic-differentiation.html"><a href="symbolic-differentiation.html#more-basic-derivative-practice-1"><i class="fa fa-check"></i><b>22.2.2</b> More Basic Derivative Practice</a></li>
+<li class="chapter" data-level="22.2.3" data-path="symbolic-differentiation.html"><a href="symbolic-differentiation.html#product-rule-and-quotient-rule-practice-1"><i class="fa fa-check"></i><b>22.2.3</b> Product Rule and Quotient Rule Practice</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="23" data-path="the-chain-rule.html"><a href="the-chain-rule.html"><i class="fa fa-check"></i><b>23</b> The Chain Rule</a>
 <ul>
@@ -486,6 +492,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="23.1.2" data-path="the-chain-rule.html"><a href="the-chain-rule.html#more-chain-rule-practice"><i class="fa fa-check"></i><b>23.1.2</b> More Chain Rule Practice</a></li>
 <li class="chapter" data-level="23.1.3" data-path="the-chain-rule.html"><a href="the-chain-rule.html#conceptual-chain-rule-problems"><i class="fa fa-check"></i><b>23.1.3</b> Conceptual Chain Rule Problems</a></li>
 <li class="chapter" data-level="23.1.4" data-path="the-chain-rule.html"><a href="the-chain-rule.html#visual-chain-rule-problem"><i class="fa fa-check"></i><b>23.1.4</b> Visual Chain Rule Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="23.2" data-path="the-chain-rule.html"><a href="the-chain-rule.html#solutions-14"><i class="fa fa-check"></i><b>23.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="23.2.1" data-path="the-chain-rule.html"><a href="the-chain-rule.html#chain-rule-practice-1"><i class="fa fa-check"></i><b>23.2.1</b> Chain Rule Practice</a></li>
+<li class="chapter" data-level="23.2.2" data-path="the-chain-rule.html"><a href="the-chain-rule.html#more-chain-rule-practice-1"><i class="fa fa-check"></i><b>23.2.2</b> More Chain Rule Practice</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="24" data-path="the-gradient.html"><a href="the-gradient.html"><i class="fa fa-check"></i><b>24</b> The Gradient</a>
@@ -851,7 +862,7 @@ Example: <code>add=TRUE</code></li>
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(xdata = xdata), 
 ##     ...)))
-## &lt;environment: 0x7fe8f19b0f50&gt;
+## &lt;environment: 0x7f8555ffedc0&gt;
 ## attr(,&quot;coefficients&quot;)
 ##    A    B 
 ## 1.70 4.18 
@@ -886,7 +897,7 @@ Example: <code>add=TRUE</code></li>
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(logxdata = logxdata), 
 ##     ...)))
-## &lt;environment: 0x7fe8fff7aff8&gt;
+## &lt;environment: 0x7f85604b2688&gt;
 ## attr(,&quot;coefficients&quot;)
 ##        A        B 
 ## 1.449432 1.915983 
@@ -915,13 +926,20 @@ Example: <code>add=TRUE</code></li>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="rstudio-quick-referrence.html#cb34-1" aria-hidden="true" tabindex="-1"></a>utilitydata <span class="ot">=</span> fetch<span class="sc">::</span><span class="fu">fetchData</span>(<span class="st">&quot;utilities.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Retrieving from http://www.mosaic-web.org/go/datasets/utilities.csv</code></pre>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="rstudio-quick-referrence.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(utilitydata)</span></code></pre></div>
-<pre><code>##   month day year temp  kwh ccf thermsPerDay dur totalbill gasbill elecbill notes
-## 1     2  24 2005   29  557 166          6.0  28    213.71  166.63    47.08      
-## 2     3  29 2005   31  772 179          5.5  33    239.85  117.05    62.80      
-## 3     1  27 2005   15  891 224          7.5  30    294.96  223.92    71.04      
-## 4    11  23 2004   43  860  82          2.8  29    160.26   88.51    71.75      
-## 5    12  28 2004   23 1160 208          6.0  35    317.47  224.18    93.29      
-## 6     9  26 2004   71  922  15          0.5  32    117.46   21.25    96.21</code></pre>
+<pre><code>##   month day year temp  kwh ccf thermsPerDay dur totalbill gasbill
+## 1     2  24 2005   29  557 166          6.0  28    213.71  166.63
+## 2     3  29 2005   31  772 179          5.5  33    239.85  117.05
+## 3     1  27 2005   15  891 224          7.5  30    294.96  223.92
+## 4    11  23 2004   43  860  82          2.8  29    160.26   88.51
+## 5    12  28 2004   23 1160 208          6.0  35    317.47  224.18
+## 6     9  26 2004   71  922  15          0.5  32    117.46   21.25
+##   elecbill notes
+## 1    47.08      
+## 2    62.80      
+## 3    71.04      
+## 4    71.75      
+## 5    93.29      
+## 6    96.21</code></pre>
 <p>Now let’s plot temperature versus month</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rstudio-quick-referrence.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(temp <span class="sc">~</span> month, <span class="at">data=</span>utilitydata)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
@@ -973,7 +991,8 @@ for some small number <span class="math inline">\(\alpha &gt; 0\)</span>. Smalle
 <span id="cb49-2"><a href="rstudio-quick-referrence.html#cb49-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
 <span id="cb49-3"><a href="rstudio-quick-referrence.html#cb49-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">f</span>(<span class="dv">4</span><span class="sc">+</span>alpha)<span class="sc">-</span><span class="fu">f</span>(<span class="dv">4</span>))<span class="sc">/</span>alpha</span>
 <span id="cb49-4"><a href="rstudio-quick-referrence.html#cb49-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 6.978782 1.952538 1.511513 1.468349 1.464042 1.463612 1.463569 1.463564</code></pre>
+<pre><code>## [1] 6.978782 1.952538 1.511513 1.468349 1.464042 1.463612 1.463569
+## [8] 1.463564</code></pre>
 <p>The estimates stabilize to the value <span class="math inline">\(1.46356\)</span>. So our estimate is <span class="math inline">\(f&#39;(4) \approx 1.46456\)</span></p>
 <p>We can use the same method to estimate the partial derivates of <span class="math inline">\(g(x,y)\)</span>. We have
 <span class="math display">\[
@@ -986,14 +1005,16 @@ Let’s estimate the partial derivatives of <span class="math inline">\(g(x,y) =
 <span id="cb51-2"><a href="rstudio-quick-referrence.html#cb51-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
 <span id="cb51-3"><a href="rstudio-quick-referrence.html#cb51-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">g</span>(<span class="dv">2</span><span class="sc">+</span>alpha,<span class="dv">7</span>)<span class="sc">-</span><span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span>))<span class="sc">/</span>alpha</span>
 <span id="cb51-4"><a href="rstudio-quick-referrence.html#cb51-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 3.456634 2.526691 2.452648 2.445403 2.444680 2.444608 2.444601 2.444600</code></pre>
+<pre><code>## [1] 3.456634 2.526691 2.452648 2.445403 2.444680 2.444608 2.444601
+## [8] 2.444600</code></pre>
 <p>We conclude that <span class="math inline">\(g_x(2,7) \approx 2.445.\)</span></p>
 <p>Now let’s estimate <span class="math inline">\(g_y(2,7) = \left. \frac{\partial g}{\partial y} \right|_{(2,7)}\)</span>. All we need to do is move <code>alpha</code> into the <span class="math inline">\(y\)</span>-variable.</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="rstudio-quick-referrence.html#cb53-1" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">exp</span>(x<span class="sc">*</span><span class="fu">sin</span>(y))<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
 <span id="cb53-2"><a href="rstudio-quick-referrence.html#cb53-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
 <span id="cb53-3"><a href="rstudio-quick-referrence.html#cb53-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span><span class="sc">+</span>alpha)<span class="sc">-</span><span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span>))<span class="sc">/</span>alpha</span>
 <span id="cb53-4"><a href="rstudio-quick-referrence.html#cb53-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 3.512524 5.761618 5.628032 5.612215 5.610611 5.610450 5.610434 5.610433</code></pre>
+<pre><code>## [1] 3.512524 5.761618 5.628032 5.612215 5.610611 5.610450 5.610434
+## [8] 5.610433</code></pre>
 <p>We conclude that <span class="math inline">\(g_y(2,7) \approx 5.610.\)</span></p>
 </div>
 <div id="gradient-search" class="section level2 hasAnchor" number="2.10">

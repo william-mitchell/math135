@@ -12,12 +12,12 @@ $$
 L_a(x) = f(a) + f'(a) (x-a).
 $$
 
-<!--
+
 The linearization of $f(x,y)$ at point $(a,b)$ is
 $$
 L_{(a,b)(x,y) = f(a,b) + f_x(a,b) (x-a) + f_y(a,b) (x-b).
 $$
--->
+
 
 ## Activities
 

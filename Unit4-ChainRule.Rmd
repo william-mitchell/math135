@@ -48,7 +48,7 @@ Below are the graphs of two functions, $f(x)$ and $g(x)$. Use the chain rule to 
 2. $(g(f(x)))'$ when $x=1$. 
 3. $(g(f(x)))'$ when $x=2$.
 
-<!--
+
 ## Solutions
 
 ### Chain Rule Practice
@@ -69,6 +69,8 @@ Below are the graphs of two functions, $f(x)$ and $g(x)$. Use the chain rule to 
 1. $R'(t) = 5 (\sin t)^4 \cdot \cos t$
 1. $f'(t) = \cos \sqrt{e^{t}+1} \cdot \frac{1}{2}\left(e^{t}+1\right)^{-1/2}\cdot e^{t}$
 1. $g'(y) = e^{2e^{y^3}} \cdot 2e^{y^3}\cdot 3y^2$
+
+<!--
 
 ### Conceptual Chain Rule Problems 
 
