@@ -497,6 +497,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="23.2.1" data-path="the-chain-rule.html"><a href="the-chain-rule.html#chain-rule-practice-1"><i class="fa fa-check"></i><b>23.2.1</b> Chain Rule Practice</a></li>
 <li class="chapter" data-level="23.2.2" data-path="the-chain-rule.html"><a href="the-chain-rule.html#more-chain-rule-practice-1"><i class="fa fa-check"></i><b>23.2.2</b> More Chain Rule Practice</a></li>
+<li class="chapter" data-level="23.2.3" data-path="the-chain-rule.html"><a href="the-chain-rule.html#conceptual-chain-rule-problems-1"><i class="fa fa-check"></i><b>23.2.3</b> Conceptual Chain Rule Problems</a></li>
+<li class="chapter" data-level="23.2.4" data-path="the-chain-rule.html"><a href="the-chain-rule.html#visual-chain-rule-problem-1"><i class="fa fa-check"></i><b>23.2.4</b> Visual Chain Rule Problem</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="24" data-path="the-gradient.html"><a href="the-gradient.html"><i class="fa fa-check"></i><b>24</b> The Gradient</a>
@@ -508,6 +510,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="24.1.3" data-path="the-gradient.html"><a href="the-gradient.html#gradient-practice"><i class="fa fa-check"></i><b>24.1.3</b> Gradient Practice</a></li>
 <li class="chapter" data-level="24.1.4" data-path="the-gradient.html"><a href="the-gradient.html#gradient-on-a-contour-diagram"><i class="fa fa-check"></i><b>24.1.4</b> Gradient on a Contour Diagram</a></li>
 <li class="chapter" data-level="24.1.5" data-path="the-gradient.html"><a href="the-gradient.html#gradient-and-the-direction-of-greatest-increase"><i class="fa fa-check"></i><b>24.1.5</b> Gradient and the Direction of Greatest Increase</a></li>
+</ul></li>
+<li class="chapter" data-level="24.2" data-path="the-gradient.html"><a href="the-gradient.html#solutions-15"><i class="fa fa-check"></i><b>24.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="24.2.1" data-path="the-gradient.html"><a href="the-gradient.html#partial-derivative-practice-1"><i class="fa fa-check"></i><b>24.2.1</b> Partial Derivative Practice</a></li>
+<li class="chapter" data-level="24.2.2" data-path="the-gradient.html"><a href="the-gradient.html#second-partial-derivative-practice-1"><i class="fa fa-check"></i><b>24.2.2</b> Second Partial Derivative Practice</a></li>
+<li class="chapter" data-level="24.2.3" data-path="the-gradient.html"><a href="the-gradient.html#gradient-practice-1"><i class="fa fa-check"></i><b>24.2.3</b> Gradient Practice</a></li>
+<li class="chapter" data-level="24.2.4" data-path="the-gradient.html"><a href="the-gradient.html#gradient-on-a-contour-diagram-1"><i class="fa fa-check"></i><b>24.2.4</b> Gradient on a Contour Diagram</a></li>
+<li class="chapter" data-level="24.2.5" data-path="the-gradient.html"><a href="the-gradient.html#gradient-and-the-direction-of-greatest-increase-1"><i class="fa fa-check"></i><b>24.2.5</b> Gradient and the Direction of Greatest Increase</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="25" data-path="unit-4-summary.html"><a href="unit-4-summary.html"><i class="fa fa-check"></i><b>25</b> Unit 4 Summary</a>
@@ -690,90 +700,87 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li>Find the gradient vector <span class="math inline">\(\nabla f(2,1)\)</span> the at the point <span class="math inline">\((2,1)\)</span>.</li>
 <li>Find the rate of change of <span class="math inline">\(f(x,y)\)</span> at <span class="math inline">\((2,1)\)</span> in the direction of greatest increase.</li>
 </ol>
-<!--
-## Solutions
-
-
-### Partial Derivative Practice
-
-
-1.  $f(x,y) = x^5 + x^2y^3 + y^4$
-
-$$
+</div>
+</div>
+<div id="solutions-15" class="section level2 hasAnchor" number="24.2">
+<h2><span class="header-section-number">24.2</span> Solutions<a href="the-gradient.html#solutions-15" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="partial-derivative-practice-1" class="section level3 hasAnchor" number="24.2.1">
+<h3><span class="header-section-number">24.2.1</span> Partial Derivative Practice<a href="the-gradient.html#partial-derivative-practice-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = x^5 + x^2y^3 + y^4\)</span></li>
+</ol>
+<p><span class="math display">\[
 f_x = 5x^2 + 2xy^3 \qquad \qquad f_y = 3x^2y^2 + 4y^3
-$$
-
-1. $f(x,y) = e^x \sin(y) + \ln(y) \cos(x)$
-
-$$
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = e^x \sin(y) + \ln(y) \cos(x)\)</span></li>
+</ol>
+<p><span class="math display">\[
 f_x = e^x \sin(y) - \ln(y) \sin(x) \qquad \qquad f_y = e^x \cos(y) + \frac{1}{y} \cos(x)
-$$
-
-2. $f(x,y) = \ln (x^2 - y^2)$
-
-
-$$
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = \ln (x^2 - y^2)\)</span></li>
+</ol>
+<p><span class="math display">\[
 f_x = \frac{2x}{x^2-y^2} \qquad \qquad f_y = - \frac{2y}{x^2-y^2}
-$$
-
-3. $f(x,y) = x^2 y^3 e^x \sin(y)$
-
-Let's rewrite this function as $x^2 e^x y^3 \sin(y)$
-
-$$
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = x^2 y^3 e^x \sin(y)\)</span></li>
+</ol>
+<p>Let’s rewrite this function as <span class="math inline">\(x^2 e^x y^3 \sin(y)\)</span></p>
+<p><span class="math display">\[
 f_x = (2xe^x + x^2e^x) y^3\sin(y) \qquad \qquad
 f_y = (3y^2 \sin(y) - y^3 \cos(y)) x^2 e^x
-$$
-
-### Second Partial Derivative Practice
-
-
-1. $f(x,y) = 7x^3 + \cos(4y)$
-
-\begin{align*}
-f_x &= 21 x^2 \\
-f_{xx} &= 42 x \\
-f_{xy} &= 0 \\
+\]</span></p>
+</div>
+<div id="second-partial-derivative-practice-1" class="section level3 hasAnchor" number="24.2.2">
+<h3><span class="header-section-number">24.2.2</span> Second Partial Derivative Practice<a href="the-gradient.html#second-partial-derivative-practice-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = 7x^3 + \cos(4y)\)</span></li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+f_x &amp;= 21 x^2 \\
+f_{xx} &amp;= 42 x \\
+f_{xy} &amp;= 0 \\
 \\
-f_y &= -4 \sin(4y) \\
-f_{yy} &= -16 \cos(y) \\
-f_{yx} &=0
-\end{align*}
-
-
-2. $f(x,y) = e^{2x+3y}$
-
-\begin{align*}
-f_x &= 2e^{2x+3y} \\
-f_{xx} &= 4e^{2x+3y} \\
-f_{xy} &= 6e^{2x+3y} \\
+f_y &amp;= -4 \sin(4y) \\
+f_{yy} &amp;= -16 \cos(y) \\
+f_{yx} &amp;=0
+\end{align*}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><span class="math inline">\(f(x,y) = e^{2x+3y}\)</span></li>
+</ol>
+<p><span class="math display">\[\begin{align*}
+f_x &amp;= 2e^{2x+3y} \\
+f_{xx} &amp;= 4e^{2x+3y} \\
+f_{xy} &amp;= 6e^{2x+3y} \\
 \\
-f_y &= 3e^{2x+3y} \\
-f_{yy} &= 9e^{2x+3y} \\
-f_{yx} &= 6e^{2x+3y}
-\end{align*}
-
-### Gradient Practice
-
-Calculate the gradient $\nabla f(x,y)$ for each of these functions
-
-1. $\nabla f(x,y) = \langle 16x y^4, 32x^2y^3 \rangle$
-1. $\nabla f(x,y) = \langle y^{-1}, -xy^{-2} \rangle$ 
-1. $f(x,y) = \langle y^{-1}, x^{-1} \rangle$
-
-### Gradient on a Contour Diagram
-
-Here is a contour plot of $f(x,y)$. At each of the three points indicated by $*$, draw a vector in the direction of the gradient $\nabla f$. 
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-93-1.png" width="672" />
-
-### Gradient and the Direction of Greatest Increase
-
-1. $\nabla f(x,y) = \langle 6x - 4y, -4x + 2y \rangle$ so 
-$\nabla f(x,y) = \langle 12 - 4, -8 + 2 \rangle = \langle 8, -6 \rangle$.
-1. $\| \nabla f(2,1) \| = \sqrt{8^2 + (-6)^2} = \sqrt{64+36} = \sqrt{100} = 10.$
-
--->
+f_y &amp;= 3e^{2x+3y} \\
+f_{yy} &amp;= 9e^{2x+3y} \\
+f_{yx} &amp;= 6e^{2x+3y}
+\end{align*}\]</span></p>
+</div>
+<div id="gradient-practice-1" class="section level3 hasAnchor" number="24.2.3">
+<h3><span class="header-section-number">24.2.3</span> Gradient Practice<a href="the-gradient.html#gradient-practice-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Calculate the gradient <span class="math inline">\(\nabla f(x,y)\)</span> for each of these functions</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\nabla f(x,y) = \langle 16x y^4, 32x^2y^3 \rangle\)</span></li>
+<li><span class="math inline">\(\nabla f(x,y) = \langle y^{-1}, -xy^{-2} \rangle\)</span></li>
+<li><span class="math inline">\(f(x,y) = \langle y^{-1}, x^{-1} \rangle\)</span></li>
+</ol>
+</div>
+<div id="gradient-on-a-contour-diagram-1" class="section level3 hasAnchor" number="24.2.4">
+<h3><span class="header-section-number">24.2.4</span> Gradient on a Contour Diagram<a href="the-gradient.html#gradient-on-a-contour-diagram-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here is a contour plot of <span class="math inline">\(f(x,y)\)</span>. At each of the three points indicated by <span class="math inline">\(*\)</span>, draw a vector in the direction of the gradient <span class="math inline">\(\nabla f\)</span>.</p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-93-1.png" width="672" /></p>
+</div>
+<div id="gradient-and-the-direction-of-greatest-increase-1" class="section level3 hasAnchor" number="24.2.5">
+<h3><span class="header-section-number">24.2.5</span> Gradient and the Direction of Greatest Increase<a href="the-gradient.html#gradient-and-the-direction-of-greatest-increase-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\nabla f(x,y) = \langle 6x - 4y, -4x + 2y \rangle\)</span> so
+<span class="math inline">\(\nabla f(x,y) = \langle 12 - 4, -8 + 2 \rangle = \langle 8, -6 \rangle\)</span>.</li>
+<li><span class="math inline">\(\| \nabla f(2,1) \| = \sqrt{8^2 + (-6)^2} = \sqrt{64+36} = \sqrt{100} = 10.\)</span></li>
+</ol>
 
 </div>
 </div>

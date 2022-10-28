@@ -70,7 +70,6 @@ Below are the graphs of two functions, $f(x)$ and $g(x)$. Use the chain rule to 
 1. $f'(t) = \cos \sqrt{e^{t}+1} \cdot \frac{1}{2}\left(e^{t}+1\right)^{-1/2}\cdot e^{t}$
 1. $g'(y) = e^{2e^{y^3}} \cdot 2e^{y^3}\cdot 3y^2$
 
-<!--
 
 ### Conceptual Chain Rule Problems 
 
@@ -102,5 +101,3 @@ $$(g'(f(1)) f'(1) = g'(4) f'(1) = 0.$$
 3. We want $(g'(f(2)) f'(2)$. We have $f(2)=2$ and $g'(2)=2/3$ and $f'(2)=-2$. So our answer is 
 $$(g'(f(2)) f'(2) = \frac{2}{3} \cdot (-2) = -\frac{4}{3}.$$
 
-
--->

@@ -252,6 +252,8 @@ visual-chain-rule-problem
 solutions-14
 chain-rule-practice-1
 more-chain-rule-practice-1
+conceptual-chain-rule-problems-1
+visual-chain-rule-problem-1
 the-gradient
 activities-16
 partial-derivative-practice
@@ -259,6 +261,12 @@ second-partial-derivative-practice
 gradient-practice
 gradient-on-a-contour-diagram
 gradient-and-the-direction-of-greatest-increase
+solutions-15
+partial-derivative-practice-1
+second-partial-derivative-practice-1
+gradient-practice-1
+gradient-on-a-contour-diagram-1
+gradient-and-the-direction-of-greatest-increase-1
 unit-4-summary
 symbolic-derivatives
 partial-derivatives-2
