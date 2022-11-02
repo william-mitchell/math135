@@ -536,13 +536,20 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="26.1.3" data-path="d-optimization.html"><a href="d-optimization.html#second-derivative-test"><i class="fa fa-check"></i><b>26.1.3</b> Second Derivative Test</a></li>
 <li class="chapter" data-level="26.1.4" data-path="d-optimization.html"><a href="d-optimization.html#cupcake-store"><i class="fa fa-check"></i><b>26.1.4</b> Cupcake Store</a></li>
 </ul></li>
+<li class="chapter" data-level="26.2" data-path="d-optimization.html"><a href="d-optimization.html#solutions-16"><i class="fa fa-check"></i><b>26.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="26.2.1" data-path="d-optimization.html"><a href="d-optimization.html#characterize-the-extrema-1"><i class="fa fa-check"></i><b>26.2.1</b> Characterize the Extrema</a></li>
+<li class="chapter" data-level="26.2.2" data-path="d-optimization.html"><a href="d-optimization.html#first-derivative-test-1"><i class="fa fa-check"></i><b>26.2.2</b> First Derivative Test</a></li>
+<li class="chapter" data-level="26.2.3" data-path="d-optimization.html"><a href="d-optimization.html#second-derivative-test-1"><i class="fa fa-check"></i><b>26.2.3</b> Second Derivative Test</a></li>
+<li class="chapter" data-level="26.2.4" data-path="d-optimization.html"><a href="d-optimization.html#cupcake-store-1"><i class="fa fa-check"></i><b>26.2.4</b> Cupcake Store</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="27" data-path="d-optimization-1.html"><a href="d-optimization-1.html"><i class="fa fa-check"></i><b>27</b> 2D Optimization</a>
 <ul>
 <li class="chapter" data-level="27.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#summary"><i class="fa fa-check"></i><b>27.1</b> Summary</a></li>
 <li class="chapter" data-level="27.2" data-path="d-optimization-1.html"><a href="d-optimization-1.html#activities-18"><i class="fa fa-check"></i><b>27.2</b> Activities</a>
 <ul>
-<li class="chapter" data-level="27.2.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-1"><i class="fa fa-check"></i><b>27.2.1</b> Characterize the Extrema</a></li>
+<li class="chapter" data-level="27.2.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-2"><i class="fa fa-check"></i><b>27.2.1</b> Characterize the Extrema</a></li>
 <li class="chapter" data-level="27.2.2" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values"><i class="fa fa-check"></i><b>27.2.2</b> Classifying a critical point using a small circle of values</a></li>
 <li class="chapter" data-level="27.2.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#the-2d-second-derivative-test"><i class="fa fa-check"></i><b>27.2.3</b> The 2D Second Derivative Test</a></li>
 <li class="chapter" data-level="27.2.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points"><i class="fa fa-check"></i><b>27.2.4</b> Classify the Critical Points</a></li>
@@ -698,98 +705,93 @@ image: <a href="https://openstax.org/books/calculus-volume-1/pages/4-3-maxima-an
 <li>The revenue for a price of <span class="math inline">\(x\)</span> dollars is <span class="math inline">\(r(x) = x \cdot q(x)\)</span>. Use your function from part (a) to find the price that maximizes revenue.</li>
 </ol>
 <p>Find the price and quantity that maximize the revenue.</p>
-<!--
-## Solutions
-
-### Characterize the Extrema
-
-1. We have three different functions
-  * $f(x) = x^3$ has no extrema
-  * $f(x) = \frac{1}{x^2+1}$ has a global maximum at $x=1$
-  * $f(x) = \cos(x)$ has global maxima at $x=2k \pi$ for every integer $k$. It has global minima at $x=(2k+1) \pi$ for every integer $k$.
-
-2. Once again we have three functions
-  * LEFT: global maximum at $x=0$; local maximum at $x=4$. Note that $x=2$ is not a local minimum.
-  * MIDDLE: local maximum at $x=1$; global minimum at $x=2$; global maximum at $x=4$.
-  * RIGHT: global minimum at $x=0$. Note that $x=2$ is not a global maximum (because the function is not defined at $x=2$).
-  
-  
-
-
-
-### First Derivative Test
-
-Find the critical point(s) of the following functions. Then use the first derivative test to determine whether it is a local minimum, a local maximum, or neither
-
-1. We have $f(x) = x - e^x$ and so $f'(x) = 1 - e^x$. There is one critical point: 
-$$
+</div>
+</div>
+<div id="solutions-16" class="section level2 hasAnchor" number="26.2">
+<h2><span class="header-section-number">26.2</span> Solutions<a href="d-optimization.html#solutions-16" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="characterize-the-extrema-1" class="section level3 hasAnchor" number="26.2.1">
+<h3><span class="header-section-number">26.2.1</span> Characterize the Extrema<a href="d-optimization.html#characterize-the-extrema-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>We have three different functions</li>
+</ol>
+<ul>
+<li><span class="math inline">\(f(x) = x^3\)</span> has no extrema</li>
+<li><span class="math inline">\(f(x) = \frac{1}{x^2+1}\)</span> has a global maximum at <span class="math inline">\(x=1\)</span></li>
+<li><span class="math inline">\(f(x) = \cos(x)\)</span> has global maxima at <span class="math inline">\(x=2k \pi\)</span> for every integer <span class="math inline">\(k\)</span>. It has global minima at <span class="math inline">\(x=(2k+1) \pi\)</span> for every integer <span class="math inline">\(k\)</span>.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Once again we have three functions</li>
+</ol>
+<ul>
+<li>LEFT: global maximum at <span class="math inline">\(x=0\)</span>; local maximum at <span class="math inline">\(x=4\)</span>. Note that <span class="math inline">\(x=2\)</span> is not a local minimum.</li>
+<li>MIDDLE: local maximum at <span class="math inline">\(x=1\)</span>; global minimum at <span class="math inline">\(x=2\)</span>; global maximum at <span class="math inline">\(x=4\)</span>.</li>
+<li>RIGHT: global minimum at <span class="math inline">\(x=0\)</span>. Note that <span class="math inline">\(x=2\)</span> is not a global maximum (because the function is not defined at <span class="math inline">\(x=2\)</span>).</li>
+</ul>
+</div>
+<div id="first-derivative-test-1" class="section level3 hasAnchor" number="26.2.2">
+<h3><span class="header-section-number">26.2.2</span> First Derivative Test<a href="d-optimization.html#first-derivative-test-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Find the critical point(s) of the following functions. Then use the first derivative test to determine whether it is a local minimum, a local maximum, or neither</p>
+<ol style="list-style-type: decimal">
+<li><p>We have <span class="math inline">\(f(x) = x - e^x\)</span> and so <span class="math inline">\(f&#39;(x) = 1 - e^x\)</span>. There is one critical point:
+<span class="math display">\[
 \begin{array}{rcl}
-1-e^x &=& 0 \\
-e^x &=& 1 \\
-x &=& 0.
+1-e^x &amp;=&amp; 0 \\
+e^x &amp;=&amp; 1 \\
+x &amp;=&amp; 0.
 \end{array}
-$$
-Using the first derivative test, we have $f'(-1) = 1 - e^{-1} > 0$ and $f'(1) = 1 - e < 0$. Therefore $x=0$ is a local maximum.
-
-1. We have $g(x) = x + \sin(x)$ and therefore $g'(x) = 1 + \sin(x)$. There is one critical point:
-$$
+\]</span>
+Using the first derivative test, we have <span class="math inline">\(f&#39;(-1) = 1 - e^{-1} &gt; 0\)</span> and <span class="math inline">\(f&#39;(1) = 1 - e &lt; 0\)</span>. Therefore <span class="math inline">\(x=0\)</span> is a local maximum.</p></li>
+<li><p>We have <span class="math inline">\(g(x) = x + \sin(x)\)</span> and therefore <span class="math inline">\(g&#39;(x) = 1 + \sin(x)\)</span>. There is one critical point:
+<span class="math display">\[
 \begin{array}{rcl}
-1 + \cos(x) &=& 0 \\
-\cos(x) &=& -1 \\
-x &=& \pi
+1 + \cos(x) &amp;=&amp; 0 \\
+\cos(x) &amp;=&amp; -1 \\
+x &amp;=&amp; \pi
 \end{array}
-$$
-
-We have $g'(\pi/2) = 1 > 0$ and $g'(3 \pi/2) = 1 > 0$. (In fact, $1+\cos(x)$ is never negative) Therefore this point is not an extremum.
-
-To find all the extrema of $g(x)$, we need to consider the endpoints of $[0,2\pi]$. The function never decreases as we move from $0$ to $2\pi$.So  $x=0$ is the global minimum, and $x=2\pi$ is the global maximum.
-
-
-
-### Second Derivative Test
-
-The function $f(x) = x^4-8 x^3+22 x^2-24 x$ has critical points at $x=1$ and $x=2$ and $x=3$.
-
-1. We have
-$$f'(x) = 4x^3 - 24 x^2 + 44 x - 24$$
+\]</span></p></li>
+</ol>
+<p>We have <span class="math inline">\(g&#39;(\pi/2) = 1 &gt; 0\)</span> and <span class="math inline">\(g&#39;(3 \pi/2) = 1 &gt; 0\)</span>. (In fact, <span class="math inline">\(1+\cos(x)\)</span> is never negative) Therefore this point is not an extremum.</p>
+<p>To find all the extrema of <span class="math inline">\(g(x)\)</span>, we need to consider the endpoints of <span class="math inline">\([0,2\pi]\)</span>. The function never decreases as we move from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\pi\)</span>.So <span class="math inline">\(x=0\)</span> is the global minimum, and <span class="math inline">\(x=2\pi\)</span> is the global maximum.</p>
+</div>
+<div id="second-derivative-test-1" class="section level3 hasAnchor" number="26.2.3">
+<h3><span class="header-section-number">26.2.3</span> Second Derivative Test<a href="d-optimization.html#second-derivative-test-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The function <span class="math inline">\(f(x) = x^4-8 x^3+22 x^2-24 x\)</span> has critical points at <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>We have
+<span class="math display">\[f&#39;(x) = 4x^3 - 24 x^2 + 44 x - 24\]</span>
 and
-$$ f''(x) = 12x^2 - 48x + 44.$$
-2. We check the critical points $x=1$, $x=2$ and $x=3$.
-$$
+<span class="math display">\[ f&#39;&#39;(x) = 12x^2 - 48x + 44.\]</span></li>
+<li>We check the critical points <span class="math inline">\(x=1\)</span>, <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span>.
+<span class="math display">\[
 \begin{array}{rcl}
-f''(1) &=& 12 - 48 + 44 = 8 > 0 \\
-f''(2) &=& 48 - 96 + 44 = -2 < 0 \\
-f''(3) &=& 108 - 144 + 44 > 0 \\
+f&#39;&#39;(1) &amp;=&amp; 12 - 48 + 44 = 8 &gt; 0 \\
+f&#39;&#39;(2) &amp;=&amp; 48 - 96 + 44 = -2 &lt; 0 \\
+f&#39;&#39;(3) &amp;=&amp; 108 - 144 + 44 &gt; 0 \\
 \end{array}
-$$
-
-Therefore $x=1$ and $x=3$ are local minima and $x=2$ is a local maximum.
-
-### Cupcake Store
-
-A cupcake store finds that at a price of \$4.00, the demand is 400 cupcakes. For every \$.25 decrease in price, the demand increases by 20 cupcakes. 
-
-1. The description of the demand function tells us that  $q(x)$ is a linear function with a negative slope. The slope is $20/(-.25)=-80$. So $q(x) = -80x + c$ and we can determine $c$ by using the fact that $q(4)=400$. 
+\]</span></li>
+</ol>
+<p>Therefore <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=3\)</span> are local minima and <span class="math inline">\(x=2\)</span> is a local maximum.</p>
+</div>
+<div id="cupcake-store-1" class="section level3 hasAnchor" number="26.2.4">
+<h3><span class="header-section-number">26.2.4</span> Cupcake Store<a href="d-optimization.html#cupcake-store-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A cupcake store finds that at a price of $4.00, the demand is 400 cupcakes. For every $.25 decrease in price, the demand increases by 20 cupcakes.</p>
+<ol style="list-style-type: decimal">
+<li><p>The description of the demand function tells us that <span class="math inline">\(q(x)\)</span> is a linear function with a negative slope. The slope is <span class="math inline">\(20/(-.25)=-80\)</span>. So <span class="math inline">\(q(x) = -80x + c\)</span> and we can determine <span class="math inline">\(c\)</span> by using the fact that <span class="math inline">\(q(4)=400\)</span>.
 We have
-$$
+<span class="math display">\[
 400 = -80 \cdot 4 + c = -320 + c
-$$
-so $c=720$. In conclusion, our demand function is
-$$q(x) = -80x + 720.$$
-
-
-
-2. The revenue at price $x$ is
-$$r(x) = x q(x) = x \left(-80x + 720 \right) = -80x^2 + 720x.$$
+\]</span>
+so <span class="math inline">\(c=720\)</span>. In conclusion, our demand function is
+<span class="math display">\[q(x) = -80x + 720.\]</span></p></li>
+<li><p>The revenue at price <span class="math inline">\(x\)</span> is
+<span class="math display">\[r(x) = x q(x) = x \left(-80x + 720 \right) = -80x^2 + 720x.\]</span>
 Taking the derivative and solving for critical points gives
-$$
+<span class="math display">\[
 -160 x + 720 = 0
-$$
-and therefore $x=720/160= 4.5$. By the second derivative test, this is a local maximum.  
-
-We sell $q(4.5) = 400 - 40 = 360$ cupcakes and obtain revenue $r(4.5) = 4.5 \cdot 360 = 1620$.
-
--->
+\]</span>
+and therefore <span class="math inline">\(x=720/160= 4.5\)</span>. By the second derivative test, this is a local maximum.</p></li>
+</ol>
+<p>We sell <span class="math inline">\(q(4.5) = 400 - 40 = 360\)</span> cupcakes and obtain revenue <span class="math inline">\(r(4.5) = 4.5 \cdot 360 = 1620\)</span>.</p>
 
 </div>
 </div>
