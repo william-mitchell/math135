@@ -290,6 +290,12 @@ classifying-a-critical-point-using-a-small-circle-of-values
 the-2d-second-derivative-test
 classify-the-critical-points
 optimizing-flight-control
+solutions-17
+characterize-the-extrema-3
+classifying-a-critical-point-using-a-small-circle-of-values-1
+the-2d-second-derivative-test-1
+classify-the-critical-points-1
+optimizing-flight-control-1
 gradient-search-1
 gradient-search-example
 activities-19

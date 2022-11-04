@@ -555,6 +555,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="27.2.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points"><i class="fa fa-check"></i><b>27.2.4</b> Classify the Critical Points</a></li>
 <li class="chapter" data-level="27.2.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control"><i class="fa fa-check"></i><b>27.2.5</b> Optimizing Flight Control</a></li>
 </ul></li>
+<li class="chapter" data-level="27.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#solutions-17"><i class="fa fa-check"></i><b>27.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="27.3.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-3"><i class="fa fa-check"></i><b>27.3.1</b> Characterize the Extrema</a></li>
+<li class="chapter" data-level="27.3.2" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values-1"><i class="fa fa-check"></i><b>27.3.2</b> Classifying a critical point using a small circle of values</a></li>
+<li class="chapter" data-level="27.3.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#the-2d-second-derivative-test-1"><i class="fa fa-check"></i><b>27.3.3</b> The 2D Second Derivative Test</a></li>
+<li class="chapter" data-level="27.3.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points-1"><i class="fa fa-check"></i><b>27.3.4</b> Classify the Critical Points</a></li>
+<li class="chapter" data-level="27.3.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control-1"><i class="fa fa-check"></i><b>27.3.5</b> Optimizing Flight Control</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="28" data-path="gradient-search-1.html"><a href="gradient-search-1.html"><i class="fa fa-check"></i><b>28</b> Gradient Search</a>
 <ul>
@@ -669,12 +677,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="creating-a-contour-plot-for-2d-optimization" class="section level2 hasAnchor" number="29.1">
 <h2><span class="header-section-number">29.1</span> Creating a Contour Plot for 2D Optimization<a href="constrained-2d-optimization.html#creating-a-contour-plot-for-2d-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here is some example code to create a plot of an objective function <span class="math inline">\(P(x,y) = x^{0.2} y^{0.8}\)</span> and a constraint function <span class="math inline">\(Q(x,y)=4x + 3y=200\)</span>.</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="constrained-2d-optimization.html#cb115-1" aria-hidden="true" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( x<span class="sc">^</span>(<span class="fl">0.2</span>) <span class="sc">*</span> y<span class="sc">^</span>(<span class="fl">0.8</span>) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb115-2"><a href="constrained-2d-optimization.html#cb115-2" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="dv">4</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb115-3"><a href="constrained-2d-optimization.html#cb115-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-4"><a href="constrained-2d-optimization.html#cb115-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">60</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">4</span>))</span>
-<span id="cb115-5"><a href="constrained-2d-optimization.html#cb115-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-6"><a href="constrained-2d-optimization.html#cb115-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">200</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="constrained-2d-optimization.html#cb128-1" aria-hidden="true" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( x<span class="sc">^</span>(<span class="fl">0.2</span>) <span class="sc">*</span> y<span class="sc">^</span>(<span class="fl">0.8</span>) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb128-2"><a href="constrained-2d-optimization.html#cb128-2" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="dv">4</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb128-3"><a href="constrained-2d-optimization.html#cb128-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb128-4"><a href="constrained-2d-optimization.html#cb128-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">60</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">4</span>))</span>
+<span id="cb128-5"><a href="constrained-2d-optimization.html#cb128-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb128-6"><a href="constrained-2d-optimization.html#cb128-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">200</span>)</span></code></pre></div>
 </div>
 <div id="activities-20" class="section level2 hasAnchor" number="29.2">
 <h2><span class="header-section-number">29.2</span> Activities<a href="constrained-2d-optimization.html#activities-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -729,7 +737,7 @@ plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE)
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-112-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-131-1.png" width="672" />
 
 The maximum output for our budget occurs where the $Q(x,y)=500$ constraint is tangent to a contour of $P(x,y)$. This occurs at (approximately) the point $(38,78)$ and we estimate that the maximum production is $P(38,78)=60$.
 
@@ -749,7 +757,7 @@ plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE)
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-114-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-133-1.png" width="672" />
 
 Now, the constraint isn't tangent to any of the shown contours, but it IS tangent to a contour that we haven't drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let's make another plot on a smaller domain and pick some contours to draw.
 
@@ -763,7 +771,7 @@ plotFun(P(x,y)~x&y, xlim=c(20,40), ylim=c(60,100), filled=FALSE, levels=seq(47,6
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-116-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-135-1.png" width="672" />
 
 After some experimentation, I realized that $P(x,y)=53$ is the contour that is tangent $ Q(x,y)=500$. So the optimal point is $(26,80)$ and the optimal output is 53.
 
@@ -782,7 +790,7 @@ plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE, levels=seq(15,85
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=300)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-118-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-137-1.png" width="672" />
 
 The optimal point is at $(21,40)$ and the optimal production is approximately $f(21,40)=35$. (This is a slight under-estimate, but it's pretty close.)
 

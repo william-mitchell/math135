@@ -32,8 +32,10 @@ newy = 1
 Next, you **repeatedly**  run the following code block, which updates the current point by moving `0.1` times the gradient vector. This takes a small step in the uphill direction.
 
 ```{r eval=FALSE}
-newx = newx + 0.1*partialx(newx, newy)
-newy = newy + 0.1*partialy(newx, newy)
+slopex=partialx(newx, newy)
+slopey=partialy(newx, newy)
+newx = newx + 0.05*slopex
+newy = newy + 0.05*slopey
 # print new partial derivatives
 c(partialx(newx, newy), partialy(newx, newy))
 # print new point
@@ -78,8 +80,10 @@ newy = 1
 Now we repeatedly run this "move downhill" block until the partial derivatives are (basically) zero.
 
 ```{r }
-newx = newx - 0.1*partialx(newx, newy)
-newy = newy - 0.1*partialy(newx, newy)
+slopex=partialx(newx, newy)
+slopey=partialy(newx, newy)
+newx = newx - 0.05*slopex
+newy = newy - 0.05*slopey
 # print new partial derivatives
 c(partialx(newx, newy), partialy(newx, newy))
 # print new point

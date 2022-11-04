@@ -555,6 +555,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="27.2.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points"><i class="fa fa-check"></i><b>27.2.4</b> Classify the Critical Points</a></li>
 <li class="chapter" data-level="27.2.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control"><i class="fa fa-check"></i><b>27.2.5</b> Optimizing Flight Control</a></li>
 </ul></li>
+<li class="chapter" data-level="27.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#solutions-17"><i class="fa fa-check"></i><b>27.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="27.3.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-3"><i class="fa fa-check"></i><b>27.3.1</b> Characterize the Extrema</a></li>
+<li class="chapter" data-level="27.3.2" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values-1"><i class="fa fa-check"></i><b>27.3.2</b> Classifying a critical point using a small circle of values</a></li>
+<li class="chapter" data-level="27.3.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#the-2d-second-derivative-test-1"><i class="fa fa-check"></i><b>27.3.3</b> The 2D Second Derivative Test</a></li>
+<li class="chapter" data-level="27.3.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points-1"><i class="fa fa-check"></i><b>27.3.4</b> Classify the Critical Points</a></li>
+<li class="chapter" data-level="27.3.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control-1"><i class="fa fa-check"></i><b>27.3.5</b> Optimizing Flight Control</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="28" data-path="gradient-search-1.html"><a href="gradient-search-1.html"><i class="fa fa-check"></i><b>28</b> Gradient Search</a>
 <ul>
@@ -748,14 +756,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="estimating-area-with-rstudio" class="section level3 hasAnchor" number="31.1.4">
 <h3><span class="header-section-number">31.1.4</span> Estimating Area with RStudio<a href="accumulating-change.html#estimating-area-with-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Here is some RStudio code that will estimate the area under the curve <span class="math inline">\(f(x)=2+4x^2-x^3\)</span> on the interval <span class="math inline">\(0 \leq x \leq 4\)</span> using a <strong>right endpoint estimation</strong> on intervals of size <span class="math inline">\(0.5\)</span>.</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="accumulating-change.html#cb116-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
-<span id="cb116-2"><a href="accumulating-change.html#cb116-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb116-3"><a href="accumulating-change.html#cb116-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">4</span></span>
-<span id="cb116-4"><a href="accumulating-change.html#cb116-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> <span class="fl">0.5</span></span>
-<span id="cb116-5"><a href="accumulating-change.html#cb116-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb116-6"><a href="accumulating-change.html#cb116-6" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb116-7"><a href="accumulating-change.html#cb116-7" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb116-8"><a href="accumulating-change.html#cb116-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="accumulating-change.html#cb129-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
+<span id="cb129-2"><a href="accumulating-change.html#cb129-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb129-3"><a href="accumulating-change.html#cb129-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb129-4"><a href="accumulating-change.html#cb129-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> <span class="fl">0.5</span></span>
+<span id="cb129-5"><a href="accumulating-change.html#cb129-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb129-6"><a href="accumulating-change.html#cb129-6" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb129-7"><a href="accumulating-change.html#cb129-7" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb129-8"><a href="accumulating-change.html#cb129-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 29</code></pre>
 <ol style="list-style-type: decimal">
 <li>Update this code to estimate this area using
@@ -961,7 +969,7 @@ f=makeFun(2+4*x^2-x^3~x)
 plotFun(f(x)~x, xlim=c(0,4))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-131-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-150-1.png" width="672" />
 
 It is **not** clear whether any of these values is an over-estimate or an under-estimate. There is a maximum at $x=2.75$. 
 

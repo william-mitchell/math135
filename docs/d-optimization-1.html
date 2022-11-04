@@ -555,6 +555,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="27.2.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points"><i class="fa fa-check"></i><b>27.2.4</b> Classify the Critical Points</a></li>
 <li class="chapter" data-level="27.2.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control"><i class="fa fa-check"></i><b>27.2.5</b> Optimizing Flight Control</a></li>
 </ul></li>
+<li class="chapter" data-level="27.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#solutions-17"><i class="fa fa-check"></i><b>27.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="27.3.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-3"><i class="fa fa-check"></i><b>27.3.1</b> Characterize the Extrema</a></li>
+<li class="chapter" data-level="27.3.2" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values-1"><i class="fa fa-check"></i><b>27.3.2</b> Classifying a critical point using a small circle of values</a></li>
+<li class="chapter" data-level="27.3.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#the-2d-second-derivative-test-1"><i class="fa fa-check"></i><b>27.3.3</b> The 2D Second Derivative Test</a></li>
+<li class="chapter" data-level="27.3.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points-1"><i class="fa fa-check"></i><b>27.3.4</b> Classify the Critical Points</a></li>
+<li class="chapter" data-level="27.3.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control-1"><i class="fa fa-check"></i><b>27.3.5</b> Optimizing Flight Control</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="28" data-path="gradient-search-1.html"><a href="gradient-search-1.html"><i class="fa fa-check"></i><b>28</b> Gradient Search</a>
 <ul>
@@ -701,16 +709,16 @@ f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) </code></pre>
 <p>Multiple 2D functions have been (contour) plotted below. For each, identify the critical points and determine if they are maximums, minimums, or saddle points.</p>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="d-optimization-1.html#cb109-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span>y<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
 <span id="cb109-2"><a href="d-optimization-1.html#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-94-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-113-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="d-optimization-1.html#cb110-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="sc">-</span>x<span class="sc">*</span>y<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
 <span id="cb110-2"><a href="d-optimization-1.html#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-95-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-114-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="d-optimization-1.html#cb111-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(y<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
 <span id="cb111-2"><a href="d-optimization-1.html#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-96-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-115-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="d-optimization-1.html#cb112-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fu">cos</span>(x)<span class="sc">*</span>(x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
 <span id="cb112-2"><a href="d-optimization-1.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-97-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-116-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="classifying-a-critical-point-using-a-small-circle-of-values" class="section level3 hasAnchor" number="27.2.2">
 <h3><span class="header-section-number">27.2.2</span> Classifying a critical point using a small circle of values<a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -744,203 +752,137 @@ f_{xx} = 6x, \qquad f_{yy} = 48y, \qquad f_{xy} = -3.
 R(t,h)=27800-5t^2-6ht-3h^2+400t+300h
 \]</span>
 What are the optimal atmospheric conditions?</p>
-<!--
-## Solutions
-
-
-### Characterize the Extrema
-
-Plot 1
-* Local minimum at $(0,0)$
-
-Plot 2
-* Local minima at $(-0.75, -0.75)$ and $(0.75, 0.75)$
-* Local maxima at $(-0.75, 0.75)$ and $(0.75, -0.75)$
-* Saddle point at $(0,0)$
-
-Plot 3
-* Saddle point at $(0,0)$
-
-Plot 4
-* Local maxima at $(-1,0)$ and $(1,0)$
-* Saddle point at $(0,0)$
-
-
-
-### Classifying a critical point using a small circle of values
-
-Let's define our function and then check each of our critical points.
-
-
-```r
-f = makeFun(3*x^2*y + y^3 -3*x^2-3*y^2+3~x&y)
-```
-
-First, we check $(0,0)$ and find that it is a **local maximum**.
-
-
-```r
-a=0
-b=0
-r = 0.1
-theta = seq(0,2*pi,pi/10)
-f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
-```
-
-```
-##  [1] 0.03000000 0.02913197 0.02864279 0.02863197 0.02886731 0.02900000
-##  [7] 0.02886731 0.02863197 0.02864279 0.02913197 0.03000000 0.03086803
-## [13] 0.03135721 0.03136803 0.03113269 0.03100000 0.03113269 0.03136803
-## [19] 0.03135721 0.03086803 0.03000000
-```
-
-
-Next, we check $(0,2)$ and find that it is also a **local minimum**.
-
-
-```r
-a=0
-b=2
-r = 0.1
-theta = seq(0,2*pi,pi/10)
-f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
-```
-
-```
-##  [1] -0.03000000 -0.03086803 -0.03135721 -0.03136803 -0.03113269
-##  [6] -0.03100000 -0.03113269 -0.03136803 -0.03135721 -0.03086803
-## [11] -0.03000000 -0.02913197 -0.02864279 -0.02863197 -0.02886731
-## [16] -0.02900000 -0.02886731 -0.02863197 -0.02864279 -0.02913197
-## [21] -0.03000000
-```
-
-
-Next up is  $(1,1)$.It is a **saddle point**!
-
-
-```r
-a=1
-b=1
-r = 0.1
-theta = seq(0,2*pi,pi/10)
-f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
-```
-
-```
-##  [1]  0.00000000 -0.01850159 -0.02988890 -0.02989973 -0.01876625
-##  [6] -0.00100000  0.01650087  0.02716366  0.02717449  0.01676552
-## [11]  0.00000000 -0.01676552 -0.02717449 -0.02716366 -0.01650087
-## [16]  0.00100000  0.01876625  0.02989973  0.02988890  0.01850159
-## [21]  0.00000000
-```
-
-
-One more point to go: $(1,-1)$. This is also a **saddle point**.
-
-
-```r
-a=1
-b=-1
-r = 0.1
-theta = seq(0,2*pi,pi/10)
-f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
-```
-
-```
-##  [1]  1.2600000  0.8119458  0.2955892 -0.2353778 -0.7292137 -1.1410000
-##  [7] -1.4355873 -1.5889990 -1.5889882 -1.4353227 -1.1400000 -0.7272129
-## [13] -0.2326526  0.2983144  0.8139466  1.2610000  1.5908545  1.7660624
-## [19]  1.7660516  1.5905898  1.2600000
-```
-
-
-
-### The 2D Second Derivative Test
-
-The function $f(x,y)=10 + x^3 + 8y^3 - 3xy$ has two critical points: $(0,0)$ and $(1/2,1/4)$. 
-
-1. The critical points are $(0,0)$ and $(1/2,1/4)$. The second derivatives are
-$$
+</div>
+</div>
+<div id="solutions-17" class="section level2 hasAnchor" number="27.3">
+<h2><span class="header-section-number">27.3</span> Solutions<a href="d-optimization-1.html#solutions-17" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="characterize-the-extrema-3" class="section level3 hasAnchor" number="27.3.1">
+<h3><span class="header-section-number">27.3.1</span> Characterize the Extrema<a href="d-optimization-1.html#characterize-the-extrema-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Plot 1
+* Local minimum at <span class="math inline">\((0,0)\)</span></p>
+<p>Plot 2
+* Local minima at <span class="math inline">\((-0.75, -0.75)\)</span> and <span class="math inline">\((0.75, 0.75)\)</span>
+* Local maxima at <span class="math inline">\((-0.75, 0.75)\)</span> and <span class="math inline">\((0.75, -0.75)\)</span>
+* Saddle point at <span class="math inline">\((0,0)\)</span></p>
+<p>Plot 3
+* Saddle point at <span class="math inline">\((0,0)\)</span></p>
+<p>Plot 4
+* Local maxima at <span class="math inline">\((-1,0)\)</span> and <span class="math inline">\((1,0)\)</span>
+* Saddle point at <span class="math inline">\((0,0)\)</span></p>
+</div>
+<div id="classifying-a-critical-point-using-a-small-circle-of-values-1" class="section level3 hasAnchor" number="27.3.2">
+<h3><span class="header-section-number">27.3.2</span> Classifying a critical point using a small circle of values<a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s define our function and then check each of our critical points.</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="d-optimization-1.html#cb113-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>y <span class="sc">+</span> y<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2-3</span><span class="sc">*</span>y<span class="sc">^</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">~</span>x<span class="sc">&amp;</span>y)</span></code></pre></div>
+<p>First, we check <span class="math inline">\((0,0)\)</span> and find that it is a <strong>local maximum</strong>.</p>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="d-optimization-1.html#cb114-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb114-2"><a href="d-optimization-1.html#cb114-2" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb114-3"><a href="d-optimization-1.html#cb114-3" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb114-4"><a href="d-optimization-1.html#cb114-4" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb114-5"><a href="d-optimization-1.html#cb114-5" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta))</span></code></pre></div>
+<pre><code>##  [1] 0.03000000 0.02913197 0.02864279 0.02863197 0.02886731
+##  [6] 0.02900000 0.02886731 0.02863197 0.02864279 0.02913197
+## [11] 0.03000000 0.03086803 0.03135721 0.03136803 0.03113269
+## [16] 0.03100000 0.03113269 0.03136803 0.03135721 0.03086803
+## [21] 0.03000000</code></pre>
+<p>Next, we check <span class="math inline">\((0,2)\)</span> and find that it is also a <strong>local minimum</strong>.</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="d-optimization-1.html#cb116-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb116-2"><a href="d-optimization-1.html#cb116-2" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">2</span></span>
+<span id="cb116-3"><a href="d-optimization-1.html#cb116-3" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb116-4"><a href="d-optimization-1.html#cb116-4" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb116-5"><a href="d-optimization-1.html#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code></pre></div>
+<pre><code>##  [1] -0.03000000 -0.03086803 -0.03135721 -0.03136803
+##  [5] -0.03113269 -0.03100000 -0.03113269 -0.03136803
+##  [9] -0.03135721 -0.03086803 -0.03000000 -0.02913197
+## [13] -0.02864279 -0.02863197 -0.02886731 -0.02900000
+## [17] -0.02886731 -0.02863197 -0.02864279 -0.02913197
+## [21] -0.03000000</code></pre>
+<p>Next up is <span class="math inline">\((1,1)\)</span>.It is a <strong>saddle point</strong>!</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="d-optimization-1.html#cb118-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">1</span></span>
+<span id="cb118-2"><a href="d-optimization-1.html#cb118-2" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">1</span></span>
+<span id="cb118-3"><a href="d-optimization-1.html#cb118-3" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb118-4"><a href="d-optimization-1.html#cb118-4" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb118-5"><a href="d-optimization-1.html#cb118-5" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code></pre></div>
+<pre><code>##  [1]  0.00000000 -0.01850159 -0.02988890 -0.02989973
+##  [5] -0.01876625 -0.00100000  0.01650087  0.02716366
+##  [9]  0.02717449  0.01676552  0.00000000 -0.01676552
+## [13] -0.02717449 -0.02716366 -0.01650087  0.00100000
+## [17]  0.01876625  0.02989973  0.02988890  0.01850159
+## [21]  0.00000000</code></pre>
+<p>One more point to go: <span class="math inline">\((1,-1)\)</span>. This is also a <strong>saddle point</strong>.</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="d-optimization-1.html#cb120-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">1</span></span>
+<span id="cb120-2"><a href="d-optimization-1.html#cb120-2" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="sc">-</span><span class="dv">1</span></span>
+<span id="cb120-3"><a href="d-optimization-1.html#cb120-3" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb120-4"><a href="d-optimization-1.html#cb120-4" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb120-5"><a href="d-optimization-1.html#cb120-5" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code></pre></div>
+<pre><code>##  [1]  1.2600000  0.8119458  0.2955892 -0.2353778 -0.7292137
+##  [6] -1.1410000 -1.4355873 -1.5889990 -1.5889882 -1.4353227
+## [11] -1.1400000 -0.7272129 -0.2326526  0.2983144  0.8139466
+## [16]  1.2610000  1.5908545  1.7660624  1.7660516  1.5905898
+## [21]  1.2600000</code></pre>
+</div>
+<div id="the-2d-second-derivative-test-1" class="section level3 hasAnchor" number="27.3.3">
+<h3><span class="header-section-number">27.3.3</span> The 2D Second Derivative Test<a href="d-optimization-1.html#the-2d-second-derivative-test-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The function <span class="math inline">\(f(x,y)=10 + x^3 + 8y^3 - 3xy\)</span> has two critical points: <span class="math inline">\((0,0)\)</span> and <span class="math inline">\((1/2,1/4)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>The critical points are <span class="math inline">\((0,0)\)</span> and <span class="math inline">\((1/2,1/4)\)</span>. The second derivatives are
+<span class="math display">\[
 f_{xx} = 6x, \qquad f_{yy} = 48y, \qquad f_{xy} = -3.
-$$
+\]</span>
 so our second derivative test function is
-$$
+<span class="math display">\[
 D(x,y) = (6x)(48y) - 9.
-$$
-We have $D(0,0) = -9$ so $(0,0)$ is a saddle point. We have $D(1/2,1/4)= 3 \cdot 12 - 99 = 36 - 9 > 0$. So we further check that $f_{xx}(1/2,1/4) = 3 > 0$ which means that $(1/2, 1/4) is a local minimum.
-
-2. Here is a plot that shows that $(0,0)$ is a saddle point.
-
-
-
-```r
-f = makeFun(10 + x^3 + 8*y^3 - 3*x*y~x&y)
-plotFun(f(x,y)~x&y, xlim=range(-1,1), ylim=range(-1,1), filled=FALSE, levels=c(0,2.5,5,7.5,10,12.5,15))
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-103-1.png" width="672" style="display: block; margin: auto;" />
-
-Here is another plot that zooms in on $(1/2,1/4)$. It is clear that this is a local minimum.
-
-
-```r
-f = makeFun(10 + x^3 + 8*y^3 - 3*x*y~x&y)
-plotFun(f(x,y)~x&y, xlim=range(0,1), ylim=range(0,1), filled=FALSE)
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-104-1.png" width="672" style="display: block; margin: auto;" />
-
-
-### Classify the Critical Points
-
-Let's find the critical points of $f(x,y)=9-2x+4y-x^2-4y^2$. We have
-$$
+\]</span>
+We have <span class="math inline">\(D(0,0) = -9\)</span> so <span class="math inline">\((0,0)\)</span> is a saddle point. We have <span class="math inline">\(D(1/2,1/4)= 3 \cdot 12 - 99 = 36 - 9 &gt; 0\)</span>. So we further check that <span class="math inline">\(f_{xx}(1/2,1/4) = 3 &gt; 0\)</span> which means that $(1/2, 1/4) is a local minimum.</p></li>
+<li><p>Here is a plot that shows that <span class="math inline">\((0,0)\)</span> is a saddle point.</p></li>
+</ol>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="d-optimization-1.html#cb122-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">10</span> <span class="sc">+</span> x<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">8</span><span class="sc">*</span>y<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span> <span class="dv">3</span><span class="sc">*</span>x<span class="sc">*</span>y<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb122-2"><a href="d-optimization-1.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">2.5</span>,<span class="dv">5</span>,<span class="fl">7.5</span>,<span class="dv">10</span>,<span class="fl">12.5</span>,<span class="dv">15</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-122-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Here is another plot that zooms in on <span class="math inline">\((1/2,1/4)\)</span>. It is clear that this is a local minimum.</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="d-optimization-1.html#cb123-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">10</span> <span class="sc">+</span> x<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">8</span><span class="sc">*</span>y<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span> <span class="dv">3</span><span class="sc">*</span>x<span class="sc">*</span>y<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
+<span id="cb123-2"><a href="d-optimization-1.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">ylim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-123-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="classify-the-critical-points-1" class="section level3 hasAnchor" number="27.3.4">
+<h3><span class="header-section-number">27.3.4</span> Classify the Critical Points<a href="d-optimization-1.html#classify-the-critical-points-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s find the critical points of <span class="math inline">\(f(x,y)=9-2x+4y-x^2-4y^2\)</span>. We have
+<span class="math display">\[
 f_x(x,y) = -2-2x, \qquad f_y(x,y) = 4 - 8y.
-$$
-
-The only critical point is $(-1, 1/2)$. Let's compare $f(-1,1/2)$ to the values of $f(x,y)$ on  a small circle around this point.
-
-
-
-```r
-f=makeFun(9 - 2*x + 4*y - x^2 - 4*y^2 ~ x&y)
-a=-1
-b=1/2
-r = 0.1
-theta = seq(0,2*pi,pi/10)
-f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
-```
-
-```
-##  [1] 0.01000000 0.01286475 0.02036475 0.02963525 0.03713525 0.04000000
-##  [7] 0.03713525 0.02963525 0.02036475 0.01286475 0.01000000 0.01286475
-## [13] 0.02036475 0.02963525 0.03713525 0.04000000 0.03713525 0.02963525
-## [19] 0.02036475 0.01286475 0.01000000
-```
-
-This is a local maximum!
-
-### Optimizing Flight Control
-
-Our function is $R(t,h)=27800-5t^2-6ht-3h^2+400t+300h$. Our partial derivatives are
-$$
+\]</span></p>
+<p>The only critical point is <span class="math inline">\((-1, 1/2)\)</span>. Let’s compare <span class="math inline">\(f(-1,1/2)\)</span> to the values of <span class="math inline">\(f(x,y)\)</span> on a small circle around this point.</p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="d-optimization-1.html#cb124-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">9</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>y <span class="sc">-</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>y<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb124-2"><a href="d-optimization-1.html#cb124-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="sc">-</span><span class="dv">1</span></span>
+<span id="cb124-3"><a href="d-optimization-1.html#cb124-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb124-4"><a href="d-optimization-1.html#cb124-4" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb124-5"><a href="d-optimization-1.html#cb124-5" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb124-6"><a href="d-optimization-1.html#cb124-6" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code></pre></div>
+<pre><code>##  [1] 0.01000000 0.01286475 0.02036475 0.02963525 0.03713525
+##  [6] 0.04000000 0.03713525 0.02963525 0.02036475 0.01286475
+## [11] 0.01000000 0.01286475 0.02036475 0.02963525 0.03713525
+## [16] 0.04000000 0.03713525 0.02963525 0.02036475 0.01286475
+## [21] 0.01000000</code></pre>
+<p>This is a local maximum!</p>
+</div>
+<div id="optimizing-flight-control-1" class="section level3 hasAnchor" number="27.3.5">
+<h3><span class="header-section-number">27.3.5</span> Optimizing Flight Control<a href="d-optimization-1.html#optimizing-flight-control-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Our function is <span class="math inline">\(R(t,h)=27800-5t^2-6ht-3h^2+400t+300h\)</span>. Our partial derivatives are
+<span class="math display">\[
 \begin{array}{rcl}
-f_t(t,h) &=& -10t - 6h + 400 \\
-f_h(t,h) &=& -6t-6h+300
+f_t(t,h) &amp;=&amp; -10t - 6h + 400 \\
+f_h(t,h) &amp;=&amp; -6t-6h+300
 \end{array}
-$$
+\]</span>
 Setting both to zero,
-$$
+<span class="math display">\[
 \begin{array}{rcl}
- -10t - 6h + 400 &=& 0\\
- -6t-6h+300 &=& 0
+-10t - 6h + 400 &amp;=&amp; 0\\
+-6t-6h+300 &amp;=&amp; 0
 \end{array}
-$$
+\]</span>
 we subtract the second from the first to find that
-$-4t+100 = 0$
-and so $t=25$. This means that $-250 - 6h +400 = 0$ which becomes $6h = 150$ and therefore $h = 25$. So the optimal conditions are $t=25$ and $h=25$.
-
--->
+<span class="math inline">\(-4t+100 = 0\)</span>
+and so <span class="math inline">\(t=25\)</span>. This means that <span class="math inline">\(-250 - 6h +400 = 0\)</span> which becomes <span class="math inline">\(6h = 150\)</span> and therefore <span class="math inline">\(h = 25\)</span>. So the optimal conditions are <span class="math inline">\(t=25\)</span> and <span class="math inline">\(h=25\)</span>.</p>
 
 </div>
 </div>

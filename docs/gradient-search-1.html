@@ -555,6 +555,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="27.2.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points"><i class="fa fa-check"></i><b>27.2.4</b> Classify the Critical Points</a></li>
 <li class="chapter" data-level="27.2.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control"><i class="fa fa-check"></i><b>27.2.5</b> Optimizing Flight Control</a></li>
 </ul></li>
+<li class="chapter" data-level="27.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#solutions-17"><i class="fa fa-check"></i><b>27.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="27.3.1" data-path="d-optimization-1.html"><a href="d-optimization-1.html#characterize-the-extrema-3"><i class="fa fa-check"></i><b>27.3.1</b> Characterize the Extrema</a></li>
+<li class="chapter" data-level="27.3.2" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classifying-a-critical-point-using-a-small-circle-of-values-1"><i class="fa fa-check"></i><b>27.3.2</b> Classifying a critical point using a small circle of values</a></li>
+<li class="chapter" data-level="27.3.3" data-path="d-optimization-1.html"><a href="d-optimization-1.html#the-2d-second-derivative-test-1"><i class="fa fa-check"></i><b>27.3.3</b> The 2D Second Derivative Test</a></li>
+<li class="chapter" data-level="27.3.4" data-path="d-optimization-1.html"><a href="d-optimization-1.html#classify-the-critical-points-1"><i class="fa fa-check"></i><b>27.3.4</b> Classify the Critical Points</a></li>
+<li class="chapter" data-level="27.3.5" data-path="d-optimization-1.html"><a href="d-optimization-1.html#optimizing-flight-control-1"><i class="fa fa-check"></i><b>27.3.5</b> Optimizing Flight Control</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="28" data-path="gradient-search-1.html"><a href="gradient-search-1.html"><i class="fa fa-check"></i><b>28</b> Gradient Search</a>
 <ul>
@@ -679,17 +687,19 @@ whose partial derivatives are
 \frac{\partial f}{\partial x} = 10 x + 2 - 16 y
 \]</span></p>
 <p>First, you define the partial derivatives and then choose your starting point <code>(newx, newy)</code>. In this case, we start at <code>(1,1)</code>.</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="gradient-search-1.html#cb113-1" aria-hidden="true" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb113-2"><a href="gradient-search-1.html#cb113-2" aria-hidden="true" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">10</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">16</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
-<span id="cb113-3"><a href="gradient-search-1.html#cb113-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb113-4"><a href="gradient-search-1.html#cb113-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="gradient-search-1.html#cb126-1" aria-hidden="true" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb126-2"><a href="gradient-search-1.html#cb126-2" aria-hidden="true" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">10</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">16</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb126-3"><a href="gradient-search-1.html#cb126-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb126-4"><a href="gradient-search-1.html#cb126-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
 <p>Next, you <strong>repeatedly</strong> run the following code block, which updates the current point by moving <code>0.1</code> times the gradient vector. This takes a small step in the uphill direction.</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="gradient-search-1.html#cb114-1" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">+</span> <span class="fl">0.1</span><span class="sc">*</span><span class="fu">partialx</span>(newx, newy)</span>
-<span id="cb114-2"><a href="gradient-search-1.html#cb114-2" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">+</span> <span class="fl">0.1</span><span class="sc">*</span><span class="fu">partialy</span>(newx, newy)</span>
-<span id="cb114-3"><a href="gradient-search-1.html#cb114-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
-<span id="cb114-4"><a href="gradient-search-1.html#cb114-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span>
-<span id="cb114-5"><a href="gradient-search-1.html#cb114-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
-<span id="cb114-6"><a href="gradient-search-1.html#cb114-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="gradient-search-1.html#cb127-1" aria-hidden="true" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
+<span id="cb127-2"><a href="gradient-search-1.html#cb127-2" aria-hidden="true" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
+<span id="cb127-3"><a href="gradient-search-1.html#cb127-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>slopex</span>
+<span id="cb127-4"><a href="gradient-search-1.html#cb127-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>slopey</span>
+<span id="cb127-5"><a href="gradient-search-1.html#cb127-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb127-6"><a href="gradient-search-1.html#cb127-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span>
+<span id="cb127-7"><a href="gradient-search-1.html#cb127-7" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
+<span id="cb127-8"><a href="gradient-search-1.html#cb127-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
 <p>Repeatedly run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.</p>
 <p>You will end at the point <code>(1.04,0.77)</code>. But note that starting at another initial point might take you to a different local maximum!</p>
 </div>
@@ -728,14 +738,16 @@ Now we repeatedly run this "move downhill" block until the partial derivatives a
 
 
 ```r
-newx = newx - 0.1*partialx(newx, newy)
-newy = newy - 0.1*partialy(newx, newy)
+slopex=partialx(newx, newy)
+slopey=partialy(newx, newy)
+newx = newx - 0.05*slopex
+newy = newy - 0.05*slopey
 # print new partial derivatives
 c(partialx(newx, newy), partialy(newx, newy))
 ```
 
 ```
-## [1] 2.68 0.00
+## [1] 4.7 7.3
 ```
 
 ```r
@@ -744,7 +756,7 @@ c(newx, newy)
 ```
 
 ```
-## [1]  0.30 -0.46
+## [1] 0.65 0.20
 ```
 
 If we run this 20 or 30 times, the partial derivatives become zero, and we estimate our local minimum to be the point $(-1.37, -0.13)$.
