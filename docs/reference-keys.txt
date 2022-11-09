@@ -300,6 +300,8 @@ gradient-search-1
 gradient-search-example
 activities-19
 finding-a-local-minimum
+solutions-18
+finding-a-local-minimum-1
 constrained-2d-optimization
 creating-a-contour-plot-for-2d-optimization
 activities-20

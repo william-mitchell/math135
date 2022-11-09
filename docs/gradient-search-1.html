@@ -571,6 +571,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="28.2.1" data-path="gradient-search-1.html"><a href="gradient-search-1.html#finding-a-local-minimum"><i class="fa fa-check"></i><b>28.2.1</b> Finding a Local Minimum</a></li>
 </ul></li>
+<li class="chapter" data-level="28.3" data-path="gradient-search-1.html"><a href="gradient-search-1.html#solutions-18"><i class="fa fa-check"></i><b>28.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="28.3.1" data-path="gradient-search-1.html"><a href="gradient-search-1.html#finding-a-local-minimum-1"><i class="fa fa-check"></i><b>28.3.1</b> Finding a Local Minimum</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="29" data-path="constrained-2d-optimization.html"><a href="constrained-2d-optimization.html"><i class="fa fa-check"></i><b>29</b> Constrained 2D Optimization</a>
 <ul>
@@ -702,6 +706,17 @@ whose partial derivatives are
 <span id="cb127-8"><a href="gradient-search-1.html#cb127-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
 <p>Repeatedly run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.</p>
 <p>You will end at the point <code>(1.04,0.77)</code>. But note that starting at another initial point might take you to a different local maximum!</p>
+<p>You can check that this critical point is a local maximum (and not a saddle point) by using the same method that we used for 2D Optimizatiion</p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="gradient-search-1.html#cb128-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span>x<span class="sc">^</span><span class="dv">4</span> <span class="sc">-</span> x<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>x<span class="sc">*</span>y <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span> y <span class="sc">-</span> <span class="dv">8</span><span class="sc">*</span> y<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb128-2"><a href="gradient-search-1.html#cb128-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="fl">1.0405</span></span>
+<span id="cb128-3"><a href="gradient-search-1.html#cb128-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="fl">0.7753</span></span>
+<span id="cb128-4"><a href="gradient-search-1.html#cb128-4" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb128-5"><a href="gradient-search-1.html#cb128-5" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb128-6"><a href="gradient-search-1.html#cb128-6" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta))</span></code></pre></div>
+<pre><code>##  [1] 0.10152236 0.06983861 0.04586756 0.03913009 0.05231624 0.07998000
+##  [7] 0.11073639 0.13203698 0.13536588 0.11957064 0.09102447 0.06080448
+## [13] 0.04028374 0.03696369 0.05199590 0.08002000 0.11113281 0.13426810
+## [19] 0.14099672 0.12862949 0.10152236</code></pre>
 </div>
 <div id="activities-19" class="section level2 hasAnchor" number="28.2">
 <h2><span class="header-section-number">28.2</span> Activities<a href="gradient-search-1.html#activities-19" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -710,59 +725,40 @@ whose partial derivatives are
 <ol style="list-style-type: decimal">
 <li>How should I change to the code if I want to find a <strong>local minimum</strong> instead of a local maximum? (Hint: we want to take a small step downhill.)</li>
 <li>Use gradient search to find a <strong>local minimum</strong> of
-<span class="math display">\[f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.\]</span>
-<!--
-## Solutions
-
-### Finding a Local Minimum
-
-1. In order to find a local minimum, we need to move in the opposite direction of the gradient. This is the "downhill direction." All we need to do in the code is replace the two `+ 0.1` with `- 0.1`.
-
-2. We want to find the local minimum of 
-$$f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.$$
-We have 
-$$
-f_x(x,y) = 2x +2y + 3, \qquad f_y(x,y) = 2x + 4 + 10y.
-$$
-Here is our updated code to walk downhill. We set up our partials and pick our starting point.
-
-
-```r
-partialx = makeFun(2*x +2*y + 3 ~ x&y)
-partialy = makeFun(2*x + 4 + 10*y ~ x&y)
-newx = 1
-newy = 1
-```
-
-Now we repeatedly run this "move downhill" block until the partial derivatives are (basically) zero.
-
-
-```r
-slopex=partialx(newx, newy)
-slopey=partialy(newx, newy)
-newx = newx - 0.05*slopex
-newy = newy - 0.05*slopey
-# print new partial derivatives
-c(partialx(newx, newy), partialy(newx, newy))
-```
-
-```
-## [1] 4.7 7.3
-```
-
-```r
-# print new point
-c(newx, newy)
-```
-
-```
-## [1] 0.65 0.20
-```
-
-If we run this 20 or 30 times, the partial derivatives become zero, and we estimate our local minimum to be the point $(-1.37, -0.13)$.
-
---></li>
+<span class="math display">\[f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.\]</span></li>
 </ol>
+</div>
+</div>
+<div id="solutions-18" class="section level2 hasAnchor" number="28.3">
+<h2><span class="header-section-number">28.3</span> Solutions<a href="gradient-search-1.html#solutions-18" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-a-local-minimum-1" class="section level3 hasAnchor" number="28.3.1">
+<h3><span class="header-section-number">28.3.1</span> Finding a Local Minimum<a href="gradient-search-1.html#finding-a-local-minimum-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>In order to find a local minimum, we need to move in the opposite direction of the gradient. This is the “downhill direction.” All we need to do in the code is replace the two <code>+ 0.1</code> with <code>- 0.1</code>.</p></li>
+<li><p>We want to find the local minimum of
+<span class="math display">\[f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.\]</span>
+We have
+<span class="math display">\[
+f_x(x,y) = 2x +2y + 3, \qquad f_y(x,y) = 2x + 4 + 10y.
+\]</span>
+Here is our updated code to walk downhill. We set up our partials and pick our starting point.</p></li>
+</ol>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="gradient-search-1.html#cb130-1" aria-hidden="true" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span><span class="dv">2</span><span class="sc">*</span>y <span class="sc">+</span> <span class="dv">3</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb130-2"><a href="gradient-search-1.html#cb130-2" aria-hidden="true" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">4</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb130-3"><a href="gradient-search-1.html#cb130-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb130-4"><a href="gradient-search-1.html#cb130-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
+<p>Now we repeatedly run this “move downhill” block until the partial derivatives are (basically) zero.</p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="gradient-search-1.html#cb131-1" aria-hidden="true" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
+<span id="cb131-2"><a href="gradient-search-1.html#cb131-2" aria-hidden="true" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
+<span id="cb131-3"><a href="gradient-search-1.html#cb131-3" aria-hidden="true" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">-</span> <span class="fl">0.05</span><span class="sc">*</span>slopex</span>
+<span id="cb131-4"><a href="gradient-search-1.html#cb131-4" aria-hidden="true" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">-</span> <span class="fl">0.05</span><span class="sc">*</span>slopey</span>
+<span id="cb131-5"><a href="gradient-search-1.html#cb131-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb131-6"><a href="gradient-search-1.html#cb131-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span></code></pre></div>
+<pre><code>## [1] 4.7 7.3</code></pre>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="gradient-search-1.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print new point</span></span>
+<span id="cb133-2"><a href="gradient-search-1.html#cb133-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
+<pre><code>## [1] 0.65 0.20</code></pre>
+<p>If we run this 20 or 30 times, the partial derivatives become zero, and we estimate our local minimum to be the point <span class="math inline">\((-1.37, -0.13)\)</span>.</p>
 
 </div>
 </div>
