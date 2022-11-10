@@ -7,7 +7,7 @@ I can ...
 
 * Find the derivative of $x^n$, $\sin(x)$, $\cos(x)$, $e^x$, $a^x$, $\ln(x)$, and $\log_a(x)$. 
 * Find the derivative ... 
-  * of the sum of function
+  * of the sum of two functions
   * using the product rule
   * using the quotient rule
   * using the chain rule
