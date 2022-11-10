@@ -117,7 +117,7 @@ Calculate the gradient $\nabla f(x,y)$ for each of these functions
 
 1. $\nabla f(x,y) = \langle 16x y^4, 32x^2y^3 \rangle$
 1. $\nabla f(x,y) = \langle y^{-1}, -xy^{-2} \rangle$ 
-1. $f(x,y) = \langle y^{-1}, x^{-1} \rangle$
+1. $f(x,y) = \langle x^{-1}, y^{-1} \rangle$
 
 ### Gradient on a Contour Diagram
 
