@@ -30,10 +30,10 @@ A company produces $P(x,y) = 100 x^{4/11} y^{7/11}$ units of its product from ra
 
 ### Constrained Optimization on a Circle
 
-Below is a plot of an objective function $f(x,y)$ in red, and its constraint function $g(x,y)=9$ in blue. 
+Below is a plot of an objective function $f(x,y)$ in red, and its constraint function $g(x,y)=4$ in blue. 
 
-1. Estimate  the **minimum** value of $f(x,y)$ constrained to $g(x,y)=9$. What point achieves this minimum?
-1. Estimate  the **maximum** value of $f(x,y)$ constrained to $g(x,y)=9$. What point achieves this maximum?
+1. Estimate  the **minimum** value of $f(x,y)$ constrained to $g(x,y)=4$. What point achieves this minimum?
+1. Estimate  the **maximum** value of $f(x,y)$ constrained to $g(x,y)=4$. What point achieves this maximum?
 
 ![](images/constrained-circle.png){width=50%}
 
