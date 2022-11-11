@@ -585,6 +585,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="29.2.2" data-path="constrained-2d-optimization.html"><a href="constrained-2d-optimization.html#constrained-optimization-on-a-circle"><i class="fa fa-check"></i><b>29.2.2</b> Constrained Optimization on a Circle</a></li>
 <li class="chapter" data-level="29.2.3" data-path="constrained-2d-optimization.html"><a href="constrained-2d-optimization.html#estimating-the-lagrange-multiplier"><i class="fa fa-check"></i><b>29.2.3</b> Estimating the Lagrange Multiplier</a></li>
 </ul></li>
+<li class="chapter" data-level="29.3" data-path="constrained-2d-optimization.html"><a href="constrained-2d-optimization.html#solutions-19"><i class="fa fa-check"></i><b>29.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="29.3.1" data-path="constrained-2d-optimization.html"><a href="constrained-2d-optimization.html#constrained-production-1"><i class="fa fa-check"></i><b>29.3.1</b> Constrained Production</a></li>
+<li class="chapter" data-level="29.3.2" data-path="constrained-2d-optimization.html"><a href="constrained-2d-optimization.html#constrained-optimization-on-a-circle-1"><i class="fa fa-check"></i><b>29.3.2</b> Constrained Optimization on a Circle</a></li>
+<li class="chapter" data-level="29.3.3" data-path="constrained-2d-optimization.html"><a href="constrained-2d-optimization.html#estimating-the-lagrange-multiplier-1"><i class="fa fa-check"></i><b>29.3.3</b> Estimating the Lagrange Multiplier</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="30" data-path="unit-5-summary.html"><a href="unit-5-summary.html"><i class="fa fa-check"></i><b>30</b> Unit 5 Summary</a>
 <ul>
@@ -681,16 +687,16 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="introduction" class="section level2 hasAnchor" number="32.1">
 <h2><span class="header-section-number">32.1</span> Introduction<a href="the-definite-integral.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here is some code that approximates the area under <span class="math inline">\(f(x)=x^2\)</span> on the interval <span class="math inline">\([a,b]\)</span> using <strong>right hand endpoints</strong> on 100 subintervals. (How would you change this code to use <strong>left hand endpoints</strong> instead?)</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="the-definite-integral.html#cb138-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
-<span id="cb138-2"><a href="the-definite-integral.html#cb138-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb138-3"><a href="the-definite-integral.html#cb138-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb138-4"><a href="the-definite-integral.html#cb138-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100</span></span>
-<span id="cb138-5"><a href="the-definite-integral.html#cb138-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb138-6"><a href="the-definite-integral.html#cb138-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb138-7"><a href="the-definite-integral.html#cb138-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb138-8"><a href="the-definite-integral.html#cb138-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb138-9"><a href="the-definite-integral.html#cb138-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb138-10"><a href="the-definite-integral.html#cb138-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="the-definite-integral.html#cb146-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
+<span id="cb146-2"><a href="the-definite-integral.html#cb146-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb146-3"><a href="the-definite-integral.html#cb146-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb146-4"><a href="the-definite-integral.html#cb146-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb146-5"><a href="the-definite-integral.html#cb146-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb146-6"><a href="the-definite-integral.html#cb146-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb146-7"><a href="the-definite-integral.html#cb146-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb146-8"><a href="the-definite-integral.html#cb146-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb146-9"><a href="the-definite-integral.html#cb146-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb146-10"><a href="the-definite-integral.html#cb146-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 9.13545</code></pre>
 </div>
 <div id="activities-22" class="section level2 hasAnchor" number="32.2">
@@ -737,8 +743,8 @@ where <span class="math inline">\(q\)</span> is in dozens of cupcakes.</p>
 <div id="area-between-curves" class="section level3 hasAnchor" number="32.2.4">
 <h3><span class="header-section-number">32.2.4</span> Area Between Curves<a href="the-definite-integral.html#area-between-curves" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Below is a graph of both <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span> on the interval <span class="math inline">\([0,2\pi]\)</span>.</p>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="the-definite-integral.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x)<span class="sc">~</span>x,<span class="at">xlim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi),<span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.1</span>,<span class="fl">1.1</span>),<span class="at">xlab=</span><span class="st">&quot;&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb140-2"><a href="the-definite-integral.html#cb140-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(x)<span class="sc">~</span>x,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="the-definite-integral.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x)<span class="sc">~</span>x,<span class="at">xlim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi),<span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.1</span>,<span class="fl">1.1</span>),<span class="at">xlab=</span><span class="st">&quot;&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb148-2"><a href="the-definite-integral.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(x)<span class="sc">~</span>x,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-136-1.png" width="672" style="display: block; margin: auto;" /></p>
 <ol style="list-style-type: decimal">
 <li>Write a <strong>sum of integrals</strong> which represents the enclosed by the two curves.<br />

@@ -308,6 +308,10 @@ activities-20
 constrained-production
 constrained-optimization-on-a-circle
 estimating-the-lagrange-multiplier
+solutions-19
+constrained-production-1
+constrained-optimization-on-a-circle-1
+estimating-the-lagrange-multiplier-1
 unit-5-summary
 d-optimization-2
 d-optimization-3
