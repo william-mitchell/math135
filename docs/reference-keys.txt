@@ -335,6 +335,11 @@ drive-my-car
 accelerate-my-car
 making-cupcakes
 area-between-curves
+solutions-21
+drive-my-car-1
+accelerate-my-car-1
+making-cupcakes-1
+area-between-curves-1
 rules-of-integration
 the-fundamental-theorem-of-calculus
 integrals-of-familiar-functions
@@ -354,7 +359,7 @@ the-indefinite-integral
 activities-23
 indefinite-integral-practice
 definite-integral-practice
-area-between-curves-1
+area-between-curves-2
 average-value
 modeling-population-growth
 zombie-apocalypse
