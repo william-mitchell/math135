@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>14 Fermi Estimation | MATH 135: AMC I</title>
+  <title>37 Population Models | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="14 Fermi Estimation | MATH 135: AMC I" />
+  <meta property="og:title" content="37 Population Models | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="14 Fermi Estimation | MATH 135: AMC I" />
+  <meta name="twitter:title" content="37 Population Models | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="dimensional-analysis.html"/>
-<link rel="next" href="unit-2-summary.html"/>
+<link rel="prev" href="introduction-to-differential-equations.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -716,82 +716,90 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fermi-estimation" class="section level1 hasAnchor" number="14">
-<h1><span class="header-section-number">14</span> Fermi Estimation<a href="fermi-estimation.html#fermi-estimation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="working-fermi-problems" class="section level2 hasAnchor" number="14.1">
-<h2><span class="header-section-number">14.1</span> Working Fermi Problems<a href="fermi-estimation.html#working-fermi-problems" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here’s a general game plan for Fermi Problems:</p>
+<div id="population-models" class="section level1 hasAnchor" number="37">
+<h1><span class="header-section-number">37</span> Population Models<a href="population-models.html#population-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="important-models" class="section level2 hasAnchor" number="37.1">
+<h2><span class="header-section-number">37.1</span> Important Models<a href="population-models.html#important-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here are the three important differential equations that are also population models.</p>
+<div id="exponential-growthdecay" class="section level3 hasAnchor" number="37.1.1">
+<h3><span class="header-section-number">37.1.1</span> Exponential Growth/Decay<a href="population-models.html#exponential-growthdecay" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The differential equation
+<span class="math display">\[\displaystyle{\frac{dP}{dt} = k P}\]</span>
+has solution
+<span class="math display">\[\displaystyle{P(t) = C e^{k \, t}}.\]</span></p>
+<p>When <span class="math inline">\(k&gt;0\)</span>, we have the exponential growth population model.</p>
+<p>When <span class="math inline">\(k &lt; 0\)</span>, we have exponential decay. This includes radioactive decay, and the metabolization of a drug in the bloodstream.</p>
+</div>
+<div id="exponential-growthdecay-with-constant-inputoutput" class="section level3 hasAnchor" number="37.1.2">
+<h3><span class="header-section-number">37.1.2</span> Exponential Growth/Decay with Constant Input/Output<a href="population-models.html#exponential-growthdecay-with-constant-inputoutput" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The differential equation
+<span class="math display">\[\frac{dP}{dt} = k (P-A)\]</span>
+is exponential growth/decay with constant input/output. Its solution is
+<span class="math display">\[P(t) = A + C e^{k \, t}.\]</span>
+When <span class="math inline">\(k &gt;0\)</span> and <span class="math inline">\(H =kA\)</span>, we have the population model
+<span class="math display">\[
+\frac{dP}{dt} = kP-H
+\]</span>
+for exponential growth at rate <span class="math inline">\(k\)</span> with constant harvesting at rate <span class="math inline">\(H\)</span>.</p>
+</div>
+<div id="constrained-growth" class="section level3 hasAnchor" number="37.1.3">
+<h3><span class="header-section-number">37.1.3</span> Constrained Growth<a href="population-models.html#constrained-growth" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The differential equation
+<span class="math display">\[\frac{dP}{dt} = r \, P \left(1 - \frac{P}{K}\right)\]</span>
+has the logistic function as its solution
+<span class="math display">\[P(t) = \frac{K}{1+ C e^{-r \, t}}.\]</span>
+When <span class="math inline">\(r&gt;0\)</span> and <span class="math inline">\(K&gt;0\)</span>, we have constrained growth at rate <span class="math inline">\(r\)</span> with carrying capacity <span class="math inline">\(K\)</span>.</p>
+</div>
+<div id="newtons-law-of-cooling" class="section level3 hasAnchor" number="37.1.4">
+<h3><span class="header-section-number">37.1.4</span> Newton’s Law of Cooling<a href="population-models.html#newtons-law-of-cooling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Newton’s Law of Cooling states that the rate of change of temperature of an object <span class="math inline">\(\frac{dT}{dt}\)</span> is related to the ambient temperature <span class="math inline">\(A\)</span> by the equation:
+<span class="math display">\[ \frac{dT}{dt}=k(T-A).\]</span>
+Note that this is the same differential equation as exponential growth with constant harvesting.</p>
+</div>
+</div>
+<div id="activities-25" class="section level2 hasAnchor" number="37.2">
+<h2><span class="header-section-number">37.2</span> Activities<a href="population-models.html#activities-25" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="drug-metabolization" class="section level3 hasAnchor" number="37.2.1">
+<h3><span class="header-section-number">37.2.1</span> Drug Metabolization<a href="population-models.html#drug-metabolization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Write down what you know.</li>
-<li>Estimate what you don’t know!
-<ol style="list-style-type: lower-alpha">
-<li>Ask a series of smaller questions.</li>
-<li>Estimate the answers to the smaller questions.</li>
+<li>After a drug is administered in a single injection, the rate at which the drug leaves the body is proportional to the quantity present.
+<ol style="list-style-type: decimal">
+<li>What differential equation models this process?</li>
+<li>Suppose that 10 mg of a drug is injected into the bloodstream. 3 hours later, only 2 mg remains in the bloodstream. Find the formula for the amount of the drug <span class="math inline">\(Q(t)\)</span> after <span class="math inline">\(t\)</span> hours.</li>
 </ol></li>
-<li>Multiply and pay attention to units.</li>
-</ol>
-<p>Remember, <strong>we’re trying to estimate!</strong></p>
-<ul>
-<li>Do not obsess over details, but also,</li>
-<li>Do not guess blindly.</li>
-<li>Find a middle ground!</li>
-</ul>
-<p><strong>Pro Tip #1:</strong> Identify smaller problems that you can estimate using your everyday common sense. For example, rather than estimating the height of of a building, I would estimate the height of one floor and estimate the number of floors, and then multiply.</p>
-<p><strong>Pro Tip #2:</strong> When estimating, determine the order of magnitude (10, 100, 1000, etc). Use the geometric mean when you think the answer is somewhere in between. For example, if you think 1,000 is too small but that 10,000 is too big, then use 3,000.</p>
-</div>
-<div id="some-useful-data" class="section level2 hasAnchor" number="14.2">
-<h2><span class="header-section-number">14.2</span> Some Useful Data<a href="fermi-estimation.html#some-useful-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The following approximate data may be useful in various Fermi problems. Each has been stated with one or two significant figures.</p>
-<ul>
-<li>Population of the world: <span class="math inline">\(7 \times 10^9\)</span> people</li>
-<li>Population of the United States: <span class="math inline">\(3 \times 10^8\)</span> people</li>
-<li>Average human life span worldwide (in years): 71 years<br />
-</li>
-<li>United States national debt (in dollars): <span class="math inline">\(\$1.8 \times 10^{13}\)</span></li>
-<li>United States federal spending (in dollars per year): <span class="math inline">\(\$3.8 \times 10^{12}\)</span>.</li>
-<li>Fraction of United States federal spending devoted to defense (as a decimal): 0.16</li>
-<li>Fraction of United States federal spending devoted to Medicare/Medicaid (as a decimal): 0.27</li>
-<li>Radius of earth (in km): 6400 km</li>
-<li>Acceleration due to gravity on the surface of the Earth: <span class="math inline">\(9.8 \text{ m/}\text{s}^2\)</span></li>
-<li>Fraction of Earth’s surface covered by water (as a decimal): 0.7</li>
-<li>Density of water at sea level: <span class="math inline">\(1 \text{ g}/\text{cm}^3\)</span></li>
-</ul>
-</div>
-<div id="activities-9" class="section level2 hasAnchor" number="14.3">
-<h2><span class="header-section-number">14.3</span> Activities<a href="fermi-estimation.html#activities-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<li>Suppose that a drug is being administered at a constant rate of 60 mg/hour and its decreasing at a rate of 20% of the amount present.
 <ol style="list-style-type: decimal">
-<li><p>How many blades of grass are there on a football field?</p></li>
-<li><p>How many babies are born each day? It will be helpful to know that (a) there are 7.8 billion people on the planet, (b) the average life expectancy is 73 years, and (c) the population doesn’t change that much (relatively speakiing) in one year.</p></li>
-<li><p>If all 7.8 billion humans in the world were crammed together, how much area would we require? Is this closer to the size of a city, a state, the U.S., or North America? Start by figuring out how many people would fit in 1 square meter. Then figure out how many square kilometers we would need.</p></li>
+<li>What differential equation models this process?</li>
+<li>Find the formula for the amount of drug <span class="math inline">\(Q(t)\)</span> after <span class="math inline">\(t\)</span> hours.</li>
+<li>What value does <span class="math inline">\(Q(t)\)</span> converge to for large values of <span class="math inline">\(t\)</span>?</li>
+</ol></li>
 </ol>
 </div>
-<div id="solutions-8" class="section level2 hasAnchor" number="14.4">
-<h2><span class="header-section-number">14.4</span> Solutions<a href="fermi-estimation.html#solutions-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li><p>I think that I can estimate the number of blades in a square inch. 10 is too small, 100 seems okay, but 1000 is too many. Among my choices of 30, 100 and 300, I guess that I like 100 blades per square inch. I know that a football field is 100 yards long. I guess that the end zones are 10 yards deep, for 120 yards total. I’ll estimate that the field is 30 yards across.
-So my answer would be
+<div id="optimal-coffee-temperature" class="section level3 hasAnchor" number="37.2.2">
+<h3><span class="header-section-number">37.2.2</span> Optimal Coffee Temperature<a href="population-models.html#optimal-coffee-temperature" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In my <span class="math inline">\(22^\circ C\)</span> office, my coffee starts at <span class="math inline">\(80^\circ C\)</span>, but cools to <span class="math inline">\(75^\circ C\)</span> after 10 minutes. If I like my coffee between <span class="math inline">\(63^\circ C\)</span> and <span class="math inline">\(70^\circ C\)</span>, how long is my window to drink it?</p>
+</div>
+<div id="constrained-rabbit-population" class="section level3 hasAnchor" number="37.2.3">
+<h3><span class="header-section-number">37.2.3</span> Constrained Rabbit Population<a href="population-models.html#constrained-rabbit-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The yearly population <span class="math inline">\(P(t)\)</span> of rabbits is modeled by
 <span class="math display">\[
-\left(100 \, \frac{\mbox{blades}}{\mbox{in}^2} \right) \left(36^2 \, \frac{\mbox{in}^2}{\mbox{yard}^2} \right) \left(120 \mbox{ yards} \right) \left(30 \mbox{ yards} \right)
-= 4.7 \times 10^8
+\frac{dP}{dt} = 0.45 P  \left(1 - \frac{P}{90} \right).
 \]</span>
-and my final estimate is 500 million blades of grass.</p></li>
-<li><p>The population of the earth is growing, but not very quickly. So let’s assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is also born each year. This leads to the estimation:
+1. If the current population is <span class="math inline">\(P=120\)</span>, will the population increase or decrease? How do you know?
+2. For what values of <span class="math inline">\(P\)</span> is <span class="math inline">\(\frac{dP}{dt}=0\)</span>?
+3. What value does <span class="math inline">\(P(t)\)</span> converge to for large values of <span class="math inline">\(t\)</span>?</p>
+</div>
+<div id="constrained-deer-population" class="section level3 hasAnchor" number="37.2.4">
+<h3><span class="header-section-number">37.2.4</span> Constrained Deer Population<a href="population-models.html#constrained-deer-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The annual population <span class="math inline">\(P(t)\)</span> of deer is modeled by the constrained growth equation
 <span class="math display">\[
-7.8 \times 10^9 \mbox{ people} \times \frac{1 \mbox{ birth/year}}{73 \mbox{ people}}  \times \frac{1 \mbox{ year}}{365 \mbox{ days}} = 292,738 \frac{\mbox{ births}}{\mbox{ day}}.
+\frac{dP}{dt} = 0.22 P - 0.0275 P^2.
 \]</span>
-So my final estimation is <span class="math inline">\(300,000\)</span> babies born per day.</p></li>
-<li><p>Let’s start with the hint: How many people could we cram into one square meter? I think that we could fit about 10 people (but not 30). So we would need
-<span class="math display">\[
-\left( 7.8 \times 10^9 \mbox{ people} \right) \left( \frac{1 \mbox{ m}^2}{10 \mbox{ people}} \right) = 7.8 \times 10^8 \mbox{ m}^2
-\]</span>
-to fit everyone on the planet. Converting to square kilometers requires dividing by <span class="math inline">\((10^3)^2 = 10^6\)</span>, which gives
-<span class="math display">\[
-\left( 7.8 \times 10^8 \mbox{ m}^2 \right) \left( \frac{1 \mbox{ km}^2}{10^6 \mbox{ m}^2} \right)
-= 780 \mbox{ km}^2.
-\]</span></p></li>
-</ol>
-<p>This is less than <span class="math inline">\(30^2=900\)</span>, which is much closer to the size of a city than the size of a state. In fact, <span class="math inline">\(30 \mbox{ km} \times 30 \mbox{ km}\)</span> is similar to the size of the “metro area” of a big city.</p>
+1. What is the growth rate <span class="math inline">\(r\)</span>?
+2. What is the carrying capacity <span class="math inline">\(K\)</span>?
+3. How large is the deer population when that population is growing at its fastest rate?</p>
 
+</div>
 </div>
 </div>
             </section>
@@ -799,8 +807,8 @@ to fit everyone on the planet. Converting to square kilometers requires dividing
           </div>
         </div>
       </div>
-<a href="dimensional-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="unit-2-summary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction-to-differential-equations.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

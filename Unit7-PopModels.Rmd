@@ -1,0 +1,80 @@
+# Population Models
+
+## Important Models
+
+
+Here are the three important differential equations that are also population models.
+
+
+### Exponential Growth/Decay
+The differential equation
+$$\displaystyle{\frac{dP}{dt} = k P}$$
+has solution
+$$\displaystyle{P(t) = C e^{k \, t}}.$$
+
+When $k>0$, we have the exponential growth population model.
+
+When $k < 0$, we have exponential decay. This includes radioactive decay, and the metabolization of a drug in the bloodstream.
+
+### Exponential Growth/Decay with Constant Input/Output
+The differential equation
+$$\frac{dP}{dt} = k (P-A)$$
+is exponential growth/decay with constant input/output.  Its solution is 
+$$P(t) = A + C e^{k \, t}.$$ 
+When $k >0$ and $H =kA$, we have the population model 
+$$
+\frac{dP}{dt} = kP-H
+$$
+for exponential growth at rate $k$ with constant harvesting at rate $H$.
+
+### Constrained Growth
+The differential equation
+$$\frac{dP}{dt} = r \, P \left(1 - \frac{P}{K}\right)$$ 
+has the logistic function as its solution
+$$P(t) = \frac{K}{1+ C e^{-r \, t}}.$$
+When $r>0$ and $K>0$, we have constrained growth at rate $r$ with carrying capacity $K$.
+
+### Newton's Law of Cooling
+
+Newton's Law of Cooling states that the rate of change of temperature of an object $\frac{dT}{dt}$ is related to the ambient temperature $A$ by the equation:
+\[ \frac{dT}{dt}=k(T-A).\]
+Note that this is the same differential equation as exponential growth with constant harvesting. 
+
+## Activities
+
+
+### Drug Metabolization
+
+1. After a drug is administered in a single injection, the rate at which the drug leaves the body is proportional to the quantity present.
+    1. What differential equation models this process?
+    1. Suppose that 10 mg of a drug is injected into the bloodstream. 3 hours later, only 2 mg remains in the bloodstream. Find the formula for the amount of the drug $Q(t)$ after $t$ hours.
+
+2. Suppose that  a drug is being administered at a constant rate of 60 mg/hour and its decreasing at a rate of 20% of the amount present.
+    1. What differential equation models this process?
+    1. Find the formula for the amount of drug $Q(t)$ after $t$ hours.
+    1. What value does $Q(t)$ converge to for large values of $t$?
+
+### Optimal Coffee Temperature
+
+In my $22^\circ C$ office, my coffee starts at $80^\circ C$, but cools to $75^\circ C$ after 10 minutes. If I like my coffee between $63^\circ C$ and $70^\circ C$, how long is my window to drink it?
+
+### Constrained Rabbit Population
+
+The yearly population $P(t)$ of rabbits is modeled by 
+$$
+\frac{dP}{dt} = 0.45 P  \left(1 - \frac{P}{90} \right).
+$$
+1. If the current population is $P=120$, will the population increase or decrease?  How do you know?
+2. For what values of $P$ is $\frac{dP}{dt}=0$?
+3. What value does  $P(t)$ converge to for large values of $t$?
+
+
+### Constrained Deer Population
+
+The annual population $P(t)$ of deer is modeled by the constrained growth equation
+$$
+\frac{dP}{dt} = 0.22 P - 0.0275 P^2.
+$$
+1. What is the growth rate $r$? 
+2. What is the carrying capacity $K$?
+3. How large is the deer population when that population is growing  at its fastest rate?

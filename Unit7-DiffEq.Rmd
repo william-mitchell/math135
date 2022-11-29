@@ -21,8 +21,19 @@ Each scenario  describes a system that changes over time. Write a differential e
 Use your knowledge of anti-derivatives to solve the following differential equations
 
 1. $\displaystyle{ \frac{dy}{dx} = \cos(2 \pi x)}$
-2. $\displaystyle{ \frac{ds}{dt} = \cos(a t + v)}$ where $a$ and $v$ are constants.
+2. $\displaystyle{ \frac{ds}{dt} = a t + v}$ where $a$ and $v$ are constants.
 3. $\displaystyle{ \frac{dP}{dq} = \frac{100}{q}}$ where $P(1) = 200$.
 4. $\displaystyle{ \frac{dy}{dx} = e^{-x}}$ where $P(2) = 0$.
 
 
+### Verifying Solutions to Differential Equations
+
+Determine which of the following functions are solutions to the differential equation
+$$
+\frac{dy}{dx} =3y.
+$$
+
+1. $y=x^3$
+2. $y=e^{3x}$
+3. $y=\sin(3x)+\cos(3x)$
+4. $y=0$

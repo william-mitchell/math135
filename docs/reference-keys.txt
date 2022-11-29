@@ -366,3 +366,15 @@ introduction-to-differential-equations
 activities-24
 building-differential-equations
 solve-the-differential-equation
+verifying-solutions-to-differential-equations
+population-models
+important-models
+exponential-growthdecay
+exponential-growthdecay-with-constant-inputoutput
+constrained-growth
+newtons-law-of-cooling
+activities-25
+drug-metabolization
+optimal-coffee-temperature
+constrained-rabbit-population
+constrained-deer-population
