@@ -37,6 +37,7 @@ rmd_files: ["index.Rmd",
   "Unit6-IntegrationRules.Rmd", 
   "Unit6-IndefiniteIntegral.Rmd", 
   "Unit6-Summary.Rmd",
+  "Unit7-DiffEq.Rmd",
   ]
 language:
   ui: 

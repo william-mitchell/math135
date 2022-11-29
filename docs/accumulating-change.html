@@ -609,6 +609,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="31.1.3" data-path="accumulating-change.html"><a href="accumulating-change.html#speed-tests"><i class="fa fa-check"></i><b>31.1.3</b> Speed Tests</a></li>
 <li class="chapter" data-level="31.1.4" data-path="accumulating-change.html"><a href="accumulating-change.html#estimating-area-with-rstudio"><i class="fa fa-check"></i><b>31.1.4</b> Estimating Area with RStudio</a></li>
 </ul></li>
+<li class="chapter" data-level="31.2" data-path="accumulating-change.html"><a href="accumulating-change.html#solutions-20"><i class="fa fa-check"></i><b>31.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="31.2.1" data-path="accumulating-change.html"><a href="accumulating-change.html#growing-bacteria-1"><i class="fa fa-check"></i><b>31.2.1</b> Growing Bacteria</a></li>
+<li class="chapter" data-level="31.2.2" data-path="accumulating-change.html"><a href="accumulating-change.html#the-change-in-world-population-1"><i class="fa fa-check"></i><b>31.2.2</b> The Change in World Population</a></li>
+<li class="chapter" data-level="31.2.3" data-path="accumulating-change.html"><a href="accumulating-change.html#speed-tests-1"><i class="fa fa-check"></i><b>31.2.3</b> Speed Tests</a></li>
+<li class="chapter" data-level="31.2.4" data-path="accumulating-change.html"><a href="accumulating-change.html#estimating-area-with-rstudio-1"><i class="fa fa-check"></i><b>31.2.4</b> Estimating Area with RStudio</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="32" data-path="the-definite-integral.html"><a href="the-definite-integral.html"><i class="fa fa-check"></i><b>32</b> The Definite Integral</a>
 <ul>
@@ -661,6 +668,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="35.1" data-path="unit-6-summary.html"><a href="unit-6-summary.html#accumulating-change-1"><i class="fa fa-check"></i><b>35.1</b> Accumulating Change</a></li>
 <li class="chapter" data-level="35.2" data-path="unit-6-summary.html"><a href="unit-6-summary.html#the-definite-integral-1"><i class="fa fa-check"></i><b>35.2</b> The Definite Integral</a></li>
 <li class="chapter" data-level="35.3" data-path="unit-6-summary.html"><a href="unit-6-summary.html#the-indefinite-integral-1"><i class="fa fa-check"></i><b>35.3</b> The Indefinite Integral</a></li>
+</ul></li>
+<li class="part"><span><b>VII Differential Equations</b></span></li>
+<li class="chapter" data-level="36" data-path="introduction-to-differential-equations.html"><a href="introduction-to-differential-equations.html"><i class="fa fa-check"></i><b>36</b> Introduction to Differential Equations</a>
+<ul>
+<li class="chapter" data-level="36.1" data-path="introduction-to-differential-equations.html"><a href="introduction-to-differential-equations.html#activities-24"><i class="fa fa-check"></i><b>36.1</b> Activities</a>
+<ul>
+<li class="chapter" data-level="36.1.1" data-path="introduction-to-differential-equations.html"><a href="introduction-to-differential-equations.html#building-differential-equations"><i class="fa fa-check"></i><b>36.1.1</b> Building Differential Equations</a></li>
+<li class="chapter" data-level="36.1.2" data-path="introduction-to-differential-equations.html"><a href="introduction-to-differential-equations.html#solve-the-differential-equation"><i class="fa fa-check"></i><b>36.1.2</b> Solve the Differential Equation</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
@@ -786,209 +802,130 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </ol></li>
 <li>Make a plot of <span class="math inline">\(f(x)\)</span> on <span class="math inline">\([0,4]\)</span>. Is is clear whether each of the values about is an over-estimate? an under-estimate? or neither?</li>
 </ol>
-<!--
-## Solutions
-
-
-### Growing Bacteria
-
-1. Right endpoint estimate  using intervals of width 1/2. 
-
-
-
-```r
-f = makeFun(3+0.1*t^2~t)
-# right endpoint approximation
-f(0.5)*0.5 + f(1)*0.5 + f(1.5)*0.5 + f(2)*0.5 + f(2.5)*0.5 + f(3)*0.5 
-```
-
-```
-## [1] 10.1375
-```
-
-
-2. Left endpoint estimate  using intervals of width 1/2.
-
-
-```r
-f = makeFun(3+0.1*t^2~t)
-# left endpoint approximation
-f(0)*0.5 + f(0.5)*0.5 + f(1)*0.5 + f(1.5)*0.5 + f(2)*0.5 + f(2.5)*0.5 
-```
-
-```
-## [1] 9.6875
-```
-
-
-
-### The Change in World Population
-
-1. Left endpoint estimate
-
-
-```r
-37*10 + 41*10 + 78*10 + 77*10 + 86*10
-```
-
-```
-## [1] 3190
-```
-
-
-2. Right endpoint estimate
-
-
-```r
-41*10 + 78*10 + 77*10 + 86*10 + 79*10
-```
-
-```
-## [1] 3610
-```
-
-### Speed Tests
-
-1. Left endpoint estimate
-
-
-```r
-0*2 + 8*2 + 16.7*2 + 27.3*2
-```
-
-```
-## [1] 104
-```
-
-2. Right endpoint estimate
-
-
-```r
-8*2 + 16.7*2 + 27.3*2 + 36.2*2
-```
-
-```
-## [1] 176.4
-```
-
-### Estimating Area with RStudio
-
-
-
-
-
-1. We estimate the area below $f(x)=2+4x^2-x^3$ on the interval $0 \leq x \leq 4$ using
-   a. A **right endpoint estimation** on intervals of size $0.1$
-
-
-```r
-f=makeFun(2+4*x^2-x^3~x)
-a=0
-b=4
-base = 0.1
-points = seq(from=a+base, to=b, by=base)
-heights = f(points)
-areas = base*heights
-sum(areas)
-```
-
-```
-## [1] 29.32
-```
-
-   
-   
-   b. A **right endpoint estimation** on intervals of size $0.01$
-   
-
-```r
-f=makeFun(2+4*x^2-x^3~x)
-a=0
-b=4
-base = 0.01
-points = seq(from=a+base, to=b, by=base)
-heights = f(points)
-areas = base*heights
-sum(areas)
-```
-
-```
-## [1] 29.3332
-```
-   
-   c. A **left endpoint estimation** on intervals of size $0.5$
-   
-
-```r
-f=makeFun(2+4*x^2-x^3~x)
-a=0
-b=4
-base = 0.5
-points = seq(from=a, to=b-base, by=base)
-heights = f(points)
-areas = base*heights
-sum(areas)
-```
-
-```
-## [1] 29
-```
-
-   d. A **left endpoint estimation** on intervals of size $0.01$
-   
-
-```r
-f=makeFun(2+4*x^2-x^3~x)
-a=0
-b=4
-base = 0.01
-points = seq(from=a, to=b-base, by=base)
-heights = f(points)
-areas = base*heights
-sum(areas)
-```
-
-```
-## [1] 29.3332
-```
-
-   e. A **left endpoint estimation** on intervals of size $0.00001$
-   
-
-```r
-f=makeFun(2+4*x^2-x^3~x)
-a=0
-b=4
-base = 0.00001
-points = seq(from=a, to=b-base, by=base)
-heights = f(points)
-areas = base*heights
-sum(areas)
-```
-
-```
-## [1] 29.33333
-```
-  
-2. Make a plot of $f(x)$ on $[0,4]$. Is is clear whether each of the values about is an over-estimate? an under-estimate? or neither?
-
-
-
-```r
-f=makeFun(2+4*x^2-x^3~x)
-plotFun(f(x)~x, xlim=c(0,4))
-```
-
-<img src="math135_handbook_files/figure-html/unnamed-chunk-132-1.png" width="672" />
-
-It is **not** clear whether any of these values is an over-estimate or an under-estimate. There is a maximum at $x=2.75$. 
-
-* A left endpoint estimate will be an under-estimate on $[0,2.75]$ and an over-estimate on $[2.75,4]$.
-* A right endpoint estimate will be an over-estimate on $[0,2.75]$ and an under-estimate on $[2.75,4]$.
-
-So we can't easily tell whether it's an under-estimate or an over-estimate.
-
--->
+</div>
+</div>
+<div id="solutions-20" class="section level2 hasAnchor" number="31.2">
+<h2><span class="header-section-number">31.2</span> Solutions<a href="accumulating-change.html#solutions-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="growing-bacteria-1" class="section level3 hasAnchor" number="31.2.1">
+<h3><span class="header-section-number">31.2.1</span> Growing Bacteria<a href="accumulating-change.html#growing-bacteria-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Right endpoint estimate using intervals of width 1/2.</li>
+</ol>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="accumulating-change.html#cb146-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">3</span><span class="fl">+0.1</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span>t)</span>
+<span id="cb146-2"><a href="accumulating-change.html#cb146-2" aria-hidden="true" tabindex="-1"></a><span class="co"># right endpoint approximation</span></span>
+<span id="cb146-3"><a href="accumulating-change.html#cb146-3" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(<span class="fl">0.5</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="dv">1</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="fl">1.5</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="dv">2</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="fl">2.5</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="dv">3</span>)<span class="sc">*</span><span class="fl">0.5</span> </span></code></pre></div>
+<pre><code>## [1] 10.1375</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Left endpoint estimate using intervals of width 1/2.</li>
+</ol>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="accumulating-change.html#cb148-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">3</span><span class="fl">+0.1</span><span class="sc">*</span>t<span class="sc">^</span><span class="dv">2</span><span class="sc">~</span>t)</span>
+<span id="cb148-2"><a href="accumulating-change.html#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="co"># left endpoint approximation</span></span>
+<span id="cb148-3"><a href="accumulating-change.html#cb148-3" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(<span class="dv">0</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="fl">0.5</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="dv">1</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="fl">1.5</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="dv">2</span>)<span class="sc">*</span><span class="fl">0.5</span> <span class="sc">+</span> <span class="fu">f</span>(<span class="fl">2.5</span>)<span class="sc">*</span><span class="fl">0.5</span> </span></code></pre></div>
+<pre><code>## [1] 9.6875</code></pre>
+</div>
+<div id="the-change-in-world-population-1" class="section level3 hasAnchor" number="31.2.2">
+<h3><span class="header-section-number">31.2.2</span> The Change in World Population<a href="accumulating-change.html#the-change-in-world-population-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Left endpoint estimate</li>
+</ol>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="accumulating-change.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="dv">37</span><span class="sc">*</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">41</span><span class="sc">*</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">78</span><span class="sc">*</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">77</span><span class="sc">*</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">86</span><span class="sc">*</span><span class="dv">10</span></span></code></pre></div>
+<pre><code>## [1] 3190</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Right endpoint estimate</li>
+</ol>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="accumulating-change.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="dv">41</span><span class="sc">*</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">78</span><span class="sc">*</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">77</span><span class="sc">*</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">86</span><span class="sc">*</span><span class="dv">10</span> <span class="sc">+</span> <span class="dv">79</span><span class="sc">*</span><span class="dv">10</span></span></code></pre></div>
+<pre><code>## [1] 3610</code></pre>
+</div>
+<div id="speed-tests-1" class="section level3 hasAnchor" number="31.2.3">
+<h3><span class="header-section-number">31.2.3</span> Speed Tests<a href="accumulating-change.html#speed-tests-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Left endpoint estimate</li>
+</ol>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="accumulating-change.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span><span class="sc">*</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">8</span><span class="sc">*</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">16.7</span><span class="sc">*</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">27.3</span><span class="sc">*</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 104</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Right endpoint estimate</li>
+</ol>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="accumulating-change.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span><span class="sc">*</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">16.7</span><span class="sc">*</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">27.3</span><span class="sc">*</span><span class="dv">2</span> <span class="sc">+</span> <span class="fl">36.2</span><span class="sc">*</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 176.4</code></pre>
+</div>
+<div id="estimating-area-with-rstudio-1" class="section level3 hasAnchor" number="31.2.4">
+<h3><span class="header-section-number">31.2.4</span> Estimating Area with RStudio<a href="accumulating-change.html#estimating-area-with-rstudio-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>We estimate the area below <span class="math inline">\(f(x)=2+4x^2-x^3\)</span> on the interval <span class="math inline">\(0 \leq x \leq 4\)</span> using
+<ol style="list-style-type: lower-alpha">
+<li>A <strong>right endpoint estimation</strong> on intervals of size <span class="math inline">\(0.1\)</span></li>
+</ol></li>
+</ol>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="accumulating-change.html#cb158-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
+<span id="cb158-2"><a href="accumulating-change.html#cb158-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb158-3"><a href="accumulating-change.html#cb158-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb158-4"><a href="accumulating-change.html#cb158-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb158-5"><a href="accumulating-change.html#cb158-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb158-6"><a href="accumulating-change.html#cb158-6" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb158-7"><a href="accumulating-change.html#cb158-7" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb158-8"><a href="accumulating-change.html#cb158-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<pre><code>## [1] 29.32</code></pre>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>A <strong>right endpoint estimation</strong> on intervals of size <span class="math inline">\(0.01\)</span></li>
+</ol>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="accumulating-change.html#cb160-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
+<span id="cb160-2"><a href="accumulating-change.html#cb160-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb160-3"><a href="accumulating-change.html#cb160-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb160-4"><a href="accumulating-change.html#cb160-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb160-5"><a href="accumulating-change.html#cb160-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb160-6"><a href="accumulating-change.html#cb160-6" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb160-7"><a href="accumulating-change.html#cb160-7" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb160-8"><a href="accumulating-change.html#cb160-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<pre><code>## [1] 29.3332</code></pre>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>A <strong>left endpoint estimation</strong> on intervals of size <span class="math inline">\(0.5\)</span></li>
+</ol>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="accumulating-change.html#cb162-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
+<span id="cb162-2"><a href="accumulating-change.html#cb162-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb162-3"><a href="accumulating-change.html#cb162-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb162-4"><a href="accumulating-change.html#cb162-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> <span class="fl">0.5</span></span>
+<span id="cb162-5"><a href="accumulating-change.html#cb162-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a, <span class="at">to=</span>b<span class="sc">-</span>base, <span class="at">by=</span>base)</span>
+<span id="cb162-6"><a href="accumulating-change.html#cb162-6" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb162-7"><a href="accumulating-change.html#cb162-7" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb162-8"><a href="accumulating-change.html#cb162-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<pre><code>## [1] 29</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>A <strong>left endpoint estimation</strong> on intervals of size <span class="math inline">\(0.01\)</span></li>
+</ol>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="accumulating-change.html#cb164-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
+<span id="cb164-2"><a href="accumulating-change.html#cb164-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb164-3"><a href="accumulating-change.html#cb164-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb164-4"><a href="accumulating-change.html#cb164-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb164-5"><a href="accumulating-change.html#cb164-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a, <span class="at">to=</span>b<span class="sc">-</span>base, <span class="at">by=</span>base)</span>
+<span id="cb164-6"><a href="accumulating-change.html#cb164-6" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb164-7"><a href="accumulating-change.html#cb164-7" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb164-8"><a href="accumulating-change.html#cb164-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<pre><code>## [1] 29.3332</code></pre>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>A <strong>left endpoint estimation</strong> on intervals of size <span class="math inline">\(0.00001\)</span></li>
+</ol>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="accumulating-change.html#cb166-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
+<span id="cb166-2"><a href="accumulating-change.html#cb166-2" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">0</span></span>
+<span id="cb166-3"><a href="accumulating-change.html#cb166-3" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">4</span></span>
+<span id="cb166-4"><a href="accumulating-change.html#cb166-4" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> <span class="fl">0.00001</span></span>
+<span id="cb166-5"><a href="accumulating-change.html#cb166-5" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a, <span class="at">to=</span>b<span class="sc">-</span>base, <span class="at">by=</span>base)</span>
+<span id="cb166-6"><a href="accumulating-change.html#cb166-6" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb166-7"><a href="accumulating-change.html#cb166-7" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb166-8"><a href="accumulating-change.html#cb166-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<pre><code>## [1] 29.33333</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Make a plot of <span class="math inline">\(f(x)\)</span> on <span class="math inline">\([0,4]\)</span>. Is is clear whether each of the values about is an over-estimate? an under-estimate? or neither?</li>
+</ol>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="accumulating-change.html#cb168-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">+</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">3</span><span class="sc">~</span>x)</span>
+<span id="cb168-2"><a href="accumulating-change.html#cb168-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x)<span class="sc">~</span>x, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-132-1.png" width="672" /></p>
+<p>It is <strong>not</strong> clear whether any of these values is an over-estimate or an under-estimate. There is a maximum at <span class="math inline">\(x=2.75\)</span>.</p>
+<ul>
+<li>A left endpoint estimate will be an under-estimate on <span class="math inline">\([0,2.75]\)</span> and an over-estimate on <span class="math inline">\([2.75,4]\)</span>.</li>
+<li>A right endpoint estimate will be an over-estimate on <span class="math inline">\([0,2.75]\)</span> and an under-estimate on <span class="math inline">\([2.75,4]\)</span>.</li>
+</ul>
+<p>So we can’t easily tell whether it’s an under-estimate or an over-estimate.</p>
 
 </div>
 </div>

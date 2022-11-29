@@ -323,6 +323,11 @@ growing-bacteria
 the-change-in-world-population
 speed-tests
 estimating-area-with-rstudio
+solutions-20
+growing-bacteria-1
+the-change-in-world-population-1
+speed-tests-1
+estimating-area-with-rstudio-1
 the-definite-integral
 introduction
 activities-22
@@ -357,3 +362,7 @@ unit-6-summary
 accumulating-change-1
 the-definite-integral-1
 the-indefinite-integral-1
+introduction-to-differential-equations
+activities-24
+building-differential-equations
+solve-the-differential-equation

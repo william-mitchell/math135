@@ -609,6 +609,13 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="31.1.3" data-path="accumulating-change.html"><a href="accumulating-change.html#speed-tests"><i class="fa fa-check"></i><b>31.1.3</b> Speed Tests</a></li>
 <li class="chapter" data-level="31.1.4" data-path="accumulating-change.html"><a href="accumulating-change.html#estimating-area-with-rstudio"><i class="fa fa-check"></i><b>31.1.4</b> Estimating Area with RStudio</a></li>
 </ul></li>
+<li class="chapter" data-level="31.2" data-path="accumulating-change.html"><a href="accumulating-change.html#solutions-20"><i class="fa fa-check"></i><b>31.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="31.2.1" data-path="accumulating-change.html"><a href="accumulating-change.html#growing-bacteria-1"><i class="fa fa-check"></i><b>31.2.1</b> Growing Bacteria</a></li>
+<li class="chapter" data-level="31.2.2" data-path="accumulating-change.html"><a href="accumulating-change.html#the-change-in-world-population-1"><i class="fa fa-check"></i><b>31.2.2</b> The Change in World Population</a></li>
+<li class="chapter" data-level="31.2.3" data-path="accumulating-change.html"><a href="accumulating-change.html#speed-tests-1"><i class="fa fa-check"></i><b>31.2.3</b> Speed Tests</a></li>
+<li class="chapter" data-level="31.2.4" data-path="accumulating-change.html"><a href="accumulating-change.html#estimating-area-with-rstudio-1"><i class="fa fa-check"></i><b>31.2.4</b> Estimating Area with RStudio</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="32" data-path="the-definite-integral.html"><a href="the-definite-integral.html"><i class="fa fa-check"></i><b>32</b> The Definite Integral</a>
 <ul>
@@ -661,6 +668,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="35.1" data-path="unit-6-summary.html"><a href="unit-6-summary.html#accumulating-change-1"><i class="fa fa-check"></i><b>35.1</b> Accumulating Change</a></li>
 <li class="chapter" data-level="35.2" data-path="unit-6-summary.html"><a href="unit-6-summary.html#the-definite-integral-1"><i class="fa fa-check"></i><b>35.2</b> The Definite Integral</a></li>
 <li class="chapter" data-level="35.3" data-path="unit-6-summary.html"><a href="unit-6-summary.html#the-indefinite-integral-1"><i class="fa fa-check"></i><b>35.3</b> The Indefinite Integral</a></li>
+</ul></li>
+<li class="part"><span><b>VII Differential Equations</b></span></li>
+<li class="chapter" data-level="36" data-path="introduction-to-differential-equations.html"><a href="introduction-to-differential-equations.html"><i class="fa fa-check"></i><b>36</b> Introduction to Differential Equations</a>
+<ul>
+<li class="chapter" data-level="36.1" data-path="introduction-to-differential-equations.html"><a href="introduction-to-differential-equations.html#activities-24"><i class="fa fa-check"></i><b>36.1</b> Activities</a>
+<ul>
+<li class="chapter" data-level="36.1.1" data-path="introduction-to-differential-equations.html"><a href="introduction-to-differential-equations.html#building-differential-equations"><i class="fa fa-check"></i><b>36.1.1</b> Building Differential Equations</a></li>
+<li class="chapter" data-level="36.1.2" data-path="introduction-to-differential-equations.html"><a href="introduction-to-differential-equations.html#solve-the-differential-equation"><i class="fa fa-check"></i><b>36.1.2</b> Solve the Differential Equation</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
@@ -800,20 +816,22 @@ What are the optimal atmospheric conditions?</p>
 <span id="cb116-3"><a href="d-optimization-1.html#cb116-3" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
 <span id="cb116-4"><a href="d-optimization-1.html#cb116-4" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
 <span id="cb116-5"><a href="d-optimization-1.html#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code></pre></div>
-<pre><code>##  [1] -0.03000000 -0.03086803 -0.03135721 -0.03136803 -0.03113269 -0.03100000
-##  [7] -0.03113269 -0.03136803 -0.03135721 -0.03086803 -0.03000000 -0.02913197
-## [13] -0.02864279 -0.02863197 -0.02886731 -0.02900000 -0.02886731 -0.02863197
-## [19] -0.02864279 -0.02913197 -0.03000000</code></pre>
+<pre><code>##  [1] -0.03000000 -0.03086803 -0.03135721 -0.03136803 -0.03113269
+##  [6] -0.03100000 -0.03113269 -0.03136803 -0.03135721 -0.03086803
+## [11] -0.03000000 -0.02913197 -0.02864279 -0.02863197 -0.02886731
+## [16] -0.02900000 -0.02886731 -0.02863197 -0.02864279 -0.02913197
+## [21] -0.03000000</code></pre>
 <p>Next up is <span class="math inline">\((1,1)\)</span>.It is a <strong>saddle point</strong>!</p>
 <div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="d-optimization-1.html#cb118-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">1</span></span>
 <span id="cb118-2"><a href="d-optimization-1.html#cb118-2" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">1</span></span>
 <span id="cb118-3"><a href="d-optimization-1.html#cb118-3" aria-hidden="true" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
 <span id="cb118-4"><a href="d-optimization-1.html#cb118-4" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
 <span id="cb118-5"><a href="d-optimization-1.html#cb118-5" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code></pre></div>
-<pre><code>##  [1]  0.00000000 -0.01850159 -0.02988890 -0.02989973 -0.01876625 -0.00100000
-##  [7]  0.01650087  0.02716366  0.02717449  0.01676552  0.00000000 -0.01676552
-## [13] -0.02717449 -0.02716366 -0.01650087  0.00100000  0.01876625  0.02989973
-## [19]  0.02988890  0.01850159  0.00000000</code></pre>
+<pre><code>##  [1]  0.00000000 -0.01850159 -0.02988890 -0.02989973 -0.01876625
+##  [6] -0.00100000  0.01650087  0.02716366  0.02717449  0.01676552
+## [11]  0.00000000 -0.01676552 -0.02717449 -0.02716366 -0.01650087
+## [16]  0.00100000  0.01876625  0.02989973  0.02988890  0.01850159
+## [21]  0.00000000</code></pre>
 <p>One more point to go: <span class="math inline">\((1,-1)\)</span>. This is also a <strong>saddle point</strong>.</p>
 <div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="d-optimization-1.html#cb120-1" aria-hidden="true" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">1</span></span>
 <span id="cb120-2"><a href="d-optimization-1.html#cb120-2" aria-hidden="true" tabindex="-1"></a>b<span class="ot">=</span><span class="sc">-</span><span class="dv">1</span></span>

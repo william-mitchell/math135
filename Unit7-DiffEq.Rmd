@@ -1,0 +1,28 @@
+# (PART) Differential Equations {-}
+
+# Introduction to Differential Equations
+
+
+## Activities
+
+
+### Building Differential Equations
+
+Each scenario  describes a system that changes over time. Write a differential equation that models the change.
+
+1. A population $P$ grows at a rate proportional to the size of the population. 
+2. Dead leaves $L$  accumulate on the ground at a rate of 3 grams per square centimeter per year. At the same time, the leaves decompose at a continuous rate of 75\% per year. 
+3. The principal $P$ of a home mortgage increases at 5\% a year and the annual payment is \$10000.
+4. Bacteria grow proportionally to the product of the current population $N$ and the difference between the carrying capacity $M$ and the current population $N$.
+
+
+### Solve the Differential Equation
+
+Use your knowledge of anti-derivatives to solve the following differential equations
+
+1. $\displaystyle{ \frac{dy}{dx} = \cos(2 \pi x)}$
+2. $\displaystyle{ \frac{ds}{dt} = \cos(a t + v)}$ where $a$ and $v$ are constants.
+3. $\displaystyle{ \frac{dP}{dq} = \frac{100}{q}}$ where $P(1) = 200$.
+4. $\displaystyle{ \frac{dy}{dx} = e^{-x}}$ where $P(2) = 0$.
+
+
