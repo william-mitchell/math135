@@ -57,7 +57,7 @@ Find the average value of function    on the given interval.
 
 ### Modeling Population Growth
 
-The second phase of bacteria growth is called the \emph{log phase}. The rate of population growth is proportional to the number of bacteria at that time with proportionality constant 0.003. In other words
+The second phase of bacteria growth is called the *log phase*. The rate of population growth is proportional to the number of bacteria at that time with proportionality constant 0.003. In other words
 
 $$
 \frac{dP}{dt} = 0.003 P
