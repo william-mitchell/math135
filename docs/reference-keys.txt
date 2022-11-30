@@ -363,6 +363,13 @@ area-between-curves-2
 average-value
 modeling-population-growth
 zombie-apocalypse
+solutions-22
+indefinite-integral-practice-1
+definite-integral-practice-1
+area-between-curves-3
+average-value-1
+modeling-population-growth-1
+zombie-apocalypse-1
 unit-6-summary
 accumulating-change-1
 the-definite-integral-1

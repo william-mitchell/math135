@@ -669,6 +669,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="34.1.5" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#modeling-population-growth"><i class="fa fa-check"></i><b>34.1.5</b> Modeling Population Growth</a></li>
 <li class="chapter" data-level="34.1.6" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#zombie-apocalypse"><i class="fa fa-check"></i><b>34.1.6</b> Zombie Apocalypse</a></li>
 </ul></li>
+<li class="chapter" data-level="34.2" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#solutions-22"><i class="fa fa-check"></i><b>34.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="34.2.1" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#indefinite-integral-practice-1"><i class="fa fa-check"></i><b>34.2.1</b> Indefinite Integral Practice</a></li>
+<li class="chapter" data-level="34.2.2" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#definite-integral-practice-1"><i class="fa fa-check"></i><b>34.2.2</b> Definite Integral Practice</a></li>
+<li class="chapter" data-level="34.2.3" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#area-between-curves-3"><i class="fa fa-check"></i><b>34.2.3</b> Area Between Curves</a></li>
+<li class="chapter" data-level="34.2.4" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#average-value-1"><i class="fa fa-check"></i><b>34.2.4</b> Average Value</a></li>
+<li class="chapter" data-level="34.2.5" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#modeling-population-growth-1"><i class="fa fa-check"></i><b>34.2.5</b> Modeling Population Growth</a></li>
+<li class="chapter" data-level="34.2.6" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#zombie-apocalypse-1"><i class="fa fa-check"></i><b>34.2.6</b> Zombie Apocalypse</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="35" data-path="unit-6-summary.html"><a href="unit-6-summary.html"><i class="fa fa-check"></i><b>35</b> Unit 6 Summary</a>
 <ul>
@@ -1067,7 +1076,7 @@ f=makeFun(3*x+2*sin(pi*x)~x)
 plotFun(f(x)~x)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-23-1.png" width="432" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-18-1.png" width="432" style="display: block; margin: auto;" />
 
 `plotFun` takes a whole variety of parameters, here are a few useful ones:
 
@@ -1089,7 +1098,7 @@ plotFun(f(x)~x, xlim=range(1,4), ylim=range(3,60),
 plotFun(g(x)~x, col="red", add=TRUE)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-24-1.png" width="432" style="display: block; margin: auto;" /><img src="math135_handbook_files/figure-html/unnamed-chunk-24-2.png" width="432" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-19-1.png" width="432" style="display: block; margin: auto;" /><img src="math135_handbook_files/figure-html/unnamed-chunk-19-2.png" width="432" style="display: block; margin: auto;" />
 
 RStudio is a little weird about plots in the RMarkdown in that you might get multiples if you're adding plots together. If you want the chunk to hold all plots until the end, add `fig.show='hold'` into the script braces at the top of the chunk.
 
@@ -1103,7 +1112,7 @@ g=makeFun(-x*y*exp(-x^2-y^2)~x&y)
 plotFun(g(x,y)~x&y)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-25-1.png" width="480" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-20-1.png" width="480" style="display: block; margin: auto;" />
 
 We are given quite a colorful plot! Since the function takes two variables, $x$ and $y$, we need some third way to display the output. That's what the colors and contours do. The colors show the relative values of the function (cooler colors for smaller values) while the contours connect all points $(x,y)$ that have the same function output. Again, this plotFun comes with parameters which can make a better picture. The ones from the single variable section still hold, so we'll list just the new ones here.
 
@@ -1122,7 +1131,7 @@ plotFun(g(x,y)~x&y, xlim=range(-1.5,1.5),
         ylim=range(-1.5,1.5), filled=FALSE, levels=seq(from=-.2,to=.2,by=0.05))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-26-1.png" width="480" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-21-1.png" width="480" style="display: block; margin: auto;" />
 
 
 ```r
@@ -1130,7 +1139,7 @@ f=makeFun(3*x^2-x-2*y^2+y-2~x&y)
 plotFun(f(x,y)~x&y, surface=TRUE, xlim=range(-5,5), ylim=range(-5,5), zlab="f(x,y)")
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-27-1.png" width="432" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-22-1.png" width="432" style="display: block; margin: auto;" />
 
 ### Plotting data
 
@@ -1148,7 +1157,7 @@ This is all great for nice, continuous, algebraic functions, but one of our jobs
 plotPoints(c(6,4,2,0,-2)~c(-2.2,-2.0,-1.8,-1.6,-1.4))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-28-1.png" width="480" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-23-1.png" width="480" style="display: block; margin: auto;" />
 
 *Notice:* the $y$ coordinates go first! This is because we once again use the tilde to denote dependency. 
 
@@ -1159,7 +1168,7 @@ If you want to plot points from a data set, you'll use the same command with som
 plotPoints(temp~time,data=somedata)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-29-1.png" width="480" style="display: block; margin: auto;" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-24-1.png" width="480" style="display: block; margin: auto;" />
 
 Cool, we've got our plot. Two things to note:
 

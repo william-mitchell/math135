@@ -669,6 +669,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="34.1.5" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#modeling-population-growth"><i class="fa fa-check"></i><b>34.1.5</b> Modeling Population Growth</a></li>
 <li class="chapter" data-level="34.1.6" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#zombie-apocalypse"><i class="fa fa-check"></i><b>34.1.6</b> Zombie Apocalypse</a></li>
 </ul></li>
+<li class="chapter" data-level="34.2" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#solutions-22"><i class="fa fa-check"></i><b>34.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="34.2.1" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#indefinite-integral-practice-1"><i class="fa fa-check"></i><b>34.2.1</b> Indefinite Integral Practice</a></li>
+<li class="chapter" data-level="34.2.2" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#definite-integral-practice-1"><i class="fa fa-check"></i><b>34.2.2</b> Definite Integral Practice</a></li>
+<li class="chapter" data-level="34.2.3" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#area-between-curves-3"><i class="fa fa-check"></i><b>34.2.3</b> Area Between Curves</a></li>
+<li class="chapter" data-level="34.2.4" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#average-value-1"><i class="fa fa-check"></i><b>34.2.4</b> Average Value</a></li>
+<li class="chapter" data-level="34.2.5" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#modeling-population-growth-1"><i class="fa fa-check"></i><b>34.2.5</b> Modeling Population Growth</a></li>
+<li class="chapter" data-level="34.2.6" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#zombie-apocalypse-1"><i class="fa fa-check"></i><b>34.2.6</b> Zombie Apocalypse</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="35" data-path="unit-6-summary.html"><a href="unit-6-summary.html"><i class="fa fa-check"></i><b>35</b> Unit 6 Summary</a>
 <ul>
@@ -745,7 +754,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="drive-my-car" class="section level3 hasAnchor" number="32.2.1">
 <h3><span class="header-section-number">32.2.1</span> Drive My Car<a href="the-definite-integral.html#drive-my-car" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A car is driving at a rate of <span class="math inline">\(v(t)=-t+5\)</span>. Here is a plot of the velocity.</p>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
 <ol style="list-style-type: decimal">
 <li>Use RStudio to approximate these definite integrals using 1000 subintervals.</li>
 </ol>
@@ -762,7 +771,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="accelerate-my-car" class="section level3 hasAnchor" number="32.2.2">
 <h3><span class="header-section-number">32.2.2</span> Accelerate My Car<a href="the-definite-integral.html#accelerate-my-car" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A car is traveling at 55 feet per second at time <span class="math inline">\(t=0\)</span>. The plot below shows the car’s <strong>acceleration</strong> on the interval <span class="math inline">\([0,18]\)</span>.</p>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-140-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-135-1.png" width="672" style="display: block; margin: auto;" /></p>
 <ol style="list-style-type: decimal">
 <li>Is the velocity increasing or decreasing at <span class="math inline">\(t=2\)</span>? <span class="math inline">\(t=15\)</span>?</li>
 <li>What happens when <span class="math inline">\(t=6\)</span>?</li>
@@ -786,7 +795,7 @@ where <span class="math inline">\(q\)</span> is in dozens of cupcakes.</p>
 <p>Below is a graph of both <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span> on the interval <span class="math inline">\([0,2\pi]\)</span>.</p>
 <div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="the-definite-integral.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">sin</span>(x)<span class="sc">~</span>x,<span class="at">xlim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi),<span class="at">ylim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="fl">1.1</span>,<span class="fl">1.1</span>),<span class="at">xlab=</span><span class="st">&quot;&quot;</span>,<span class="at">ylab=</span><span class="st">&quot;&quot;</span>)</span>
 <span id="cb171-2"><a href="the-definite-integral.html#cb171-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">cos</span>(x)<span class="sc">~</span>x,<span class="at">add=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-141-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-136-1.png" width="672" style="display: block; margin: auto;" /></p>
 <ol style="list-style-type: decimal">
 <li>Write a <strong>sum of integrals</strong> which represents the enclosed by the two curves.<br />
 Hint: <span class="math inline">\(\sin(x) = \cos(x)\)</span> at <span class="math inline">\(x=\pi/4\)</span> and <span class="math inline">\(x=5\pi/4\)</span>.</li>

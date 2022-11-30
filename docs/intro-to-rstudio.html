@@ -669,6 +669,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="34.1.5" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#modeling-population-growth"><i class="fa fa-check"></i><b>34.1.5</b> Modeling Population Growth</a></li>
 <li class="chapter" data-level="34.1.6" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#zombie-apocalypse"><i class="fa fa-check"></i><b>34.1.6</b> Zombie Apocalypse</a></li>
 </ul></li>
+<li class="chapter" data-level="34.2" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#solutions-22"><i class="fa fa-check"></i><b>34.2</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="34.2.1" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#indefinite-integral-practice-1"><i class="fa fa-check"></i><b>34.2.1</b> Indefinite Integral Practice</a></li>
+<li class="chapter" data-level="34.2.2" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#definite-integral-practice-1"><i class="fa fa-check"></i><b>34.2.2</b> Definite Integral Practice</a></li>
+<li class="chapter" data-level="34.2.3" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#area-between-curves-3"><i class="fa fa-check"></i><b>34.2.3</b> Area Between Curves</a></li>
+<li class="chapter" data-level="34.2.4" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#average-value-1"><i class="fa fa-check"></i><b>34.2.4</b> Average Value</a></li>
+<li class="chapter" data-level="34.2.5" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#modeling-population-growth-1"><i class="fa fa-check"></i><b>34.2.5</b> Modeling Population Growth</a></li>
+<li class="chapter" data-level="34.2.6" data-path="the-indefinite-integral.html"><a href="the-indefinite-integral.html#zombie-apocalypse-1"><i class="fa fa-check"></i><b>34.2.6</b> Zombie Apocalypse</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="35" data-path="unit-6-summary.html"><a href="unit-6-summary.html"><i class="fa fa-check"></i><b>35</b> Unit 6 Summary</a>
 <ul>
@@ -907,16 +916,16 @@ to start, let’s evaluate it at 1.</p>
 <div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="intro-to-rstudio.html#cb83-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
 <span id="cb83-2"><a href="intro-to-rstudio.html#cb83-2" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">=</span> X<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb83-3"><a href="intro-to-rstudio.html#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(Y <span class="sc">~</span> X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-65-1.png" width="672" /></p>
 <p>Notice! We list the <strong>dependent</strong> variable <code>Y</code> first and then the <strong>independent</strong> variable <code>X</code> after the tidle <code>~</code> (which matches the syntax of <code>makeFun</code>).</p>
 <p>We can also plot a function. Once again the dependent variable appears after the tilde.</p>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="intro-to-rstudio.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
 <p>We can actually plot the data and the function on the same graph. We will plot the data and then add the function by using the <code>add=TRUE</code> parameter for <code>plotFun</code>. I will also use the optional <code>col</code> parameter to change the color of the function curve.</p>
 <div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="intro-to-rstudio.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(Y <span class="sc">~</span> X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
 <div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="intro-to-rstudio.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;red&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-72-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-67-2.png" width="672" /></p>
 <div id="you-try-3" class="section level4 hasAnchor" number="3.3.4.1">
 <h4><span class="header-section-number">3.3.4.1</span> You Try<a href="intro-to-rstudio.html#you-try-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
