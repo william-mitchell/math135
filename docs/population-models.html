@@ -52,65 +52,6 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; } /* Alert */
-code span.an { color: #008000; } /* Annotation */
-code span.at { } /* Attribute */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #0000ff; } /* ControlFlow */
-code span.ch { color: #008080; } /* Char */
-code span.cn { } /* Constant */
-code span.co { color: #008000; } /* Comment */
-code span.cv { color: #008000; } /* CommentVar */
-code span.do { color: #008000; } /* Documentation */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.im { } /* Import */
-code span.in { color: #008000; } /* Information */
-code span.kw { color: #0000ff; } /* Keyword */
-code span.op { } /* Operator */
-code span.ot { color: #ff4000; } /* Other */
-code span.pp { color: #ff4000; } /* Preprocessor */
-code span.sc { color: #008080; } /* SpecialChar */
-code span.ss { color: #008080; } /* SpecialString */
-code span.st { color: #008080; } /* String */
-code span.va { } /* Variable */
-code span.vs { color: #008080; } /* VerbatimString */
-code span.wa { color: #008000; font-weight: bold; } /* Warning */
-</style>
 
 
 <link rel="stylesheet" href="m135style.css" type="text/css" />
@@ -139,13 +80,31 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="1.1.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#packages"><i class="fa fa-check"></i><b>1.1.3</b> Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#rmarkdown"><i class="fa fa-check"></i><b>1.2</b> RMarkdown</a></li>
+<li class="chapter" data-level="1.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#calculations-in-rstudio"><i class="fa fa-check"></i><b>1.3</b> Calculations in RStudio</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#basic-commands"><i class="fa fa-check"></i><b>1.3.1</b> Basic Commands</a></li>
+<li class="chapter" data-level="1.3.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#variables"><i class="fa fa-check"></i><b>1.3.2</b> Variables</a></li>
+<li class="chapter" data-level="1.3.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#lists-and-sequences"><i class="fa fa-check"></i><b>1.3.3</b> Lists and sequences</a></li>
+<li class="chapter" data-level="1.3.4" data-path="r-studio-primer.html"><a href="r-studio-primer.html#making-functions"><i class="fa fa-check"></i><b>1.3.4</b> Making functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="r-studio-primer.html"><a href="r-studio-primer.html#data"><i class="fa fa-check"></i><b>1.4</b> Data</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#importing-data-from-rstudiomosaic"><i class="fa fa-check"></i><b>1.4.1</b> Importing data from RStudio/mosaic</a></li>
+<li class="chapter" data-level="1.4.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#importing-.csv-files"><i class="fa fa-check"></i><b>1.4.2</b> Importing .csv files</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="r-studio-primer.html"><a href="r-studio-primer.html#plots"><i class="fa fa-check"></i><b>1.5</b> Plots</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#single-variable-plots"><i class="fa fa-check"></i><b>1.5.1</b> Single variable plots</a></li>
+<li class="chapter" data-level="1.5.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#multivariable-plots"><i class="fa fa-check"></i><b>1.5.2</b> Multivariable plots</a></li>
+<li class="chapter" data-level="1.5.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#plotting-data"><i class="fa fa-check"></i><b>1.5.3</b> Plotting data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i><b>2</b> RStudio Quick Referrence</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i><b>2.1</b> Common Functions</a></li>
 <li class="chapter" data-level="2.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#defining-your-own-function"><i class="fa fa-check"></i><b>2.2</b> Defining your own function</a></li>
 <li class="chapter" data-level="2.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-lists-of-data"><i class="fa fa-check"></i><b>2.3</b> Creating Lists of Data</a></li>
-<li class="chapter" data-level="2.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data"><i class="fa fa-check"></i><b>2.4</b> Plotting Data</a></li>
+<li class="chapter" data-level="2.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-1"><i class="fa fa-check"></i><b>2.4</b> Plotting Data</a></li>
 <li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-functions"><i class="fa fa-check"></i><b>2.5</b> Plotting Functions</a></li>
 <li class="chapter" data-level="2.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-functions"><i class="fa fa-check"></i><b>2.6</b> Plotting Data and Functions</a></li>
 <li class="chapter" data-level="2.7" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.7</b> Fitting a Function to Data</a>
@@ -204,6 +163,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="5.3.2" data-path="linear-functions.html"><a href="linear-functions.html#height-and-weight-of-american-men"><i class="fa fa-check"></i><b>5.3.2</b> Height and weight of American men</a></li>
 <li class="chapter" data-level="5.3.3" data-path="linear-functions.html"><a href="linear-functions.html#scooter-rates"><i class="fa fa-check"></i><b>5.3.3</b> Scooter rates</a></li>
 <li class="chapter" data-level="5.3.4" data-path="linear-functions.html"><a href="linear-functions.html#oil-reserves"><i class="fa fa-check"></i><b>5.3.4</b> Oil reserves</a></li>
+<li class="chapter" data-level="5.3.5" data-path="linear-functions.html"><a href="linear-functions.html#world-population-growth-rate"><i class="fa fa-check"></i><b>5.3.5</b> World population growth rate</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="linear-functions.html"><a href="linear-functions.html#solutions"><i class="fa fa-check"></i><b>5.4</b> Solutions</a>
 <ul>
@@ -305,16 +265,19 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="10.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#activities-6"><i class="fa fa-check"></i><b>10.2</b> Activities</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours"><i class="fa fa-check"></i><b>10.2.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.2.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.2.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.2.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.2.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.2.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.2.4</b> Plotting in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.3</b> Solutions</a>
+<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#drawing-contours-on-a-data-table"><i class="fa fa-check"></i><b>10.3</b> Drawing contours on a data table</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.3.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.3.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.3.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.3.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.3.4</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.3.1</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.3.2</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.3.3</b> Plotting in RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.4</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.4.1</b> Matching Contours</a></li>
+<li class="chapter" data-level="10.4.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.4.2</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.4.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.4.3</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.4.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.4.4</b> Plotting in RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="unit-1-summary.html"><a href="unit-1-summary.html"><i class="fa fa-check"></i><b>11</b> Unit 1 Summary</a>
@@ -779,12 +742,12 @@ Note that this is the same differential equation as exponential growth with cons
 <h3><span class="header-section-number">37.2.1</span> Drug Metabolization<a href="population-models.html#drug-metabolization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>After a drug is administered in a single injection, the rate at which the drug leaves the body is proportional to the quantity present.
-<ol style="list-style-type: decimal">
+<ol style="list-style-type: lower-alpha">
 <li>What differential equation models this process?</li>
 <li>Suppose that 10 mg of a drug is injected into the bloodstream. 3 hours later, only 2 mg remains in the bloodstream. Find the formula for the amount of the drug <span class="math inline">\(Q(t)\)</span> after <span class="math inline">\(t\)</span> hours.</li>
 </ol></li>
 <li>Suppose that a drug is being administered at a constant rate of 60 mg/hour and its decreasing at a rate of 20% of the amount present.
-<ol style="list-style-type: decimal">
+<ol style="list-style-type: lower-alpha">
 <li>What differential equation models this process?</li>
 <li>Find the formula for the amount of drug <span class="math inline">\(Q(t)\)</span> after <span class="math inline">\(t\)</span> hours.</li>
 <li>What value does <span class="math inline">\(Q(t)\)</span> converge to for large values of <span class="math inline">\(t\)</span>?</li>
@@ -800,20 +763,24 @@ Note that this is the same differential equation as exponential growth with cons
 <p>The yearly population <span class="math inline">\(P(t)\)</span> of rabbits is modeled by
 <span class="math display">\[
 \frac{dP}{dt} = 0.45 P  \left(1 - \frac{P}{90} \right).
-\]</span>
-1. If the current population is <span class="math inline">\(P=120\)</span>, will the population increase or decrease? How do you know?
-2. For what values of <span class="math inline">\(P\)</span> is <span class="math inline">\(\frac{dP}{dt}=0\)</span>?
-3. What value does <span class="math inline">\(P(t)\)</span> converge to for large values of <span class="math inline">\(t\)</span>?</p>
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>If the current population is <span class="math inline">\(P=120\)</span>, will the population increase or decrease? How do you know?</li>
+<li>For what values of <span class="math inline">\(P\)</span> is <span class="math inline">\(\frac{dP}{dt}=0\)</span>?</li>
+<li>What value does <span class="math inline">\(P(t)\)</span> converge to for large values of <span class="math inline">\(t\)</span>?</li>
+</ol>
 </div>
 <div id="constrained-deer-population" class="section level3 hasAnchor" number="37.2.4">
 <h3><span class="header-section-number">37.2.4</span> Constrained Deer Population<a href="population-models.html#constrained-deer-population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The annual population <span class="math inline">\(P(t)\)</span> of deer is modeled by the constrained growth equation
 <span class="math display">\[
 \frac{dP}{dt} = 0.22 P - 0.0275 P^2.
-\]</span>
-1. What is the growth rate <span class="math inline">\(r\)</span>?
-2. What is the carrying capacity <span class="math inline">\(K\)</span>?
-3. How large is the deer population when that population is growing at its fastest rate?</p>
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>What is the growth rate <span class="math inline">\(r\)</span>?</li>
+<li>What is the carrying capacity <span class="math inline">\(K\)</span>?</li>
+<li>How large is the deer population when that population is growing at its fastest rate? How fast is the population growing at that time?</li>
+</ol>
 
 </div>
 </div>
