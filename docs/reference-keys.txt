@@ -379,6 +379,10 @@ activities-24
 building-differential-equations
 solve-the-differential-equation
 verifying-solutions-to-differential-equations
+solutions-23
+building-differential-equations-1
+solve-the-differential-equation-1
+verifying-solutions-to-differential-equations-1
 population-models
 important-models
 exponential-growthdecay
@@ -387,6 +391,7 @@ constrained-growth
 newtons-law-of-cooling
 activities-25
 drug-metabolization
+elementary-my-dear-watson
 optimal-coffee-temperature
 constrained-rabbit-population
 constrained-deer-population

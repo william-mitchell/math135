@@ -54,6 +54,10 @@ Note that this is the same differential equation as exponential growth with cons
     a. Find the formula for the amount of drug $Q(t)$ after $t$ hours.
     a. What value does $Q(t)$ converge to for large values of $t$?
 
+### Elementary, My Dear Watson
+
+In a mystery novel, the body of a murder victim is found at noon in a room with a constant temperature of $20^\circ C$. At noon, the body is $35^\circ C$ and at 2 pm the body is $33^\circ C$. Normal body temperature is $37^\circ C$. What time did the murder occur?
+
 ### Optimal Coffee Temperature
 
 In my $22^\circ C$ office, my coffee starts at $80^\circ C$, but cools to $75^\circ C$ after 10 minutes. If I like my coffee between $63^\circ C$ and $70^\circ C$, how long is my window to drink it?

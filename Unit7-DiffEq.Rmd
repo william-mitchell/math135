@@ -37,3 +37,37 @@ $$
 2. $y=e^{3x}$
 3. $y=\sin(3x)+\cos(3x)$
 4. $y=0$
+
+
+
+## Solutions
+
+
+### Building Differential Equations
+
+1. $\frac{dP}{dt} = r P$
+2. $\frac{dL}{dt} = 3 - 0.75L$
+3. $\frac{dP}{dt} = 0.05P - 10000$
+4. $\frac{dP}{dt} = k N (M-N)$
+
+
+
+
+### Solve the Differential Equation
+
+Use your knowledge of anti-derivatives to solve the following differential equations
+
+1. $\displaystyle{ y = \frac{1}{2\pi} \sin(2\pi x) + C}$
+2. $\displaystyle{ s = \frac{1}{2}a t^2 + vt + C}$
+3. $\displaystyle{ P = 100 \ln (q) + 200}$
+4. $\displaystyle{ y = -e^{-x} + e^{-2}}$.
+
+
+### Verifying Solutions to Differential Equations
+
+We must check whether $\frac{dy}{dx} =3y.$
+
+1. $\frac{dy}{dx}=3x^2$ and $3y=3x^3$. These are not equal, so $y=x^3$ is NOT  a solution.
+2. $\frac{dy}{dx}=3e^{3x}$ and $3y = 3e^{3x}$. These are equal, so $y=e^{3x}$ is a solution!
+3. $\frac{dy}{dx}=3\cos(3x)-3\sin(3x)$ and $3y=3\sin(3x)+3\cos(3x)$. These are not equal (they differ by a negative sign), so  $y=\sin(3x)+\cos(3x)$ is NOT a solution.
+4. $\frac{dy}{dx}=0$ and $3y=0$. These are equal, so $y=0$ is a solution!
