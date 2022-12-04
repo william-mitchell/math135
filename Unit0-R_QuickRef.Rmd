@@ -4,8 +4,10 @@
 knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
 ```
-    
-## Common Functions
+
+## Functions and Data    
+
+### Common Functions
 
 | function | R command | comments |
 |-----|-----|-----|
@@ -21,7 +23,7 @@ suppressPackageStartupMessages(library(mosaic))
 | $\log_{b}(x)$ | `log(x,b)` | You can use any number $b$ as the base for your logarithm
 
 
-## Defining your own function
+### Defining Your Own Function
 
 The `makeFun` command is part of the mosaic package.
 
@@ -43,7 +45,7 @@ Notes:
 * The variable (`x` or `t`, etc) that appears in the OUTPUT **must match** the INPUT variable that appears after the tilde `~`. The the command `makeFun(x^2 ~ t)` won't work because the `x^2` is not a function of `t`.
 
 
-## Creating Lists of Data
+### Creating Lists of Data
 
 Use `c()` to "combine" some values into a list. Assign the list to a variable so that you can use it later.
 
@@ -74,7 +76,7 @@ my_seq3
 
 
 
-## Plotting Data
+### Plotting Data
 
 
 Use `plotPoints` to plot a list of $y$-axis data versus a list of $x$-axis data. Separate these lists with a tilde `~`. 
@@ -96,7 +98,7 @@ plotPoints(y_data ~ x_data)
 
 ```
 
-## Plotting Functions
+### Plotting Functions
 Use `plotFun` to plot a function. 
 
 * As with `plotPoints`, we use a tilde `~` to separate the output variable (the function) from the input variable.
@@ -151,7 +153,7 @@ plotFun(g(x)~x, col="red", add=TRUE)
 RStudio is a little weird about plots in the RMarkdown in that you might get multiples if you're adding plots together. If you want the chunk to hold all plots until the end, add `fig.show='hold'` into the script braces at the top of the chunk.
 
 
-## Plotting Data and Functions
+### Plotting Data and Functions
 We can also combine plots of data and functions using `add=TRUE`.
 
 
@@ -169,7 +171,7 @@ plotFun(P(t) ~ t, add=TRUE, col='orange')
 
 ```
 
-## Fitting a Function to Data
+### Fitting a Function to Data
 
 The `fitModel` command is part of the mosaic package. Here is how you would fit a linear model to data
 
@@ -190,7 +192,7 @@ plotPoints(ydata ~ xdata)
 plotFun(f(x) ~ x,  add=TRUE, col='orange')
 ```
 
-### Fitting a Power Function to Data
+#### Fitting a Power Function to Data
 
 Here are the steps to fit `xdata` and `ydata` to a power function $f(x) = c x^p$. 
 
@@ -226,7 +228,7 @@ plotFun(6.82 * x^1.45 ~ x, add=TRUE, col='orange')
 
 ```
 
-### Fitting a Model by Specifying Starting Values
+#### Fitting a Model by Specifying Starting Values
 
 Sometimes `fitModel` fails to find a good model for the data. Here are two things that can happen.
 
@@ -272,7 +274,7 @@ plotFun(f(t)~t, add=TRUE, col='orange')
 
 That looks much better!
 
-## Plotting Surfaces in 3D
+### Plotting Surfaces in 3D
 
 We plot functions $z = f(x,y)$ using the `plotFun()` command. We specify the independent variables with the syntax `~ x&y`. By default, RStudio will create a **contour plot** of this function and include **shading** to help visualize the values of the function.
 
@@ -304,7 +306,9 @@ You can create a 3D plot by setting `surface=TRUE`.
 plotFun(f(x,y) ~ x&y, xlim=c(-20,20), ylim=c(-20,20), surface=TRUE)
 ```
 
-## Estimating the Derivative
+## Differentiaation
+
+### Estimating the Derivative
 
 We can estimate the derivative of $f'(x)$  by using the average rate of change
 $$
@@ -322,6 +326,8 @@ d
 ```
 
 The estimates stabilize to the value $1.46356$. So our estimate is $f'(4) \approx 1.46456$
+
+### Estimating the Partial Derivative
 
 We can use the same method to estimate the partial derivates of $g(x,y)$. We have
 $$
@@ -354,7 +360,7 @@ d
 We conclude that $g_y(2,7) \approx 5.610.$
 
 
-## Gradient Search
+### Gradient Search
 
 Here is code that will use gradient search to find the maximum of the function 
 $$
@@ -384,22 +390,23 @@ Next, you repeatedly run the following code block, which updates the current poi
 
 Repeatedly to run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.
 
-```{r}
-newx=newx+0.1*partialx(newx,newy)
-newy=newy+0.1*partialy(newx,newy)
+```{r eval=FALSE}
+slopex=partialx(newx, newy)
+slopey=partialy(newx, newy)
+newx = newx + 0.1*slopex
+newy = newy + 0.1*slopey
 # print new partial derivatives
-c(partialx(newx,newy), partialy(newx,newy))
+c(partialx(newx, newy), partialy(newx, newy))
 # print new point
 c(newx, newy)
 ```
-
 
 Repeatedly running this code block will take you to the point `(1.04,0.77)`. But note that starting at another initial point might take you to a different local maximum.
 
 If you want to find a local minimum, then you should multiply the partials by `-0.1` instead. This is equivalent to taking a small step downhill. Try this on the function $f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2$.
 
 
-## Constrained Optimization
+### Constrained Optimization
 
 Suppose that we want to find the maximum of the production function $P(x,y)=3000x^{0.2}y^{0.8}$ given the constraint $Q(x,y)= 4x + 3y = 200$.
 
@@ -435,11 +442,12 @@ $$
 = \frac{40 - 38}{210-200} = \frac{2}{10} = 0.2.
 $$
 
+## Integration 
 
-## Estimating the Definite Integral
+### Estimating the Definite Integral
 
 
-The define integral $\int_{a}^b f(x) dx$ is the (signed) area between the curve $y=f(x)$ and the $x$-axis. We approximate this area by partitioning the interval $[a,b]$ into smaller intervals of width $\triangle x$ and then summing the areas $f(x) \triangle x$ of the corresponding rectangles.
+The define integral $\int_{a}^b f(x) dx$ is the signed area between the curve $y=f(x)$ and the $x$-axis. We approximate this area by partitioning the interval $[a,b]$ into smaller intervals of width $\triangle x$ and then summing the areas $f(x) \triangle x$ of the corresponding rectangles.
 
 Here is code that makes this approximation for the function $f(x) = x + \sin(x^2)$ over the interval $[5,10]$. The code splits this interval into 100 subintervals. You can get a better approximation by increasing the denominator of `base=(b-a)/100` to a much larger number, for example: `base=(b-a)/1000000`.
 
@@ -454,6 +462,41 @@ areas=base*heights
 sum(areas)
 ```
 
+## Differential Equations
+
+### Euler's Method
+
+Euler's Method repeatedly uses Local Linear Approximation to  find an approximate solution to a differential equation. Here is  code that uses Euler's Method to find an approximate solution for the following  problem:
+
+* Differential equation  $\displaystyle{\frac{dx}{dt} = 3x  -  x^2}$
+* Initial point $t_0=2$ and $x_0= 5$
+* End time $T=9$
+* Step size $\triangle t = 0.01$
+
+```{r, eval=FALSE, echo=TRUE}
+# derivative, initial conditions and setup
+dxdt = makeFun(3*x - x^2 ~ x)
+tstart = 2
+xstart = 5
+tend = 9
+dt = 0.01
+num = (tend - tstart)/dt
+# Euler's Method code
+t = tstart
+x = xstart
+tlist = t
+xlist = x
+for (i in 1:num) {
+  x = x + dt * dxdt(x)
+  t = t + dt
+  tlist = c(tlist, t)
+  xlist = c(xlist, x)
+}
+# print the ending point
+c(tail(tlist,1),  tail(xlist,1))
+# plot the approximate function
+plotPoints(xlist ~ tlist)
+```
 
 
 ## Troubleshooting

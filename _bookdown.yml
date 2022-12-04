@@ -39,6 +39,7 @@ rmd_files: ["index.Rmd",
   "Unit6-Summary.Rmd",
   "Unit7-DiffEq.Rmd",
   "Unit7-PopModels.Rmd",
+  "Unit7-EulersMethod.Rmd",
   ]
 language:
   ui: 

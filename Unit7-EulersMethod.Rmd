@@ -1,0 +1,142 @@
+# Euler's  Method
+
+## Introduction
+
+Euler's Method finds an approximate solution to a differential equation. Here is how it works.
+
+You are given
+
+* The differential equation for  $\frac{dx}{dt}$.
+* The initial point $(t_0,x_0)$.
+* The step size $\triangle t$.
+* Either the number $n$ of iterations,  or the  desired end time $T$.
+
+We want to find an approximation of the (unknown) function $x(t)$.
+
+We repeatedly use *Local Linear Approximation* to estimate the value of $x(t)$  and times $t_1=t_0+\triangle t$ and $t_2=t_0+2\triangle t$ and $t_3=t_0+3\triangle t$ and so on. Let's call these estimates $x_1, x_2, x_3$ and so on.
+
+
+We estimate as follows:
+$$
+\begin{array}{rcccl}
+x_1 &=& x_0 + x'(t_0) \cdot \triangle t \\
+x_2 &=& x_1 + x'(t_1) \cdot \triangle t &=&  x_1 + x'(t_0+\triangle t) \cdot \triangle t \\
+x_3 &=& x_2 + x'(t_2) \cdot \triangle t &=&  x_2 + x'(t_0+2 \triangle t) \cdot \triangle t \\
+\end{array}
+$$
+We repeat $n$ times. If we were given the ending time $T$, then $n= (T-t_0)/\triangle t$.  
+
+
+If you only want to calculate a few steps, then you can do this manually. But in general, we use RStudio to do the hard work. 
+
+### Euler's Method in RStudio
+
+Here is  code that uses Euler's Method to find an approximate solution for the following  problem:
+
+* Differential equation  $\displaystyle{\frac{dx}{dt} = 3x  -  x^2}$
+* Initial point $t_0=2$ and $x_0= 5$
+* End time $T=9$
+* Step size $\triangle t = 0.01$
+
+```{r, eval=FALSE, echo=TRUE}
+# derivative, initial conditions and setup
+dxdt = makeFun(3*x - x^2 ~ x)
+tstart = 2
+xstart = 5
+tend = 9
+dt = 0.01
+num = (tend - tstart)/dt
+# Euler's Method code
+t = tstart
+x = xstart
+tlist = t
+xlist = x
+for (i in 1:num) {
+  x = x + dt * dxdt(x)
+  t = t + dt
+  tlist = c(tlist, t)
+  xlist = c(xlist, x)
+}
+# print the ending point
+c(tail(tlist,1),  tail(xlist,1))
+# plot the approximate function
+plotPoints(xlist ~ tlist)
+```
+
+##  Activities
+
+### Euler's Method for Two Steps
+
+For each of the following problems, perform TWO steps of Euler's  Method for the given differential equation $\frac{dx}{dt}, initial conditions and  step size $\triangle t$.
+
+1. Differential equation $\displaystyle{\frac{dx}{dt} = x^2}$, initial conditions  $t_0=1$ and $x_0= 3$ and step size $\triangle t=1$.
+2. Differential equation $\displaystyle{\frac{dx}{dt} = t^2}$, initial conditions  $t_0=1$ and $x_0= 3$ and step size $\triangle t=0.5$.
+3. Differential equation $\displaystyle{\frac{dx}{dt} = t+x}$, initial conditions  $t_0=1$ and $x_0= 3$ and step size $\triangle t=0.25$.
+
+### Calculating an Euler Approximation
+
+
+Use Euler's Method to approximate the value $x(4)$ where $x(t)$ satisfies the differential equation
+\[ \frac{dx}{dt}=2x -6, \quad \mbox{where} \quad   x(0)=4 \]
+by using times $t_0=0$, $t_1=0.5$, $t_2=1.0$ and $t_3 = 1.5$. Here is  a  table to get you started.
+$$
+\begin{array}{c|c|c|c|c}
+n & t_n & x_n & x'(t_n) & x_{n} + x'(t_{n}) (t_{n+1} - t_{n}) \\ 
+&&& = 2x_n - 6  & = x_{n} + x'(t_{n}) \cdot 0.5  \\
+\hline
+0 & 0   & 4   & 2  &        \\
+1 & 0.5 &     &                 \\
+2 & 1.0   &     &                 \\
+3 & 1.5 &     &                 \\
+4 & 2.0 &     &                 \\
+\end{array}
+$$
+
+### Euler's Method with Different Step Sizes.
+
+We will use various step sizes in Euler's method to estimate the value $P(50)$ for the constrained growth problem
+$$
+\frac{dP}{dt} = 0.04 P \left( 1 - \frac{P}{800} \right) \quad \mbox{and} \quad P(0)=100.
+$$
+
+1. Adapt the template Euler's Method code at the top of this page to estimate $P(50)$ when
+    a. $\triangle t = 10$
+    b. $\triangle t = 1$
+    c. $\triangle t = 0.1$ 
+    d. $\triangle t = 0.01$ 
+2. We know that the solution to this logistic equation is a logistic function $\displaystyle{P(t) = \frac{K}{1+Ce^{-rt}}}$. Find the values for $r,C,K$. Then calculate the actual value of $P(50)$ and compare this value our estimates. How did  we do  in each case?
+    
+    
+<!--    
+    
+```{r, eval=FALSE, echo=TRUE}
+# derivative, initial conditions and setup
+dxdt = makeFun(0.04*x*(1-x/800) ~ x)
+tstart = 0
+xstart = 100
+tend = 50
+dt = 0.01
+num = (tend - tstart)/dt
+# Euler's Method code
+t = tstart
+x = xstart
+tlist = t
+xlist = x
+for (i in 1:num) {
+  x = x + dt * dxdt(x)
+  t = t + dt
+  tlist = c(tlist, t)
+  xlist = c(xlist, x)
+}
+# print the ending point
+c(tail(tlist,1),  tail(xlist,1))
+# plot the approximate function
+#plotPoints(xlist ~ tlist)
+```
+
+a. When $\triangle t=10$, our  estimate is $P(50)=377.37$
+b. When $\triangle t=1$, our  estimate is $P(50)=407.50$
+c. When $\triangle t=0.1$, our  estimate is $P(50)=410.49$
+d. When $\triangle t=0.01$, our  estimate is $P(50)=410.78$
+
+-->

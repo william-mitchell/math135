@@ -8,6 +8,7 @@ command-line-console
 packages
 rmarkdown
 rstudio-quick-referrence
+functions-and-data
 common-functions
 defining-your-own-function
 creating-lists-of-data
@@ -18,10 +19,15 @@ fitting-a-function-to-data
 fitting-a-power-function-to-data
 fitting-a-model-by-specifying-starting-values
 plotting-surfaces-in-3d
+differentiaation
 estimating-the-derivative
+estimating-the-partial-derivative
 gradient-search
 constrained-optimization
+integration
 estimating-the-definite-integral
+differential-equations
+eulers-method
 troubleshooting
 intro-to-rstudio
 getting-started
@@ -395,3 +401,10 @@ elementary-my-dear-watson
 optimal-coffee-temperature
 constrained-rabbit-population
 constrained-deer-population
+eulers-method-1
+introduction-1
+eulers-method-in-rstudio
+activities-26
+eulers-method-for-two-steps
+calculating-an-euler-approximation
+eulers-method-with-different-step-sizes.
