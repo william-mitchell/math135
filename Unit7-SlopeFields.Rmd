@@ -63,7 +63,7 @@ Match each of the following differential equations with its slope field. *Hint:*
 </tr>
 </table>
 
-## Draw Some Trajectories
+### Draw Some Trajectories
 
 For each of the above slope fields, sketch the solution curves that satisfy
 
@@ -72,7 +72,7 @@ For each of the above slope fields, sketch the solution curves that satisfy
 1. $y(0) = -1$
 
 
-## Slope Fields for Population Models
+### Slope Fields for Population Models
 
 Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of $P$ does the population increase without bound? stabilize to a constant value? die out? 
 
