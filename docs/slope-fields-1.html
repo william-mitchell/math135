@@ -784,7 +784,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="slope-fields-1.html#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb192-2"><a href="slope-fields-1.html#cb192-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
 <span id="cb192-3"><a href="slope-fields-1.html#cb192-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-216-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-152-1.png" width="672" /></p>
 </div>
 <div id="activities-27" class="section level2 hasAnchor" number="39.2">
 <h2><span class="header-section-number">39.2</span> Activities<a href="slope-fields-1.html#activities-27" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -866,14 +866,14 @@ P ~  0.2 * P -  40,
 bounds(t=0:100, P=0:400))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-217-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-153-1.png" width="672" />
 -->
 <ol start="2" style="list-style-type: decimal">
 <li>Constrained growth
 <span class="math display">\[
 \frac{dP}{dt} = 0.05 P  (1 - 0.01 P)
 \]</span>
-for <span class="math inline">\(0 \leq P \leq 150\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.</li>
+for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.</li>
 </ol>
 <!--
 
@@ -883,14 +883,14 @@ P ~  0.05  * P *  (1 - 0.002 * P),
 bounds(t=0:50, P=0:600))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-218-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-154-1.png" width="672" />
 -->
 <ol start="3" style="list-style-type: decimal">
 <li>Constrained growth with constant harvesting
 <span class="math display">\[
 \frac{dP}{dt} = 0.05 P  (1 - 0.002 P) - 4
 \]</span>
-for <span class="math inline">\(0 \leq P \leq 150\)</span> and <span class="math inline">\(0 \leq t \leq 500\)</span>.</li>
+for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.</li>
 </ol>
 <!--
 
@@ -900,7 +900,7 @@ P ~  0.05  * P *  (1 - 0.002 * P) - 4,
 bounds(t=0:50, P=0:600))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-219-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-155-1.png" width="672" />
 -->
 
 </div>

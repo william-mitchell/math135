@@ -94,7 +94,7 @@ bounds(t=0:100, P=0:400))
 $$
 \frac{dP}{dt} = 0.05 P  (1 - 0.01 P) 
 $$
-for  $0 \leq P \leq 150$ and $0 \leq t \leq 50$.
+for  $0 \leq P \leq 600$ and $0 \leq t \leq 50$.
 
 <!--
 ```{r}
@@ -109,7 +109,7 @@ bounds(t=0:50, P=0:600))
 $$
 \frac{dP}{dt} = 0.05 P  (1 - 0.002 P) - 4
 $$
-for  $0 \leq P \leq 150$ and $0 \leq t \leq 500$.
+for  $0 \leq P \leq 600$ and $0 \leq t \leq 50$.
 
 <!--
 ```{r}
