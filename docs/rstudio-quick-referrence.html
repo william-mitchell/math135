@@ -991,7 +991,7 @@ Example: <code>add=TRUE</code></li>
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(xdata = xdata), 
 ##     ...)))
-## &lt;environment: 0x7fce25565860&gt;
+## &lt;environment: 0x7fce3abcd730&gt;
 ## attr(,&quot;coefficients&quot;)
 ##    A    B 
 ## 1.70 4.18 
@@ -1026,7 +1026,7 @@ Example: <code>add=TRUE</code></li>
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(logxdata = logxdata), 
 ##     ...)))
-## &lt;environment: 0x7fce2b5bbc18&gt;
+## &lt;environment: 0x7fce23a770b8&gt;
 ## attr(,&quot;coefficients&quot;)
 ##        A        B 
 ## 1.449432 1.915983 
@@ -1266,7 +1266,7 @@ On this zoomed in plot, we can refine our estimate a bit. The maximum <span clas
 <h3><span class="header-section-number">2.4.2</span> Slope Fields<a href="rstudio-quick-referrence.html#slope-fields" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field. So we need to make sure that this package has been loaded into RStudio.</p>
 <div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="rstudio-quick-referrence.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
-<p>Here is the code to create the slope field for <span class="math inline">\(displaystyle{\frac{dP}{dt} = 5 - 2 P}\)</span></p>
+<p>Here is the code to create the slope field for <span class="math inline">\(\displaystyle{\frac{dP}{dt} = 5 - 2 P}\)</span></p>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="rstudio-quick-referrence.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb67-2"><a href="rstudio-quick-referrence.html#cb67-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
 <span id="cb67-3"><a href="rstudio-quick-referrence.html#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>

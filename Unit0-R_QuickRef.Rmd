@@ -506,7 +506,7 @@ The `mosaicCalc` package has a `vectorfield_plot` function that we use to create
 suppressPackageStartupMessages(library(mosaicCalc))
 ```
 
-Here is the code to create the slope field for $displaystyle{\frac{dP}{dt} = 5 - 2 P}$
+Here is the code to create the slope field for $\displaystyle{\frac{dP}{dt} = 5 - 2 P}$
 
 
 ```{r}
