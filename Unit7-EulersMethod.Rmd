@@ -2,9 +2,7 @@
 
 ## Introduction
 
-Euler's Method finds an approximate solution to a differential equation. Here is how it works.
-
-You are given
+Euler's Method finds an approximate solution to a differential equation. Here is how it works. You are given
 
 * The differential equation for  $\frac{dx}{dt}$.
 * The initial point $(t_0,x_0)$.
@@ -92,7 +90,19 @@ n & t_n & x_n & x'(t_n) & x_{n} + x'(t_{n}) (t_{n+1} - t_{n}) \\
 \end{array}
 $$
 
-### Euler's Method with Different Step Sizes.
+### Estimating Drug Metabolization
+Vancomycin is an antibiotic administered at a rate of 85 milligrams per hour and is metabolized at an hourly rate equal to 0.1 times the amount of drug in the body 
+
+1. Write a differential equation relating $\frac{dQ}{dt}$ and $Q$, where $Q$ is the quantity of the drug in the body.
+2.  Modify the Euler's Method code at the top of the page to plot a solution to your differential equation 
+    * Start with initial condition $Q(0)=0$.
+    * Use `dt=0.1`
+    * Run the approximation for 1000 steps
+3. What happens to the amount of the drug in the body in the long run?
+
+Medical doctors use this sort of calculation to maintain an effective dosage. 
+
+### Euler's Method with Different Step Sizes
 
 We will use various step sizes in Euler's method to estimate the value $P(50)$ for the constrained growth problem
 $$
@@ -104,7 +114,7 @@ $$
     b. $\triangle t = 1$
     c. $\triangle t = 0.1$ 
     d. $\triangle t = 0.01$ 
-2. We know that the solution to this logistic equation is a logistic function $\displaystyle{P(t) = \frac{K}{1+Ce^{-rt}}}$. Find the values for $r,C,K$. Then calculate the actual value of $P(50)$ and compare this value our estimates. How did  we do  in each case?
+2. We know that the solution to this differential equation is a logistic function $\displaystyle{P(t) = \frac{K}{1+Ce^{-rt}}}$. Find the values for $r,C,K$. Then calculate the actual value of $P(50)$ and compare this value our estimates. How did  we do  in each case?
     
     
 <!--    

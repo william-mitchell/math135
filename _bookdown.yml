@@ -40,6 +40,7 @@ rmd_files: ["index.Rmd",
   "Unit7-DiffEq.Rmd",
   "Unit7-PopModels.Rmd",
   "Unit7-EulersMethod.Rmd",
+  "Unit7-SlopeFields.Rmd",
   ]
 language:
   ui: 

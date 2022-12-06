@@ -1,6 +1,6 @@
 <!--# (PART) RStudio {-}-->
 
-# R Studio Primer
+# R Studio Orientation
 
 ```{r, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

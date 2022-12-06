@@ -8,24 +8,24 @@ Here are the three important differential equations that are also population mod
 
 ### Exponential Growth/Decay
 The differential equation
-$$\displaystyle{\frac{dP}{dt} = k P}$$
+$$\displaystyle{\frac{dP}{dt} = r P}$$
 has solution
-$$\displaystyle{P(t) = C e^{k \, t}}.$$
+$$\displaystyle{P(t) = C e^{r \, t}}.$$
 
-When $k>0$, we have the exponential growth population model.
+When $r>0$, we have the exponential growth population model.
 
-When $k < 0$, we have exponential decay. This includes radioactive decay, and the metabolization of a drug in the bloodstream.
+When $r < 0$, we have exponential decay. This includes radioactive decay, and the metabolization of a drug in the bloodstream.
 
 ### Exponential Growth/Decay with Constant Input/Output
 The differential equation
-$$\frac{dP}{dt} = k (P-A)$$
+$$\frac{dP}{dt} = r (P-A)$$
 is exponential growth/decay with constant input/output.  Its solution is 
-$$P(t) = A + C e^{k \, t}.$$ 
-When $k >0$ and $H =kA$, we have the population model 
+$$P(t) = A + C e^{r \, t}.$$ 
+When $k >0$ and $H =rA$, we have the population model 
 $$
-\frac{dP}{dt} = kP-H
+\frac{dP}{dt} = rP-H
 $$
-for exponential growth at rate $k$ with constant harvesting at rate $H$.
+for exponential growth at rate $r$ with constant harvesting at rate $H$.
 
 ### Constrained Growth
 The differential equation
@@ -37,7 +37,7 @@ When $r>0$ and $K>0$, we have constrained growth at rate $r$ with carrying capac
 ### Newton's Law of Cooling
 
 Newton's Law of Cooling states that the rate of change of temperature of an object $\frac{dT}{dt}$ is related to the ambient temperature $A$ by the equation:
-\[ \frac{dT}{dt}=k(T-A).\]
+\[ \frac{dT}{dt}=r(T-A).\]
 Note that this is the same differential equation as exponential growth with constant harvesting. 
 
 ## Activities

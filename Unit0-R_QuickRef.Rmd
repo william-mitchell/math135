@@ -498,6 +498,22 @@ c(tail(tlist,1),  tail(xlist,1))
 plotPoints(xlist ~ tlist)
 ```
 
+### Slope Fields
+
+The `mosaicCalc` package has a `vectorfield_plot` function that we use to create a slope field. So we need to make sure that this package has been loaded into RStudio.
+
+```{r}
+suppressPackageStartupMessages(library(mosaicCalc))
+```
+
+Here is the code to create the slope field for $displaystyle{\frac{dP}{dt} = 5 - 2 P}$
+
+
+```{r}
+vectorfield_plot(t ~ 1,
+P ~ 6 - 2 * P,
+bounds(t=-8:8, P=-8:8))
+```
 
 ## Troubleshooting
 Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here's a list of some common errors and what might be wrong:

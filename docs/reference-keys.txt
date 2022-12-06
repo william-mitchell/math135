@@ -1,4 +1,4 @@
-r-studio-primer
+r-studio-orientation
 getting-oriented
 first-login
 the-rstudio-window
@@ -28,6 +28,7 @@ integration
 estimating-the-definite-integral
 differential-equations
 eulers-method
+slope-fields
 troubleshooting
 intro-to-rstudio
 getting-started
@@ -407,4 +408,11 @@ eulers-method-in-rstudio
 activities-26
 eulers-method-for-two-steps
 calculating-an-euler-approximation
-eulers-method-with-different-step-sizes.
+estimating-drug-metabolization
+eulers-method-with-different-step-sizes
+slope-fields-1
+creating-a-slope-field-in-rstudio
+activities-27
+match-the-slope-field
+draw-some-trajectories
+slope-fields-for-population-models
