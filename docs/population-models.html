@@ -729,6 +729,14 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="37.2.4" data-path="population-models.html"><a href="population-models.html#constrained-rabbit-population"><i class="fa fa-check"></i><b>37.2.4</b> Constrained Rabbit Population</a></li>
 <li class="chapter" data-level="37.2.5" data-path="population-models.html"><a href="population-models.html#constrained-deer-population"><i class="fa fa-check"></i><b>37.2.5</b> Constrained Deer Population</a></li>
 </ul></li>
+<li class="chapter" data-level="37.3" data-path="population-models.html"><a href="population-models.html#solutions-24"><i class="fa fa-check"></i><b>37.3</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="37.3.1" data-path="population-models.html"><a href="population-models.html#drug-metabolization-1"><i class="fa fa-check"></i><b>37.3.1</b> Drug Metabolization</a></li>
+<li class="chapter" data-level="37.3.2" data-path="population-models.html"><a href="population-models.html#elementary-my-dear-watson-1"><i class="fa fa-check"></i><b>37.3.2</b> Elementary, My Dear Watson</a></li>
+<li class="chapter" data-level="37.3.3" data-path="population-models.html"><a href="population-models.html#optimal-coffee-temperature-1"><i class="fa fa-check"></i><b>37.3.3</b> Optimal Coffee Temperature</a></li>
+<li class="chapter" data-level="37.3.4" data-path="population-models.html"><a href="population-models.html#constrained-rabbit-population-1"><i class="fa fa-check"></i><b>37.3.4</b> Constrained Rabbit Population</a></li>
+<li class="chapter" data-level="37.3.5" data-path="population-models.html"><a href="population-models.html#constrained-deer-population-1"><i class="fa fa-check"></i><b>37.3.5</b> Constrained Deer Population</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="38" data-path="eulers-method-1.html"><a href="eulers-method-1.html"><i class="fa fa-check"></i><b>38</b> Euler’s Method</a>
 <ul>
@@ -820,15 +828,15 @@ Note that this is the same differential equation as exponential growth with cons
 <div id="drug-metabolization" class="section level3 hasAnchor" number="37.2.1">
 <h3><span class="header-section-number">37.2.1</span> Drug Metabolization<a href="population-models.html#drug-metabolization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>After a drug is administered in a single injection, the rate at which the drug leaves the body is proportional to the quantity present.
+<li>After a drug is administered in a single injection, the rate at which the drug leaves the body is proportional to the quantity <span class="math inline">\(Q\)</span> present.
 <ol style="list-style-type: lower-alpha">
 <li>What differential equation models this process?</li>
-<li>Suppose that 10 mg of a drug is injected into the bloodstream. 3 hours later, only 2 mg remains in the bloodstream. Find the formula for the amount of the drug <span class="math inline">\(Q(t)\)</span> after <span class="math inline">\(t\)</span> hours.</li>
+<li>Suppose that 10 mg of a drug is injected into the bloodstream. 3 hours later, only 2 mg remains in the bloodstream. Find the formula for the amount of the drug <span class="math inline">\(Q(t)\)</span>, in mg, after <span class="math inline">\(t\)</span> hours.</li>
 </ol></li>
 <li>Suppose that a drug is being administered at a constant rate of 60 mg/hour and its decreasing at a rate of 20% of the amount present.
 <ol style="list-style-type: lower-alpha">
 <li>What differential equation models this process?</li>
-<li>Find the formula for the amount of drug <span class="math inline">\(Q(t)\)</span> after <span class="math inline">\(t\)</span> hours.</li>
+<li>Assuming that <span class="math inline">\(Q(t)=0\)</span>, find the formula for the amount of drug <span class="math inline">\(Q(t)\)</span>, in mg, after <span class="math inline">\(t\)</span> hours.</li>
 <li>What value does <span class="math inline">\(Q(t)\)</span> converge to for large values of <span class="math inline">\(t\)</span>?</li>
 </ol></li>
 </ol>
@@ -863,6 +871,68 @@ Note that this is the same differential equation as exponential growth with cons
 <li>What is the growth rate <span class="math inline">\(r\)</span>?</li>
 <li>What is the carrying capacity <span class="math inline">\(K\)</span>?</li>
 <li>How large is the deer population when that population is growing at its fastest rate? How fast is the population growing at that time?</li>
+</ol>
+</div>
+</div>
+<div id="solutions-24" class="section level2 hasAnchor" number="37.3">
+<h2><span class="header-section-number">37.3</span> Solutions<a href="population-models.html#solutions-24" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="drug-metabolization-1" class="section level3 hasAnchor" number="37.3.1">
+<h3><span class="header-section-number">37.3.1</span> Drug Metabolization<a href="population-models.html#drug-metabolization-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>This is an exponential decay function.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle={\frac{dQ}{dt} = rQ}\)</span></li>
+<li>The solution is expoential decay <span class="math inline">\(Q(t) = Ce^{rt}\)</span>. We have <span class="math inline">\(Q(0) = 10 = C e^{r\cdot 0} = C\)</span>. So <span class="math inline">\(Q(t) = 10e^{rt}\)</span>, Next we have <span class="math inline">\(Q(3) = 2 = 10 e^{3r}\)</span> so <span class="math inline">\(r = \frac{1}{3} \ln (1/5) = -0.537\)</span>. Our final formula is <span class="math inline">\(Q(t) = 10 e^{-0537t}\)</span>.</li>
+</ol></li>
+<li>Suppose that a drug is being administered at a constant rate of 60 mg/hour and its decreasing at a rate of 20% of the amount present.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle={\frac{dQ}{dt} = -0.2 Q + 60}\)</span></li>
+<li>We need to rewrite the differential equation as <span class="math inline">\(\displaystyle={\frac{dQ}{dt} = -0.2 (Q - 300)}\)</span>. The solution is
+<span class="math inline">\(Q(t) = 300 - 300 e^{-0.2t}\)</span>.</li>
+<li><span class="math inline">\(Q(t)\)</span> converges to <span class="math inline">\(300\)</span></li>
+</ol></li>
+</ol>
+</div>
+<div id="elementary-my-dear-watson-1" class="section level3 hasAnchor" number="37.3.2">
+<h3><span class="header-section-number">37.3.2</span> Elementary, My Dear Watson<a href="population-models.html#elementary-my-dear-watson-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In a mystery novel, the body of a murder victim is found at noon in a room with a constant temperature of <span class="math inline">\(20^\circ C\)</span>. At noon, the body is <span class="math inline">\(35^\circ C\)</span> and at 2 pm the body is <span class="math inline">\(33^\circ C\)</span>. Normal body temperature is <span class="math inline">\(37^\circ C\)</span>. What time did the murder occur?</p>
+<p>We use Newton’s Law of Cooling <span class="math inline">\(\frac{dT}{dt} = r(T-A)\)</span> where <span class="math inline">\(A=20\)</span>. Let’s set <span class="math inline">\(t=0\)</span> to be noon. We have <span class="math inline">\(T(0)=35\)</span> and <span class="math inline">\(T(2)=33\)</span>.
+The initial condition tell us that the solution is <span class="math inline">\(T(t) = 20 + 15e^{rt}\)</span>. Next, we have <span class="math inline">\(T(2) = 33 = 20 + 15e^{2r}\)</span> and so <span class="math inline">\(r = \frac{1}{2} \ln(13/15) = -0.072.\)</span> Our temperature function is <span class="math inline">\(T(t) = 20+15e^{-0.072t}.\)</span></p>
+<p>Finally, we solve <span class="math inline">\(37 = 20+15e^{-0.072t}\)</span> which is equivalent to <span class="math inline">\(17/15 = e^{-0.072t}\)</span>. Our time of death is <span class="math inline">\(t= -1/(0.072) \ln(17/15) = -1.74\)</span>. So the time of death was 10:15 am.</p>
+</div>
+<div id="optimal-coffee-temperature-1" class="section level3 hasAnchor" number="37.3.3">
+<h3><span class="header-section-number">37.3.3</span> Optimal Coffee Temperature<a href="population-models.html#optimal-coffee-temperature-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In my <span class="math inline">\(22^\circ C\)</span> office, my coffee starts at <span class="math inline">\(80^\circ C\)</span>, but cools to <span class="math inline">\(75^\circ C\)</span> after 10 minutes. If I like my coffee between <span class="math inline">\(63^\circ C\)</span> and <span class="math inline">\(70^\circ C\)</span>, how long is my window to drink it?</p>
+<p>We have <span class="math inline">\(T(t) = 22 + 58 e^{rt}\)</span>. Solving <span class="math inline">\(75 = 22 + 58e^{10r}\)</span> gives
+<span class="math inline">\(r= \frac{1}{10} \ln (53/58) = -0.009\)</span>. The temperature formula is <span class="math inline">\(22 + 68 e^{-0.009 t}\)</span>.</p>
+<p>Next, we solve <span class="math inline">\(63 = 22 + 58 e^{-0.009 t}\)</span> to find that <span class="math inline">\(t= -1/0.009 \ln(41/58)=38.54\)</span>. Finally we solve <span class="math inline">\(70 = 22 + 58 e^{-0.009 t}\)</span> to find that <span class="math inline">\(t= -1/0.009 \ln(48/58)=21.03\)</span>. So the coffee is drinkable from minute 21 to minute <span class="math inline">\(38.5\)</span>.</p>
+</div>
+<div id="constrained-rabbit-population-1" class="section level3 hasAnchor" number="37.3.4">
+<h3><span class="header-section-number">37.3.4</span> Constrained Rabbit Population<a href="population-models.html#constrained-rabbit-population-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The yearly population <span class="math inline">\(P(t)\)</span> of rabbits is modeled by
+<span class="math display">\[
+\frac{dP}{dt} = 0.45 P  \left(1 - \frac{P}{90} \right).
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>We have <span class="math inline">\(\frac{dP}{dt} = 0.45 \cdot 120 \left(1 - \frac{120}{90} \right) &lt; 0\)</span>. The population will decrease because the rate of change is negative.</li>
+<li><span class="math inline">\(P&#39;(t)=0\)</span> when <span class="math inline">\(P=0\)</span> and when <span class="math inline">\(P=90\)</span>.</li>
+<li>The carrying capacity is 90.</li>
+</ol>
+</div>
+<div id="constrained-deer-population-1" class="section level3 hasAnchor" number="37.3.5">
+<h3><span class="header-section-number">37.3.5</span> Constrained Deer Population<a href="population-models.html#constrained-deer-population-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The annual population <span class="math inline">\(P(t)\)</span> of deer is modeled by the constrained growth equation
+<span class="math display">\[
+\frac{dP}{dt} = 0.22 P - 0.0275 P^2.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>The growth rate is <span class="math inline">\(r=0.23\)</span>.</p></li>
+<li><p>We rewrite the derivative as
+<span class="math display">\[
+\frac{dP}{dt} = 0.22 P\left( 1 - \frac{0.0275}{0.22} P \right) = 0.22 P\left( 1 - \frac{P}{8} \right)
+\]</span>
+So the carrying capacity is <span class="math inline">\(K=8\)</span>.</p></li>
+<li><p>The rate of change is largest when <span class="math inline">\(P=K/2=4\)</span>. The rate of change is <span class="math inline">\(0.22 \cdot 4 \cdot \frac{1}{2} = 0.44\)</span>.</p></li>
 </ol>
 
 </div>

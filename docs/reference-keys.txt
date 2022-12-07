@@ -402,6 +402,12 @@ elementary-my-dear-watson
 optimal-coffee-temperature
 constrained-rabbit-population
 constrained-deer-population
+solutions-24
+drug-metabolization-1
+elementary-my-dear-watson-1
+optimal-coffee-temperature-1
+constrained-rabbit-population-1
+constrained-deer-population-1
 eulers-method-1
 introduction-1
 eulers-method-in-rstudio
