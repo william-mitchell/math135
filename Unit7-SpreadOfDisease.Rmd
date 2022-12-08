@@ -89,12 +89,14 @@ $$
 2. How long does the outbreak last? Answer this question by lowering the upper bound on $t$ to find the first time where $I=0$.
 3. Now increase the removal rate $b=0.2$ to findthe smallest value of $b$ such that when the outbreak is over, there are 200 susceptible people who never became infected. Your answer should be correct up to two decimal places.
 
+<!--
 ```{r}
 SIRdyn = makeODE(dS ~ - 0.001*S*I, 
                   dI ~  0.001*S*I -.38*I )
 Soln = integrateODE(SIRdyn, domain(t=0:45), S=600, I=8)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
+-->
 
 
 ### Managing an Outbreak

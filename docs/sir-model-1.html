@@ -856,7 +856,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li>If we start at <span class="math inline">\(S=400\)</span> and <span class="math inline">\(I=10\)</span>, are we in epidemic phase?</li>
 <li>What is the threshold population for this SIR Model?</li>
 </ol>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-163-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-166-1.png" width="672" /></p>
 <div id="ending-an-outbreak-before-everyone-gets-sick" class="section level3 hasAnchor" number="40.2.1">
 <h3><span class="header-section-number">40.2.1</span> Ending an Outbreak Before Everyone Gets Sick<a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A disease is spreading according to the SIR Model
@@ -866,12 +866,24 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 1. Use <code>traj_plot</code> to create the SI trajectory for initial conditions <span class="math inline">\(S=600\)</span> and <span class="math inline">\(I=8\)</span>. Start with <span class="math inline">\(0 \leq t \leq 100.\)</span>
 2. How long does the outbreak last? Answer this question by lowering the upper bound on <span class="math inline">\(t\)</span> to find the first time where <span class="math inline">\(I=0\)</span>.
 3. Now increase the removal rate <span class="math inline">\(b=0.2\)</span> to findthe smallest value of <span class="math inline">\(b\)</span> such that when the outbreak is over, there are 200 susceptible people who never became infected. Your answer should be correct up to two decimal places.</p>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="sir-model-1.html#cb202-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb202-2"><a href="sir-model-1.html#cb202-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span>.<span class="dv">38</span><span class="sc">*</span>I )</span>
-<span id="cb202-3"><a href="sir-model-1.html#cb202-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">45</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
-<pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="sir-model-1.html#cb204-1" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-164-1.png" width="672" /></p>
+<!--
+
+```r
+SIRdyn = makeODE(dS ~ - 0.001*S*I, 
+                  dI ~  0.001*S*I -.38*I )
+Soln = integrateODE(SIRdyn, domain(t=0:45), S=600, I=8)
+```
+
+```
+## Solution containing functions S(t), I(t).
+```
+
+```r
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-167-1.png" width="672" />
+-->
 </div>
 <div id="managing-an-outbreak" class="section level3 hasAnchor" number="40.2.2">
 <h3><span class="header-section-number">40.2.2</span> Managing an Outbreak<a href="sir-model-1.html#managing-an-outbreak" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -918,7 +930,7 @@ Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-165-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-168-1.png" width="672" />
 
 
 ```r
@@ -935,7 +947,7 @@ Soln = integrateODE(SIRdyn, domain(t=0:45), S=600, I=8)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-166-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-169-1.png" width="672" />
 
 
 ```r
@@ -952,7 +964,7 @@ Soln = integrateODE(SIRdyn, domain(t=0:80), S=600, I=8)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-167-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-170-1.png" width="672" />
 -->
 
 </div>
