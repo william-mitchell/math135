@@ -41,6 +41,8 @@ rmd_files: ["index.Rmd",
   "Unit7-PopModels.Rmd",
   "Unit7-EulersMethod.Rmd",
   "Unit7-SlopeFields.Rmd",
+  "Unit7-SpreadOfDisease.Rmd",
+  "Unit7-Summary.Rmd",
   ]
 language:
   ui: 

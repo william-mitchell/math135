@@ -168,6 +168,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i><b>2.4.1</b> Euler’s Method</a></li>
 <li class="chapter" data-level="2.4.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i><b>2.4.2</b> Slope Fields</a></li>
+<li class="chapter" data-level="2.4.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i><b>2.4.3</b> SIR Model</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.5</b> Troubleshooting</a></li>
 </ul></li>
@@ -762,6 +763,27 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="39.2.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#slope-fields-for-population-models"><i class="fa fa-check"></i><b>39.2.3</b> Slope Fields for Population Models</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="40" data-path="sir-model-1.html"><a href="sir-model-1.html"><i class="fa fa-check"></i><b>40</b> SIR Model</a>
+<ul>
+<li class="chapter" data-level="40.1" data-path="sir-model-1.html"><a href="sir-model-1.html#the-sir-model-for-the-spread-of-disease"><i class="fa fa-check"></i><b>40.1</b> The SIR Model for the Spread of Disease</a>
+<ul>
+<li class="chapter" data-level="40.1.1" data-path="sir-model-1.html"><a href="sir-model-1.html#plotting-an-sir-slope-field-and-an-sir-trajectory"><i class="fa fa-check"></i><b>40.1.1</b> Plotting an SIR Slope Field and an SIR Trajectory</a></li>
+</ul></li>
+<li class="chapter" data-level="40.2" data-path="sir-model-1.html"><a href="sir-model-1.html#activities-28"><i class="fa fa-check"></i><b>40.2</b> Activities</a>
+<ul>
+<li class="chapter" data-level="40.2.1" data-path="sir-model-1.html"><a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick"><i class="fa fa-check"></i><b>40.2.1</b> Ending an Outbreak Before Everyone Gets Sick</a></li>
+<li class="chapter" data-level="40.2.2" data-path="sir-model-1.html"><a href="sir-model-1.html#managing-an-outbreak"><i class="fa fa-check"></i><b>40.2.2</b> Managing an Outbreak</a></li>
+<li class="chapter" data-level="40.2.3" data-path="sir-model-1.html"><a href="sir-model-1.html#changing-infection-rate-versus-changing-removal-rate"><i class="fa fa-check"></i><b>40.2.3</b> Changing Infection Rate Versus Changing Removal Rate</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="41" data-path="unit-7-summary.html"><a href="unit-7-summary.html"><i class="fa fa-check"></i><b>41</b> Unit 7 Summary</a>
+<ul>
+<li class="chapter" data-level="41.1" data-path="unit-7-summary.html"><a href="unit-7-summary.html#differential-equations-1"><i class="fa fa-check"></i><b>41.1</b> Differential Equations</a></li>
+<li class="chapter" data-level="41.2" data-path="unit-7-summary.html"><a href="unit-7-summary.html#population-models-1"><i class="fa fa-check"></i><b>41.2</b> Population Models</a></li>
+<li class="chapter" data-level="41.3" data-path="unit-7-summary.html"><a href="unit-7-summary.html#eulers-method-2"><i class="fa fa-check"></i><b>41.3</b> Euler’s Method</a></li>
+<li class="chapter" data-level="41.4" data-path="unit-7-summary.html"><a href="unit-7-summary.html#slope-fields-2"><i class="fa fa-check"></i><b>41.4</b> Slope Fields</a></li>
+<li class="chapter" data-level="41.5" data-path="unit-7-summary.html"><a href="unit-7-summary.html#sir-model-2"><i class="fa fa-check"></i><b>41.5</b> SIR Model</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -913,16 +935,16 @@ where <span class="math inline">\(t\)</span> is the number of days since the sta
 \]</span></li>
 <li>Let’s use RStudio. It’s easier!</li>
 </ol>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="the-indefinite-integral.html#cb188-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">8</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
-<span id="cb188-2"><a href="the-indefinite-integral.html#cb188-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="sc">-</span><span class="dv">2</span> </span>
-<span id="cb188-3"><a href="the-indefinite-integral.html#cb188-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">2</span> </span>
-<span id="cb188-4"><a href="the-indefinite-integral.html#cb188-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
-<span id="cb188-5"><a href="the-indefinite-integral.html#cb188-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
-<span id="cb188-6"><a href="the-indefinite-integral.html#cb188-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
-<span id="cb188-7"><a href="the-indefinite-integral.html#cb188-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
-<span id="cb188-8"><a href="the-indefinite-integral.html#cb188-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
-<span id="cb188-9"><a href="the-indefinite-integral.html#cb188-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
-<span id="cb188-10"><a href="the-indefinite-integral.html#cb188-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="the-indefinite-integral.html#cb194-1" aria-hidden="true" tabindex="-1"></a>f<span class="ot">=</span><span class="fu">makeFun</span>(<span class="dv">8</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span>
+<span id="cb194-2"><a href="the-indefinite-integral.html#cb194-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="sc">-</span><span class="dv">2</span> </span>
+<span id="cb194-3"><a href="the-indefinite-integral.html#cb194-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="dv">2</span> </span>
+<span id="cb194-4"><a href="the-indefinite-integral.html#cb194-4" aria-hidden="true" tabindex="-1"></a>num <span class="ot">=</span> <span class="dv">100000</span></span>
+<span id="cb194-5"><a href="the-indefinite-integral.html#cb194-5" aria-hidden="true" tabindex="-1"></a><span class="do">### the approximation of f(x) on interval [a,b]</span></span>
+<span id="cb194-6"><a href="the-indefinite-integral.html#cb194-6" aria-hidden="true" tabindex="-1"></a>base <span class="ot">=</span> (b<span class="sc">-</span>a)<span class="sc">/</span>num</span>
+<span id="cb194-7"><a href="the-indefinite-integral.html#cb194-7" aria-hidden="true" tabindex="-1"></a>points <span class="ot">=</span> <span class="fu">seq</span>(<span class="at">from=</span>a<span class="sc">+</span>base, <span class="at">to=</span>b, <span class="at">by=</span>base)</span>
+<span id="cb194-8"><a href="the-indefinite-integral.html#cb194-8" aria-hidden="true" tabindex="-1"></a>heights <span class="ot">=</span> <span class="fu">f</span>(points)</span>
+<span id="cb194-9"><a href="the-indefinite-integral.html#cb194-9" aria-hidden="true" tabindex="-1"></a>areas <span class="ot">=</span> base<span class="sc">*</span>heights</span>
+<span id="cb194-10"><a href="the-indefinite-integral.html#cb194-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(areas)</span></code></pre></div>
 <pre><code>## [1] 21.33333</code></pre>
 </div>
 <div id="average-value-1" class="section level3 hasAnchor" number="34.2.4">

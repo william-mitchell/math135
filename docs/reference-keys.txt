@@ -29,6 +29,7 @@ estimating-the-definite-integral
 differential-equations
 eulers-method
 slope-fields
+sir-model
 troubleshooting
 intro-to-rstudio
 getting-started
@@ -422,3 +423,16 @@ activities-27
 match-the-slope-field
 draw-some-trajectories
 slope-fields-for-population-models
+sir-model-1
+the-sir-model-for-the-spread-of-disease
+plotting-an-sir-slope-field-and-an-sir-trajectory
+activities-28
+ending-an-outbreak-before-everyone-gets-sick
+managing-an-outbreak
+changing-infection-rate-versus-changing-removal-rate
+unit-7-summary
+differential-equations-1
+population-models-1
+eulers-method-2
+slope-fields-2
+sir-model-2

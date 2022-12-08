@@ -29,7 +29,7 @@
   
   
 <link rel="prev" href="eulers-method-1.html"/>
-
+<link rel="next" href="sir-model-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -168,6 +168,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i><b>2.4.1</b> Euler’s Method</a></li>
 <li class="chapter" data-level="2.4.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i><b>2.4.2</b> Slope Fields</a></li>
+<li class="chapter" data-level="2.4.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i><b>2.4.3</b> SIR Model</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.5</b> Troubleshooting</a></li>
 </ul></li>
@@ -762,6 +763,27 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="39.2.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#slope-fields-for-population-models"><i class="fa fa-check"></i><b>39.2.3</b> Slope Fields for Population Models</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="40" data-path="sir-model-1.html"><a href="sir-model-1.html"><i class="fa fa-check"></i><b>40</b> SIR Model</a>
+<ul>
+<li class="chapter" data-level="40.1" data-path="sir-model-1.html"><a href="sir-model-1.html#the-sir-model-for-the-spread-of-disease"><i class="fa fa-check"></i><b>40.1</b> The SIR Model for the Spread of Disease</a>
+<ul>
+<li class="chapter" data-level="40.1.1" data-path="sir-model-1.html"><a href="sir-model-1.html#plotting-an-sir-slope-field-and-an-sir-trajectory"><i class="fa fa-check"></i><b>40.1.1</b> Plotting an SIR Slope Field and an SIR Trajectory</a></li>
+</ul></li>
+<li class="chapter" data-level="40.2" data-path="sir-model-1.html"><a href="sir-model-1.html#activities-28"><i class="fa fa-check"></i><b>40.2</b> Activities</a>
+<ul>
+<li class="chapter" data-level="40.2.1" data-path="sir-model-1.html"><a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick"><i class="fa fa-check"></i><b>40.2.1</b> Ending an Outbreak Before Everyone Gets Sick</a></li>
+<li class="chapter" data-level="40.2.2" data-path="sir-model-1.html"><a href="sir-model-1.html#managing-an-outbreak"><i class="fa fa-check"></i><b>40.2.2</b> Managing an Outbreak</a></li>
+<li class="chapter" data-level="40.2.3" data-path="sir-model-1.html"><a href="sir-model-1.html#changing-infection-rate-versus-changing-removal-rate"><i class="fa fa-check"></i><b>40.2.3</b> Changing Infection Rate Versus Changing Removal Rate</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="41" data-path="unit-7-summary.html"><a href="unit-7-summary.html"><i class="fa fa-check"></i><b>41</b> Unit 7 Summary</a>
+<ul>
+<li class="chapter" data-level="41.1" data-path="unit-7-summary.html"><a href="unit-7-summary.html#differential-equations-1"><i class="fa fa-check"></i><b>41.1</b> Differential Equations</a></li>
+<li class="chapter" data-level="41.2" data-path="unit-7-summary.html"><a href="unit-7-summary.html#population-models-1"><i class="fa fa-check"></i><b>41.2</b> Population Models</a></li>
+<li class="chapter" data-level="41.3" data-path="unit-7-summary.html"><a href="unit-7-summary.html#eulers-method-2"><i class="fa fa-check"></i><b>41.3</b> Euler’s Method</a></li>
+<li class="chapter" data-level="41.4" data-path="unit-7-summary.html"><a href="unit-7-summary.html#slope-fields-2"><i class="fa fa-check"></i><b>41.4</b> Slope Fields</a></li>
+<li class="chapter" data-level="41.5" data-path="unit-7-summary.html"><a href="unit-7-summary.html#sir-model-2"><i class="fa fa-check"></i><b>41.5</b> SIR Model</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -787,12 +809,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="creating-a-slope-field-in-rstudio" class="section level2 hasAnchor" number="39.1">
 <h2><span class="header-section-number">39.1</span> Creating a Slope Field in RStudio<a href="slope-fields-1.html#creating-a-slope-field-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field. So we need to make sure that this package has been loaded into RStudio.</p>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="slope-fields-1.html#cb191-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="slope-fields-1.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
 <p>Here is the code to create the slope field for <span class="math inline">\(\displaystyle{\frac{dP}{dt} = 5 - 2 P}\)</span></p>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="slope-fields-1.html#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb192-2"><a href="slope-fields-1.html#cb192-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
-<span id="cb192-3"><a href="slope-fields-1.html#cb192-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-152-1.png" width="672" /></p>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="slope-fields-1.html#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb198-2"><a href="slope-fields-1.html#cb198-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
+<span id="cb198-3"><a href="slope-fields-1.html#cb198-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-156-1.png" width="672" /></p>
 </div>
 <div id="activities-27" class="section level2 hasAnchor" number="39.2">
 <h2><span class="header-section-number">39.2</span> Activities<a href="slope-fields-1.html#activities-27" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -873,7 +895,7 @@ P ~  0.2 * P -  40,
 bounds(t=0:100, P=0:400))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-153-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-157-1.png" width="672" />
 -->
 <ol start="2" style="list-style-type: decimal">
 <li>Constrained growth
@@ -890,7 +912,7 @@ P ~  0.05  * P *  (1 - 0.002 * P),
 bounds(t=0:50, P=0:600))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-154-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-158-1.png" width="672" />
 -->
 <ol start="3" style="list-style-type: decimal">
 <li>Constrained growth with constant harvesting
@@ -907,7 +929,7 @@ P ~  0.05  * P *  (1 - 0.002 * P) - 4,
 bounds(t=0:50, P=0:600))
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-155-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-159-1.png" width="672" />
 -->
 
 </div>
@@ -918,8 +940,8 @@ bounds(t=0:50, P=0:600))
           </div>
         </div>
       </div>
-<a href="eulers-method-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="eulers-method-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sir-model-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

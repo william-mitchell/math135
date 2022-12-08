@@ -473,7 +473,7 @@ Euler's Method repeatedly uses Local Linear Approximation to  find an approximat
 * End time $T=9$
 * Step size $\triangle t = 0.01$
 
-```{r, eval=FALSE, echo=TRUE}
+```{r, echo=TRUE}
 # derivative, initial conditions and setup
 dxdt = makeFun(3*x - x^2 ~ x)
 tstart = 2
@@ -514,6 +514,55 @@ vectorfield_plot(t ~ 1,
 P ~ 6 - 2 * P,
 bounds(t=-8:8, P=-8:8))
 ```
+
+### SIR Model
+
+The `mosaicCalc` package has a `vectorfield_plot` function that we use to create a slope field, and a `traj_plot` function that we use to plot a trajectory. So we need to make sure that this package has been loaded into RStudio.
+
+```{r}
+suppressPackageStartupMessages(library(mosaicCalc))
+```
+
+
+Here is some example code that plots an SIR slope field where
+
+* The infection rate is $a=0.001$
+* The removal rate is $b=0.2$
+* $0 \leq S \leq 800$
+* $0 \leq I \leq 100$
+
+The horizontal axis is the susceptible population and the vertical axis is the infected population.
+
+
+```{r}
+vectorfield_plot(S ~ - 0.001*S*I, 
+                 I ~ 0.001*S*I -0.2*I, 
+                 bounds(S=0:800, I=0:100), 
+                 transform=function(L) L^0.01)
+```
+
+Here is some example code that plots a single SIR trajectory  for this same model. Here are the additional inputs:
+
+* `domain(t=0:80)` means that the trajectory runs for $0 \leq t \leq 80$.
+* `S=800` means that the initial susceptible population is 800.
+* `I=5` means that the initial infected  population is 5.
+* `nt=20` means that 20  tick marks will be added to the trajectory, showing the time that  the point  $(S,I)$  occurs.
+
+
+```{r, eval=FALSE}
+SIRdyn = makeODE(dS ~ - 0.001*S*I, 
+                  dI ~  0.001*S*I -0.2*I )
+Soln = integrateODE(SIRdyn, domain(t=0:80), S=800, I=5)
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
+```{r, echo=FALSE}
+SIRdyn = makeODE(dS ~ - 0.001*S*I, 
+                  dI ~  0.001*S*I -0.2*I )
+Soln = integrateODE(SIRdyn, domain(t=0:80), S=800, I=5)
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
 
 ## Troubleshooting
 Without fail, you will run into problems. Sometimes RStudio will give you helpful error messages, but sometimes they are obtuse. Here's a list of some common errors and what might be wrong:

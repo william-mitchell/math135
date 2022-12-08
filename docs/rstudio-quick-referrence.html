@@ -168,6 +168,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <ul>
 <li class="chapter" data-level="2.4.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i><b>2.4.1</b> Euler’s Method</a></li>
 <li class="chapter" data-level="2.4.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i><b>2.4.2</b> Slope Fields</a></li>
+<li class="chapter" data-level="2.4.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i><b>2.4.3</b> SIR Model</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.5</b> Troubleshooting</a></li>
 </ul></li>
@@ -762,6 +763,27 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="39.2.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#slope-fields-for-population-models"><i class="fa fa-check"></i><b>39.2.3</b> Slope Fields for Population Models</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="40" data-path="sir-model-1.html"><a href="sir-model-1.html"><i class="fa fa-check"></i><b>40</b> SIR Model</a>
+<ul>
+<li class="chapter" data-level="40.1" data-path="sir-model-1.html"><a href="sir-model-1.html#the-sir-model-for-the-spread-of-disease"><i class="fa fa-check"></i><b>40.1</b> The SIR Model for the Spread of Disease</a>
+<ul>
+<li class="chapter" data-level="40.1.1" data-path="sir-model-1.html"><a href="sir-model-1.html#plotting-an-sir-slope-field-and-an-sir-trajectory"><i class="fa fa-check"></i><b>40.1.1</b> Plotting an SIR Slope Field and an SIR Trajectory</a></li>
+</ul></li>
+<li class="chapter" data-level="40.2" data-path="sir-model-1.html"><a href="sir-model-1.html#activities-28"><i class="fa fa-check"></i><b>40.2</b> Activities</a>
+<ul>
+<li class="chapter" data-level="40.2.1" data-path="sir-model-1.html"><a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick"><i class="fa fa-check"></i><b>40.2.1</b> Ending an Outbreak Before Everyone Gets Sick</a></li>
+<li class="chapter" data-level="40.2.2" data-path="sir-model-1.html"><a href="sir-model-1.html#managing-an-outbreak"><i class="fa fa-check"></i><b>40.2.2</b> Managing an Outbreak</a></li>
+<li class="chapter" data-level="40.2.3" data-path="sir-model-1.html"><a href="sir-model-1.html#changing-infection-rate-versus-changing-removal-rate"><i class="fa fa-check"></i><b>40.2.3</b> Changing Infection Rate Versus Changing Removal Rate</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="41" data-path="unit-7-summary.html"><a href="unit-7-summary.html"><i class="fa fa-check"></i><b>41</b> Unit 7 Summary</a>
+<ul>
+<li class="chapter" data-level="41.1" data-path="unit-7-summary.html"><a href="unit-7-summary.html#differential-equations-1"><i class="fa fa-check"></i><b>41.1</b> Differential Equations</a></li>
+<li class="chapter" data-level="41.2" data-path="unit-7-summary.html"><a href="unit-7-summary.html#population-models-1"><i class="fa fa-check"></i><b>41.2</b> Population Models</a></li>
+<li class="chapter" data-level="41.3" data-path="unit-7-summary.html"><a href="unit-7-summary.html#eulers-method-2"><i class="fa fa-check"></i><b>41.3</b> Euler’s Method</a></li>
+<li class="chapter" data-level="41.4" data-path="unit-7-summary.html"><a href="unit-7-summary.html#slope-fields-2"><i class="fa fa-check"></i><b>41.4</b> Slope Fields</a></li>
+<li class="chapter" data-level="41.5" data-path="unit-7-summary.html"><a href="unit-7-summary.html#sir-model-2"><i class="fa fa-check"></i><b>41.5</b> SIR Model</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -999,11 +1021,7 @@ Example: <code>add=TRUE</code></li>
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(xdata = xdata), 
 ##     ...)))
-<<<<<<< HEAD
-## &lt;environment: 0x7f8e314fd438&gt;
-=======
-## &lt;environment: 0x7fce40e48438&gt;
->>>>>>> 6fb9574291362722a1267716a03e4e579d0aaaf2
+## &lt;environment: 0x7f9ab1d5fb38&gt;
 ## attr(,&quot;coefficients&quot;)
 ##    A    B 
 ## 1.70 4.18 
@@ -1038,11 +1056,7 @@ Example: <code>add=TRUE</code></li>
 ## x) 
 ## return(transformation(predict(model, newdata = data.frame(logxdata = logxdata), 
 ##     ...)))
-<<<<<<< HEAD
-## &lt;environment: 0x7f8e2e6f41e0&gt;
-=======
-## &lt;environment: 0x7fce2da07d20&gt;
->>>>>>> 6fb9574291362722a1267716a03e4e579d0aaaf2
+## &lt;environment: 0x7f9aafe4d4a0&gt;
 ## attr(,&quot;coefficients&quot;)
 ##        A        B 
 ## 1.449432 1.915983 
@@ -1071,20 +1085,13 @@ Example: <code>add=TRUE</code></li>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="rstudio-quick-referrence.html#cb34-1" aria-hidden="true" tabindex="-1"></a>utilitydata <span class="ot">=</span> fetch<span class="sc">::</span><span class="fu">fetchData</span>(<span class="st">&quot;utilities.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Retrieving from http://www.mosaic-web.org/go/datasets/utilities.csv</code></pre>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="rstudio-quick-referrence.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(utilitydata)</span></code></pre></div>
-<pre><code>##   month day year temp  kwh ccf thermsPerDay dur totalbill gasbill
-## 1     2  24 2005   29  557 166          6.0  28    213.71  166.63
-## 2     3  29 2005   31  772 179          5.5  33    239.85  117.05
-## 3     1  27 2005   15  891 224          7.5  30    294.96  223.92
-## 4    11  23 2004   43  860  82          2.8  29    160.26   88.51
-## 5    12  28 2004   23 1160 208          6.0  35    317.47  224.18
-## 6     9  26 2004   71  922  15          0.5  32    117.46   21.25
-##   elecbill notes
-## 1    47.08      
-## 2    62.80      
-## 3    71.04      
-## 4    71.75      
-## 5    93.29      
-## 6    96.21</code></pre>
+<pre><code>##   month day year temp  kwh ccf thermsPerDay dur totalbill gasbill elecbill notes
+## 1     2  24 2005   29  557 166          6.0  28    213.71  166.63    47.08      
+## 2     3  29 2005   31  772 179          5.5  33    239.85  117.05    62.80      
+## 3     1  27 2005   15  891 224          7.5  30    294.96  223.92    71.04      
+## 4    11  23 2004   43  860  82          2.8  29    160.26   88.51    71.75      
+## 5    12  28 2004   23 1160 208          6.0  35    317.47  224.18    93.29      
+## 6     9  26 2004   71  922  15          0.5  32    117.46   21.25    96.21</code></pre>
 <p>Now let’s plot temperature versus month</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rstudio-quick-referrence.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(temp <span class="sc">~</span> month, <span class="at">data=</span>utilitydata)</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
@@ -1139,8 +1146,7 @@ for some small number <span class="math inline">\(\alpha &gt; 0\)</span>. Smalle
 <span id="cb49-2"><a href="rstudio-quick-referrence.html#cb49-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
 <span id="cb49-3"><a href="rstudio-quick-referrence.html#cb49-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">f</span>(<span class="dv">4</span><span class="sc">+</span>alpha)<span class="sc">-</span><span class="fu">f</span>(<span class="dv">4</span>))<span class="sc">/</span>alpha</span>
 <span id="cb49-4"><a href="rstudio-quick-referrence.html#cb49-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 6.978782 1.952538 1.511513 1.468349 1.464042 1.463612 1.463569
-## [8] 1.463564</code></pre>
+<pre><code>## [1] 6.978782 1.952538 1.511513 1.468349 1.464042 1.463612 1.463569 1.463564</code></pre>
 <p>The estimates stabilize to the value <span class="math inline">\(1.46356\)</span>. So our estimate is <span class="math inline">\(f&#39;(4) \approx 1.46456\)</span></p>
 </div>
 <div id="estimating-the-partial-derivative" class="section level3 hasAnchor" number="2.2.2">
@@ -1156,16 +1162,14 @@ Let’s estimate the partial derivatives of <span class="math inline">\(g(x,y) =
 <span id="cb51-2"><a href="rstudio-quick-referrence.html#cb51-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
 <span id="cb51-3"><a href="rstudio-quick-referrence.html#cb51-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">g</span>(<span class="dv">2</span><span class="sc">+</span>alpha,<span class="dv">7</span>)<span class="sc">-</span><span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span>))<span class="sc">/</span>alpha</span>
 <span id="cb51-4"><a href="rstudio-quick-referrence.html#cb51-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 3.456634 2.526691 2.452648 2.445403 2.444680 2.444608 2.444601
-## [8] 2.444600</code></pre>
+<pre><code>## [1] 3.456634 2.526691 2.452648 2.445403 2.444680 2.444608 2.444601 2.444600</code></pre>
 <p>We conclude that <span class="math inline">\(g_x(2,7) \approx 2.445.\)</span></p>
 <p>Now let’s estimate <span class="math inline">\(g_y(2,7) = \left. \frac{\partial g}{\partial y} \right|_{(2,7)}\)</span>. All we need to do is move <code>alpha</code> into the <span class="math inline">\(y\)</span>-variable.</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="rstudio-quick-referrence.html#cb53-1" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">makeFun</span>(<span class="fu">exp</span>(x<span class="sc">*</span><span class="fu">sin</span>(y))<span class="sc">~</span>x<span class="sc">&amp;</span>y)</span>
 <span id="cb53-2"><a href="rstudio-quick-referrence.html#cb53-2" aria-hidden="true" tabindex="-1"></a>alpha<span class="ot">=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>, <span class="fl">0.00001</span>, <span class="fl">0.000001</span>, <span class="fl">0.0000001</span>)</span>
 <span id="cb53-3"><a href="rstudio-quick-referrence.html#cb53-3" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span>(<span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span><span class="sc">+</span>alpha)<span class="sc">-</span><span class="fu">g</span>(<span class="dv">2</span>,<span class="dv">7</span>))<span class="sc">/</span>alpha</span>
 <span id="cb53-4"><a href="rstudio-quick-referrence.html#cb53-4" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div>
-<pre><code>## [1] 3.512524 5.761618 5.628032 5.612215 5.610611 5.610450 5.610434
-## [8] 5.610433</code></pre>
+<pre><code>## [1] 3.512524 5.761618 5.628032 5.612215 5.610611 5.610450 5.610434 5.610433</code></pre>
 <p>We conclude that <span class="math inline">\(g_y(2,7) \approx 5.610.\)</span></p>
 </div>
 <div id="gradient-search" class="section level3 hasAnchor" number="2.2.3">
@@ -1274,19 +1278,52 @@ On this zoomed in plot, we can refine our estimate a bit. The maximum <span clas
 <span id="cb65-17"><a href="rstudio-quick-referrence.html#cb65-17" aria-hidden="true" tabindex="-1"></a>  xlist <span class="ot">=</span> <span class="fu">c</span>(xlist, x)</span>
 <span id="cb65-18"><a href="rstudio-quick-referrence.html#cb65-18" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb65-19"><a href="rstudio-quick-referrence.html#cb65-19" aria-hidden="true" tabindex="-1"></a><span class="co"># print the ending point</span></span>
-<span id="cb65-20"><a href="rstudio-quick-referrence.html#cb65-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span>
-<span id="cb65-21"><a href="rstudio-quick-referrence.html#cb65-21" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
-<span id="cb65-22"><a href="rstudio-quick-referrence.html#cb65-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist)</span></code></pre></div>
+<span id="cb65-20"><a href="rstudio-quick-referrence.html#cb65-20" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">tail</span>(tlist,<span class="dv">1</span>),  <span class="fu">tail</span>(xlist,<span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## [1] 9 3</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="rstudio-quick-referrence.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the approximate function</span></span>
+<span id="cb67-2"><a href="rstudio-quick-referrence.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotPoints</span>(xlist <span class="sc">~</span> tlist)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
 </div>
 <div id="slope-fields" class="section level3 hasAnchor" number="2.4.2">
 <h3><span class="header-section-number">2.4.2</span> Slope Fields<a href="rstudio-quick-referrence.html#slope-fields" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field. So we need to make sure that this package has been loaded into RStudio.</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="rstudio-quick-referrence.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="rstudio-quick-referrence.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
 <p>Here is the code to create the slope field for <span class="math inline">\(\displaystyle{\frac{dP}{dt} = 5 - 2 P}\)</span></p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="rstudio-quick-referrence.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb67-2"><a href="rstudio-quick-referrence.html#cb67-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
-<span id="cb67-3"><a href="rstudio-quick-referrence.html#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="rstudio-quick-referrence.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb69-2"><a href="rstudio-quick-referrence.html#cb69-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
+<span id="cb69-3"><a href="rstudio-quick-referrence.html#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
 <p><img src="math135_handbook_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+</div>
+<div id="sir-model" class="section level3 hasAnchor" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> SIR Model<a href="rstudio-quick-referrence.html#sir-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field, and a <code>traj_plot</code> function that we use to plot a trajectory. So we need to make sure that this package has been loaded into RStudio.</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="rstudio-quick-referrence.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<p>Here is some example code that plots an SIR slope field where</p>
+<ul>
+<li>The infection rate is <span class="math inline">\(a=0.001\)</span></li>
+<li>The removal rate is <span class="math inline">\(b=0.2\)</span></li>
+<li><span class="math inline">\(0 \leq S \leq 800\)</span></li>
+<li><span class="math inline">\(0 \leq I \leq 100\)</span></li>
+</ul>
+<p>The horizontal axis is the susceptible population and the vertical axis is the infected population.</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="rstudio-quick-referrence.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(S <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
+<span id="cb71-2"><a href="rstudio-quick-referrence.html#cb71-2" aria-hidden="true" tabindex="-1"></a>                 I <span class="sc">~</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I, </span>
+<span id="cb71-3"><a href="rstudio-quick-referrence.html#cb71-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">bounds</span>(<span class="at">S=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), </span>
+<span id="cb71-4"><a href="rstudio-quick-referrence.html#cb71-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">transform=</span><span class="cf">function</span>(L) L<span class="sc">^</span><span class="fl">0.01</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p>Here is some example code that plots a single SIR trajectory for this same model. Here are the additional inputs:</p>
+<ul>
+<li><code>domain(t=0:80)</code> means that the trajectory runs for <span class="math inline">\(0 \leq t \leq 80\)</span>.</li>
+<li><code>S=800</code> means that the initial susceptible population is 800.</li>
+<li><code>I=5</code> means that the initial infected population is 5.</li>
+<li><code>nt=20</code> means that 20 tick marks will be added to the trajectory, showing the time that the point <span class="math inline">\((S,I)\)</span> occurs.</li>
+</ul>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="rstudio-quick-referrence.html#cb72-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
+<span id="cb72-2"><a href="rstudio-quick-referrence.html#cb72-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I )</span>
+<span id="cb72-3"><a href="rstudio-quick-referrence.html#cb72-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">80</span>), <span class="at">S=</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">5</span>)</span>
+<span id="cb72-4"><a href="rstudio-quick-referrence.html#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
+<pre><code>## Solution containing functions S(t), I(t).</code></pre>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
 </div>
 </div>
 <div id="troubleshooting" class="section level2 hasAnchor" number="2.5">
