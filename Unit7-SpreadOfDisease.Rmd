@@ -59,7 +59,7 @@ Soln = integrateODE(SIRdyn, domain(t=0:80), S=800, I=5)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="70%"}
 SIRdyn = makeODE(dS ~ - 0.001*S*I, 
                   dI ~  0.001*S*I -0.2*I )
 Soln = integrateODE(SIRdyn, domain(t=0:80), S=800, I=5)
@@ -80,7 +80,7 @@ Here is the slope field for an SIR Model. The horizontal axis is the Susceptible
 2. If we start at $S=400$ and $I=10$, are we in epidemic phase?
 3. What is the threshold population for this SIR Model?
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="70%"}
 vectorfield_plot(S ~ - 0.002*S*I, 
                  I ~ 0.002*S*I -0.5*I, 
                  bounds(S=0:600, I=0:50), 
@@ -164,7 +164,7 @@ $$
 $$
 1.  Use `traj_plot` to create the SI trajectory for initial conditions $S=600$ and $I=8$. Start with $0 \leq t \leq 100.$
 
-```{r}
+```{r, out.width="70%"}
 SIRdyn = makeODE(dS ~ - 0.001*S*I, 
                   dI ~  0.001*S*I - 0.2*I )
 Soln = integrateODE(SIRdyn, domain(t=0:100), S=600, I=8)
@@ -173,7 +173,7 @@ traj_plot(I(t) ~ S(t), Soln, nt=20)
 
 2. The outbreak lasts about 50 days.
 
-```{r}
+```{r, out.width="70%"}
 SIRdyn = makeODE(dS ~ - 0.001*S*I, 
                   dI ~  0.001*S*I - 0.2*I )
 Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)
@@ -182,7 +182,7 @@ traj_plot(I(t) ~ S(t), Soln, nt=10)
 
 3. The removal rate $b=0.38$ is the smallest rate that has at least 200 susceptible people remaining when the infected population is 0.
 
-```{r}
+```{r, out.width="70%"}
 SIRdyn = makeODE(dS ~ - 0.001*S*I, 
                   dI ~  0.001*S*I - 0.38*I )
 Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)
@@ -218,7 +218,7 @@ where $0 < c < 1$ is the rate at which susceptible people are vaccinated.
 
 1. The peak infected population is about 185. It occurs at $t=12.5$. There are about 25 susceptible people left at the end of the outbreak.
 
-```{r}
+```{r, out.width="70%"}
 SIRdyn = makeODE(dS ~ - 0.001*S*I, 
                   dI ~  0.001*S*I -.2*I )
 Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)
@@ -228,7 +228,7 @@ traj_plot(I(t) ~ S(t), Soln, nt=20)
 
 2. When the model is half as infectious, the peak infected population is 46, and this occurs at $t=29$. There are about 235 susceptible people left at the end of the outbreak, which lasts about 100 days.
 
-```{r}
+```{r, out.width="70%"}
 SIRdyn = makeODE(dS ~ - 0.0005*S*I, 
                   dI ~  0.0005*S*I -.2*I )
 Soln = integrateODE(SIRdyn, domain(t=0:100), S=600, I=8)
@@ -238,7 +238,7 @@ traj_plot(I(t) ~ S(t), Soln, nt=20)
 
 3. When the removal time is doubled, the peak infected population is 46, and this occurs at $t=14.5$. There are 235 susceptible people at the end of the outbreak, which lasts 50 days.
 
-```{r}
+```{r, out.width="70%"}
 SIRdyn = makeODE(dS ~ - 0.001*S*I, 
                   dI ~  0.001*S*I -.4*I )
 Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)

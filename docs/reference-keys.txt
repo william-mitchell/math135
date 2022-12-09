@@ -417,6 +417,11 @@ eulers-method-for-two-steps
 calculating-an-euler-approximation
 estimating-drug-metabolization
 eulers-method-with-different-step-sizes
+soluutions
+eulers-method-for-two-steps-1
+calculating-an-euler-approximation-1
+estimating-drug-metabolization-1
+eulers-method-with-different-step-sizes-1
 slope-fields-1
 creating-a-slope-field-in-rstudio
 activities-27

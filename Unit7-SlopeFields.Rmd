@@ -148,7 +148,7 @@ Create a slope field for each of the following population models. For each one, 
 
 1. Exponential growth with harvesting.
 
-```{r}
+```{r, out.width="70%"}
 vectorfield_plot(t ~ 1,
 P ~  0.2 * P -  40,
 bounds(t=0:100, P=0:300))
@@ -160,7 +160,7 @@ bounds(t=0:100, P=0:300))
 
 2. Constrained growth
 
-```{r}
+```{r, out.width="70%"}
 vectorfield_plot(t ~ 1,
 P ~  0.05  * P *  (1 - 0.002 * P),
 bounds(t=0:50, P=0:600))
@@ -176,7 +176,7 @@ bounds(t=0:50, P=0:600))
 3. Constrained growth with constant harvesting
 
 
-```{r}
+```{r, out.width="70%"}
 vectorfield_plot(t ~ 1,
 P ~  0.05  * P *  (1 - 0.002 * P) - 4,
 bounds(t=0:50, P=0:600))
