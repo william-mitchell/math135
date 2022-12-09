@@ -1,6 +1,6 @@
 # (PART) Differential Equations {-}
 
-# Introduction to Differential Equations
+# Modeling Change
 
 
 ## Activities
