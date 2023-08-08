@@ -79,6 +79,14 @@ slope-and-concavity-1
 example-function
 vinyl-lps
 relative-change-of-the-dow-jones-average-1
+solutions-1
+aroc-of-a-function-1
+measuring-daily-rainfall-1
+sketching-a-function-1
+slope-and-concavity-2
+example-function-1
+vinyl-lps-1
+relative-change-of-the-dow-jones-average-2
 exponential-and-logarithmic-functions
 goals-3
 activities-3
@@ -89,7 +97,7 @@ interest-rate-for-an-investment
 exponential-decay
 doubling-time
 people-and-vehicles
-solutions-1
+solutions-2
 growing-population-1
 consumer-price-index-1
 two-data-sets-1
@@ -104,7 +112,7 @@ examples-and-non-examples
 descriptions-of-power-functions
 allometry-of-pectoral-fins
 specific-heat
-solutions-2
+solutions-3
 examples-and-non-examples-1
 descriptions-of-power-functions-1
 allometry-of-pectoral-fins-1
@@ -117,7 +125,7 @@ find-a-periodic-formula
 variable-star
 tides-and-currents
 rainfall-in-seattle
-solutions-3
+solutions-4
 periodic-function-examples-1
 find-a-periodic-formula-1
 variable-star-1
@@ -130,7 +138,7 @@ matching-contours
 plotting-in-rstudio
 cross-sections
 plotting-in-rstudio-1
-solutions-4
+solutions-5
 matching-contours-1
 plotting-in-rstudio-2
 cross-sections-1
@@ -149,7 +157,7 @@ find-the-dimension
 dimensionally-feasible
 geometric-formulas-for-a-cylinder
 unit-conversions
-solutions-5
+solutions-6
 find-the-dimension-1
 dimensionally-feasible-1
 geometric-formulas-for-a-cylinder-1
@@ -160,12 +168,12 @@ activities-8
 vocal-chord-frequency
 mixer-power
 velocity-of-an-ocean-wave
-solutions-6
+solutions-7
 fermi-estimation
 working-fermi-problems
 some-useful-data
 activities-9
-solutions-7
+solutions-8
 unit-2-summary
 dimensions-and-units-1
 dimensional-analysis-1
@@ -177,7 +185,7 @@ studying
 marginal-cost
 farmland-in-the-united-states
 a-moving-particle
-solutions-8
+solutions-9
 studying-1
 marginal-cost-1
 farmland-in-the-united-states-1
@@ -189,7 +197,7 @@ estimating-the-first-and-second-derivatives-from-a-graph
 function-matching
 a-plot-of-velocity
 characterize-the-derivatives
-solutions-9
+solutions-10
 estimating-the-first-and-second-derivatives-from-a-graph-1
 function-matching-1
 a-plot-of-velocity-1
@@ -199,7 +207,7 @@ activities-12
 estimating-from-data
 estimating-from-a-contour-plot
 estimating-using-desmos
-solutions-10
+solutions-11
 estimating-from-data-1
 estimating-from-a-contour-plot-1
 estimating-using-desmos-1
@@ -209,7 +217,7 @@ estimating-sugar-solution-temperature
 comparing-linearizations
 estimating-a-function
 estimating-the-windchill
-solutions-11
+solutions-12
 estimating-sugar-solution-temperature-1
 comparing-linearizations-1
 estimating-a-function-1
@@ -239,7 +247,7 @@ activities-14
 basic-derivative-practice
 more-basic-derivative-practice
 product-rule-and-quotient-rule-practice
-solutions-12
+solutions-13
 basic-derivative-practice-1
 more-basic-derivative-practice-1
 product-rule-and-quotient-rule-practice-1
@@ -249,7 +257,7 @@ chain-rule-practice
 more-chain-rule-practice
 conceptual-chain-rule-problems
 visual-chain-rule-problem
-solutions-13
+solutions-14
 chain-rule-practice-1
 more-chain-rule-practice-1
 conceptual-chain-rule-problems-1
@@ -261,7 +269,7 @@ second-partial-derivative-practice
 gradient-practice
 gradient-on-a-contour-diagram
 gradient-and-the-direction-of-greatest-increase
-solutions-14
+solutions-15
 partial-derivative-practice-1
 second-partial-derivative-practice-1
 gradient-practice-1
@@ -277,7 +285,7 @@ characterize-the-extrema
 first-derivative-test
 second-derivative-test
 cupcake-store
-solutions-15
+solutions-16
 characterize-the-extrema-1
 first-derivative-test-1
 second-derivative-test-1
@@ -290,7 +298,7 @@ classifying-a-critical-point-using-a-small-circle-of-values
 the-2d-second-derivative-test
 classify-the-critical-points
 optimizing-flight-control
-solutions-16
+solutions-17
 characterize-the-extrema-3
 classifying-a-critical-point-using-a-small-circle-of-values-1
 the-2d-second-derivative-test-1
@@ -300,7 +308,7 @@ gradient-search-1
 gradient-search-example
 activities-19
 finding-a-local-minimum
-solutions-17
+solutions-18
 finding-a-local-minimum-1
 constrained-2d-optimization
 creating-a-contour-plot-for-2d-optimization
@@ -308,7 +316,7 @@ activities-20
 constrained-production
 constrained-optimization-on-a-circle
 estimating-the-lagrange-multiplier
-solutions-18
+solutions-19
 constrained-production-1
 constrained-optimization-on-a-circle-1
 estimating-the-lagrange-multiplier-1
@@ -323,7 +331,7 @@ growing-bacteria
 the-change-in-world-population
 speed-tests
 estimating-area-with-rstudio
-solutions-19
+solutions-20
 growing-bacteria-1
 the-change-in-world-population-1
 speed-tests-1
@@ -335,7 +343,7 @@ drive-my-car
 accelerate-my-car
 making-cupcakes
 area-between-curves
-solutions-20
+solutions-21
 drive-my-car-1
 accelerate-my-car-1
 making-cupcakes-1
@@ -363,7 +371,7 @@ area-between-curves-2
 average-value
 modeling-population-growth
 zombie-apocalypse
-solutions-21
+solutions-22
 indefinite-integral-practice-1
 definite-integral-practice-1
 area-between-curves-3
@@ -379,7 +387,7 @@ activities-24
 building-differential-equations
 solve-the-differential-equation
 verifying-solutions-to-differential-equations
-solutions-22
+solutions-23
 building-differential-equations-1
 solve-the-differential-equation-1
 verifying-solutions-to-differential-equations-1
@@ -395,7 +403,7 @@ elementary-my-dear-watson
 optimal-coffee-temperature
 constrained-rabbit-population
 constrained-deer-population
-solutions-23
+solutions-24
 drug-metabolization-1
 elementary-my-dear-watson-1
 optimal-coffee-temperature-1
@@ -420,7 +428,7 @@ activities-27
 match-the-slope-field
 draw-some-trajectories
 slope-fields-for-population-models
-solutions-24
+solutions-25
 match-the-slope-fields
 draw-some-trajectories-1
 slope-fields-for-population-models-1
@@ -432,7 +440,7 @@ threshold-population-for-an-sir-model
 ending-an-outbreak-before-everyone-gets-sick
 managing-an-outbreak
 changing-infection-rate-versus-changing-removal-rate
-solutions-25
+solutions-26
 threshold-population-for-an-sir-model-1
 ending-an-outbreak-before-everyone-gets-sick-1
 managing-an-outbreak-1
